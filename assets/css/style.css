@@ -139,10 +139,10 @@ a:hover { color: var(--primary-light); }
   transition: opacity 1.2s ease-in-out;
 }
 .hero-slide.active { opacity: 1; }
-/* Hero photos — Academic Year 2569 only (under current Director). TODO: copy to /assets/img/ before WP retirement */
-.hero-slide.s1 { background-image: url('https://acep.ac.th/wp-content/uploads/2026/06/S__18022559_0-1200x674.jpg'); }
-.hero-slide.s2 { background-image: url('https://acep.ac.th/wp-content/uploads/2026/05/box-ac-453x341.jpg'); }
-.hero-slide.s3 { background-image: url('https://acep.ac.th/wp-content/uploads/2026/06/bannnn2-453x341.jpg'); }
+/* Hero photos — KG + Primary classroom · Preparatory Meeting (no kneeling, no old director) */
+.hero-slide.s1 { background-image: url('https://acep.ac.th/wp-content/uploads/2025/06/Academic-Kindergarten-1200x674.jpg'); }
+.hero-slide.s2 { background-image: url('https://acep.ac.th/wp-content/uploads/2025/06/508557638_1345025630963903_4762845114533693764_n-1200x674.jpg'); }
+.hero-slide.s3 { background-image: url('https://acep.ac.th/wp-content/uploads/2026/05/box-ac-453x341.jpg'); }
 
 .hero-overlay {
   position: absolute; inset: 0; z-index: 1;
@@ -198,9 +198,9 @@ a:hover { color: var(--primary-light); }
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 /* Thumb backgrounds matching slides */
-.hero-thumb.t1 { background-image: url('https://acep.ac.th/wp-content/uploads/2026/06/S__18022559_0-1200x674.jpg'); }
-.hero-thumb.t2 { background-image: url('https://acep.ac.th/wp-content/uploads/2026/05/box-ac-453x341.jpg'); }
-.hero-thumb.t3 { background-image: url('https://acep.ac.th/wp-content/uploads/2026/06/bannnn2-453x341.jpg'); }
+.hero-thumb.t1 { background-image: url('https://acep.ac.th/wp-content/uploads/2025/06/Academic-Kindergarten-1200x674.jpg'); }
+.hero-thumb.t2 { background-image: url('https://acep.ac.th/wp-content/uploads/2025/06/508557638_1345025630963903_4762845114533693764_n-1200x674.jpg'); }
+.hero-thumb.t3 { background-image: url('https://acep.ac.th/wp-content/uploads/2026/05/box-ac-453x341.jpg'); }
 .hero-eyebrow {
   display: inline-block;
   background: var(--gold); color: var(--primary-dark);
