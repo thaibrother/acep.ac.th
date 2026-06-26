@@ -237,7 +237,7 @@
         </div>
 
         <div class="col-cta">
-          <a href="https://swis.acep.ac.th" target="_blank">Full Calendar on SWIS →</a>
+          <a href="https://swis.acep.ac.th/html_edu/cgi-bin/report/today_events.php" target="_blank">Full Calendar on SWIS →</a>
         </div>
       </div>
 
@@ -277,6 +277,20 @@
       <div class="eyebrow">Academic Programs</div>
       <h2>Programs We Offer</h2>
       <p>A bilingual English-medium pathway designed for early years and primary learners</p>
+    </div>
+
+    <!-- Katie's introduction · EP Head from ACP, advising KG + Primary at ACEP -->
+    <div style="max-width: 760px; margin: 0 auto 36px; background: var(--white); border-radius: 14px; padding: 20px; box-shadow: 0 6px 24px var(--shadow-strong); border-top: 4px solid var(--gold);">
+      <div style="margin-bottom: 12px;">
+        <div style="font-size:0.78rem; color:var(--gold-dark); font-weight:700; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:4px;">Curriculum Advisor</div>
+        <h3 style="color:var(--primary); margin:0; font-size:1.2rem;">Miss Katie · Head of English Programme at AC Primary (ACP)</h3>
+        <p style="font-size:0.9rem; color:var(--gray-text); margin:4px 0 0; line-height:1.55;">Curriculum advisor for ACEP — Kindergarten and Primary teaching &amp; learning design.</p>
+      </div>
+      <video controls preload="metadata" style="width:100%; border-radius:8px; display:block; background:var(--primary-dark);">
+        <source src="assets/video/katie-message.mov" type="video/quicktime">
+        <source src="assets/video/katie-message.mov" type="video/mp4">
+        Your browser does not support the video tag. <a href="assets/video/katie-message.mov" download>Download the video</a>.
+      </video>
     </div>
     <div class="card-grid">
       <div class="prog-card">
@@ -808,6 +822,62 @@
   document.querySelector('.hero-thumbs').addEventListener('mouseleave', start);
 
   start();
+})();
+</script>
+
+<!-- ===== SWIS LIVE FEED FETCHER (by SWIS Plus team · 26 Jun 2026) ===== -->
+<script>
+(function() {
+  var SWIS = 'https://swis.acep.ac.th/html_edu/api/json';
+  var MON  = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+
+  // --- Photo Albums ---
+  fetch(SWIS + '/get_pic_post.php?start=0&count=6&category=all')
+    .then(function(r) { return r.json(); })
+    .then(function(json) {
+      if (json.status !== 'success' || !json.data) return;
+      var items = json.data.map(function(d) {
+        var dateStr = d.post_date || '';
+        var parts = dateStr.split('-');
+        var formatted = parts.length === 3
+          ? parseInt(parts[2]) + ' ' + MON[parseInt(parts[1])-1] + ' ' + parts[0]
+          : dateStr;
+        return {
+          date:  formatted,
+          title: d.title || d.title_eng || '',
+          image: d.cover || '',
+          link:  d.url || '#'
+        };
+      });
+      if (window.acepRenderAlbums) window.acepRenderAlbums(items);
+    })
+    .catch(function() {});
+
+  // --- News ---
+  fetch(SWIS + '/get_news.php?start=0&count=5&type=2')
+    .then(function(r) { return r.json(); })
+    .then(function(json) {
+      if (json.status !== 'success' || !json.data) return;
+      var items = json.data.map(function(d) {
+        var dateStr = d.post_date || '';
+        var parts = dateStr.split('-');
+        var day = '', monthYear = '';
+        if (parts.length === 3) {
+          day = parseInt(parts[2]).toString();
+          monthYear = MON[parseInt(parts[1])-1] + ' ' + parts[0];
+        }
+        return {
+          date:      d.post_date_th || dateStr,
+          day:       day,
+          monthYear: monthYear,
+          title:     d.title || d.title_eng || '',
+          excerpt:   (d.detail || '').replace(/<[^>]*>/g, '').substring(0, 120),
+          link:      d.url || '#'
+        };
+      });
+      if (window.acepRenderNews) window.acepRenderNews(items);
+    })
+    .catch(function() {});
 })();
 </script>
 

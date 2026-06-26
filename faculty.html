@@ -552,113 +552,113 @@
   // photo: image # matches the profile card order
   // stage: estimated from years of service + qualifications
   // Quals: ✓ held (per CV) · ⏳ in progress · ○ target (per ACEP standard)
-  const faculty = [
-    { id: 1,  photo: 'teacher-1.jpg',  name: 'Miss Velicity Ann Van Rooyen', flag: '🇿🇦', subject: 'Kindergarten', level: 'Kindergarten', joined: 'May 2026', stage: 'foundation',
+  const facultyRaw = [
+    { id: 1,  photo: 'teacher-1.jpg',  name: 'Miss Velicity Ann Van Rooyen', flag: '🇿🇦', subject: 'Kindergarten', level: 'Kindergarten', joined: 'May 2026', yrs: 0.1, stage: 'foundation',
       quals: [
         { s: 'held',    t: 'Bachelor of Commerce' },
         { s: 'pending', t: 'CELT-P (target Q4 2026)' },
         { s: 'missing', t: 'TEFL Level 5' },
         { s: 'missing', t: 'Cambridge workshop · Aug 2026' }
       ]},
-    { id: 2,  photo: 'teacher-2.jpg',  name: 'Mr. Nikhil Nagaraja Ra', flag: '🇮🇳', subject: 'Computer', level: 'Secondary', joined: 'May 2026', stage: 'developing',
+    { id: 2,  photo: 'teacher-2.jpg',  name: 'Mr. Nikhil Nagaraja Ra', flag: '🇮🇳', subject: 'Computer', level: 'Secondary', joined: 'May 2026', yrs: 0.1, stage: 'developing',
       quals: [
         { s: 'held',    t: 'B.Tech Computer Science · Presidency Univ.' },
         { s: 'held',    t: 'M.Tech (Master Computer Science)' },
         { s: 'pending', t: 'TEFL Level 5' },
         { s: 'missing', t: 'Cambridge workshop · Aug 2026' }
       ]},
-    { id: 3,  photo: 'teacher-3.jpg',  name: 'Mr. Danny Lee', flag: '🇿🇦', subject: 'English', level: 'Secondary', joined: 'May 2026', stage: 'developing',
+    { id: 3,  photo: 'teacher-3.jpg',  name: 'Mr. Danny Lee', flag: '🇿🇦', subject: 'English', level: 'Secondary', joined: 'May 2026', yrs: 0.1, stage: 'developing',
       quals: [
         { s: 'held',    t: 'Bachelor of Teaching' },
         { s: 'held',    t: 'Diploma in Child Psychology' },
         { s: 'pending', t: 'CELT-P (target)' },
         { s: 'missing', t: 'Cambridge workshop · Aug 2026' }
       ]},
-    { id: 4,  photo: 'teacher-4.jpg',  name: 'Miss Trixia Ann Colibao', flag: '🇵🇭', subject: 'Math', level: 'Secondary', joined: 'May 2026', stage: 'developing',
+    { id: 4,  photo: 'teacher-4.jpg',  name: 'Miss Trixia Ann Colibao', flag: '🇵🇭', subject: 'Math', level: 'Secondary', joined: 'May 2026', yrs: 0.1, stage: 'developing',
       quals: [
         { s: 'held',    t: 'BSE Math · Cum Laude' },
         { s: 'pending', t: 'TEFL Level 5' },
         { s: 'missing', t: 'CELT-P (target)' },
         { s: 'missing', t: 'Cambridge workshop · Aug 2026' }
       ]},
-    { id: 5,  photo: 'teacher-5.jpg',  name: 'Mr. Roman Danilin', flag: '🇷🇺', subject: 'Science', level: 'Primary', joined: 'Aug 2025', stage: 'developing',
+    { id: 5,  photo: 'teacher-5.jpg',  name: 'Mr. Roman Danilin', flag: '🇷🇺', subject: 'Science', level: 'Primary', joined: 'Aug 2025', yrs: 0.9, stage: 'developing',
       quals: [
         { s: 'held',    t: 'BA Elementary Education · Berkeley' },
         { s: 'pending', t: 'CELT-P (target)' },
         { s: 'missing', t: 'PGCE / iPGCE' },
         { s: 'missing', t: 'Cambridge workshop · Aug 2026' }
       ]},
-    { id: 6,  photo: 'teacher-6.jpg',  name: 'Mr. Edwin Camba Catabay', flag: '🇵🇭', subject: 'Science', level: 'Secondary', joined: 'Jan 2025', stage: 'developing',
+    { id: 6,  photo: 'teacher-6.jpg',  name: 'Mr. Edwin Camba Catabay', flag: '🇵🇭', subject: 'Science', level: 'Secondary', joined: 'Jan 2025', yrs: 1.5, stage: 'developing',
       quals: [
         { s: 'held',    t: 'BSE · Major in Science' },
         { s: 'pending', t: 'TEFL Level 5' },
         { s: 'missing', t: 'CELT-P (target)' },
         { s: 'missing', t: 'Cambridge workshop · Aug 2026' }
       ]},
-    { id: 7,  photo: 'teacher-7.jpg',  name: 'Mr. Qu Yubin', flag: '🇨🇳', subject: 'Chinese', level: 'Secondary', joined: 'May 2024', stage: 'proficient',
+    { id: 7,  photo: 'teacher-7.jpg',  name: 'Mr. Qu Yubin', flag: '🇨🇳', subject: 'Chinese', level: 'Secondary', joined: 'May 2024', yrs: 2.1, stage: 'proficient',
       quals: [
         { s: 'held',    t: 'Master of Education · Teaching as Foreign Language' },
         { s: 'held',    t: 'HSK Examiner Qualification' },
         { s: 'pending', t: 'Cambridge methodology workshop · Aug 2026' },
         { s: 'missing', t: 'DELTA Modules (target)' }
       ]},
-    { id: 8,  photo: 'teacher-8.jpg',  name: 'Mr. Johnny Byrne', flag: '🇮🇪', subject: 'Math', level: 'Primary', joined: 'Mar 2014', stage: 'proficient',
+    { id: 8,  photo: 'teacher-8.jpg',  name: 'Mr. Johnny Byrne', flag: '🇮🇪', subject: 'Math', level: 'Primary', joined: 'Mar 2014', yrs: 12.3, stage: 'proficient',
       quals: [
         { s: 'held',    t: 'BA in Education' },
         { s: 'held',    t: '12+ years teaching experience' },
         { s: 'pending', t: 'CELT-P (target)' },
         { s: 'missing', t: 'DELTA Modules (target)' }
       ]},
-    { id: 9,  photo: 'teacher-9.jpg',  name: 'Miss Mary Anne Vatral', flag: '🇺🇸', subject: 'Science', level: 'Secondary', joined: 'Mar 2012', stage: 'expert',
+    { id: 9,  photo: 'teacher-9.jpg',  name: 'Miss Mary Anne Vatral', flag: '🇺🇸', subject: 'Science', level: 'Secondary', joined: 'Mar 2012', yrs: 14.3, stage: 'expert',
       quals: [
         { s: 'held',    t: 'BSc in English' },
         { s: 'held',    t: '14+ years teaching experience at ACEP' },
         { s: 'pending', t: 'Cambridge methodology workshop · Aug 2026' },
         { s: 'missing', t: 'DELTA Full (target)' }
       ]},
-    { id: 10, photo: 'teacher-10.jpg', name: 'Mr. Christopher Charles Morgan', flag: '🇬🇧', subject: 'English', level: 'Secondary', joined: 'Dec 2023', stage: 'developing',
+    { id: 10, photo: 'teacher-10.jpg', name: 'Mr. Christopher Charles Morgan', flag: '🇬🇧', subject: 'English', level: 'Secondary', joined: 'Dec 2023', yrs: 2.6, stage: 'developing',
       quals: [
         { s: 'held',    t: 'BM Government Management' },
         { s: 'held',    t: 'Postgraduate Certificate (Education)' },
         { s: 'pending', t: 'CELT-P (target)' },
         { s: 'missing', t: 'Cambridge workshop · Aug 2026' }
       ]},
-    { id: 11, photo: 'teacher-11.jpg', name: 'Mr. Robert Gemmell Daly', flag: '🇬🇧', subject: 'English', level: 'Primary', joined: 'Jul 2021', stage: 'developing',
+    { id: 11, photo: 'teacher-11.jpg', name: 'Mr. Robert Gemmell Daly', flag: '🇬🇧', subject: 'English', level: 'Primary', joined: 'Jul 2021', yrs: 4.11, stage: 'developing',
       quals: [
         { s: 'held',    t: 'BA in Community Education' },
         { s: 'held',    t: '4+ years at ACEP' },
         { s: 'pending', t: 'CELT-P (target)' },
         { s: 'missing', t: 'PGCE / iPGCE (target)' }
       ]},
-    { id: 12, photo: 'teacher-12.jpg', name: 'Mr. Oliver James Bluett', flag: '🇬🇧', subject: 'Science', level: 'Primary', joined: 'Mar 2017', stage: 'proficient',
+    { id: 12, photo: 'teacher-12.jpg', name: 'Mr. Oliver James Bluett', flag: '🇬🇧', subject: 'Science', level: 'Primary', joined: 'Mar 2017', yrs: 9.3, stage: 'proficient',
       quals: [
         { s: 'held',    t: 'BSc with Qualified Teacher Status (QTS) · UK' },
         { s: 'held',    t: '9+ years teaching experience' },
         { s: 'pending', t: 'Cambridge methodology workshop · Aug 2026' },
         { s: 'missing', t: 'DELTA Modules (mentor track)' }
       ]},
-    { id: 13, photo: 'teacher-13.jpg', name: 'Mr. Kaiya Charlie Connor Newman', flag: '🇬🇧', subject: 'English', level: 'Primary', joined: 'Mar 2018', stage: 'proficient',
+    { id: 13, photo: 'teacher-13.jpg', name: 'Mr. Kaiya Charlie Connor Newman', flag: '🇬🇧', subject: 'English', level: 'Primary', joined: 'Mar 2018', yrs: 8.3, stage: 'proficient',
       quals: [
         { s: 'held',    t: 'BA (Honours) in Education' },
         { s: 'held',    t: '8+ years at ACEP' },
         { s: 'pending', t: 'CELT-P (target)' },
         { s: 'missing', t: 'PGCE / iPGCE (target)' }
       ]},
-    { id: 14, photo: 'teacher-14.jpg', name: 'Mr. Carl Julian Crawford', flag: '🇿🇦', subject: 'Math', level: 'Primary', joined: 'Jul 2021', stage: 'developing',
+    { id: 14, photo: 'teacher-14.jpg', name: 'Mr. Carl Julian Crawford', flag: '🇿🇦', subject: 'Math', level: 'Primary', joined: 'Jul 2021', yrs: 4.10, stage: 'developing',
       quals: [
         { s: 'held',    t: 'BA Health Sciences & Social Sciences (Applied Psy.)' },
         { s: 'held',    t: 'Post Grad Education (PGCE)' },
         { s: 'held',    t: 'Mathematics Certificate · SACE Certified' },
         { s: 'missing', t: 'CELT-P (target)' }
       ]},
-    { id: 15, photo: 'teacher-15.jpg', name: 'Mr. Karam Ghanim Fathy', flag: '🇺🇸', subject: 'English', level: 'Primary', joined: 'Aug 2023', stage: 'developing',
+    { id: 15, photo: 'teacher-15.jpg', name: 'Mr. Karam Ghanim Fathy', flag: '🇺🇸', subject: 'English', level: 'Primary', joined: 'Aug 2023', yrs: 2.10, stage: 'developing',
       quals: [
         { s: 'held',    t: 'Master of Management' },
         { s: 'held',    t: "Diploma in Teacher's Education" },
         { s: 'pending', t: 'CELT-P (target)' },
         { s: 'missing', t: 'Cambridge workshop · Aug 2026' }
       ]},
-    { id: 16, photo: 'teacher-cassie-pending.jpg', name: 'Miss Yanyi He (Cassie)', flag: '🇨🇳', subject: 'Chinese', level: 'Primary', joined: 'Aug 2026 · joining', stage: 'proficient',
+    { id: 16, photo: 'teacher-cassie.png', name: 'Miss Yanyi He (Cassie)', flag: '🇨🇳', subject: 'Chinese', level: 'Primary', joined: 'Aug 2026 · joining', yrs: 0, stage: 'proficient',
       quals: [
         { s: 'held',    t: "M.Ed Educational Management · Mahidol · GPA 4.00" },
         { s: 'held',    t: 'BA English (First-Class Honors) · Payap Univ.' },
@@ -668,6 +668,9 @@
         { s: 'missing', t: 'Cambridge methodology workshop · Aug 2026' }
       ]}
   ];
+  // Default sort: longest service first (most experienced)
+  const faculty = facultyRaw.slice().sort((a, b) => (b.yrs || 0) - (a.yrs || 0));
+
   const stageLabel = { unverified: 'Stage: pending review', foundation: 'Foundation', developing: 'Developing', proficient: 'Proficient', expert: 'Expert' };
   const mark = s => s === 'held' ? '✓' : s === 'pending' ? '⏳' : '○';
 
