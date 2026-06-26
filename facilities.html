@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Campus Facilities — ACEP · Pool · Football · Tennis · Pickleball · Fitness</title>
+<meta name="description" content="ACEP campus facilities — current photos and planned upgrades for Swimming Pool, Football Fields, Tennis Courts, Pickleball, and St. Peter Sport Club Fitness Centre.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Sarabun:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="https://acep.ac.th/wp-content/uploads/2025/06/cropped-logo-gold-270x270.png">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  .sub-hero { background: linear-gradient(135deg, var(--primary-dark), var(--primary)); color: var(--white); padding: 56px 24px 64px; text-align: center; }
+  .sub-hero .crumb { font-size: 0.85rem; color: var(--gold); margin-bottom: 12px; letter-spacing: 0.08em; text-transform: uppercase; }
+  .sub-hero h1 { color: var(--white); margin-bottom: 10px; }
+  .sub-hero p { color: rgba(255,255,255,0.92); font-size: 1.05rem; max-width: 760px; margin: 0 auto; }
+
+  section[id] { scroll-margin-top: 80px; }
+  .quick-nav { background: var(--cream); padding: 18px 24px; border-radius: 8px; margin: 0 0 36px; display: flex; flex-wrap: wrap; gap: 8px; border-left: 4px solid var(--gold); }
+  .quick-nav .label { font-weight: 600; color: var(--primary); font-size: 0.9rem; margin-right: 6px; }
+  .quick-nav a { background: var(--white); color: var(--primary); padding: 6px 12px; border-radius: 999px; font-size: 0.85rem; font-weight: 500; border: 1px solid var(--gray-light); transition: all 0.2s; }
+  .quick-nav a:hover { background: var(--primary); color: var(--white); border-color: var(--primary); }
+
+  .fac-section { padding: 36px 0; border-top: 1px solid var(--gray-light); }
+  .fac-section:first-child { border-top: none; padding-top: 0; }
+  .fac-section h2 { color: var(--primary); display: flex; align-items: center; gap: 12px; margin-bottom: 6px; }
+  .fac-section h2 .ico { font-size: 1.6rem; }
+  .fac-section h2 .count {
+    background: var(--gold); color: var(--primary-dark);
+    font-size: 0.78rem; font-weight: 700;
+    padding: 4px 12px; border-radius: 999px;
+    margin-left: auto;
+  }
+  .fac-section .lead { color: var(--gray-text); font-size: 0.95rem; margin-bottom: 18px; line-height: 1.65; }
+  .fac-section .lead strong { color: var(--primary); }
+
+  .album-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 8px;
+  }
+  .album-thumb {
+    aspect-ratio: 4/3;
+    background: var(--cream);
+    border-radius: 6px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.2s;
+  }
+  .album-thumb:hover { transform: scale(1.03); z-index: 2; box-shadow: 0 6px 20px var(--shadow-strong); }
+  .album-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  /* Lightbox */
+  .lb-overlay {
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.92);
+    z-index: 1000;
+    display: none;
+    align-items: center; justify-content: center;
+    padding: 24px;
+  }
+  .lb-overlay.open { display: flex; }
+  .lb-overlay img { max-width: 100%; max-height: 92vh; border-radius: 6px; box-shadow: 0 8px 32px rgba(0,0,0,0.5); }
+  .lb-close { position: absolute; top: 18px; right: 24px; background: var(--gold); color: var(--primary-dark); width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; cursor: pointer; border: none; }
+  .lb-prev, .lb-next { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.15); color: var(--white); width: 52px; height: 52px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; cursor: pointer; border: none; transition: background 0.2s; }
+  .lb-prev { left: 24px; }
+  .lb-next { right: 24px; }
+  .lb-prev:hover, .lb-next:hover { background: var(--gold); color: var(--primary-dark); }
+  .lb-info { position: absolute; bottom: 18px; left: 50%; transform: translateX(-50%); color: var(--gold); font-size: 0.88rem; background: rgba(0,0,0,0.6); padding: 6px 14px; border-radius: 999px; }
+</style>
+</head>
+<body>
+
+<!-- ===== TOP STATUS BAR ===== -->
+<div class="topbar">
+  <span>Assumption College English Program · Rama 2 · Samut Sakhon</span>
+  <span class="topbar-sep">·</span>
+  <span class="gold">A school of the Saint Gabriel's Foundation of Thailand</span>
+</div>
+
+<!-- ===== NAV ===== -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">
+      <div class="nav-brand-logo">
+        <img src="https://acep.ac.th/wp-content/uploads/2025/06/logo.svg" alt="ACEP Crest">
+      </div>
+      <div class="nav-brand-text">
+        <div class="name">Assumption College</div>
+        <div class="sub">English Program · Rama 2</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#message">Message</a>
+      <div class="nav-dd">
+        <a href="index.html#about">About ▾</a>
+        <div class="nav-dd-menu">
+          <a href="index.html#about">Why ACEP · 6 Pillars</a>
+          <a href="index.html#programs" style="border-top:1px solid var(--gray-light); margin-top:6px; padding-top:12px;">Programs Overview</a>
+          <a href="program/kindergarten.html">Kindergarten (KG 1–3)</a>
+          <a href="program/primary.html">Primary (Year 1–6)</a>
+          <a href="faculty.html" style="border-top:1px solid var(--gray-light); margin-top:6px; padding-top:12px; color:var(--primary); font-weight:700;">Our Faculty ★</a>
+        </div>
+      </div>
+      <a href="facilities.html" style="color:var(--primary); font-weight:600;">Facilities</a>
+      <a href="index.html#news">News</a>
+      <a href="index.html#network">Network</a>
+      <a href="index.html#contact">Contact</a>
+      <a class="cta" href="https://swis.acep.ac.th/admin/register_online/" target="_blank">Apply →</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== SUB-HERO ===== -->
+<section class="sub-hero">
+  <div class="crumb">Campus · Facilities</div>
+  <h1>Our Campus Facilities</h1>
+  <p>Current state and planned upgrades for every space — Swimming Pool · Football · Tennis · Pickleball · Fitness. Some photos show the facility today; others are concept renders for upcoming improvements.</p>
+</section>
+
+<!-- ===== MAIN CONTENT ===== -->
+<section class="section">
+  <div class="wrap">
+
+    <div class="quick-nav">
+      <span class="label">Jump to:</span>
+      <a href="#pool">🏊 Swimming Pool</a>
+      <a href="#football">⚽ Football (Turf)</a>
+      <a href="#tennis">🎾 Tennis</a>
+      <a href="#pickleball">🥒 Pickleball</a>
+      <a href="#fitness">🏋️ St. Peter Sport Club</a>
+    </div>
+
+    <!-- ===== Pool ===== -->
+    <section id="pool" class="fac-section">
+      <h2><span class="ico">🏊</span>Swimming Pool <span class="count">100 photos</span></h2>
+      <p class="lead">A 6-lane standard pool for instruction, training, and competition. A separate early-childhood pool ensures safe, age-appropriate learning. <strong>Some images show planned upgrades</strong> (filtration, deck surfaces, shade structures).</p>
+      <div class="album-grid" data-album="pool" data-count="100"></div>
+    </section>
+
+    <!-- ===== Football ===== -->
+    <section id="football" class="fac-section">
+      <h2><span class="ico">⚽</span>Football Fields <span class="count" id="football-count">28 photos</span></h2>
+      <p class="lead">Artificial-turf field (สนามหญ้าเทียม) plus the planned full-size Assumption College Football Academy. Photos blend the <strong>current turf</strong> with <strong>concept renders</strong> for the academy programme.</p>
+      <div class="album-grid" data-album="football" data-count="28"></div>
+    </section>
+
+    <!-- ===== Tennis ===== -->
+    <section id="tennis" class="fac-section">
+      <h2><span class="ico">🎾</span>Tennis Courts <span class="count">28 photos</span></h2>
+      <p class="lead">Four refurbished tennis courts running after-school courses for ACEP students. <strong>Some photos are concept renders</strong> for planned shade, stands, and changing facilities.</p>
+      <div class="album-grid" data-album="tennis" data-count="28"></div>
+    </section>
+
+    <!-- ===== Pickleball ===== -->
+    <section id="pickleball" class="fac-section">
+      <h2><span class="ico">🥒</span>Pickleball &amp; Multi-sport <span class="count">7 photos</span></h2>
+      <p class="lead">Pickleball courts converted from existing basketball lines — a growing popular sport, available to ACEP students through coached student programmes.</p>
+      <div class="album-grid" data-album="pickleball" data-count="7"></div>
+    </section>
+
+    <!-- ===== Fitness ===== -->
+    <section id="fitness" class="fac-section">
+      <h2><span class="ico">🏋️</span>St. Peter Sport Club &amp; Fitness Centre <span class="count">18 photos</span></h2>
+      <p class="lead">On-campus sports and fitness facility for upper-primary students, staff, and the wider school community. <strong>Some photos show planned equipment upgrades</strong>.</p>
+      <div class="album-grid" data-album="fitness" data-count="18"></div>
+    </section>
+
+    <p class="center" style="margin-top:48px;">
+      <a class="btn btn-red" href="index.html">← Back to Home</a>
+      &nbsp;
+      <a class="btn btn-red" href="https://swis.acep.ac.th/admin/register_online/" target="_blank">📝 Apply Online (SWIS) →</a>
+    </p>
+
+  </div>
+</section>
+
+<!-- ===== Lightbox ===== -->
+<div class="lb-overlay" id="lightbox">
+  <button class="lb-close" onclick="lbClose()">×</button>
+  <button class="lb-prev" onclick="lbStep(-1)">‹</button>
+  <button class="lb-next" onclick="lbStep(1)">›</button>
+  <img id="lb-img" src="" alt="">
+  <div class="lb-info" id="lb-info"></div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">ACEP</div>
+        <div class="footer-tagline">Assumption College English Program</div>
+        <div class="footer-mission">A Catholic English-medium school under the Saint Gabriel's Foundation of Thailand · Rama 2 Campus.</div>
+      </div>
+      <div>
+        <h4>Facilities</h4>
+        <a href="#pool">Swimming Pool</a>
+        <a href="#football">Football Fields</a>
+        <a href="#tennis">Tennis Courts</a>
+        <a href="#pickleball">Pickleball</a>
+        <a href="#fitness">St. Peter Sport Club</a>
+      </div>
+      <div>
+        <h4>Foundation Network</h4>
+        <a href="https://fsgthailand.org" target="_blank">Saint Gabriel's Foundation</a>
+        <a href="https://www.thaibrothers.net" target="_blank">Thai Brothers Network</a>
+        <a href="https://swis.acep.ac.th" target="_blank">SWIS — ACEP</a>
+      </div>
+      <div>
+        <h4>Programs</h4>
+        <a href="program/kindergarten.html">Kindergarten Level</a>
+        <a href="program/primary.html">Primary Level</a>
+        <a href="faculty.html">Our Faculty</a>
+        <a href="https://swis.acep.ac.th/admin/register_online/" target="_blank">Apply Online</a>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Assumption College English Program · A school of the Saint Gabriel's Foundation of Thailand</div>
+  </div>
+</footer>
+
+<!-- ===== Album + Lightbox script ===== -->
+<script>
+(function() {
+  const prefix = { pool: 'p', tennis: 't', fitness: 'f', pickleball: 'pk' };
+  // Pool / Tennis / Fitness / Pickleball — simple sequential filenames
+  document.querySelectorAll('.album-grid[data-album]').forEach(grid => {
+    const album = grid.dataset.album;
+    const count = parseInt(grid.dataset.count, 10);
+    let html = '';
+    if (album === 'football') {
+      // Football: 14 turf + 14 academy pptx images
+      for (let i = 1; i <= 14; i++) {
+        html += `<div class="album-thumb" data-src="assets/img/facilities/turf/turf-${i}.jpg" data-album="football"><img src="assets/img/facilities/turf/turf-${i}.jpg" alt="Football field ${i}" loading="lazy"></div>`;
+      }
+      const fbExtras = ['pptx-image1.jpeg','pptx-image5.jpg','pptx-image8.jpg','pptx-image9.jpg','pptx-image10.jpg','pptx-image11.jpg','pptx-image12.jpg','pptx-image13.jpg','pptx-image14.jpg'];
+      fbExtras.forEach((f, idx) => {
+        html += `<div class="album-thumb" data-src="assets/img/facilities/football/${f}" data-album="football"><img src="assets/img/facilities/football/${f}" alt="Football academy ${idx + 1}" loading="lazy"></div>`;
+      });
+    } else {
+      const p = prefix[album];
+      for (let i = 1; i <= count; i++) {
+        html += `<div class="album-thumb" data-src="assets/img/facilities/${album}/${p}-${i}.jpg" data-album="${album}"><img src="assets/img/facilities/${album}/${p}-${i}.jpg" alt="${album} ${i}" loading="lazy"></div>`;
+      }
+    }
+    grid.innerHTML = html;
+  });
+
+  // Lightbox
+  let currentList = [], currentIdx = 0;
+  window.lbClose = () => document.getElementById('lightbox').classList.remove('open');
+  window.lbStep = (dir) => {
+    currentIdx = (currentIdx + dir + currentList.length) % currentList.length;
+    document.getElementById('lb-img').src = currentList[currentIdx];
+    document.getElementById('lb-info').textContent = `${currentIdx + 1} / ${currentList.length}`;
+  };
+  document.querySelectorAll('.album-thumb').forEach(t => {
+    t.addEventListener('click', () => {
+      const album = t.dataset.album;
+      currentList = Array.from(document.querySelectorAll(`.album-thumb[data-album="${album}"]`)).map(x => x.dataset.src);
+      currentIdx = currentList.indexOf(t.dataset.src);
+      document.getElementById('lb-img').src = t.dataset.src;
+      document.getElementById('lb-info').textContent = `${currentIdx + 1} / ${currentList.length}`;
+      document.getElementById('lightbox').classList.add('open');
+    });
+  });
+  document.getElementById('lightbox').addEventListener('click', (e) => {
+    if (e.target.id === 'lightbox') lbClose();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (!document.getElementById('lightbox').classList.contains('open')) return;
+    if (e.key === 'Escape') lbClose();
+    if (e.key === 'ArrowLeft') lbStep(-1);
+    if (e.key === 'ArrowRight') lbStep(1);
+  });
+})();
+</script>
+
+</body>
+</html>
