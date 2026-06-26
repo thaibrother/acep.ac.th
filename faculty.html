@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Faculty — ACEP · Quality Standard + Native Teachers Directory</title>
+<meta name="description" content="ACEP Faculty — what quality we expect, Cambridge English Teaching Framework, current native teachers, compliance status, and the development calendar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Sarabun:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="https://acep.ac.th/wp-content/uploads/2025/06/cropped-logo-gold-270x270.png">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  .sub-hero { background: linear-gradient(135deg, var(--primary-dark), var(--primary)); color: var(--white); padding: 56px 24px 64px; text-align: center; }
+  .sub-hero .crumb { font-size: 0.85rem; color: var(--gold); margin-bottom: 12px; letter-spacing: 0.08em; text-transform: uppercase; }
+  .sub-hero h1 { color: var(--white); margin-bottom: 10px; }
+  .sub-hero p { color: rgba(255,255,255,0.92); font-size: 1.05rem; max-width: 760px; margin: 0 auto; }
+  .prog-content { padding: 56px 0; }
+  .prog-content h2 { color: var(--primary); margin-top: 48px; margin-bottom: 14px; }
+  .prog-content h2:first-of-type { margin-top: 0; }
+  .prog-content h3 { color: var(--primary); margin-top: 24px; margin-bottom: 10px; }
+  .prog-content p { margin-bottom: 14px; line-height: 1.75; }
+  .prog-content ul { padding-left: 22px; margin-bottom: 18px; }
+  .prog-content ul li { margin-bottom: 8px; line-height: 1.65; }
+  .prog-content ul li strong { color: var(--primary); }
+  section[id] { scroll-margin-top: 80px; }
+
+  /* Native vs Thai comparison */
+  .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 24px 0; }
+  .compare-card { background: var(--white); border-top: 4px solid var(--gold); padding: 22px 24px; border-radius: 8px; box-shadow: 0 2px 12px var(--shadow); }
+  .compare-card.thai { border-top-color: var(--primary); }
+  .compare-card h3 { color: var(--primary); margin: 0 0 8px; font-size: 1.15rem; }
+  .compare-card .sub { font-size: 0.85rem; color: var(--gold-dark); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 14px; }
+  .compare-card.thai .sub { color: var(--primary-light); }
+  .compare-card ul { padding-left: 18px; margin: 0; }
+  .compare-card li { font-size: 0.9rem; line-height: 1.55; margin-bottom: 6px; }
+  @media (max-width: 720px) { .compare-grid { grid-template-columns: 1fr; } }
+
+  /* Workflow steps */
+  .workflow { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; margin: 24px 0; counter-reset: wf-step; }
+  .wf-step { background: var(--white); border-left: 4px solid var(--primary); padding: 18px 20px; border-radius: 6px; box-shadow: 0 2px 10px var(--shadow); position: relative; }
+  .wf-step::before { counter-increment: wf-step; content: counter(wf-step, decimal-leading-zero); position: absolute; top: -10px; left: -10px; background: var(--gold); color: var(--primary-dark); width: 36px; height: 36px; border-radius: 50%; font-family: "Playfair Display", serif; font-weight: 700; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px var(--shadow-strong); }
+  .wf-step h4 { color: var(--primary); margin: 0 0 6px; font-size: 1rem; }
+  .wf-step p { font-size: 0.88rem; line-height: 1.55; margin: 0; color: var(--dark); }
+
+  /* Calendar */
+  .dev-calendar-full { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 24px 0; }
+  .dev-cal-item-full { background: var(--white); border-left: 4px solid var(--gold); padding: 16px 20px; border-radius: 6px; box-shadow: 0 1px 6px var(--shadow); }
+  .dev-cal-item-full .month { font-family: "Playfair Display", serif; font-weight: 700; color: var(--primary); font-size: 0.88rem; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px; }
+  .dev-cal-item-full .event { font-size: 0.95rem; color: var(--dark); font-weight: 500; margin-bottom: 4px; }
+  .dev-cal-item-full .detail { font-size: 0.82rem; color: var(--gray-text); line-height: 1.5; }
+
+  /* Photo gallery (Faculty Quality in Action) */
+  .quality-photos { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin: 24px 0; }
+  .qp { aspect-ratio: 4/3; border-radius: 8px; background: linear-gradient(135deg, var(--cream), var(--gray-light)); display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--gray-text); font-size: 0.85rem; text-align: center; gap: 6px; padding: 12px; position: relative; overflow: hidden; }
+  .qp img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .qp .caption-overlay { position: absolute; left: 0; right: 0; bottom: 0; background: linear-gradient(transparent, rgba(74,10,18,0.85)); color: var(--white); padding: 18px 12px 10px; font-size: 0.85rem; text-align: left; }
+
+  /* FAQ */
+  .faq-item { background: var(--white); border-left: 4px solid var(--primary); padding: 16px 22px; border-radius: 4px; box-shadow: 0 1px 6px var(--shadow); margin-bottom: 12px; }
+  .faq-item h4 { color: var(--primary); margin: 0 0 6px; font-size: 1rem; }
+  .faq-item p { font-size: 0.92rem; line-height: 1.6; margin: 0; color: var(--dark); }
+
+  /* Cambridge Framework infographic */
+  .framework-board { background: linear-gradient(135deg, var(--primary-dark), var(--primary)); color: var(--white); border-radius: 14px; padding: 32px 28px; margin: 24px 0 16px; box-shadow: 0 6px 24px var(--shadow-strong); }
+  .framework-board h3 { color: var(--gold); text-align: center; margin: 0 0 4px; font-size: 1.3rem; }
+  .framework-board .fw-sub { text-align: center; color: rgba(255,255,255,0.85); font-size: 0.92rem; margin-bottom: 24px; }
+  .fw-stages { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; position: relative; margin-bottom: 22px; }
+  .fw-stage { background: rgba(255,255,255,0.06); padding: 18px 12px 14px; border-right: 1px dashed rgba(255,255,255,0.18); position: relative; text-align: center; }
+  .fw-stage:last-child { border-right: none; }
+  .fw-stage:nth-child(1) { background: rgba(201,169,97,0.15); border-radius: 8px 0 0 8px; }
+  .fw-stage:nth-child(2) { background: rgba(201,169,97,0.25); }
+  .fw-stage:nth-child(3) { background: rgba(201,169,97,0.4); }
+  .fw-stage:nth-child(4) { background: rgba(201,169,97,0.6); border-radius: 0 8px 8px 0; }
+  .fw-stage .stage-num { display: inline-block; background: var(--gold); color: var(--primary-dark); width: 30px; height: 30px; border-radius: 50%; line-height: 30px; font-family: "Playfair Display", serif; font-weight: 700; font-size: 1rem; margin-bottom: 8px; }
+  .fw-stage .stage-name { font-weight: 600; color: var(--white); font-size: 1rem; margin-bottom: 4px; }
+  .fw-stage .stage-quals { font-size: 0.78rem; color: rgba(255,255,255,0.85); line-height: 1.45; }
+  .fw-stage .stage-quals strong { color: var(--gold); }
+  .fw-arrow { text-align: center; color: var(--gold); font-size: 1.2rem; margin: 6px 0 18px; letter-spacing: 0.5em; }
+  .fw-categories { background: rgba(255,255,255,0.08); border-radius: 8px; padding: 16px 18px; }
+  .fw-categories .cat-label { color: var(--gold); font-size: 0.82rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 10px; text-align: center; }
+  .fw-categories .cat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 8px; }
+  .fw-cat { background: rgba(255,255,255,0.06); padding: 8px 12px; border-radius: 4px; font-size: 0.82rem; color: rgba(255,255,255,0.92); display: flex; gap: 8px; align-items: flex-start; }
+  .fw-cat .num { color: var(--gold); font-weight: 700; font-family: "Playfair Display", serif; flex-shrink: 0; }
+  .fw-cat.foundation { background: var(--gold); color: var(--primary-dark); border: 2px solid #FBE08E; font-weight: 600; grid-column: 1 / -1; }
+  .fw-cat.foundation .num { color: var(--primary-dark); font-size: 1rem; }
+  .fw-cat.foundation .anchor { display: block; font-size: 0.72rem; font-weight: 500; color: var(--primary); margin-top: 2px; letter-spacing: 0.03em; }
+  @media (max-width: 720px) { .fw-stages { grid-template-columns: 1fr 1fr; gap: 6px; } .fw-stage { border-right: none; border-radius: 6px !important; } }
+
+  /* Quick nav */
+  .quick-nav { background: var(--cream); padding: 18px 24px; border-radius: 8px; margin: 0 0 36px; display: flex; flex-wrap: wrap; gap: 8px; border-left: 4px solid var(--gold); }
+  .quick-nav .label { font-weight: 600; color: var(--primary); font-size: 0.9rem; margin-right: 6px; }
+  .quick-nav a { background: var(--white); color: var(--primary); padding: 6px 12px; border-radius: 999px; font-size: 0.85rem; font-weight: 500; border: 1px solid var(--gray-light); transition: all 0.2s; }
+  .quick-nav a:hover { background: var(--primary); color: var(--white); border-color: var(--primary); }
+
+  /* ===== Meet the Faculty (cards) ===== */
+  .faculty-headcount { text-align: center; margin: 18px 0 6px; }
+  .faculty-headcount .count-num { display: inline-block; background: var(--primary); color: var(--gold); font-family: "Playfair Display", serif; font-weight: 700; font-size: 1.6rem; padding: 4px 18px; border-radius: 999px; }
+  .faculty-headcount .count-label { display: block; color: var(--gray-text); font-size: 0.92rem; margin-top: 6px; }
+
+  .filter-bar { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin: 18px 0 24px; }
+  .filter-chip { padding: 6px 14px; border-radius: 999px; background: var(--white); border: 2px solid var(--gray-light); color: var(--gray-text); font-weight: 500; font-size: 0.88rem; cursor: pointer; transition: all 0.2s; }
+  .filter-chip:hover { border-color: var(--primary); color: var(--primary); }
+  .filter-chip.active { background: var(--primary); color: var(--white); border-color: var(--primary); }
+
+  .faculty-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 22px; }
+  .fac-card { background: var(--white); border-radius: 10px; overflow: hidden; box-shadow: 0 4px 16px var(--shadow); display: flex; flex-direction: column; transition: transform 0.25s, box-shadow 0.25s; }
+  .fac-card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px var(--shadow-strong); }
+  .fac-portrait { aspect-ratio: 2000 / 1415; background: var(--cream); overflow: hidden; position: relative; }
+  .fac-portrait img { width: 100%; height: 100%; object-fit: contain; display: block; }
+  .fac-portrait .play-badge { position: absolute; top: 12px; right: 12px; background: var(--gold); color: var(--primary-dark); width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; box-shadow: 0 2px 8px rgba(0,0,0,0.25); opacity: 0; transition: opacity 0.2s; }
+  .fac-card:hover .play-badge { opacity: 1; }
+  .fac-body { padding: 14px 18px; flex: 1; display: flex; flex-direction: column; gap: 10px; }
+  .fac-watch-btn { background: var(--primary); color: var(--white); padding: 8px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; text-align: center; transition: background 0.2s; display: block; }
+  .fac-watch-btn:hover { background: var(--primary-light); color: var(--white); }
+  .fac-watch-btn[aria-disabled="true"] { background: var(--gray-light); color: var(--gray-text); cursor: default; }
+
+  /* Compliance */
+  .fac-stage { display: inline-block; font-size: 0.7rem; font-weight: 700; padding: 3px 10px; border-radius: 999px; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 8px; }
+  .fac-stage.foundation  { background: #FBE08E; color: var(--primary-dark); }
+  .fac-stage.developing  { background: var(--gold); color: var(--primary-dark); }
+  .fac-stage.proficient  { background: var(--primary-light); color: var(--white); }
+  .fac-stage.expert      { background: var(--primary); color: var(--gold); }
+  .fac-stage.unverified  { background: var(--gray-light); color: var(--gray-text); }
+  .qual-list { list-style: none; padding: 0; margin: 0; font-size: 0.78rem; line-height: 1.5; }
+  .qual-list li { display: flex; gap: 6px; align-items: flex-start; margin-bottom: 3px; }
+  .qual-list li .mark { flex-shrink: 0; font-weight: 700; width: 14px; }
+  .qual-list li.held .mark    { color: #1d9e75; }
+  .qual-list li.pending .mark { color: var(--gold-dark); }
+  .qual-list li.missing .mark { color: var(--gray-text); }
+  .qual-list li.pending      { color: var(--dark); }
+  .qual-list li.missing      { color: var(--gray-text); text-decoration: line-through; }
+
+  .profile-pending { background: #FDF4E8; border-left: 4px solid var(--gold); padding: 14px 18px; border-radius: 4px; margin: 18px 0 28px; font-size: 0.92rem; color: var(--primary-dark); }
+  .profile-pending strong { color: var(--primary); }
+  .legend-bar { background: var(--white); padding: 14px 18px; border-radius: 8px; margin-bottom: 28px; border: 1px solid var(--gray-light); display: flex; gap: 24px; flex-wrap: wrap; align-items: center; justify-content: center; font-size: 0.85rem; }
+</style>
+</head>
+<body>
+
+<!-- ===== TOP STATUS BAR ===== -->
+<div class="topbar">
+  <span>Assumption College English Program · Rama 2 · Samut Sakhon</span>
+  <span class="topbar-sep">·</span>
+  <span class="gold">A school of the Saint Gabriel's Foundation of Thailand</span>
+</div>
+
+<!-- ===== NAV ===== -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">
+      <div class="nav-brand-logo">
+        <img src="https://acep.ac.th/wp-content/uploads/2025/06/logo.svg" alt="ACEP Crest">
+      </div>
+      <div class="nav-brand-text">
+        <div class="name">Assumption College</div>
+        <div class="sub">English Program · Rama 2</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#message">Message</a>
+      <div class="nav-dd">
+        <a href="index.html#about">About ▾</a>
+        <div class="nav-dd-menu">
+          <a href="index.html#about">Why ACEP · 6 Pillars</a>
+          <a href="index.html#programs" style="border-top:1px solid var(--gray-light); margin-top:6px; padding-top:12px;">Programs Overview</a>
+          <a href="program/kindergarten.html">Kindergarten (KG 1–3)</a>
+          <a href="program/primary.html">Primary (Year 1–6)</a>
+          <a href="faculty.html" style="border-top:1px solid var(--gray-light); margin-top:6px; padding-top:12px; color:var(--primary); font-weight:700;">Our Faculty ★</a>
+        </div>
+      </div>
+      <a href="index.html#facilities">Facilities</a>
+      <a href="index.html#news">News</a>
+      <a href="index.html#network">Network</a>
+      <a href="index.html#contact">Contact</a>
+      <a class="cta" href="https://swis.acep.ac.th/admin/register_online/" target="_blank">Apply →</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== SUB-HERO ===== -->
+<section class="sub-hero">
+  <div class="crumb">About · Our Faculty</div>
+  <h1>Our Faculty</h1>
+  <p>What quality we expect · how we develop every teacher · who teaches at ACEP today · where each teacher stands on the Cambridge framework.</p>
+</section>
+
+<!-- ===== MAIN CONTENT ===== -->
+<section class="section prog-content">
+  <div class="wrap-narrow">
+
+    <!-- Quick nav -->
+    <div class="quick-nav">
+      <span class="label">Jump to:</span>
+      <a href="#why">Why this matters</a>
+      <a href="#standard">Standard</a>
+      <a href="#framework">Framework</a>
+      <a href="#native-thai">Native vs Thai</a>
+      <a href="#selection">Selection</a>
+      <a href="#development">Development</a>
+      <a href="#recognition">Recognition</a>
+      <a href="#calendar">Calendar</a>
+      <a href="#meet" style="background:var(--primary); color:var(--white);">★ Meet the Faculty</a>
+      <a href="#photos">In Action</a>
+      <a href="#faq">FAQ</a>
+    </div>
+
+    <!-- ===== Why this matters ===== -->
+    <section id="why">
+      <h2>Why This Matters</h2>
+      <p>When parents choose an international school, the single most important question is: <em>who will actually teach my child?</em></p>
+      <p>At ACEP we treat that question with the seriousness it deserves. We don't simply hire teachers and hope for the best. We run a deliberate quality process — for both <strong>native teachers</strong> and <strong>Thai teachers</strong> — that selects carefully, develops continually, and recognises excellence visibly.</p>
+      <p>This page makes the entire process transparent — what we expect, how we develop, who teaches today, and what each teacher is still working toward.</p>
+    </section>
+
+    <!-- ===== Standard ===== -->
+    <section id="standard">
+      <h2>The Standard · 3 Stages</h2>
+      <p>Every teacher at ACEP — native or Thai — passes through the same three-stage commitment that keeps classroom standards rising year over year.</p>
+      <div class="workflow">
+        <div class="wf-step"><h4>Selection · คัดสรร</h4><p>The right teacher in front of every classroom — entrance exam, qualifications check, demo class, panel interview.</p></div>
+        <div class="wf-step"><h4>Development · อบรมพัฒนา</h4><p>Continuous upgrading — Cambridge methodology workshops, classroom observation, mentoring, cross-school exchange.</p></div>
+        <div class="wf-step"><h4>Recognition · ยกย่อง</h4><p>Great teaching is seen — Teacher of the Month, Voices video series, parent-facing portfolios, long-service awards.</p></div>
+      </div>
+      <p style="margin-top:18px;"><strong>Direction:</strong> all native teachers progressively moving toward <strong>British faculty and Cambridge-aligned assessment</strong>; all Thai teachers continually upgraded through the same Cambridge methodology.</p>
+    </section>
+
+    <!-- ===== Framework ===== -->
+    <section id="framework">
+      <h2>Our Compass · Cambridge English Teaching Framework</h2>
+      <p>Every ACEP teacher — native and Thai alike — is positioned on the same internationally recognised framework. Teachers see where they stand, plan their next stage, and earn the next qualification.</p>
+      <div class="framework-board">
+        <h3>Cambridge English Teaching Framework</h3>
+        <div class="fw-sub">The international standard for English teacher development</div>
+        <div class="fw-stages">
+          <div class="fw-stage"><div class="stage-num">01</div><div class="stage-name">Foundation</div><div class="stage-quals"><strong>TEFL 120 hr</strong></div></div>
+          <div class="fw-stage"><div class="stage-num">02</div><div class="stage-name">Developing</div><div class="stage-quals"><strong>CELTA · CELT-P</strong> · TEFL Level 5</div></div>
+          <div class="fw-stage"><div class="stage-num">03</div><div class="stage-name">Proficient</div><div class="stage-quals"><strong>DELTA Modules</strong> · ICELT · iPGCE</div></div>
+          <div class="fw-stage"><div class="stage-num">04</div><div class="stage-name">Expert</div><div class="stage-quals"><strong>DELTA Full</strong> · MA TESOL · QTS</div></div>
+        </div>
+        <div class="fw-arrow">→ → → →</div>
+        <div class="fw-categories">
+          <div class="cat-label">5 Categories of Teaching Competency · Values First</div>
+          <div class="cat-grid">
+            <div class="fw-cat foundation"><span class="num">★</span><span><strong>Values &amp; Professional Development</strong><span class="anchor">Our foundation · Saint Gabriel tradition · everything begins here</span></span></div>
+            <div class="fw-cat"><span class="num">1</span><span>Learning and the Learner</span></div>
+            <div class="fw-cat"><span class="num">2</span><span>Teaching, Learning &amp; Assessment</span></div>
+            <div class="fw-cat"><span class="num">3</span><span>Language Ability</span></div>
+            <div class="fw-cat"><span class="num">4</span><span>Language Knowledge &amp; Awareness</span></div>
+          </div>
+        </div>
+      </div>
+      <p style="font-size:0.92rem; color:var(--primary); text-align:center; margin-top:14px; line-height:1.65;"><strong>Why Values come first at ACEP:</strong> Cambridge groups Values with Professional Development as one of five categories. At ACEP — a Catholic school in the Saint Gabriel tradition — <em>Values are not the afterthought; they are the foundation</em>.</p>
+      <p style="font-size:0.85rem; color:var(--gray-text); text-align:center; margin-top:10px;"><em>Framework reference: Cambridge English Language Assessment · validated by primary &amp; secondary schools and language schools worldwide (launched April 2014, regularly updated).</em></p>
+
+      <h3 style="margin-top:32px;">ACEP Target Levels</h3>
+      <div class="compare-grid">
+        <div class="compare-card">
+          <h3>Native Faculty</h3>
+          <div class="sub">Cambridge Framework Target</div>
+          <ul>
+            <li><strong>Minimum:</strong> Subject degree + <strong>CELTA</strong> or <strong>CELT-P</strong> or TEFL Level 5 Diploma</li>
+            <li><strong>Preferred:</strong> + <strong>PGCE / iPGCE</strong> (UK formal teaching qualification)</li>
+            <li><strong>Mentor / Academic Head tier:</strong> <strong>DELTA</strong> or <strong>MA TESOL</strong> + 5+ years experience</li>
+            <li><strong>Target stage:</strong> Developing → Proficient within 3 years at ACEP</li>
+          </ul>
+        </div>
+        <div class="compare-card thai">
+          <h3>Thai Faculty</h3>
+          <div class="sub">Cambridge Framework Target</div>
+          <ul>
+            <li><strong>Minimum:</strong> Subject degree + ใบประกอบวิชาชีพครู คุรุสภา + English proficiency <strong>IELTS 6.5+</strong> / CEFR B2+</li>
+            <li><strong>Pursuing:</strong> <strong>CELT-P</strong> — the same Cambridge certification path as native faculty</li>
+            <li><strong>Senior tier:</strong> <strong>DELTA</strong> Modules + ICELT track</li>
+            <li><strong>Target stage:</strong> Foundation → Developing → Proficient over 5 years at ACEP</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Native vs Thai ===== -->
+    <section id="native-thai">
+      <h2>Native &amp; Thai Faculty · Same Standard, Different Specifics</h2>
+      <p>Both groups go through the same three stages — but with the specifications appropriate to each.</p>
+      <div class="compare-grid">
+        <div class="compare-card">
+          <h3>Native Faculty</h3>
+          <div class="sub">ครูต่างชาติ</div>
+          <ul>
+            <li><strong>Origin:</strong> Native English-speaking countries (progressively all-British)</li>
+            <li><strong>Qualification:</strong> Degree in subject area + TEFL / CELTA / PGCE</li>
+            <li><strong>Selection:</strong> CV review · entrance exam · demo class · Director panel · police clearance</li>
+            <li><strong>Development:</strong> Cambridge methodology · classroom observation · cross-school exchange · annual PD retreat</li>
+            <li><strong>Recognition:</strong> Teacher of the Month · Voices video series · long-service awards</li>
+          </ul>
+        </div>
+        <div class="compare-card thai">
+          <h3>Thai Faculty</h3>
+          <div class="sub">ครูไทย ผู้ร่วมสอน</div>
+          <ul>
+            <li><strong>Origin:</strong> Degree-qualified Thai educators · ครู ก.พ./ป.ที่รับรอง</li>
+            <li><strong>Qualification:</strong> Subject expertise · Thai teaching licence · English proficiency check</li>
+            <li><strong>Selection:</strong> CV review · entrance exam · demo class · Director panel · background check</li>
+            <li><strong>Development:</strong> Cambridge methodology workshops (same as native) · mentoring pairs · subject-team planning</li>
+            <li><strong>Recognition:</strong> Teacher of the Month · long-service awards · internal promotion to academic head track</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Selection ===== -->
+    <section id="selection">
+      <h2>Stage 01 · Selection Process</h2>
+      <p>The most important decision we make all year. Six explicit steps — no shortcuts.</p>
+      <div class="workflow">
+        <div class="wf-step"><h4>Position Posting</h4><p>Detailed job spec aligned with our standard. Posted on relevant boards (Foundation network · international platforms).</p></div>
+        <div class="wf-step"><h4>CV &amp; Credentials Review</h4><p>Subject degree + teaching qualification verified directly with the issuing body (Cambridge / TEFL.org / university registrar). Mapped on Cambridge English Teaching Framework.</p></div>
+        <div class="wf-step"><h4>Entrance Exam</h4><p>Both native and Thai applicants sit subject-matter and pedagogical knowledge tests. Standardised across all hires.</p></div>
+        <div class="wf-step"><h4>Demo Class</h4><p>Live teaching demonstration with real ACEP students. Senior staff observe and score.</p></div>
+        <div class="wf-step"><h4>Panel Interview</h4><p>Director + Academic Head + relevant subject lead. Behavioural and values-based interview.</p></div>
+        <div class="wf-step"><h4>Background &amp; Police Check</h4><p>Police clearance from country of citizenship · reference checks with prior employers. Required before any classroom assignment.</p></div>
+      </div>
+    </section>
+
+    <!-- ===== Development ===== -->
+    <section id="development">
+      <h2>Stage 02 · Development Cycle</h2>
+      <p>Selection is the start, not the end. The development cycle runs every term, every year, for every teacher.</p>
+      <div class="workflow">
+        <div class="wf-step"><h4>New Teacher Orientation</h4><p>Induction week before semester start — curriculum, classroom systems, school values, and ACEP expectations.</p></div>
+        <div class="wf-step"><h4>Mentoring Pairs</h4><p>Every new teacher paired with a senior teacher for at least the first year. Weekly 1:1 check-ins.</p></div>
+        <div class="wf-step"><h4>Cambridge Workshops</h4><p>Termly methodology workshops — Cambridge-aligned content for English, Math, Science across all teachers.</p></div>
+        <div class="wf-step"><h4>Classroom Observation</h4><p>Termly peer-observed teaching with structured feedback. Specific, actionable, on the record.</p></div>
+        <div class="wf-step"><h4>Cross-School Exchange</h4><p>Annual exchange with AC, ACT, ACR — observe other classrooms in the foundation network, bring back ideas.</p></div>
+        <div class="wf-step"><h4>Annual PD Retreat</h4><p>Year-end teacher retreat — review the year, plan the next, deepen collegial bonds.</p></div>
+      </div>
+    </section>
+
+    <!-- ===== Recognition ===== -->
+    <section id="recognition">
+      <h2>Stage 03 · Recognition &amp; Career Pathway</h2>
+      <p>When teaching is great, parents and students should see it — and the teacher should know.</p>
+      <div class="workflow">
+        <div class="wf-step"><h4>Teacher of the Month</h4><p>Monthly recognition with public assembly, certificate, and a featured profile on this website.</p></div>
+        <div class="wf-step"><h4>Voices from the Classroom</h4><p>Quarterly video series — each teacher introduces themselves, their philosophy, and how they care for each student.</p></div>
+        <div class="wf-step"><h4>Parent-Facing Portfolio</h4><p>Public-facing profile on the school website — qualifications, subjects taught, years at ACEP, philosophy.</p></div>
+        <div class="wf-step"><h4>Long-Service Awards</h4><p>Recognition at 5, 10, 15+ years of service. Loyalty matters; continuity matters more.</p></div>
+        <div class="wf-step"><h4>Internal Promotion Track</h4><p>Clear pathway from teacher → subject lead → academic head → leadership. Built from within.</p></div>
+        <div class="wf-step"><h4>Compensation Alignment</h4><p>Performance and qualifications reflected in salary bands. Reviewed annually against market benchmarks.</p></div>
+      </div>
+    </section>
+
+    <!-- ===== Calendar ===== -->
+    <section id="calendar">
+      <h2>Faculty Development Calendar · AY 2569</h2>
+      <p>An explicit, year-round commitment — every term, every teacher.</p>
+      <div class="dev-calendar-full">
+        <div class="dev-cal-item-full"><div class="month">May 2026</div><div class="event">New Teacher Orientation</div><div class="detail">Induction week · curriculum walkthrough · classroom systems · mentoring pair assignment</div></div>
+        <div class="dev-cal-item-full"><div class="month">Jun 2026</div><div class="event">Academic Preparatory Meeting</div><div class="detail">All-faculty curriculum alignment · subject team planning · semester goals</div></div>
+        <div class="dev-cal-item-full"><div class="month">Aug 2026</div><div class="event">Cambridge Methodology Workshop</div><div class="detail">All faculty (native + Thai) · English / Math / Science content · pedagogy</div></div>
+        <div class="dev-cal-item-full"><div class="month">Oct 2026</div><div class="event">Mid-term Observation Cycle</div><div class="detail">Peer-observed teaching · structured feedback · mentor 1:1 follow-up</div></div>
+        <div class="dev-cal-item-full"><div class="month">Dec 2026</div><div class="event">Cross-School Exchange</div><div class="detail">Visit AC / ACT / ACR · observe classrooms · bring back ideas · network</div></div>
+        <div class="dev-cal-item-full"><div class="month">Feb 2027</div><div class="event">Teacher of the Term Recognition</div><div class="detail">Term-end ceremony · awards · feature profiles</div></div>
+        <div class="dev-cal-item-full"><div class="month">Mar 2027</div><div class="event">Year-End PD Retreat</div><div class="detail">Review AY 2569 · plan AY 2570 · deepen collegial bonds</div></div>
+        <div class="dev-cal-item-full" style="background:#FDF4E8; border-left-color:var(--primary);"><div class="month" style="color:var(--gold-dark);">Ongoing</div><div class="event">Weekly &amp; Monthly Rhythm</div><div class="detail">Weekly mentoring · monthly subject-team planning · termly classroom observation</div></div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ===== ★ Meet the Faculty (wide-wrap section) ===== -->
+  <section id="meet" style="background: var(--cream-warm); padding: 56px 0; margin-top:48px;">
+    <div class="wrap">
+      <div class="section-title">
+        <div class="eyebrow">★ Meet the Faculty</div>
+        <h2>Our Native Teachers Today</h2>
+        <p>The current native faculty teaching at ACEP — each card shows the profile card and compliance status against our standard.</p>
+      </div>
+
+      <div class="faculty-headcount" id="headcount">
+        <span class="count-num" id="count-num">15</span>
+        <span class="count-label" id="count-label">native faculty currently teaching at ACEP · AY 2569 · 1 KG · 7 Primary · 7 Secondary</span>
+      </div>
+
+      <div class="profile-pending">
+        <strong>📋 Profiles &amp; videos being assembled.</strong>
+        Subjects, qualifications, video interviews, and portfolios will be added for each teacher over the coming weeks. Each card shows current compliance status against the ACEP Teacher Standard — what each teacher already holds, what is in progress, and what remains as a development target.
+      </div>
+
+      <div class="legend-bar">
+        <strong style="color:var(--primary);">Legend:</strong>
+        <span><span style="color:#1d9e75; font-weight:700;">✓</span> Held / verified</span>
+        <span><span style="color:var(--gold-dark); font-weight:700;">⏳</span> In progress</span>
+        <span><span style="color:var(--gray-text); font-weight:700;">○</span> Target / planned</span>
+        <span style="padding-left:18px; border-left:1px solid var(--gray-light);">
+          Stages:
+          <span class="fac-stage foundation" style="margin-left:6px;">Foundation</span>
+          <span class="fac-stage developing">Developing</span>
+          <span class="fac-stage proficient">Proficient</span>
+          <span class="fac-stage expert">Expert</span>
+        </span>
+      </div>
+
+      <div class="filter-bar" id="filter-bar">
+        <button class="filter-chip active" data-filter="all">All 15</button>
+        <button class="filter-chip" data-filter="level:Kindergarten">Kindergarten (1)</button>
+        <button class="filter-chip" data-filter="level:Primary">Primary (7)</button>
+        <button class="filter-chip" data-filter="level:Secondary">Secondary (7)</button>
+        <button class="filter-chip" data-filter="subject:English">English</button>
+        <button class="filter-chip" data-filter="subject:Math">Math</button>
+        <button class="filter-chip" data-filter="subject:Science">Science</button>
+        <button class="filter-chip" data-filter="subject:Chinese">Chinese</button>
+        <button class="filter-chip" data-filter="subject:Computer">Computer</button>
+      </div>
+
+      <div class="faculty-grid" id="faculty-grid"></div>
+
+      <p class="center" style="margin-top:32px; font-size:0.92rem; color:var(--gray-text);">
+        <em>Cards populated dynamically — see <code>faculty-data.js</code> in the repo to edit names, subjects, and compliance status per teacher.</em>
+      </p>
+    </div>
+  </section>
+
+  <div class="wrap-narrow" style="padding: 48px 24px 0;">
+
+    <!-- ===== Photos ===== -->
+    <section id="photos">
+      <h2>Faculty Quality in Action</h2>
+      <p>Real moments from our standing commitment to teacher quality.</p>
+      <div class="quality-photos">
+        <div class="qp"><img src="https://acep.ac.th/wp-content/uploads/2026/05/box-ac-453x341.jpg" alt="Academic Preparatory Meeting"><div class="caption-overlay">Academic Preparatory Meeting · 12 May 2026</div></div>
+        <div class="qp placeholder-img"><span class="photo-num">📷 รอภาพ #12</span>Selection · Entrance exam &amp; demo class</div>
+        <div class="qp placeholder-img"><span class="photo-num">📷 รอภาพ #13</span>Cambridge methodology workshop</div>
+        <div class="qp placeholder-img"><span class="photo-num">📷 รอภาพ #14</span>Classroom observation · peer review</div>
+        <div class="qp placeholder-img"><span class="photo-num">📷 รอภาพ #15</span>Cross-school exchange (AC/ACT/ACR)</div>
+        <div class="qp placeholder-img"><span class="photo-num">📷 รอภาพ #16</span>Teacher of the Term · recognition</div>
+        <div class="qp placeholder-img"><span class="photo-num">📷 รอภาพ #17</span>Mentoring · senior + new pair</div>
+        <div class="qp placeholder-img"><span class="photo-num">📷 รอภาพ #18</span>Annual PD retreat</div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section id="faq">
+      <h2>Parents' Questions</h2>
+      <div class="faq-item"><h4>How do you ensure every teacher actually meets these standards?</h4><p>Through process — not promises. Each stage above produces evidence (exam scores, observation notes, feedback forms, certificates) kept on file. The Director reviews compliance termly. Every teacher's stage on the Cambridge English Teaching Framework is recorded and updated.</p></div>
+      <div class="faq-item"><h4>What is CELT-P, and why mention it specifically?</h4><p><strong>CELT-P</strong> is the Cambridge <em>Certificate in English Language Teaching — Primary</em>. It is the international standard certificate specifically for teachers of primary-age children. Because ACEP focuses on Kindergarten + Primary, CELT-P (rather than the more generic CELTA) is our preferred qualification target for both native and Thai faculty.</p></div>
+      <div class="faq-item"><h4>Why are "Values" listed first when Cambridge places them last?</h4><p>The Cambridge English Teaching Framework lists Values together with Professional Development as one of five competency categories. At ACEP — a Catholic school in the Saint Gabriel tradition — we treat Values as the <strong>foundation</strong>, not an additional skill area.</p></div>
+      <div class="faq-item"><h4>How is the Thai faculty held to the same standard?</h4><p>Same selection process (entrance exam, demo class, panel interview), same development cycle (Cambridge workshops, observation, mentoring), and same recognition system. Thai faculty are not "support staff" — they are co-teachers who share full classroom standards.</p></div>
+      <div class="faq-item"><h4>Why "progressively all-British" instead of "all-British now"?</h4><p>Honesty. We commit to the direction but do not overstate the present. Each hiring cycle increases the British proportion. Parents can ask the Director for the current breakdown at any time.</p></div>
+      <div class="faq-item"><h4>Can parents observe a class or meet a teacher before enrolling?</h4><p>Yes. Schedule a campus visit via the Apply page, or contact the Director's office directly. Sample lessons can be arranged with notice.</p></div>
+    </section>
+
+    <p class="center" style="margin-top:48px;">
+      <a class="btn btn-red" href="index.html">← Back to Home</a>
+      &nbsp;
+      <a class="btn btn-red" href="https://swis.acep.ac.th/admin/register_online/" target="_blank">📝 Apply Online (SWIS) →</a>
+    </p>
+
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">ACEP</div>
+        <div class="footer-tagline">Assumption College English Program</div>
+        <div class="footer-mission">A Catholic English-medium school under the Saint Gabriel's Foundation of Thailand · Rama 2 Campus.</div>
+      </div>
+      <div>
+        <h4>Our Faculty</h4>
+        <a href="#standard">The Standard</a>
+        <a href="#framework">Cambridge Framework</a>
+        <a href="#meet">Meet the Faculty</a>
+        <a href="#calendar">Development Calendar</a>
+      </div>
+      <div>
+        <h4>Foundation Network</h4>
+        <a href="https://fsgthailand.org" target="_blank">Saint Gabriel's Foundation</a>
+        <a href="https://www.thaibrothers.net" target="_blank">Thai Brothers Network</a>
+        <a href="https://swis.acep.ac.th" target="_blank">SWIS — ACEP</a>
+      </div>
+      <div>
+        <h4>Programs</h4>
+        <a href="program/kindergarten.html">Kindergarten Level</a>
+        <a href="program/primary.html">Primary Level</a>
+        <a href="index.html#about">Why ACEP</a>
+        <a href="https://swis.acep.ac.th/admin/register_online/" target="_blank">Apply Online</a>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Assumption College English Program · A school of the Saint Gabriel's Foundation of Thailand · Powered by SWIS</div>
+  </div>
+</footer>
+
+<!-- ===== Faculty cards renderer + filter ===== -->
+<script>
+(function() {
+  // Source: ข้อมูลครูต่างชาติ 26-6-2026.xlsx · ACEP HR
+  // photo: image # matches the profile card order
+  // stage: estimated from years of service + qualifications
+  // Quals: ✓ held (per CV) · ⏳ in progress · ○ target (per ACEP standard)
+  const faculty = [
+    { id: 1,  photo: 'teacher-1.jpg',  name: 'Miss Velicity Ann Van Rooyen', flag: '🇿🇦', subject: 'Kindergarten', level: 'Kindergarten', joined: 'May 2026', stage: 'foundation',
+      quals: [
+        { s: 'held',    t: 'Bachelor of Commerce' },
+        { s: 'pending', t: 'CELT-P (target Q4 2026)' },
+        { s: 'missing', t: 'TEFL Level 5' },
+        { s: 'missing', t: 'Cambridge workshop · Aug 2026' }
+      ]},
+    { id: 2,  photo: 'teacher-2.jpg',  name: 'Mr. Nikhil Nagaraja Ra', flag: '🇮🇳', subject: 'Computer', level: 'Secondary', joined: 'May 2026', stage: 'developing',
+      quals: [
+        { s: 'held',    t: 'B.Tech Computer Science · Presidency Univ.' },
+        { s: 'held',    t: 'M.Tech (Master Computer Science)' },
+        { s: 'pending', t: 'TEFL Level 5' },
+        { s: 'missing', t: 'Cambridge workshop · Aug 2026' }
+      ]},
+    { id: 3,  photo: 'teacher-3.jpg',  name: 'Mr. Danny Lee', flag: '🇿🇦', subject: 'English', level: 'Secondary', joined: 'May 2026', stage: 'developing',
+      quals: [
+        { s: 'held',    t: 'Bachelor of Teaching' },
+        { s: 'held',    t: 'Diploma in Child Psychology' },
+        { s: 'pending', t: 'CELT-P (target)' },
+        { s: 'missing', t: 'Cambridge workshop · Aug 2026' }
+      ]},
+    { id: 4,  photo: 'teacher-4.jpg',  name: 'Miss Trixia Ann Colibao', flag: '🇵🇭', subject: 'Math', level: 'Secondary', joined: 'May 2026', stage: 'developing',
+      quals: [
+        { s: 'held',    t: 'BSE Math · Cum Laude' },
+        { s: 'pending', t: 'TEFL Level 5' },
+        { s: 'missing', t: 'CELT-P (target)' },
+        { s: 'missing', t: 'Cambridge workshop · Aug 2026' }
+      ]},
+    { id: 5,  photo: 'teacher-5.jpg',  name: 'Mr. Roman Danilin', flag: '🇷🇺', subject: 'Science', level: 'Primary', joined: 'Aug 2025', stage: 'developing',
+      quals: [
+        { s: 'held',    t: 'BA Elementary Education · Berkeley' },
+        { s: 'pending', t: 'CELT-P (target)' },
+        { s: 'missing', t: 'PGCE / iPGCE' },
+        { s: 'missing', t: 'Cambridge workshop · Aug 2026' }
+      ]},
+    { id: 6,  photo: 'teacher-6.jpg',  name: 'Mr. Edwin Camba Catabay', flag: '🇵🇭', subject: 'Science', level: 'Secondary', joined: 'Jan 2025', stage: 'developing',
+      quals: [
+        { s: 'held',    t: 'BSE · Major in Science' },
+        { s: 'pending', t: 'TEFL Level 5' },
+        { s: 'missing', t: 'CELT-P (target)' },
+        { s: 'missing', t: 'Cambridge workshop · Aug 2026' }
+      ]},
+    { id: 7,  photo: 'teacher-7.jpg',  name: 'Mr. Qu Yubin', flag: '🇨🇳', subject: 'Chinese', level: 'Secondary', joined: 'May 2024', stage: 'proficient',
+      quals: [
+        { s: 'held',    t: 'Master of Education · Teaching as Foreign Language' },
+        { s: 'held',    t: 'HSK Examiner Qualification' },
+        { s: 'pending', t: 'Cambridge methodology workshop · Aug 2026' },
+        { s: 'missing', t: 'DELTA Modules (target)' }
+      ]},
+    { id: 8,  photo: 'teacher-8.jpg',  name: 'Mr. Johnny Byrne', flag: '🇮🇪', subject: 'Math', level: 'Primary', joined: 'Mar 2014', stage: 'proficient',
+      quals: [
+        { s: 'held',    t: 'BA in Education' },
+        { s: 'held',    t: '12+ years teaching experience' },
+        { s: 'pending', t: 'CELT-P (target)' },
+        { s: 'missing', t: 'DELTA Modules (target)' }
+      ]},
+    { id: 9,  photo: 'teacher-9.jpg',  name: 'Miss Mary Anne Vatral', flag: '🇺🇸', subject: 'Science', level: 'Secondary', joined: 'Mar 2012', stage: 'expert',
+      quals: [
+        { s: 'held',    t: 'BSc in English' },
+        { s: 'held',    t: '14+ years teaching experience at ACEP' },
+        { s: 'pending', t: 'Cambridge methodology workshop · Aug 2026' },
+        { s: 'missing', t: 'DELTA Full (target)' }
+      ]},
+    { id: 10, photo: 'teacher-10.jpg', name: 'Mr. Christopher Charles Morgan', flag: '🇬🇧', subject: 'English', level: 'Secondary', joined: 'Dec 2023', stage: 'developing',
+      quals: [
+        { s: 'held',    t: 'BM Government Management' },
+        { s: 'held',    t: 'Postgraduate Certificate (Education)' },
+        { s: 'pending', t: 'CELT-P (target)' },
+        { s: 'missing', t: 'Cambridge workshop · Aug 2026' }
+      ]},
+    { id: 11, photo: 'teacher-11.jpg', name: 'Mr. Robert Gemmell Daly', flag: '🇬🇧', subject: 'English', level: 'Primary', joined: 'Jul 2021', stage: 'developing',
+      quals: [
+        { s: 'held',    t: 'BA in Community Education' },
+        { s: 'held',    t: '4+ years at ACEP' },
+        { s: 'pending', t: 'CELT-P (target)' },
+        { s: 'missing', t: 'PGCE / iPGCE (target)' }
+      ]},
+    { id: 12, photo: 'teacher-12.jpg', name: 'Mr. Oliver James Bluett', flag: '🇬🇧', subject: 'Science', level: 'Primary', joined: 'Mar 2017', stage: 'proficient',
+      quals: [
+        { s: 'held',    t: 'BSc with Qualified Teacher Status (QTS) · UK' },
+        { s: 'held',    t: '9+ years teaching experience' },
+        { s: 'pending', t: 'Cambridge methodology workshop · Aug 2026' },
+        { s: 'missing', t: 'DELTA Modules (mentor track)' }
+      ]},
+    { id: 13, photo: 'teacher-13.jpg', name: 'Mr. Kaiya Charlie Connor Newman', flag: '🇬🇧', subject: 'English', level: 'Primary', joined: 'Mar 2018', stage: 'proficient',
+      quals: [
+        { s: 'held',    t: 'BA (Honours) in Education' },
+        { s: 'held',    t: '8+ years at ACEP' },
+        { s: 'pending', t: 'CELT-P (target)' },
+        { s: 'missing', t: 'PGCE / iPGCE (target)' }
+      ]},
+    { id: 14, photo: 'teacher-14.jpg', name: 'Mr. Carl Julian Crawford', flag: '🇿🇦', subject: 'Math', level: 'Primary', joined: 'Jul 2021', stage: 'developing',
+      quals: [
+        { s: 'held',    t: 'BA Health Sciences & Social Sciences (Applied Psy.)' },
+        { s: 'held',    t: 'Post Grad Education (PGCE)' },
+        { s: 'held',    t: 'Mathematics Certificate · SACE Certified' },
+        { s: 'missing', t: 'CELT-P (target)' }
+      ]},
+    { id: 15, photo: 'teacher-15.jpg', name: 'Mr. Karam Ghanim Fathy', flag: '🇺🇸', subject: 'English', level: 'Primary', joined: 'Aug 2023', stage: 'developing',
+      quals: [
+        { s: 'held',    t: 'Master of Management' },
+        { s: 'held',    t: "Diploma in Teacher's Education" },
+        { s: 'pending', t: 'CELT-P (target)' },
+        { s: 'missing', t: 'Cambridge workshop · Aug 2026' }
+      ]}
+  ];
+  const stageLabel = { unverified: 'Stage: pending review', foundation: 'Foundation', developing: 'Developing', proficient: 'Proficient', expert: 'Expert' };
+  const mark = s => s === 'held' ? '✓' : s === 'pending' ? '⏳' : '○';
+
+  function render(list) {
+    document.getElementById('faculty-grid').innerHTML = list.map(f => `
+      <div class="fac-card" data-level="${f.level}" data-subject="${f.subject}">
+        <div class="fac-portrait"><img src="assets/img/teachers/${f.photo}" alt="${f.name}" loading="lazy"><div class="play-badge">▶</div></div>
+        <div class="fac-body">
+          <div style="display:flex; gap:6px; flex-wrap:wrap; align-items:center; font-size:0.78rem; color:var(--gray-text); margin-bottom:4px;">
+            <span style="font-size:1rem;">${f.flag}</span>
+            <span><strong style="color:var(--primary);">${f.subject}</strong> · ${f.level}</span>
+            <span style="margin-left:auto;">Since ${f.joined}</span>
+          </div>
+          <span class="fac-stage ${f.stage}">${stageLabel[f.stage]}</span>
+          <ul class="qual-list">
+            ${f.quals.map(q => `<li class="${q.s}"><span class="mark">${mark(q.s)}</span>${q.t}</li>`).join('')}
+          </ul>
+          <a class="fac-watch-btn" href="#" aria-disabled="true">▶ Watch Interview · Coming</a>
+        </div>
+      </div>
+    `).join('');
+    document.getElementById('count-num').textContent = list.length;
+  }
+
+  function applyFilter(filter) {
+    if (filter === 'all') { render(faculty); document.getElementById('count-label').textContent = 'native faculty currently teaching at ACEP · AY 2569 · 1 KG · 7 Primary · 7 Secondary'; return; }
+    const [key, val] = filter.split(':');
+    const list = faculty.filter(f => f[key] === val);
+    render(list);
+    document.getElementById('count-label').textContent = `${val} faculty · filtered`;
+  }
+
+  render(faculty);
+
+  document.querySelectorAll('#filter-bar .filter-chip').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#filter-bar .filter-chip').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      applyFilter(btn.dataset.filter);
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

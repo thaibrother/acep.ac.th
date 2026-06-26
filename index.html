@@ -44,20 +44,20 @@
     <div class="nav-links">
       <a href="#message">Message</a>
       <div class="nav-dd">
-        <a href="#programs">Programs ▾</a>
+        <a href="#about">About ▾</a>
         <div class="nav-dd-menu">
-          <a href="#programs">Overview</a>
-          <a href="https://acep.ac.th/program/kindergarten/" target="_blank">Kindergarten (KG 1–3)</a>
-          <a href="https://acep.ac.th/program/primary-level/" target="_blank">Primary (Year 1–6)</a>
+          <a href="#about">Why ACEP · 6 Pillars</a>
+          <a href="#programs" style="border-top:1px solid var(--gray-light); margin-top:6px; padding-top:12px;">Programs Overview</a>
+          <a href="program/kindergarten.html">Kindergarten (KG 1–3)</a>
+          <a href="program/primary.html">Primary (Year 1–6)</a>
+          <a href="faculty.html" style="border-top:1px solid var(--gray-light); margin-top:6px; padding-top:12px; color:var(--primary); font-weight:700;">Our Faculty ★</a>
         </div>
       </div>
-      <a href="#teachers">Teachers</a>
-      <a href="#about">About</a>
       <a href="#facilities">Facilities</a>
       <a href="#news">News</a>
       <a href="#network">Network</a>
       <a href="#contact">Contact</a>
-      <a class="cta" href="#admission">Apply →</a>
+      <a class="cta" href="https://swis.acep.ac.th/admin/register_online/" target="_blank">Apply →</a>
     </div>
   </div>
 </nav>
@@ -84,7 +84,7 @@
       Built on <strong>virtue, systematic communication, and an alumni network across 15 institutions</strong>.
     </p>
     <div class="hero-cta">
-      <a class="btn btn-primary" href="#admission">Start Application →</a>
+      <a class="btn btn-primary" href="https://swis.acep.ac.th/admin/register_online/" target="_blank">Start Application →</a>
       <a class="btn btn-ghost" href="#message">Director's Message</a>
     </div>
   </div>
@@ -157,70 +157,107 @@
   </div>
 </section>
 
-<!-- ===== PHOTO ALBUM — Live feed from SWIS ===== -->
-<section class="section section-cream" id="gallery">
+<!-- ===== UPDATES — News + Calendar + Photo Album in one section ===== -->
+<section class="section section-cream" id="news">
   <div class="wrap">
     <div class="section-title">
-      <div class="eyebrow">Photo Album</div>
-      <h2>Life at ACEP</h2>
-      <p>Recent moments from across campus — live from the SWIS system</p>
+      <div class="eyebrow">Updates from ACEP</div>
+      <h2>What's Happening</h2>
+      <p>News, calendar, and photo album — all live from the SWIS system</p>
     </div>
 
-    <!-- Container for SWIS live feed. Team script: call window.acepRenderAlbums(items) with array of {date, title, image, link} -->
-    <div id="photo-feed"
-         data-source="swis-albums"
-         data-endpoint="https://swis.acep.ac.th/html_edu/cgi-bin/picture_school/print_picture_school_all.php"
-         data-limit="6">
-      <!-- Loading skeleton (shown until script populates) -->
-      <div class="feed-skeleton">
-        <div class="feed-skel-card"></div>
-        <div class="feed-skel-card"></div>
-        <div class="feed-skel-card"></div>
-        <div class="feed-skel-card"></div>
-        <div class="feed-skel-card"></div>
-        <div class="feed-skel-card"></div>
-      </div>
-    </div>
+    <div class="updates-grid">
 
-    <p class="center" style="margin-top:28px;">
-      <a class="btn btn-red" href="https://swis.acep.ac.th/html_edu/cgi-bin/picture_school/print_picture_school_all.php" target="_blank">See All Albums on SWIS →</a>
-    </p>
-  </div>
-</section>
+      <!-- ===== News column ===== -->
+      <div class="updates-col">
+        <h3>📰 News &amp; Announcements</h3>
+        <div class="col-sub">Latest from the school</div>
 
-<!-- ===== NEWS / ANNOUNCEMENTS ===== -->
-<section class="section" id="news">
-  <div class="wrap-narrow">
-    <div class="section-title">
-      <div class="eyebrow">News &amp; Announcements</div>
-      <h2>What's Happening at ACEP</h2>
-      <p>Latest news, updates, and announcements from the school</p>
-    </div>
-    <!-- Pinned: school-controlled · always shown, outside SWIS feed -->
-    <div class="news-list" style="margin-bottom:14px;">
-      <div class="news-item" style="border-left-color:var(--gold);">
-        <div class="date"><span class="day">27</span>JUN 2026</div>
-        <div>
-          <h3><a href="#admission">📌 Parents' Town Hall — Academic Year 2569</a></h3>
-          <p>Saturday 27 June 2026 · 08:30 a.m. · The Trinity Hall. AC and ACT booths offering pathway counselling and student-activity introductions.</p>
+        <!-- Pinned (school-controlled) -->
+        <div class="news-list" style="margin-bottom:10px;">
+          <div class="news-item" style="border-left-color:var(--gold);">
+            <div class="date"><span class="day">27</span>JUN 2026</div>
+            <div>
+              <h3><a href="#admission">📌 Town Hall · AY 2569</a></h3>
+              <p>Saturday 27 June · 08:30 · The Trinity Hall</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SWIS live feed container -->
+        <div id="news-feed"
+             data-source="swis-news"
+             data-endpoint="https://swis.acep.ac.th"
+             data-limit="5">
+          <div class="feed-skeleton" style="grid-template-columns:1fr; gap:8px;">
+            <div class="feed-skel-card" style="aspect-ratio:auto; height:62px;"></div>
+            <div class="feed-skel-card" style="aspect-ratio:auto; height:62px;"></div>
+            <div class="feed-skel-card" style="aspect-ratio:auto; height:62px;"></div>
+          </div>
+        </div>
+
+        <div class="col-cta">
+          <a href="https://swis.acep.ac.th" target="_blank">All News on SWIS →</a>
         </div>
       </div>
-    </div>
 
-    <!-- Container for SWIS live feed. Team script: call window.acepRenderNews(items) -->
-    <div id="news-feed"
-         data-source="swis-news"
-         data-endpoint="https://swis.acep.ac.th"
-         data-limit="5">
-      <div class="feed-skeleton" style="grid-template-columns:1fr; gap:10px;">
-        <div class="feed-skel-card" style="aspect-ratio:auto; height:78px;"></div>
-        <div class="feed-skel-card" style="aspect-ratio:auto; height:78px;"></div>
-        <div class="feed-skel-card" style="aspect-ratio:auto; height:78px;"></div>
+      <!-- ===== Calendar column ===== -->
+      <div class="updates-col">
+        <h3>📅 Calendar</h3>
+        <div class="col-sub">Upcoming events</div>
+
+        <!-- SWIS calendar feed container -->
+        <div id="calendar-feed"
+             data-source="swis-calendar"
+             data-endpoint="https://swis.acep.ac.th"
+             data-limit="6">
+          <div class="cal-events">
+            <div class="cal-ev">
+              <div class="date-box"><div class="d">27</div><div class="m">Jun</div></div>
+              <div>
+                <div class="title">Town Hall · Academic Year 2569</div>
+                <div class="meta">Sat · 08:30 · Trinity Hall</div>
+              </div>
+            </div>
+            <div class="feed-skeleton" style="grid-template-columns:1fr; gap:8px;">
+              <div class="feed-skel-card" style="aspect-ratio:auto; height:62px;"></div>
+              <div class="feed-skel-card" style="aspect-ratio:auto; height:62px;"></div>
+              <div class="feed-skel-card" style="aspect-ratio:auto; height:62px;"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-cta">
+          <a href="https://swis.acep.ac.th" target="_blank">Full Calendar on SWIS →</a>
+        </div>
       </div>
+
+      <!-- ===== Photo Album column ===== -->
+      <div class="updates-col album-col">
+        <h3>📷 Photo Album</h3>
+        <div class="col-sub">Recent moments from across campus</div>
+
+        <!-- SWIS album feed container -->
+        <div id="photo-feed"
+             data-source="swis-albums"
+             data-endpoint="https://swis.acep.ac.th/html_edu/cgi-bin/picture_school/print_picture_school_all.php"
+             data-limit="6">
+          <div class="feed-skeleton">
+            <div class="feed-skel-card"></div>
+            <div class="feed-skel-card"></div>
+            <div class="feed-skel-card"></div>
+            <div class="feed-skel-card"></div>
+            <div class="feed-skel-card"></div>
+            <div class="feed-skel-card"></div>
+          </div>
+        </div>
+
+        <div class="col-cta">
+          <a href="https://swis.acep.ac.th/html_edu/cgi-bin/picture_school/print_picture_school_all.php" target="_blank">All Albums on SWIS →</a>
+        </div>
+      </div>
+
     </div>
-    <p class="center" style="margin-top:28px;">
-      <a class="btn btn-red" href="https://swis.acep.ac.th" target="_blank">All News on SWIS →</a>
-    </p>
   </div>
 </section>
 
@@ -269,30 +306,119 @@
       <h2>What Sets ACEP Apart</h2>
       <p>For our parents, the quality of native English teachers matters most — and we treat it that way:
         selected with care, developed continually, and recognised for their craft.</p>
+      <p style="margin-top:8px;"><a href="faculty.html" style="color:var(--primary); font-weight:600;">See Our Faculty · Quality + Compliance →</a></p>
     </div>
 
-    <!-- Teacher Standard — 3 pillars -->
+    <!-- Teacher Standard — 3 pillars (covers BOTH native + Thai faculty) -->
     <div class="teacher-standard">
-      <h3>Our Teacher Standard</h3>
-      <p class="standard-intro">Every native teacher at ACEP passes through a deliberate three-stage commitment — so parents know exactly what kind of educator stands in front of their child.
-        <strong style="color:var(--gold);">Our direction:</strong> as ACEP enters its next phase, we are progressively moving toward an
-        <strong style="color:var(--white);">all-British faculty and Cambridge-aligned assessment</strong> across every level.</p>
+      <h3>Our Teacher Standard · ครูต่างชาติ + ครูไทย</h3>
+      <p class="standard-intro">Every teacher at ACEP — both native and Thai — passes through a deliberate three-stage commitment that keeps our classroom standards rising year over year.
+        <strong style="color:var(--gold);">Our direction:</strong> all native teachers progressively moving to
+        <strong style="color:var(--white);">British faculty and Cambridge-aligned assessment</strong>; all Thai teachers continually upgraded through the same Cambridge methodology.</p>
       <div class="standard-grid">
         <div class="standard-pillar">
           <div class="pillar-num">01</div>
           <div class="pillar-title">Selection · คัดสรร</div>
-          <p>Native English speaker · degree-qualified · TEFL/CELTA or PGCE · background-checked · interviewed by Director + Academic Head before any classroom assignment.</p>
+          <ul>
+            <li><strong>Entrance exam</strong> for both native and Thai applicants</li>
+            <li>Degree-qualified · TEFL/CELTA or PGCE for native</li>
+            <li>Subject-matter expertise verified · Thai faculty</li>
+            <li>Background check · police clearance</li>
+            <li>Demo class &amp; panel interview with Director</li>
+          </ul>
         </div>
         <div class="standard-pillar">
           <div class="pillar-num">02</div>
           <div class="pillar-title">Development · อบรมพัฒนา</div>
-          <p>Ongoing professional development · termly classroom observation · mentoring from senior staff · Cambridge / IELTS / HSK methodology refreshers.</p>
+          <ul>
+            <li><strong>Termly Cambridge methodology workshops</strong></li>
+            <li>Classroom observation cycle every term</li>
+            <li>Mentoring pairs (senior + new teachers)</li>
+            <li>Cross-school exchange with AC / ACT / ACR</li>
+            <li>Annual PD retreat &amp; conference attendance</li>
+          </ul>
         </div>
         <div class="standard-pillar">
           <div class="pillar-num">03</div>
           <div class="pillar-title">Recognition · ยกย่อง</div>
-          <p>Teacher of the Month · Voices from the Classroom video series · parent-facing profiles · long-service awards · a culture where great teaching is seen.</p>
+          <ul>
+            <li><strong>Teacher of the Month</strong> · public recognition</li>
+            <li>Voices from the Classroom video series</li>
+            <li>Parent-facing profiles &amp; portfolio</li>
+            <li>Long-service awards (5 / 10 / 15+ years)</li>
+            <li>Internal promotion pathway · academic head track</li>
+          </ul>
         </div>
+      </div>
+    </div>
+
+    <!-- Faculty Development Calendar -->
+    <h3 style="text-align:center; color:var(--primary); margin: 36px 0 6px; font-size:1.35rem;">Faculty Development Calendar · AY 2569</h3>
+    <p style="text-align:center; color:var(--gray-text); margin-bottom:18px; font-size:0.92rem;">An explicit, year-round commitment to raising classroom standards — for every teacher.</p>
+
+    <div class="dev-calendar">
+      <div class="dev-cal-item">
+        <div class="month">May 2026</div>
+        <div class="event">New teacher orientation · ACEP induction week</div>
+      </div>
+      <div class="dev-cal-item">
+        <div class="month">Jun 2026</div>
+        <div class="event">Academic Preparatory Meeting · curriculum alignment</div>
+      </div>
+      <div class="dev-cal-item">
+        <div class="month">Aug 2026</div>
+        <div class="event">Cambridge methodology workshop · all faculty</div>
+      </div>
+      <div class="dev-cal-item">
+        <div class="month">Oct 2026</div>
+        <div class="event">Mid-term observation cycle · peer review</div>
+      </div>
+      <div class="dev-cal-item">
+        <div class="month">Dec 2026</div>
+        <div class="event">Cross-school exchange with AC / ACT / ACR</div>
+      </div>
+      <div class="dev-cal-item">
+        <div class="month">Feb 2027</div>
+        <div class="event">Teacher of the Term recognition · ceremony</div>
+      </div>
+      <div class="dev-cal-item">
+        <div class="month">Mar 2027</div>
+        <div class="event">Year-end PD retreat · planning AY 2570</div>
+      </div>
+      <div class="dev-cal-item" style="background:#FDF4E8; border-left-color: var(--primary);">
+        <div class="month" style="color:var(--gold-dark);">Ongoing</div>
+        <div class="event">Weekly mentoring · monthly subject-team planning · termly classroom observation</div>
+      </div>
+    </div>
+
+    <!-- Photo strip — Faculty Development in action -->
+    <h3 style="text-align:center; color:var(--primary); margin: 36px 0 6px; font-size:1.35rem;">Faculty Development in Action</h3>
+    <p style="text-align:center; color:var(--gray-text); margin-bottom:18px; font-size:0.92rem;">Real moments from our standing commitment to teacher quality.</p>
+
+    <div class="dev-photos">
+      <div class="dev-photo">
+        <img src="https://acep.ac.th/wp-content/uploads/2026/05/box-ac-453x341.jpg" alt="Academic Preparatory Meeting">
+        <div class="caption-overlay">Academic Preparatory Meeting · 12 May 2026</div>
+      </div>
+      <div class="dev-photo placeholder-img">
+        <span class="photo-num">📷 รอภาพ #12</span>
+        Selection · Entrance exam &amp; demo class
+      </div>
+      <div class="dev-photo placeholder-img">
+        <span class="photo-num">📷 รอภาพ #13</span>
+        Cambridge methodology workshop
+      </div>
+      <div class="dev-photo placeholder-img">
+        <span class="photo-num">📷 รอภาพ #14</span>
+        Classroom observation · peer review
+      </div>
+      <div class="dev-photo placeholder-img">
+        <span class="photo-num">📷 รอภาพ #15</span>
+        Cross-school exchange (AC/ACT/ACR)
+      </div>
+      <div class="dev-photo placeholder-img">
+        <span class="photo-num">📷 รอภาพ #16</span>
+        Teacher of the Term · recognition
       </div>
     </div>
 
@@ -300,28 +426,21 @@
     <p style="text-align:center; color:var(--gray-text); margin-bottom:28px; font-size:0.95rem;">Hear directly from our teachers — backgrounds, teaching philosophy, and how they nurture each child.</p>
 
     <div class="teacher-grid">
-      <!-- Bare-bones placeholders — each teacher will speak for themselves on video -->
       <div class="teacher-card">
-        <div class="teacher-portrait placeholder-img">
-          <span class="teacher-coming-soon">Coming Soon</span>
-          <span class="photo-num">📷 รอภาพ #1</span>
-          Teacher 1 · Interview clip
+        <div class="teacher-portrait">
+          <img src="assets/img/teachers/teacher-1.jpg" alt="ACEP Native Teacher">
           <div class="play-overlay"><div class="play-icon">▶</div></div>
         </div>
       </div>
       <div class="teacher-card">
-        <div class="teacher-portrait placeholder-img">
-          <span class="teacher-coming-soon">Coming Soon</span>
-          <span class="photo-num">📷 รอภาพ #2</span>
-          Teacher 2 · Interview clip
+        <div class="teacher-portrait">
+          <img src="assets/img/teachers/teacher-2.jpg" alt="ACEP Native Teacher">
           <div class="play-overlay"><div class="play-icon">▶</div></div>
         </div>
       </div>
       <div class="teacher-card">
-        <div class="teacher-portrait placeholder-img">
-          <span class="teacher-coming-soon">Coming Soon</span>
-          <span class="photo-num">📷 รอภาพ #3</span>
-          Teacher 3 · Interview clip
+        <div class="teacher-portrait">
+          <img src="assets/img/teachers/teacher-3.jpg" alt="ACEP Native Teacher">
           <div class="play-overlay"><div class="play-icon">▶</div></div>
         </div>
       </div>
@@ -374,7 +493,7 @@
 
       <!-- Pillar 4 -->
       <div class="prog-card">
-        <div class="prog-img placeholder-img" style="aspect-ratio:16/9;"><span class="photo-num">📷 รอภาพ #4</span>Alumni Network</div>
+        <div class="prog-img"><img src="assets/img/alumni/alumni-1.jpg" alt="ACEP Alumni Network"></div>
         <div class="prog-body">
           <h3>4. Alumni Network · Career Pathway</h3>
           <p>From classroom to industry: our alumni include leading entrepreneurs, executives, and organisational leaders nationally and internationally. <a href="#network" style="color:var(--primary); font-weight:600;">See network →</a></p>
@@ -423,21 +542,21 @@
         </div>
       </div>
       <div class="prog-card">
-        <div class="prog-img placeholder-img" style="aspect-ratio:16/9;"><span class="photo-num">📷 รอภาพ #5</span>Swimming Pool</div>
+        <div class="prog-img"><img src="assets/img/facilities/pool.jpg" alt="ACEP Swimming Pool"></div>
         <div class="prog-body">
           <h3>🏊 Swimming Pool</h3>
           <p>A 6-lane standard pool for aquatic education, training, and competitions. A separate early-childhood pool ensures safe, age-appropriate learning while building physical skills and confidence.</p>
         </div>
       </div>
       <div class="prog-card">
-        <div class="prog-img placeholder-img" style="aspect-ratio:16/9;"><span class="photo-num">📷 รอภาพ #6</span>Football Fields</div>
+        <div class="prog-img"><img src="assets/img/facilities/football/football-1.jpg" alt="ACEP Football Field"></div>
         <div class="prog-body">
           <h3>⚽ Football Fields</h3>
           <p>Standard-grade football fields supporting student PE, after-school training, and inter-school friendly matches.</p>
         </div>
       </div>
       <div class="prog-card">
-        <div class="prog-img placeholder-img" style="aspect-ratio:16/9;"><span class="photo-num">📷 รอภาพ #7</span>Tennis Courts</div>
+        <div class="prog-img"><img src="assets/img/facilities/tennis/tennis-1.jpg" alt="ACEP Tennis Courts"></div>
         <div class="prog-body">
           <h3>🎾 Tennis Courts</h3>
           <p>Four refurbished courts running after-school tennis courses for ACEP students at all levels.</p>
@@ -451,7 +570,7 @@
         </div>
       </div>
       <div class="prog-card">
-        <div class="prog-img placeholder-img" style="aspect-ratio:16/9;"><span class="photo-num">📷 รอภาพ #9</span>St. Peter Sport Club</div>
+        <div class="prog-img"><img src="assets/img/facilities/fitness.jpg" alt="St. Peter Sport Club · Fitness"></div>
         <div class="prog-body">
           <h3>🏟️ St. Peter Sport Club</h3>
           <p>An on-campus sports and fitness facility for upper-secondary students, staff, and the wider school community.</p>
@@ -739,6 +858,19 @@
       </div>
     `).join('');
   }
+  function renderCalendar(items) {
+    const container = document.getElementById('calendar-feed');
+    if (!container || !Array.isArray(items) || items.length === 0) return;
+    container.innerHTML = '<div class="cal-events">' + items.map(it => `
+      <div class="cal-ev">
+        <div class="date-box"><div class="d">${it.day || ''}</div><div class="m">${it.month || ''}</div></div>
+        <div>
+          <div class="title">${it.title || ''}</div>
+          <div class="meta">${it.meta || ''}</div>
+        </div>
+      </div>
+    `).join('') + '</div>';
+  }
   function showFallback(id, label) {
     const el = document.getElementById(id);
     if (!el) return;
@@ -750,8 +882,9 @@
       </div>`;
   }
   // Expose public hooks
-  window.acepRenderAlbums = renderAlbums;
-  window.acepRenderNews   = renderNews;
+  window.acepRenderAlbums   = renderAlbums;
+  window.acepRenderNews     = renderNews;
+  window.acepRenderCalendar = renderCalendar;
 
   // Fallback after 4s if no script populated the feeds
   setTimeout(() => {
@@ -761,6 +894,9 @@
       showFallback('photo-feed', 'Photo album');
     if (news && news.querySelector('.feed-skeleton'))
       showFallback('news-feed', 'News');
+    const cal = document.getElementById('calendar-feed');
+    if (cal && cal.querySelector('.feed-skeleton'))
+      showFallback('calendar-feed', 'Calendar');
   }, 4000);
 })();
 </script>
