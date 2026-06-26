@@ -446,106 +446,53 @@
 </section>
 
 
-<!-- ===== 8. UPDATES — News + Calendar (static · SWIS feed สำรองไว้ฟื้นภายหลัง) ===== -->
+<!-- ===== 8. UPDATES — News + Calendar + Photo Album (live SWIS feed · 26 มิ.ย. 69) ===== -->
 <section class="section section-cream" id="news">
   <div class="wrap">
     <div class="section-title">
       <div class="eyebrow">Updates from ACEP</div>
       <h2>What's Happening</h2>
-      <p>กิจกรรมและประกาศต้นเทอม · ปีการศึกษา 2569 (Academic Year 2027)</p>
+      <p>News, calendar, and photo album — all live from the SWIS system</p>
     </div>
-
     <div class="updates-grid">
       <div class="updates-col">
         <h3>📰 News &amp; Announcements</h3>
-        <div class="col-sub">ประกาศจากโรงเรียน · ต้นเทอม AY 2027</div>
-        <ul class="static-news-list">
-          <li>
-            <div class="news-date-block"><span class="day">27</span><span class="my">JUN 2026</span></div>
-            <div class="news-body">
-              <strong>ปฐมนิเทศนักเรียนใหม่ · Orientation Day</strong>
-              <p>ต้อนรับนักเรียนใหม่ AY 2027 · พบครูประจำชั้น · เยี่ยมชมโรงเรียน — เวลา 8:30 น.</p>
-            </div>
-          </li>
-          <li>
-            <div class="news-date-block"><span class="day">28</span><span class="my">JUN 2026</span></div>
-            <div class="news-body">
-              <strong>Town Hall ผู้ปกครอง</strong>
-              <p>พบ ผอ. · ทีมบริหาร · ครู Foreign &amp; Thai · ทิศทาง ACEP สู่ AY 2027</p>
-            </div>
-          </li>
-          <li>
-            <div class="news-date-block"><span class="day">01</span><span class="my">JUL 2026</span></div>
-            <div class="news-body">
-              <strong>เปิดภาคเรียนที่ 1 · Term 1 begins</strong>
-              <p>เริ่มการเรียนการสอนปกติ · นักเรียนแต่งกายเต็มยศ · ใช้รถรับ-ส่งตามปกติ</p>
-            </div>
-          </li>
-        </ul>
-        <div class="col-cta"><a href="https://swis.acep.ac.th" target="_blank">รายละเอียดเพิ่มเติม · SWIS →</a></div>
+        <div class="col-sub">Latest from the school</div>
+        <div id="news-feed" data-source="swis-news" data-endpoint="https://swis.acep.ac.th" data-limit="5">
+          <div class="feed-skeleton" style="grid-template-columns:1fr; gap:8px;">
+            <div class="feed-skel-card" style="aspect-ratio:auto; height:62px;"></div>
+            <div class="feed-skel-card" style="aspect-ratio:auto; height:62px;"></div>
+            <div class="feed-skel-card" style="aspect-ratio:auto; height:62px;"></div>
+          </div>
+        </div>
+        <div class="col-cta"><a href="https://swis.acep.ac.th" target="_blank">All News on SWIS →</a></div>
       </div>
-
       <div class="updates-col">
-        <h3>📅 Calendar · ปฏิทินกิจกรรม</h3>
-        <div class="col-sub">กิจกรรมสำคัญที่กำลังจะถึง</div>
-        <ul class="static-calendar-list">
-          <li class="cal-today">
-            <div class="cal-date"><span class="day">27</span><span class="my">มิ.ย. 69</span></div>
-            <div class="cal-event">
-              <strong>ปฐมนิเทศนักเรียนใหม่</strong>
-              <span class="cal-time">⏰ 8:30 — 12:00 · หอประชุมใหญ่</span>
-            </div>
-          </li>
-          <li>
-            <div class="cal-date"><span class="day">28</span><span class="my">มิ.ย. 69</span></div>
-            <div class="cal-event">
-              <strong>Town Hall ผู้ปกครอง</strong>
-              <span class="cal-time">⏰ 9:00 — 12:00 · หอประชุมใหญ่</span>
-            </div>
-          </li>
-          <li>
-            <div class="cal-date"><span class="day">01</span><span class="my">ก.ค. 69</span></div>
-            <div class="cal-event">
-              <strong>เปิดภาคเรียนที่ 1 · Term 1</strong>
-              <span class="cal-time">⏰ 7:30 น. · เคารพธงชาติ · เริ่มเรียนปกติ</span>
-            </div>
-          </li>
-          <li>
-            <div class="cal-date"><span class="day">??</span><span class="my">ก.ค. 69</span></div>
-            <div class="cal-event">
-              <strong>พิธีไหว้ครู</strong>
-              <span class="cal-time">⏰ รอประกาศ</span>
-            </div>
-          </li>
-          <li>
-            <div class="cal-date"><span class="day">??</span><span class="my">ส.ค. 69</span></div>
-            <div class="cal-event">
-              <strong>วันแม่ · ถวายพระพร</strong>
-              <span class="cal-time">⏰ รอประกาศ</span>
-            </div>
-          </li>
-        </ul>
+        <h3>📅 Calendar</h3>
+        <div class="col-sub">Upcoming events</div>
+        <div id="calendar-feed" data-source="swis-calendar" data-endpoint="https://swis.acep.ac.th" data-limit="6">
+          <div class="feed-skeleton" style="grid-template-columns:1fr; gap:8px;">
+            <div class="feed-skel-card" style="aspect-ratio:auto; height:62px;"></div>
+            <div class="feed-skel-card" style="aspect-ratio:auto; height:62px;"></div>
+            <div class="feed-skel-card" style="aspect-ratio:auto; height:62px;"></div>
+          </div>
+        </div>
         <div class="col-cta"><a href="https://swis.acep.ac.th/html_edu/cgi-bin/report/today_events.php" target="_blank">Full Calendar on SWIS →</a></div>
       </div>
-
-      <div class="updates-col">
-        <h3>📷 Photo Album · อัลบั้มภาพ</h3>
-        <div class="col-sub">ภาพกิจกรรมและสนามฟาซิลิตี้</div>
-        <div class="static-album-preview">
-          <a href="facilities.html#pool" class="alb-tile" style="background-image:url('assets/img/facilities/pool/p-5.jpg');">
-            <span>🏊 สระว่ายน้ำ · 100 ภาพ</span>
-          </a>
-          <a href="facilities.html#football" class="alb-tile" style="background-image:url('assets/img/facilities/football/football-5.jpg');">
-            <span>⚽ สนามหญ้าเทียม · 28 ภาพ</span>
-          </a>
-          <a href="facilities.html#tennis" class="alb-tile" style="background-image:url('assets/img/facilities/tennis/t-5.jpg');">
-            <span>🎾 สนามเทนนิส · 28 ภาพ</span>
-          </a>
-          <a href="facilities.html#fitness" class="alb-tile" style="background-image:url('assets/img/facilities/fitness/f-5.jpg');">
-            <span>💪 ฟิตเนส · 18 ภาพ</span>
-          </a>
+      <div class="updates-col album-col">
+        <h3>📷 Photo Album</h3>
+        <div class="col-sub">Recent moments from across campus</div>
+        <div id="photo-feed" data-source="swis-albums" data-endpoint="https://swis.acep.ac.th/html_edu/cgi-bin/picture_school/print_picture_school_all.php" data-limit="6">
+          <div class="feed-skeleton">
+            <div class="feed-skel-card"></div>
+            <div class="feed-skel-card"></div>
+            <div class="feed-skel-card"></div>
+            <div class="feed-skel-card"></div>
+            <div class="feed-skel-card"></div>
+            <div class="feed-skel-card"></div>
+          </div>
         </div>
-        <div class="col-cta"><a href="facilities.html">All Facility Albums →</a></div>
+        <div class="col-cta"><a href="https://swis.acep.ac.th/html_edu/cgi-bin/picture_school/print_picture_school_all.php" target="_blank">All Albums on SWIS →</a></div>
       </div>
     </div>
   </div>
@@ -936,13 +883,13 @@
 </script>
 
 
-<!-- ===== SWIS LIVE FEED FETCHER · TEMPORARILY DISABLED ===== -->
-<!-- ปิดชั่วคราว 26 มิ.ย. 69 · บราเดอร์สั่ง: ระบบ SWIS สารสนเทศไม่พร้อม · ใช้ static calendar+news ไปก่อน
-     เมื่อ SWIS พร้อม → uncomment block นี้กลับมา + ลบ static lists ใน section #news
+<!-- ===== SWIS LIVE FEED FETCHER (by SWIS Plus team · 26 Jun 2026) ===== -->
 <script>
 (function() {
   var SWIS = 'https://swis.acep.ac.th/html_edu/api/json';
   var MON  = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+
+  // --- Photo Albums ---
   fetch(SWIS + '/get_pic_post.php?start=0&count=6&category=all')
     .then(function(r) { return r.json(); })
     .then(function(json) {
@@ -954,6 +901,8 @@
       });
       if (window.acepRenderAlbums) window.acepRenderAlbums(items);
     }).catch(function() {});
+
+  // --- News ---
   fetch(SWIS + '/get_news.php?start=0&count=5&type=2')
     .then(function(r) { return r.json(); })
     .then(function(json) {
@@ -965,9 +914,32 @@
       });
       if (window.acepRenderNews) window.acepRenderNews(items);
     }).catch(function() {});
+
+  // --- Calendar (endpoint ใหม่จาก SWIS Plus team · 26 มิ.ย. 69) ---
+  fetch('https://swis.acep.ac.th/html_edu/api/get_calendar_month.php?type=1')
+    .then(function(r) { return r.json(); })
+    .then(function(json) {
+      if (json.status !== 'success' || !json.data) return;
+      var items = json.data.slice(0, 6).map(function(d) {
+        var dateStr = d.timer || '', parts = dateStr.split('-');
+        var day = '', month = '';
+        if (parts.length === 3) {
+          day = parseInt(parts[2]).toString();
+          month = MON[parseInt(parts[1])-1] || '';
+        }
+        var meta = (d.all_day == 1) ? 'All day' : (d.time_cal || '');
+        return {
+          day:   day,
+          month: month,
+          title: d.title || '',
+          meta:  meta,
+          link:  'https://swis.acep.ac.th/html_edu/cgi-bin/calendar/print_time.php?id_cal=' + (d.id_cal || '')
+        };
+      });
+      if (window.acepRenderCalendar) window.acepRenderCalendar(items);
+    }).catch(function() {});
 })();
 </script>
--->
 
 
 
@@ -1005,7 +977,7 @@
   function renderCalendar(items) {
     const container = document.getElementById('calendar-feed');
     if (!container || !Array.isArray(items) || items.length === 0) return;
-    container.innerHTML = '<div class="cal-events">' + items.map(it => `<div class="cal-ev"><div class="date-box"><div class="d">${it.day || ''}</div><div class="m">${it.month || ''}</div></div><div><div class="title">${it.title || ''}</div><div class="meta">${it.meta || ''}</div></div></div>`).join('') + '</div>';
+    container.innerHTML = '<div class="cal-events">' + items.map(it => `<a class="cal-ev" href="${it.link || '#'}" target="_blank" rel="noopener" style="text-decoration:none; color:inherit; display:flex;"><div class="date-box"><div class="d">${it.day || ''}</div><div class="m">${it.month || ''}</div></div><div><div class="title">${it.title || ''}</div><div class="meta">${it.meta || ''}</div></div></a>`).join('') + '</div>';
   }
   function showFallback(id, label) {
     const el = document.getElementById(id);
