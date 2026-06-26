@@ -364,19 +364,6 @@ a:hover { color: var(--primary-light); }
 .section-title p { color: var(--gray-text); font-size: 1.05rem; }
 
 /* ============ DIRECTOR MESSAGE ============ */
-.director-banner {
-  width: 100%;
-  margin-bottom: 18px;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 6px 24px var(--shadow-strong);
-  background: var(--cream);
-}
-.director-banner img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
 .director-card {
   background: var(--white);
   border-left: 6px solid var(--gold);
@@ -384,9 +371,6 @@ a:hover { color: var(--primary-light); }
   border-radius: 8px;
   box-shadow: 0 4px 24px var(--shadow);
   display: grid; grid-template-columns: 320px 1fr; gap: 32px;
-}
-.director-card.director-card-no-photo {
-  grid-template-columns: 1fr;
 }
 .director-card .photo {
   width: 100%; max-width: 280px;
