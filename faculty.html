@@ -138,12 +138,6 @@
 </head>
 <body>
 
-<!-- ===== TOP STATUS BAR ===== -->
-<div class="topbar">
-  <span>Assumption College English Program · Rama 2 · Samut Sakhon</span>
-  <span class="topbar-sep">·</span>
-  <span class="gold">A school of the Saint Gabriel's Foundation of Thailand</span>
-</div>
 
 <!-- ===== NAV ===== -->
 <nav class="nav">
@@ -377,38 +371,39 @@
       </div>
 
       <h3 style="margin-top:24px;">Meet the Psychologists</h3>
-      <div class="faculty-grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
+      <div class="faculty-grid" style="grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));">
         <div class="fac-card">
-          <div class="fac-portrait" style="aspect-ratio:1 / 1;">
-            <img src="assets/img/support/psychologist-1.jpg" alt="ACEP Psychologist">
+          <div class="fac-portrait" style="aspect-ratio: 1179/620;">
+            <img src="assets/img/support/psychologist-picha.jpg" alt="คุณพิชา มากแพทย์">
           </div>
           <div class="fac-body">
-            <div style="font-size:0.78rem; color:var(--gray-text); margin-bottom:4px;">
-              <strong style="color:var(--primary);">Psychology · Counselling</strong> · KG–Primary
+            <div style="font-family: 'Sarabun', sans-serif; font-size: 1.1rem; font-weight: 700; color: var(--primary); margin-bottom: 2px;">คุณพิชา มากแพทย์</div>
+            <div style="font-size:0.85rem; color:var(--gold-dark); font-weight: 600; margin-bottom:8px;">
+              นักจิตวิทยาคลินิกชำนาญการ · <span style="color:var(--gray-text); font-weight:500; font-style: italic;">Senior Clinical Psychologist</span>
             </div>
-            <span class="fac-stage developing">On-campus support</span>
             <ul class="qual-list">
-              <li class="held"><span class="mark">✓</span>Bachelor / Master in Psychology</li>
-              <li class="held"><span class="mark">✓</span>Child &amp; Adolescent specialisation</li>
-              <li class="held"><span class="mark">✓</span>Available for parent consultation</li>
+              <li class="held"><span class="mark">✓</span><strong>ดูแลระดับชั้น:</strong> ป.1 · ป.3 · ป.5</li>
+              <li class="held"><span class="mark">✓</span>นักจิตวิทยาคลินิกชำนาญการ · ใบอนุญาตประกอบโรคศิลปะ</li>
+              <li class="held"><span class="mark">✓</span>Available for parent &amp; teacher consultation</li>
             </ul>
             <a class="fac-watch-btn" href="#" aria-disabled="true">📞 Schedule a Consultation</a>
           </div>
         </div>
         <div class="fac-card">
-          <div class="fac-portrait placeholder-img" style="aspect-ratio:1 / 1;">
-            <span class="photo-num">📷 รอภาพ #19</span>
-            Additional psychologist
+          <div class="fac-portrait" style="aspect-ratio: 1179/590;">
+            <img src="assets/img/support/psychologist-nattanya.jpg" alt="คุณณัฐธันยา โชติสุทธิ์">
           </div>
           <div class="fac-body">
-            <div style="font-size:0.78rem; color:var(--gray-text); margin-bottom:4px;">
-              <strong style="color:var(--primary);">Psychology · Counselling</strong>
+            <div style="font-family: 'Sarabun', sans-serif; font-size: 1.1rem; font-weight: 700; color: var(--primary); margin-bottom: 2px;">คุณณัฐธันยา โชติสุทธิ์</div>
+            <div style="font-size:0.85rem; color:var(--gold-dark); font-weight: 600; margin-bottom:8px;">
+              นักจิตวิทยาคลินิก · <span style="color:var(--gray-text); font-weight:500; font-style: italic;">Clinical Psychologist</span>
             </div>
-            <span class="fac-stage unverified">Profile pending</span>
             <ul class="qual-list">
-              <li class="pending"><span class="mark">⏳</span>Profile being assembled</li>
+              <li class="held"><span class="mark">✓</span><strong>ดูแลระดับชั้น:</strong> ป.2 · ป.4 · ป.6</li>
+              <li class="held"><span class="mark">✓</span>นักจิตวิทยาคลินิก · ใบอนุญาตประกอบโรคศิลปะ</li>
+              <li class="held"><span class="mark">✓</span>Available for parent &amp; teacher consultation</li>
             </ul>
-            <a class="fac-watch-btn" href="#" aria-disabled="true">Coming soon</a>
+            <a class="fac-watch-btn" href="#" aria-disabled="true">📞 Schedule a Consultation</a>
           </div>
         </div>
       </div>
@@ -444,13 +439,6 @@
         <span><span style="color:#1d9e75; font-weight:700;">✓</span> Held / verified</span>
         <span><span style="color:var(--gold-dark); font-weight:700;">⏳</span> In progress</span>
         <span><span style="color:var(--gray-text); font-weight:700;">○</span> Target / planned</span>
-        <span style="padding-left:18px; border-left:1px solid var(--gray-light);">
-          Stages:
-          <span class="fac-stage foundation" style="margin-left:6px;">Foundation</span>
-          <span class="fac-stage developing">Developing</span>
-          <span class="fac-stage proficient">Proficient</span>
-          <span class="fac-stage expert">Expert</span>
-        </span>
       </div>
 
       <div class="filter-bar" id="filter-bar">
@@ -688,7 +676,6 @@
             <span><strong style="color:var(--primary);">${f.subject}</strong> · ${f.level}</span>
             <span style="margin-left:auto;">Since ${f.joined}</span>
           </div>
-          <span class="fac-stage ${f.stage}">${stageLabel[f.stage]}</span>
           <ul class="qual-list">
             ${f.quals.map(q => `<li class="${q.s}"><span class="mark">${mark(q.s)}</span>${q.t}</li>`).join('')}
           </ul>

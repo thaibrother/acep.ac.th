@@ -11,23 +11,90 @@
 <link rel="icon" type="image/png" href="https://acep.ac.th/wp-content/uploads/2025/06/cropped-logo-gold-270x270.png">
 <link rel="apple-touch-icon" href="https://acep.ac.th/wp-content/uploads/2025/06/cropped-logo-gold-270x270.png">
 <link rel="stylesheet" href="assets/css/style.css">
+<style>
+  /* Level section heading */
+  .level-section { padding: 64px 0; }
+  .level-section .level-head {
+    text-align: center; margin-bottom: 32px;
+  }
+  .level-section .level-eyebrow {
+    display: inline-block;
+    background: var(--gold); color: var(--primary-dark);
+    padding: 4px 16px; border-radius: 999px;
+    font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em;
+    text-transform: uppercase; margin-bottom: 12px;
+  }
+  .level-section h2 { color: var(--primary); margin-bottom: 8px; }
+  .level-section .level-lead { color: var(--gray-text); max-width: 720px; margin: 0 auto; font-size: 1.02rem; line-height: 1.6; }
+
+  /* Level photo strip */
+  .level-photos {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px; margin: 24px 0 36px;
+  }
+  .level-photos img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 8px; display: block; box-shadow: 0 2px 12px var(--shadow); }
+
+  /* Curriculum summary box */
+  .curr-summary {
+    background: var(--white); border-radius: 12px;
+    padding: 24px 28px; box-shadow: 0 4px 18px var(--shadow);
+    margin-bottom: 32px;
+  }
+  .curr-summary h3 { color: var(--primary); margin: 0 0 10px; }
+  .curr-summary p { color: var(--dark); line-height: 1.65; margin-bottom: 10px; }
+  .curr-summary .pills {
+    display: flex; gap: 8px; flex-wrap: wrap; margin: 14px 0 0;
+  }
+  .curr-summary .pills span {
+    background: var(--cream); color: var(--primary);
+    padding: 6px 12px; border-radius: 999px;
+    font-size: 0.85rem; font-weight: 500;
+  }
+
+  /* Section: teachers for a level — compact card */
+  .level-teachers h3 {
+    color: var(--primary); margin-top: 0; margin-bottom: 14px; font-size: 1.15rem;
+  }
+  .level-teacher-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+  }
+  .lt-card {
+    background: var(--white); border-radius: 8px; overflow: hidden;
+    box-shadow: 0 2px 12px var(--shadow); display: flex; flex-direction: column;
+  }
+  .lt-card .lt-img { aspect-ratio: 2000/1415; background: var(--cream); overflow: hidden; }
+  .lt-card .lt-img img { width: 100%; height: 100%; object-fit: contain; display: block; }
+  /* Portrait photos (no pre-made profile card): crop to landscape, keep face */
+  .lt-card .lt-img.portrait img { object-fit: cover; object-position: 50% 18%; }
+  .lt-card .lt-body { padding: 12px 16px; font-size: 0.85rem; }
+  .lt-card .lt-meta { color: var(--gray-text); display: flex; gap: 6px; flex-wrap: wrap; }
+  .lt-card .lt-meta strong { color: var(--primary); }
+  .lt-card .lt-stage { display: inline-block; font-size: 0.7rem; font-weight: 700; padding: 3px 10px; border-radius: 999px; letter-spacing: 0.04em; text-transform: uppercase; margin-top: 8px; }
+  .lt-card .lt-stage.foundation { background: #FBE08E; color: var(--primary-dark); }
+  .lt-card .lt-stage.developing { background: var(--gold); color: var(--primary-dark); }
+  .lt-card .lt-stage.proficient { background: var(--primary-light); color: var(--white); }
+  .lt-card .lt-stage.expert     { background: var(--primary); color: var(--gold); }
+
+  /* Sport block */
+  .sport-block { background: var(--white); border-radius: 12px; padding: 24px; box-shadow: 0 4px 20px var(--shadow); margin-bottom: 24px; }
+  .sport-block h3 { color: var(--primary); display: flex; align-items: center; gap: 10px; margin: 0 0 6px; }
+  .sport-block h3 .ico { font-size: 1.5rem; }
+  .sport-block h3 .photo-count { background: var(--gold); color: var(--primary-dark); font-size: 0.72rem; font-weight: 700; padding: 3px 10px; border-radius: 999px; margin-left: auto; }
+  .sport-block .sport-lead { color: var(--gray-text); font-size: 0.95rem; line-height: 1.6; margin-bottom: 14px; }
+  .sport-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
+  @media (max-width: 720px) { .sport-grid { grid-template-columns: 1fr; } }
+  .sport-grid > div h4 { color: var(--gold-dark); margin: 0 0 8px; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+  .sport-coaches { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .sport-coaches img { width: 100%; aspect-ratio: 1044/1566; object-fit: cover; border-radius: 6px; display: block; }
+  .sport-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .sport-photos img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 6px; display: block; }
+  .sport-cta { text-align: right; margin-top: 12px; }
+  .sport-cta a { font-size: 0.85rem; color: var(--primary); font-weight: 600; }
+</style>
 </head>
 <body>
 
-<!-- ===== TOP STATUS BAR ===== -->
-<div class="topbar">
-  <span>Assumption College English Program · Rama 2 · Samut Sakhon</span>
-  <span class="topbar-sep">·</span>
-  <span class="gold">A school of the Saint Gabriel's Foundation of Thailand</span>
-  <span class="topbar-sep">·</span>
-  <span>Est. 2003</span>
-</div>
-
-<!-- ===== EVENT BANNER (Town Hall 27 Jun) ===== -->
-<div class="banner-event">
-  📅 Parents' Town Hall · <strong>Saturday 27 June 2026</strong> · 08:30 a.m. · The Trinity Hall
-  <span class="small">· Meet AC + ACT for pathway counselling and student activity booths</span>
-</div>
 
 <!-- ===== NAV ===== -->
 <nav class="nav">
@@ -42,36 +109,33 @@
       </div>
     </a>
     <div class="nav-links">
-      <a href="#message">Message</a>
+      <a href="#advisor">Curriculum &amp; Personnel</a>
+      <a href="#sports">Sports &amp; Activities</a>
+      <a href="#news">News &amp; Network</a>
       <div class="nav-dd">
-        <a href="#about">About ▾</a>
+        <a href="#quality">Quality &amp; Management ▾</a>
         <div class="nav-dd-menu">
-          <a href="#about">Why ACEP · 6 Pillars</a>
-          <a href="#programs" style="border-top:1px solid var(--gray-light); margin-top:6px; padding-top:12px;">Programs Overview</a>
-          <a href="program/kindergarten.html">Kindergarten (KG 1–3)</a>
-          <a href="program/primary.html">Primary (Year 1–6)</a>
-          <a href="faculty.html" style="border-top:1px solid var(--gray-light); margin-top:6px; padding-top:12px; color:var(--primary); font-weight:700;">Our Faculty ★</a>
+          <a href="#message">Director's Message</a>
+          <a href="#q-faculty">Faculty Quality</a>
+          <a href="#q-calendar">Development Calendar</a>
+          <a href="#q-formula">School Formula</a>
+          <a href="#q-recognition">International Recognition</a>
         </div>
       </div>
-      <a href="facilities.html">Facilities</a>
-      <a href="#news">News</a>
-      <a href="#network">Network</a>
-      <a href="#contact">Contact</a>
       <a class="cta" href="https://swis.acep.ac.th/admin/register_online/" target="_blank">Apply →</a>
     </div>
   </div>
 </nav>
 
+
 <!-- ===== HERO with PHOTO CAROUSEL ===== -->
 <section class="hero" id="top">
-  <!-- Slideshow layers (auto-rotating) — classroom + preparatory only -->
   <div class="hero-slides">
     <div class="hero-slide s1 active" data-label="Kindergarten Classroom"></div>
     <div class="hero-slide s2" data-label="Primary Classroom"></div>
     <div class="hero-slide s3" data-label="Academic Preparatory Meeting"></div>
   </div>
   <div class="hero-overlay"></div>
-
   <div class="hero-inner">
     <div class="hero-eyebrow">Admissions Open · Academic Year 2027</div>
     <p class="hero-slogan">Make ACEP our loving place!</p>
@@ -88,8 +152,6 @@
       <a class="btn btn-ghost" href="#message">Director's Message</a>
     </div>
   </div>
-
-  <!-- Dots indicator -->
   <div class="hero-dots">
     <button class="hero-dot active" data-slide="0" aria-label="Slide 1"></button>
     <button class="hero-dot" data-slide="1" aria-label="Slide 2"></button>
@@ -97,7 +159,6 @@
   </div>
 </section>
 
-<!-- ===== HERO THUMB STRIP (clickable, like thaibrothers.net) ===== -->
 <div class="hero-thumbs">
   <div class="hero-thumbs-inner">
     <div class="hero-thumb t1 active" data-slide="0"><span class="thumb-label">Kindergarten</span></div>
@@ -107,531 +168,391 @@
 </div>
 
 
-<!-- ===== DIRECTOR MESSAGE — Full text in 3 languages ===== -->
-<section class="section" id="message">
-  <div class="wrap">
+<!-- ===== KAITIE — Curriculum Advisor ===== -->
+<section class="section section-cream" id="advisor">
+  <div class="wrap-narrow">
     <div class="section-title">
-      <div class="eyebrow">Director's Message</div>
-      <h2>From the Director</h2>
-    </div>
-    <div class="director-card">
-      <div class="photo"><img src="https://acep.ac.th/wp-content/uploads/2026/05/MMM.jpg" alt="Bro. Supanun Khantapreecha, Director of ACEP"></div>
-      <div>
-        <!-- Language tabs -->
-        <div class="lang-tabs" role="tablist" aria-label="Message language">
-          <button class="lang-tab active" data-lang="en" role="tab" aria-selected="true">English</button>
-          <button class="lang-tab" data-lang="th" role="tab" aria-selected="false">ภาษาไทย</button>
-          <button class="lang-tab" data-lang="zh" role="tab" aria-selected="false">中文</button>
-          <button class="lang-tab" data-lang="heart" role="tab" aria-selected="false" style="font-size:1.15rem;">❤️</button>
-        </div>
-
-        <!-- EN panel -->
-        <div class="lang-panel lang-en active" data-lang="en" role="tabpanel">
-          <p>In an era where AI serves as the <strong>fundamental infrastructure</strong> for every sector — from energy and food to technology — our challenge is to empower the next generation to become the <em>architects of the future</em>, rather than mere occupants of a technology-driven world.</p>
-          <p>We believe that while not every student possesses a profound literary talent, <strong>every child can achieve effective communication</strong> through international languages (English and Chinese) and <strong>Systematic Thinking</strong>. These are the essential competencies for mastering AI prompting in today's landscape.</p>
-          <p>As a member of the Catholic educational network managed by the <strong>Saint Gabriel's Foundation of Thailand</strong>, we focus on moral cultivation to develop individuals of high integrity. In the age of AI and collaborative teamwork, <em>"Virtue"</em> and <em>"Trust"</em> have become the most precious and rarest foundations of success.</p>
-          <p>We invite you to join our community, characterized by a distinguished alumni network of leading entrepreneurs, top executives, and organizational leaders at both national and international levels. Together, let us build a society that fosters human dignity and collective prosperity.</p>
-        </div>
-
-        <!-- TH panel -->
-        <div class="lang-panel lang-th" data-lang="th" role="tabpanel">
-          <p>ในยุคที่ AI เป็น<strong>โครงสร้างพื้นฐานของทุกภาคส่วน</strong> — พลังงาน · อาหาร · เทคโนโลยี — ความท้าทายของเราคือการหล่อหลอมบุตรหลานให้มีศักยภาพ <em>เป็นผู้กำหนดทิศทาง</em> ไม่ใช่เพียงอาศัยอยู่ร่วมกับเทคโนโลยี</p>
-          <p>เราเชื่อมั่นว่า แม้ผู้เรียนทุกคนอาจไม่ได้มีพรสวรรค์ทางด้านอักษรศาสตร์ในเชิงลึก แต่<strong>เด็กทุกคนสามารถสื่อสารอย่างมีประสิทธิภาพ</strong> ด้วยภาษาระดับสากล (English, Chinese) และ<strong>กระบวนการคิดที่เป็นระบบ (Systematic Thinking)</strong> — ซึ่งเป็นสมรรถนะสำคัญในการสั่งการ AI (Prompting) ในโลกปัจจุบัน</p>
-          <p>เราเป็นหนึ่งในสถาบันการศึกษาในเครือคาทอลิก บริหารงานโดย<strong>มูลนิธิคณะภราดาเซนต์คาเบรียล</strong> ที่มุ่งเน้นการบ่มเพาะจริยธรรม เพื่อสร้างบุคคลที่เปี่ยมด้วยความน่าเชื่อถือ — ซึ่งเป็นพื้นฐานสำคัญของการได้รับ <em>คุณธรรมและความไว้วางใจ</em> อันเป็นสิ่งล้ำค่าและหายากที่สุดในยุค AI และการทำงานเป็นทีม (Teamwork or Team Spirit)</p>
-          <p>มาร่วมเป็นประชาคมที่มีศิษย์เก่าเป็นนักธุรกิจชั้นนำ ผู้บริหารระดับสูง และผู้นำองค์กรในระดับประเทศและนานาชาติ และร่วมสร้างสังคมที่ควรจะเป็นสำหรับการอาศัยอยู่มนุษย์ที่แสวงหาความเจริญร่วมกันครับ</p>
-        </div>
-
-        <!-- ZH panel -->
-        <div class="lang-panel lang-zh" data-lang="zh" role="tabpanel">
-          <p>在现今人工智能（AI）已成为能源、粮食、科技等各领域<strong>基础设施</strong>的时代，我们的挑战在于培养孩子的能力，使其成为<em>技术的引领者</em>，而非仅仅是技术的共存者。</p>
-          <p>我们坚信，尽管并非每位学生都具备深厚的文学天赋，但<strong>每个孩子都能通过国际通用语言（英语、中文）和系统性思维（Systematic Thinking）进行高效沟通</strong>。这正是当今世界驱动人工智能（Prompting）的核心胜任力。</p>
-          <p>作为<strong>圣加百列修士基金会</strong>旗下的天主教教育机构，我们致力于德育培养，旨在造就诚信正直的人才。在人工智能时代和团队协作中，<em>"美德"</em>与<em>"信任"</em>已成为最珍贵且稀缺的基石。</p>
-          <p>欢迎加入我们的社群。在这里，我们的校友涵盖了国内外卓越的商业精英、高层管理人员及机构领袖。让我们携手共建一个追求共同繁荣、充满人文关怀的理想社会。</p>
-        </div>
-
-        <!-- ❤️ panel — images only, no text -->
-        <div class="lang-panel lang-heart" data-lang="heart" role="tabpanel">
-          <div style="display:grid; grid-template-columns: 1fr 1fr; gap:24px; align-items:center; padding:20px 0;">
-            <img src="assets/img/hearts/heart-single.avif" alt="" style="width:100%; height:auto; display:block; border-radius:8px;">
-            <img src="assets/img/hearts/heart-many.webp" alt="" style="width:100%; height:auto; display:block; border-radius:8px;">
-          </div>
-        </div>
-
-        <div class="sig">
-          Bro. Supanun Khantapreecha, FSG
-          <small>Director, Assumption College English Program · Board Member, Saint Gabriel's Foundation of Thailand</small>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== UPDATES — News + Calendar + Photo Album in one section ===== -->
-<section class="section section-cream" id="news">
-  <div class="wrap">
-    <div class="section-title">
-      <div class="eyebrow">Updates from ACEP</div>
-      <h2>What's Happening</h2>
-      <p>News, calendar, and photo album — all live from the SWIS system</p>
+      <div class="eyebrow">Curriculum Advisor</div>
+      <h2>A Word from Our Curriculum Advisor</h2>
+      <p>Miss Kaitie McAlpine — Foreign Head of the English Program at Assumption College Primary Section (ACP) — advising ACEP on Kindergarten and Primary teaching &amp; learning design.</p>
     </div>
 
-    <div class="updates-grid">
-
-      <!-- ===== News column ===== -->
-      <div class="updates-col">
-        <h3>📰 News &amp; Announcements</h3>
-        <div class="col-sub">Latest from the school</div>
-
-        <!-- Pinned (school-controlled) -->
-        <div class="news-list" style="margin-bottom:10px;">
-          <div class="news-item" style="border-left-color:var(--gold);">
-            <div class="date"><span class="day">27</span>JUN 2026</div>
-            <div>
-              <h3><a href="#admission">📌 Town Hall · AY 2569</a></h3>
-              <p>Saturday 27 June · 08:30 · The Trinity Hall</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- SWIS live feed container -->
-        <div id="news-feed"
-             data-source="swis-news"
-             data-endpoint="https://swis.acep.ac.th"
-             data-limit="5">
-          <div class="feed-skeleton" style="grid-template-columns:1fr; gap:8px;">
-            <div class="feed-skel-card" style="aspect-ratio:auto; height:62px;"></div>
-            <div class="feed-skel-card" style="aspect-ratio:auto; height:62px;"></div>
-            <div class="feed-skel-card" style="aspect-ratio:auto; height:62px;"></div>
-          </div>
-        </div>
-
-        <div class="col-cta">
-          <a href="https://swis.acep.ac.th" target="_blank">All News on SWIS →</a>
-        </div>
+    <div class="advisor-card">
+      <div class="advisor-photo">
+        <img src="assets/img/teachers/kaitie-mcalpine.jpg" alt="Miss Kaitie McAlpine" loading="lazy">
       </div>
-
-      <!-- ===== Calendar column ===== -->
-      <div class="updates-col">
-        <h3>📅 Calendar</h3>
-        <div class="col-sub">Upcoming events</div>
-
-        <!-- SWIS calendar feed container -->
-        <div id="calendar-feed"
-             data-source="swis-calendar"
-             data-endpoint="https://swis.acep.ac.th"
-             data-limit="6">
-          <div class="cal-events">
-            <div class="cal-ev">
-              <div class="date-box"><div class="d">27</div><div class="m">Jun</div></div>
-              <div>
-                <div class="title">Town Hall · Academic Year 2569</div>
-                <div class="meta">Sat · 08:30 · Trinity Hall</div>
-              </div>
-            </div>
-            <div class="feed-skeleton" style="grid-template-columns:1fr; gap:8px;">
-              <div class="feed-skel-card" style="aspect-ratio:auto; height:62px;"></div>
-              <div class="feed-skel-card" style="aspect-ratio:auto; height:62px;"></div>
-              <div class="feed-skel-card" style="aspect-ratio:auto; height:62px;"></div>
-            </div>
-          </div>
+      <div class="advisor-bio">
+        <div class="advisor-name">
+          Miss Kaitie McAlpine
+          <small>Foreign Head of the English Program · Assumption College Primary Section (ACP)</small>
         </div>
-
-        <div class="col-cta">
-          <a href="https://swis.acep.ac.th/html_edu/cgi-bin/report/today_events.php" target="_blank">Full Calendar on SWIS →</a>
-        </div>
+        <ul class="advisor-meta">
+          <li><strong>At ACP since</strong> 2014 · <strong>11+ years</strong></li>
+          <li><strong>Bachelor of Education</strong> · 2013</li>
+          <li><strong>Taught:</strong> Grades 1, 2, 3</li>
+          <li><strong>Leadership Roles:</strong> Head of Grade · Special Needs Coordinator</li>
+          <li><strong>Key Builder of:</strong> Chinese English Program (CEP) · launched 2018, now 8 years strong</li>
+          <li><strong>Current Role:</strong> Head of EP — supporting both students and teachers, fostering a positive, caring, and effective learning environment</li>
+        </ul>
+        <p class="advisor-pull">"Miss Kaitie brings dedication, experience, and strong leadership — guiding ACEP's Kindergarten and Primary curriculum design with the same care she has built at ACP for over a decade."</p>
       </div>
-
-      <!-- ===== Photo Album column ===== -->
-      <div class="updates-col album-col">
-        <h3>📷 Photo Album</h3>
-        <div class="col-sub">Recent moments from across campus</div>
-
-        <!-- SWIS album feed container -->
-        <div id="photo-feed"
-             data-source="swis-albums"
-             data-endpoint="https://swis.acep.ac.th/html_edu/cgi-bin/picture_school/print_picture_school_all.php"
-             data-limit="6">
-          <div class="feed-skeleton">
-            <div class="feed-skel-card"></div>
-            <div class="feed-skel-card"></div>
-            <div class="feed-skel-card"></div>
-            <div class="feed-skel-card"></div>
-            <div class="feed-skel-card"></div>
-            <div class="feed-skel-card"></div>
-          </div>
-        </div>
-
-        <div class="col-cta">
-          <a href="https://swis.acep.ac.th/html_edu/cgi-bin/picture_school/print_picture_school_all.php" target="_blank">All Albums on SWIS →</a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ===== PROGRAMS ===== -->
-<section class="section section-cream" id="programs">
-  <div class="wrap">
-    <div class="section-title">
-      <div class="eyebrow">Academic Programs</div>
-      <h2>Programs We Offer</h2>
-      <p>A bilingual English-medium pathway designed for early years and primary learners</p>
     </div>
 
-    <!-- Katie's introduction · EP Head from ACP, advising KG + Primary at ACEP -->
-    <div style="max-width: 760px; margin: 0 auto 36px; background: var(--white); border-radius: 14px; padding: 20px; box-shadow: 0 6px 24px var(--shadow-strong); border-top: 4px solid var(--gold);">
-      <div style="margin-bottom: 12px;">
-        <div style="font-size:0.78rem; color:var(--gold-dark); font-weight:700; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:4px;">Curriculum Advisor</div>
-        <h3 style="color:var(--primary); margin:0; font-size:1.2rem;">Miss Katie · Head of English Programme at AC Primary (ACP)</h3>
-        <p style="font-size:0.9rem; color:var(--gray-text); margin:4px 0 0; line-height:1.55;">Curriculum advisor for ACEP — Kindergarten and Primary teaching &amp; learning design.</p>
-      </div>
-      <video controls preload="metadata" style="width:100%; border-radius:8px; display:block; background:var(--primary-dark);">
+    <div class="advisor-video">
+      <div class="advisor-video-label">▶ Watch Miss Kaitie's message to ACEP families</div>
+      <video controls preload="metadata">
         <source src="assets/video/katie-message.mov" type="video/quicktime">
         <source src="assets/video/katie-message.mov" type="video/mp4">
         Your browser does not support the video tag. <a href="assets/video/katie-message.mov" download>Download the video</a>.
       </video>
     </div>
-    <div class="card-grid">
-      <div class="prog-card">
-        <div class="prog-img">
-          <img src="assets/img/kindergarten/kg-15.jpg" alt="Kindergarten Level · AY 2569">
-          <span class="badge">KG 1–3</span>
-        </div>
-        <div class="prog-body">
-          <h3>Kindergarten Level</h3>
-          <p>A nurturing bilingual start where children build confidence, English proficiency, and a love of learning — through play, exploration, and individual care.</p>
-          <p style="font-size:0.88rem; color:var(--gray-text); margin-top:8px;"><strong>Smart English Program (S-EP)</strong> · additional tracks coming with the upcoming curriculum announcement.</p>
-          <a class="more" href="program/kindergarten.html">More Detail →</a>
-        </div>
+  </div>
+</section>
+
+
+<!-- ===== 3. KINDERGARTEN ===== -->
+<section class="level-section" id="kindergarten">
+  <div class="wrap">
+    <div class="level-head">
+      <div class="level-eyebrow">Kindergarten · KG 1–3</div>
+      <h2>Our Kindergarten</h2>
+      <p class="level-lead">A bilingual start where children build confidence, English proficiency, and a love of learning — through play, exploration, and individual care.</p>
+    </div>
+
+    <!-- KG photos -->
+    <div class="level-photos">
+      <img src="assets/img/kindergarten/kg-1.jpg" alt="ACEP Kindergarten · AY 2569">
+      <img src="assets/img/kindergarten/kg-15.jpg" alt="ACEP Kindergarten classroom">
+      <img src="assets/img/kindergarten/kg-45.jpg" alt="ACEP Kindergarten activity">
+      <img src="assets/img/kindergarten/kg-75.jpg" alt="ACEP Kindergarten individualised care">
+    </div>
+
+    <!-- KG curriculum summary -->
+    <div class="curr-summary">
+      <h3>📚 What Our Kindergarteners Learn</h3>
+      <p>The ACEP Kindergarten curriculum focuses on <strong>four pillars</strong> that shape every day in the classroom:</p>
+      <div class="pills">
+        <span>🌱 Holistic Growth</span>
+        <span>🧩 Play-Based Learning</span>
+        <span>💛 Life Skills</span>
+        <span>❤️ Love &amp; Care</span>
       </div>
-      <div class="prog-card">
-        <div class="prog-img">
-          <img src="https://acep.ac.th/wp-content/uploads/2025/06/508557638_1345025630963903_4762845114533693764_n-1200x674.jpg" alt="Primary Level">
-          <span class="badge">Year 1–6</span>
-        </div>
-        <div class="prog-body">
-          <h3>Primary Level</h3>
-          <p>Thai Ministry curriculum integrated with international best practice — English, Mathematics, and Science taught by native-speaking teachers, alongside Thai Language, History, Religion, and Thai Culture.</p>
-          <p style="font-size:0.88rem; color:var(--gray-text); margin-top:8px;"><strong>Smart English Program (S-EP)</strong> · additional tracks coming with the upcoming curriculum announcement.</p>
-          <a class="more" href="program/primary.html">More Detail →</a>
+      <p style="margin-top:14px;">Children develop literacy &amp; numeracy foundations alongside Thai and English, supported by a native English teacher and individualised care. Aligned with the <strong>Thai Basic Education Core Curriculum B.E. 2551</strong>.</p>
+      <p style="margin-top:8px;"><a class="more" href="program/kindergarten.html">See full Kindergarten curriculum →</a></p>
+    </div>
+
+    <!-- KG teachers + Velicity interview -->
+    <div class="level-teachers">
+      <h3>👩‍🏫 Our Kindergarten Teacher</h3>
+      <div class="velicity-feature">
+        <div class="velicity-card" id="kg-teachers"></div>
+        <div class="velicity-video">
+          <div class="velicity-video-label">▶ Watch Miss Velicity introduce her class</div>
+          <video controls preload="metadata">
+            <source src="assets/video/velicity-interview.mov" type="video/quicktime">
+            <source src="assets/video/velicity-interview.mov" type="video/mp4">
+            Your browser does not support the video tag. <a href="assets/video/velicity-interview.mov" download>Download the video</a>.
+          </video>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== TEACHER SPOTLIGHT — Native Qualified Teachers (Primary Differentiator) ===== -->
-<section class="section" id="teachers">
+
+<!-- ===== 4. PRIMARY ===== -->
+<section class="level-section section-cream" id="primary">
   <div class="wrap">
-    <div class="section-title">
-      <div class="eyebrow">Native English Teachers · British-led</div>
-      <h2>What Sets ACEP Apart</h2>
-      <p>For our parents, the quality of native English teachers matters most — and we treat it that way:
-        selected with care, developed continually, and recognised for their craft.</p>
-      <p style="margin-top:8px;"><a href="faculty.html" style="color:var(--primary); font-weight:600;">See Our Faculty · Quality + Compliance →</a></p>
+    <div class="level-head">
+      <div class="level-eyebrow">Primary · Year 1–6</div>
+      <h2>Our Primary</h2>
+      <p class="level-lead">Thai Ministry curriculum integrated with international best practice. English, Mathematics, and Science taught by native-speaking teachers alongside Thai Language, History, Religion, and Thai Culture.</p>
     </div>
 
-    <!-- Teacher Standard — 3 pillars (covers BOTH native + Thai faculty) -->
-    <div class="teacher-standard">
-      <h3>Our Teacher Standard · ครูต่างชาติ + ครูไทย</h3>
-      <p class="standard-intro">Every teacher at ACEP — both native and Thai — passes through a deliberate three-stage commitment that keeps our classroom standards rising year over year.
-        <strong style="color:var(--gold);">Our direction:</strong> all native teachers progressively moving to
-        <strong style="color:var(--white);">British faculty and Cambridge-aligned assessment</strong>; all Thai teachers continually upgraded through the same Cambridge methodology.</p>
-      <div class="standard-grid">
-        <div class="standard-pillar">
-          <div class="pillar-num">01</div>
-          <div class="pillar-title">Selection · คัดสรร</div>
-          <ul>
-            <li><strong>Entrance exam</strong> for both native and Thai applicants</li>
-            <li>Degree-qualified · TEFL/CELTA or PGCE for native</li>
-            <li>Subject-matter expertise verified · Thai faculty</li>
-            <li>Background check · police clearance</li>
-            <li>Demo class &amp; panel interview with Director</li>
-          </ul>
-        </div>
-        <div class="standard-pillar">
-          <div class="pillar-num">02</div>
-          <div class="pillar-title">Development · อบรมพัฒนา</div>
-          <ul>
-            <li><strong>Termly Cambridge methodology workshops</strong></li>
-            <li>Classroom observation cycle every term</li>
-            <li>Mentoring pairs (senior + new teachers)</li>
-            <li>Cross-school exchange with AC / ACT / ACR</li>
-            <li>Annual PD retreat &amp; conference attendance</li>
-          </ul>
-        </div>
-        <div class="standard-pillar">
-          <div class="pillar-num">03</div>
-          <div class="pillar-title">Recognition · ยกย่อง</div>
-          <ul>
-            <li><strong>Teacher of the Month</strong> · public recognition</li>
-            <li>Voices from the Classroom video series</li>
-            <li>Parent-facing profiles &amp; portfolio</li>
-            <li>Long-service awards (5 / 10 / 15+ years)</li>
-            <li>Internal promotion pathway · academic head track</li>
-          </ul>
-        </div>
-      </div>
+    <!-- Primary photos -->
+    <div class="level-photos">
+      <img src="https://acep.ac.th/wp-content/uploads/2025/06/508557638_1345025630963903_4762845114533693764_n-1200x674.jpg" alt="ACEP Primary classroom">
+      <img src="https://acep.ac.th/wp-content/uploads/2026/04/DSC09095-1200x674.jpg" alt="ACEP Primary students">
+      <img src="https://acep.ac.th/wp-content/uploads/2025/06/Untitled-3-1024x582.jpg" alt="ACEP Primary curriculum">
+      <img src="assets/img/kindergarten/kg-60.jpg" alt="ACEP learning environment">
     </div>
 
-    <!-- Faculty Development Calendar -->
-    <h3 style="text-align:center; color:var(--primary); margin: 36px 0 6px; font-size:1.35rem;">Faculty Development Calendar · AY 2569</h3>
-    <p style="text-align:center; color:var(--gray-text); margin-bottom:18px; font-size:0.92rem;">An explicit, year-round commitment to raising classroom standards — for every teacher.</p>
-
-    <div class="dev-calendar">
-      <div class="dev-cal-item">
-        <div class="month">May 2026</div>
-        <div class="event">New teacher orientation · ACEP induction week</div>
+    <!-- Primary curriculum summary -->
+    <div class="curr-summary">
+      <h3>📚 What Our Primary Students Learn</h3>
+      <p>Our Y1–Y6 curriculum follows the <strong>Thai Basic Education Core Curriculum B.E. 2551 (Revise 2026)</strong>, integrated with Cambridge-aligned international additional subjects.</p>
+      <div class="pills">
+        <span>🌍 English (Native-led)</span>
+        <span>🔢 Math (Cambridge)</span>
+        <span>🔬 Science (Cambridge)</span>
+        <span>📖 English Literature</span>
+        <span>🇨🇳 Chinese Kids Connect</span>
+        <span>💻 STEM Education</span>
+        <span>⛪ Montfort Study</span>
+        <span>🇹🇭 Thai · History · Religion</span>
       </div>
-      <div class="dev-cal-item">
-        <div class="month">Jun 2026</div>
-        <div class="event">Academic Preparatory Meeting · curriculum alignment</div>
-      </div>
-      <div class="dev-cal-item">
-        <div class="month">Aug 2026</div>
-        <div class="event">Cambridge methodology workshop · all faculty</div>
-      </div>
-      <div class="dev-cal-item">
-        <div class="month">Oct 2026</div>
-        <div class="event">Mid-term observation cycle · peer review</div>
-      </div>
-      <div class="dev-cal-item">
-        <div class="month">Dec 2026</div>
-        <div class="event">Cross-school exchange with AC / ACT / ACR</div>
-      </div>
-      <div class="dev-cal-item">
-        <div class="month">Feb 2027</div>
-        <div class="event">Teacher of the Term recognition · ceremony</div>
-      </div>
-      <div class="dev-cal-item">
-        <div class="month">Mar 2027</div>
-        <div class="event">Year-end PD retreat · planning AY 2570</div>
-      </div>
-      <div class="dev-cal-item" style="background:#FDF4E8; border-left-color: var(--primary);">
-        <div class="month" style="color:var(--gold-dark);">Ongoing</div>
-        <div class="event">Weekly mentoring · monthly subject-team planning · termly classroom observation</div>
-      </div>
+      <p style="margin-top:14px;"><strong>Total 34.5 hours/week</strong> · 21 hr Fundamental + 10 hr Additional (ACEP distinctive) + 3.5 hr Activities. Curriculum under tentative review.</p>
+      <p style="margin-top:8px;"><a class="more" href="program/primary.html">See full Primary curriculum →</a></p>
     </div>
 
-    <!-- Photo strip — Faculty Development in action -->
-    <h3 style="text-align:center; color:var(--primary); margin: 36px 0 6px; font-size:1.35rem;">Faculty Development in Action</h3>
-    <p style="text-align:center; color:var(--gray-text); margin-bottom:18px; font-size:0.92rem;">Real moments from our standing commitment to teacher quality.</p>
-
-    <div class="dev-photos">
-      <div class="dev-photo">
-        <img src="https://acep.ac.th/wp-content/uploads/2026/05/box-ac-453x341.jpg" alt="Academic Preparatory Meeting">
-        <div class="caption-overlay">Academic Preparatory Meeting · 12 May 2026</div>
-      </div>
-      <div class="dev-photo placeholder-img">
-        <span class="photo-num">📷 รอภาพ #12</span>
-        Selection · Entrance exam &amp; demo class
-      </div>
-      <div class="dev-photo placeholder-img">
-        <span class="photo-num">📷 รอภาพ #13</span>
-        Cambridge methodology workshop
-      </div>
-      <div class="dev-photo placeholder-img">
-        <span class="photo-num">📷 รอภาพ #14</span>
-        Classroom observation · peer review
-      </div>
-      <div class="dev-photo placeholder-img">
-        <span class="photo-num">📷 รอภาพ #15</span>
-        Cross-school exchange (AC/ACT/ACR)
-      </div>
-      <div class="dev-photo placeholder-img">
-        <span class="photo-num">📷 รอภาพ #16</span>
-        Teacher of the Term · recognition
-      </div>
+    <!-- Primary teachers -->
+    <div class="level-teachers">
+      <h3>👨‍🏫 Our Primary Teachers</h3>
+      <p style="font-size:0.9rem; color:var(--gray-text); margin: 0 0 14px;">Sorted by years of service · senior first.</p>
+      <div class="level-teacher-grid" id="primary-teachers"></div>
     </div>
-
-    <h3 style="text-align:center; color:var(--primary); margin-bottom:8px; font-size:1.5rem;">Voices from the Classroom</h3>
-    <p style="text-align:center; color:var(--gray-text); margin-bottom:28px; font-size:0.95rem;">Hear directly from our teachers — backgrounds, teaching philosophy, and how they nurture each child.</p>
-
-    <div class="teacher-grid">
-      <div class="teacher-card">
-        <div class="teacher-portrait">
-          <img src="assets/img/teachers/teacher-1.jpg" alt="ACEP Native Teacher">
-          <div class="play-overlay"><div class="play-icon">▶</div></div>
-        </div>
-      </div>
-      <div class="teacher-card">
-        <div class="teacher-portrait">
-          <img src="assets/img/teachers/teacher-2.jpg" alt="ACEP Native Teacher">
-          <div class="play-overlay"><div class="play-icon">▶</div></div>
-        </div>
-      </div>
-      <div class="teacher-card">
-        <div class="teacher-portrait">
-          <img src="assets/img/teachers/teacher-3.jpg" alt="ACEP Native Teacher">
-          <div class="play-overlay"><div class="play-icon">▶</div></div>
-        </div>
-      </div>
-    </div>
-
-    <p class="center" style="margin-top:32px;">
-      <em style="color:var(--gray-text); font-size:0.92rem; display:block;">
-        Each teacher will introduce themselves here — who they are, why they chose ACEP, how they teach, and how they care for each child. Coming with Academic Year 2569.
-      </em>
-    </p>
   </div>
 </section>
 
-<!-- ===== ABOUT — Why ACEP · 6 Pillars (the international-school formula) ===== -->
-<section class="section section-cream" id="about">
+
+<!-- ===== STUDENT & TEACHER SUPPORT · PSYCHOLOGY TEAM ===== -->
+<section class="section section-cream" id="support">
   <div class="wrap">
     <div class="section-title">
-      <div class="eyebrow">Why ACEP</div>
-      <h2>The International-School Formula</h2>
-      <p>What parents really evaluate when choosing an international school for their child — and how ACEP answers each.</p>
+      <div class="eyebrow">Student &amp; Teacher Support</div>
+      <h2>Psychology Team · ทีมนักจิตวิทยาประจำโรงเรียน</h2>
+      <p>Beyond academic teaching, ACEP keeps a dedicated <strong>clinical psychology team</strong> on campus — supporting students from <strong>Primary 1 through Primary 6</strong>, consulting with teachers on classroom strategies, and working alongside parents on social-emotional growth.</p>
     </div>
-    <div class="card-grid">
 
-      <!-- Pillar 1 -->
-      <div class="prog-card">
-        <div class="prog-img"><img src="https://acep.ac.th/wp-content/uploads/2025/06/img-about1.jpg" alt="Toward an All-British Native Faculty"></div>
-        <div class="prog-body">
-          <h3>1. Toward an All-British Native Faculty</h3>
-          <p>Our highest priority. As ACEP enters its next phase we are progressively building an all-British native faculty, Cambridge-aligned and recognised through our Teacher Standard. <a href="#teachers" style="color:var(--primary); font-weight:600;">See our commitment →</a></p>
+    <div class="psy-grid">
+      <div class="psy-card">
+        <div class="psy-photo">
+          <img src="assets/img/support/psychologist-picha.jpg" alt="คุณพิชา มากแพทย์" loading="lazy">
+        </div>
+        <div class="psy-body">
+          <div class="psy-name">คุณพิชา มากแพทย์</div>
+          <div class="psy-role">นักจิตวิทยาคลินิกชำนาญการ <span>· Senior Clinical Psychologist</span></div>
+          <div class="psy-grades"><strong>ดูแลระดับชั้น:</strong> ประถมศึกษาปีที่ 1 · ปีที่ 3 · ปีที่ 5</div>
         </div>
       </div>
 
-      <!-- Pillar 2 -->
-      <div class="prog-card">
-        <div class="prog-img"><img src="https://acep.ac.th/wp-content/uploads/2025/06/cambridge.png" alt="International Recognition · Credit Transfer" style="object-fit:contain; background:var(--white); padding:32px;"></div>
-        <div class="prog-body">
-          <h3>2. International Recognition · Credit Transfer</h3>
-          <p>Our students earn Cambridge, IDP IELTS, and HSK credentials that count toward leading universities worldwide. <a href="#partners" style="color:var(--primary); font-weight:600;">See partners →</a></p>
+      <div class="psy-card">
+        <div class="psy-photo">
+          <img src="assets/img/support/psychologist-nattanya.jpg" alt="คุณณัฐธันยา โชติสุทธิ์" loading="lazy">
+        </div>
+        <div class="psy-body">
+          <div class="psy-name">คุณณัฐธันยา โชติสุทธิ์</div>
+          <div class="psy-role">นักจิตวิทยาคลินิก <span>· Clinical Psychologist</span></div>
+          <div class="psy-grades"><strong>ดูแลระดับชั้น:</strong> ประถมศึกษาปีที่ 2 · ปีที่ 4 · ปีที่ 6</div>
         </div>
       </div>
-
-      <!-- Pillar 3 -->
-      <div class="prog-card">
-        <div class="prog-img"><img src="https://acep.ac.th/wp-content/uploads/2025/06/logo-gold-1.jpg" alt="Assumption · Saint Gabriel Heritage"></div>
-        <div class="prog-body">
-          <h3>3. Assumption · Saint Gabriel Heritage</h3>
-          <p>125+ years of Catholic education excellence in Thailand — a name parents have trusted across generations to form leaders of character.</p>
-        </div>
-      </div>
-
-      <!-- Pillar 4 -->
-      <div class="prog-card">
-        <div class="prog-img"><img src="assets/img/alumni/alumni-1.jpg" alt="ACEP Alumni Network"></div>
-        <div class="prog-body">
-          <h3>4. Alumni Network · Career Pathway</h3>
-          <p>From classroom to industry: our alumni include leading entrepreneurs, executives, and organisational leaders nationally and internationally. <a href="#network" style="color:var(--primary); font-weight:600;">See network →</a></p>
-        </div>
-      </div>
-
-      <!-- Pillar 5 -->
-      <div class="prog-card">
-        <div class="prog-img"><img src="https://acep.ac.th/wp-content/uploads/2025/06/img-about2.jpg" alt="Life Skills Development"></div>
-        <div class="prog-body">
-          <h3>5. Life Skills Beyond the Classroom</h3>
-          <p>Learning that fosters creativity, resilience, and the practical skills students will need to lead fulfilling, meaningful lives.</p>
-        </div>
-      </div>
-
-      <!-- Pillar 6 -->
-      <div class="prog-card">
-        <div class="prog-img"><img src="https://acep.ac.th/wp-content/uploads/2025/06/img-about3.jpg" alt="Social Responsibility"></div>
-        <div class="prog-body">
-          <h3>6. Social Responsibility &amp; Virtue</h3>
-          <p>In the age of AI and teamwork, virtue and trust become rarest assets. We form students of conscience — leaders with both competence and compassion.</p>
-        </div>
-      </div>
-
     </div>
-    <p class="center" style="margin-top:32px;">
-      <a class="btn btn-red" href="https://youtu.be/34X8j7ICZnk" target="_blank">▶ Watch the ACEP Story</a>
-    </p>
+
+    <div class="psy-note">
+      <strong>What the psychology team does</strong> — Consults with teachers on classroom strategies · supports students navigating social-emotional milestones · runs early-years screening when needed · provides confidential 1:1 sessions with referral to specialists when appropriate · liaises with parents on growth and well-being.
+    </div>
   </div>
 </section>
 
-<!-- ===== FACILITIES ===== -->
-<section class="section" id="facilities">
+
+<!-- ===== 7. SPORTS & ACTIVITIES ===== -->
+<section class="section" id="sports">
   <div class="wrap">
     <div class="section-title">
-      <div class="eyebrow">Campus Facilities &amp; Activities</div>
+      <div class="eyebrow">Sports &amp; Activities</div>
       <h2>Spaces to Discover Where They Belong</h2>
-      <p>Activities and facilities at ACEP exist to broaden every student's experience, follow their interests, and help them find their strengths — building the life skills essential for community living and a wide range of future careers.</p>
+      <p>Activities and facilities at ACEP exist to broaden every student's experience, follow their interests, and help them find their strengths.</p>
     </div>
-    <div class="card-grid">
-      <div class="prog-card">
-        <div class="prog-img"><img src="https://acep.ac.th/wp-content/uploads/2025/07/Untitled-2.jpg" alt="ACEP Buildings"></div>
-        <div class="prog-body">
-          <h3>🏛️ Buildings</h3>
-          <p>ACEP's campus features a collection of thoughtfully designed buildings, each serving a unique role in supporting students' academic, physical, and personal development.</p>
+
+    <!-- Swimming Pool -->
+    <div class="sport-block">
+      <h3><span class="ico">🏊</span>Swimming Pool<span class="photo-count">100 photos</span></h3>
+      <p class="sport-lead">A 6-lane standard pool for instruction, training, and competitions · separate early-childhood pool for our youngest learners.</p>
+      <div class="sport-grid">
+        <div>
+          <h4>🏆 Pool Coaches · 2 ท่าน</h4>
+          <div class="sport-coaches">
+            <img src="assets/img/coaches/swim/coach-1.jpg" alt="Pool Coach 1">
+            <img src="assets/img/coaches/swim/coach-2.jpg" alt="Pool Coach 2">
+          </div>
+        </div>
+        <div>
+          <h4>📷 Facility</h4>
+          <div class="sport-photos">
+            <img src="assets/img/facilities/pool/p-1.jpg" alt="Pool 1">
+            <img src="assets/img/facilities/pool/p-15.jpg" alt="Pool 2">
+            <img src="assets/img/facilities/pool/p-30.jpg" alt="Pool 3">
+            <img src="assets/img/facilities/pool/p-45.jpg" alt="Pool 4">
+          </div>
         </div>
       </div>
-      <div class="prog-card">
-        <div class="prog-img"><img src="assets/img/facilities/pool.jpg" alt="ACEP Swimming Pool"></div>
-        <div class="prog-body">
-          <h3>🏊 Swimming Pool</h3>
-          <p>A 6-lane standard pool for aquatic education, training, and competitions. A separate early-childhood pool ensures safe, age-appropriate learning while building physical skills and confidence.</p>
+      <div class="sport-cta"><a href="facilities.html#pool">View 100-photo album →</a></div>
+    </div>
+
+    <!-- Football -->
+    <div class="sport-block">
+      <h3><span class="ico">⚽</span>Football Fields<span class="photo-count">28 photos</span></h3>
+      <p class="sport-lead">Artificial-turf field plus the planned <strong>Assumption College Football Academy</strong> — programme led by Coach <strong>Borriboon Bunsomboon</strong> (AFC "A" / "B" / "C" Coaching Certificate License).</p>
+      <div class="sport-grid">
+        <div>
+          <h4>🏆 Football Academy · Coach Borriboon</h4>
+          <div class="sport-coaches">
+            <img src="assets/img/facilities/football/pptx-image1.jpeg" alt="Coach Borriboon">
+            <img src="assets/img/facilities/football/pptx-image5.jpg" alt="Coaching">
+          </div>
+        </div>
+        <div>
+          <h4>📷 Current Turf Field</h4>
+          <div class="sport-photos">
+            <img src="assets/img/facilities/turf/turf-1.jpg" alt="Turf 1">
+            <img src="assets/img/facilities/turf/turf-5.jpg" alt="Turf 2">
+            <img src="assets/img/facilities/turf/turf-10.jpg" alt="Turf 3">
+            <img src="assets/img/facilities/turf/turf-14.jpg" alt="Turf 4">
+          </div>
         </div>
       </div>
-      <div class="prog-card">
-        <div class="prog-img"><img src="assets/img/facilities/football/football-1.jpg" alt="ACEP Football Field"></div>
-        <div class="prog-body">
-          <h3>⚽ Football Fields</h3>
-          <p>Standard-grade football fields supporting student PE, after-school training, and inter-school friendly matches.</p>
-        </div>
+      <div class="sport-cta"><a href="facilities.html#football">View 28-photo album →</a></div>
+    </div>
+
+    <!-- Tennis -->
+    <div class="sport-block">
+      <h3><span class="ico">🎾</span>Tennis Courts<span class="photo-count">28 photos</span></h3>
+      <p class="sport-lead">Four refurbished courts running after-school tennis courses for ACEP students. Concept renders below show planned shade, stands, and changing facilities.</p>
+      <div class="sport-photos" style="grid-template-columns: repeat(4, 1fr);">
+        <img src="assets/img/facilities/tennis/t-1.jpg" alt="Tennis 1">
+        <img src="assets/img/facilities/tennis/t-7.jpg" alt="Tennis 2">
+        <img src="assets/img/facilities/tennis/t-13.jpg" alt="Tennis 3">
+        <img src="assets/img/facilities/tennis/t-20.jpg" alt="Tennis 4">
       </div>
-      <div class="prog-card">
-        <div class="prog-img"><img src="assets/img/facilities/tennis/tennis-1.jpg" alt="ACEP Tennis Courts"></div>
-        <div class="prog-body">
-          <h3>🎾 Tennis Courts</h3>
-          <p>Four refurbished courts running after-school tennis courses for ACEP students at all levels.</p>
-        </div>
+      <div class="sport-cta"><a href="facilities.html#tennis">View 28-photo album →</a></div>
+    </div>
+
+    <!-- Pickleball -->
+    <div class="sport-block">
+      <h3><span class="ico">🥒</span>Pickleball &amp; Multi-sport<span class="photo-count">7 photos</span></h3>
+      <p class="sport-lead">Pickleball courts converted from existing basketball lines — a growing popular sport, available to students through coached programmes.</p>
+      <div class="sport-photos" style="grid-template-columns: repeat(4, 1fr);">
+        <img src="assets/img/facilities/pickleball/pk-1.jpg" alt="Pickleball 1">
+        <img src="assets/img/facilities/pickleball/pk-3.jpg" alt="Pickleball 2">
+        <img src="assets/img/facilities/pickleball/pk-5.jpg" alt="Pickleball 3">
+        <img src="assets/img/facilities/pickleball/pk-7.jpg" alt="Pickleball 4">
       </div>
-      <div class="prog-card">
-        <div class="prog-img"><img src="assets/img/facilities/pickleball/pk-1.jpg" alt="ACEP Pickleball Court"></div>
-        <div class="prog-body">
-          <h3>🥒 Pickleball &amp; Multi-sport</h3>
-          <p>Pickleball courts converted from existing basketball lines — a growing popular sport with coached student programmes.</p>
-        </div>
+      <div class="sport-cta"><a href="facilities.html#pickleball">View 7-photo album →</a></div>
+    </div>
+
+    <!-- Fitness -->
+    <div class="sport-block">
+      <h3><span class="ico">🏋️</span>St. Peter Sport Club &amp; Fitness Centre<span class="photo-count">18 photos</span></h3>
+      <p class="sport-lead">On-campus fitness facility for upper-primary students, staff, and the wider school community.</p>
+      <div class="sport-photos" style="grid-template-columns: repeat(4, 1fr);">
+        <img src="assets/img/facilities/fitness/f-1.jpg" alt="Fitness 1">
+        <img src="assets/img/facilities/fitness/f-5.jpg" alt="Fitness 2">
+        <img src="assets/img/facilities/fitness/f-10.jpg" alt="Fitness 3">
+        <img src="assets/img/facilities/fitness/f-15.jpg" alt="Fitness 4">
       </div>
-      <div class="prog-card">
-        <div class="prog-img"><img src="assets/img/facilities/fitness.jpg" alt="St. Peter Sport Club · Fitness"></div>
-        <div class="prog-body">
-          <h3>🏟️ St. Peter Sport Club</h3>
-          <p>An on-campus sports and fitness facility for upper-secondary students, staff, and the wider school community.</p>
-        </div>
-      </div>
+      <div class="sport-cta"><a href="facilities.html#fitness">View 18-photo album →</a></div>
     </div>
   </div>
 </section>
 
-<!-- ===== PARTNERS / INTERNATIONAL RECOGNITION & CREDIT TRANSFER ===== -->
-<section class="section" id="partners">
+
+<!-- ===== 8. UPDATES — News + Calendar (static · SWIS feed สำรองไว้ฟื้นภายหลัง) ===== -->
+<section class="section section-cream" id="news">
   <div class="wrap">
     <div class="section-title">
-      <div class="eyebrow">International Recognition</div>
-      <h2>Credentials That Travel</h2>
-      <p>The reason "international school" matters: our students earn credentials from globally recognised institutions — recognised for university admission and credit transfer at top universities worldwide.</p>
+      <div class="eyebrow">Updates from ACEP</div>
+      <h2>What's Happening</h2>
+      <p>กิจกรรมและประกาศต้นเทอม · ปีการศึกษา 2569 (Academic Year 2027)</p>
     </div>
-    <div class="partners">
-      <div class="logo"><img src="https://acep.ac.th/wp-content/uploads/2025/06/cambridge.png" alt="Cambridge Assessment English"></div>
-      <div class="logo"><img src="https://acep.ac.th/wp-content/uploads/2025/06/idp_ielts.png" alt="IDP IELTS"></div>
-      <div class="logo"><img src="https://acep.ac.th/wp-content/uploads/2025/06/hsk.png" alt="HSK Chinese Proficiency"></div>
-      <div class="logo"><img src="https://acep.ac.th/wp-content/uploads/2025/06/mahidol.png" alt="Mahidol University"></div>
-      <div class="logo"><img src="https://acep.ac.th/wp-content/uploads/2025/06/assumption.png" alt="Assumption University"></div>
-      <div class="logo"><img src="https://acep.ac.th/wp-content/uploads/2025/06/kmitl.png" alt="KMITL"></div>
+
+    <div class="updates-grid">
+      <div class="updates-col">
+        <h3>📰 News &amp; Announcements</h3>
+        <div class="col-sub">ประกาศจากโรงเรียน · ต้นเทอม AY 2027</div>
+        <ul class="static-news-list">
+          <li>
+            <div class="news-date-block"><span class="day">27</span><span class="my">JUN 2026</span></div>
+            <div class="news-body">
+              <strong>ปฐมนิเทศนักเรียนใหม่ · Orientation Day</strong>
+              <p>ต้อนรับนักเรียนใหม่ AY 2027 · พบครูประจำชั้น · เยี่ยมชมโรงเรียน — เวลา 8:30 น.</p>
+            </div>
+          </li>
+          <li>
+            <div class="news-date-block"><span class="day">28</span><span class="my">JUN 2026</span></div>
+            <div class="news-body">
+              <strong>Town Hall ผู้ปกครอง</strong>
+              <p>พบ ผอ. · ทีมบริหาร · ครู Foreign &amp; Thai · ทิศทาง ACEP สู่ AY 2027</p>
+            </div>
+          </li>
+          <li>
+            <div class="news-date-block"><span class="day">01</span><span class="my">JUL 2026</span></div>
+            <div class="news-body">
+              <strong>เปิดภาคเรียนที่ 1 · Term 1 begins</strong>
+              <p>เริ่มการเรียนการสอนปกติ · นักเรียนแต่งกายเต็มยศ · ใช้รถรับ-ส่งตามปกติ</p>
+            </div>
+          </li>
+        </ul>
+        <div class="col-cta"><a href="https://swis.acep.ac.th" target="_blank">รายละเอียดเพิ่มเติม · SWIS →</a></div>
+      </div>
+
+      <div class="updates-col">
+        <h3>📅 Calendar · ปฏิทินกิจกรรม</h3>
+        <div class="col-sub">กิจกรรมสำคัญที่กำลังจะถึง</div>
+        <ul class="static-calendar-list">
+          <li class="cal-today">
+            <div class="cal-date"><span class="day">27</span><span class="my">มิ.ย. 69</span></div>
+            <div class="cal-event">
+              <strong>ปฐมนิเทศนักเรียนใหม่</strong>
+              <span class="cal-time">⏰ 8:30 — 12:00 · หอประชุมใหญ่</span>
+            </div>
+          </li>
+          <li>
+            <div class="cal-date"><span class="day">28</span><span class="my">มิ.ย. 69</span></div>
+            <div class="cal-event">
+              <strong>Town Hall ผู้ปกครอง</strong>
+              <span class="cal-time">⏰ 9:00 — 12:00 · หอประชุมใหญ่</span>
+            </div>
+          </li>
+          <li>
+            <div class="cal-date"><span class="day">01</span><span class="my">ก.ค. 69</span></div>
+            <div class="cal-event">
+              <strong>เปิดภาคเรียนที่ 1 · Term 1</strong>
+              <span class="cal-time">⏰ 7:30 น. · เคารพธงชาติ · เริ่มเรียนปกติ</span>
+            </div>
+          </li>
+          <li>
+            <div class="cal-date"><span class="day">??</span><span class="my">ก.ค. 69</span></div>
+            <div class="cal-event">
+              <strong>พิธีไหว้ครู</strong>
+              <span class="cal-time">⏰ รอประกาศ</span>
+            </div>
+          </li>
+          <li>
+            <div class="cal-date"><span class="day">??</span><span class="my">ส.ค. 69</span></div>
+            <div class="cal-event">
+              <strong>วันแม่ · ถวายพระพร</strong>
+              <span class="cal-time">⏰ รอประกาศ</span>
+            </div>
+          </li>
+        </ul>
+        <div class="col-cta"><a href="https://swis.acep.ac.th/html_edu/cgi-bin/report/today_events.php" target="_blank">Full Calendar on SWIS →</a></div>
+      </div>
+
+      <div class="updates-col">
+        <h3>📷 Photo Album · อัลบั้มภาพ</h3>
+        <div class="col-sub">ภาพกิจกรรมและสนามฟาซิลิตี้</div>
+        <div class="static-album-preview">
+          <a href="facilities.html#pool" class="alb-tile" style="background-image:url('assets/img/facilities/pool/p-5.jpg');">
+            <span>🏊 สระว่ายน้ำ · 100 ภาพ</span>
+          </a>
+          <a href="facilities.html#football" class="alb-tile" style="background-image:url('assets/img/facilities/football/football-5.jpg');">
+            <span>⚽ สนามหญ้าเทียม · 28 ภาพ</span>
+          </a>
+          <a href="facilities.html#tennis" class="alb-tile" style="background-image:url('assets/img/facilities/tennis/t-5.jpg');">
+            <span>🎾 สนามเทนนิส · 28 ภาพ</span>
+          </a>
+          <a href="facilities.html#fitness" class="alb-tile" style="background-image:url('assets/img/facilities/fitness/f-5.jpg');">
+            <span>💪 ฟิตเนส · 18 ภาพ</span>
+          </a>
+        </div>
+        <div class="col-cta"><a href="facilities.html">All Facility Albums →</a></div>
+      </div>
     </div>
-    <p class="center" style="margin-top:24px; font-size:0.92rem; color:var(--gray-text);">
-      <strong style="color:var(--primary);">Cambridge</strong> for English certification ·
-      <strong style="color:var(--primary);">IDP IELTS</strong> for international university entry ·
-      <strong style="color:var(--primary);">HSK</strong> for Chinese proficiency ·
-      <strong style="color:var(--primary);">Mahidol · Assumption · KMITL</strong> partnerships for higher-education pathways
-    </p>
-    <p class="center" style="margin-top:14px; font-size:0.92rem; color:var(--primary); font-weight:500;">
-      ⮕ <em>Our direction: every assessment Cambridge-aligned across all levels.</em>
-    </p>
   </div>
 </section>
 
-<!-- ===== NETWORK 15 SCHOOLS ===== -->
+
+<!-- ===== NETWORK 15 SCHOOLS + HUB ===== -->
 <section class="section section-cream" id="network">
   <div class="wrap">
     <div class="section-title">
@@ -645,62 +566,20 @@
         <span class="code" style="color:var(--primary-dark);">HUB</span>
         <span class="name" style="color:var(--primary); font-weight:600;">Thai Brothers Network · 15 Schools</span>
       </a>
-      <a class="net-item" href="http://www.assumption.ac.th" target="_blank">
-        <span class="logo-wrap"><img src="assets/img/schools/ac.png" alt="AC logo" loading="lazy"></span>
-        <span class="code">AC</span><span class="name">Assumption College (Bangrak)</span>
-      </a>
-      <a class="net-item" href="http://www.acp.ac.th" target="_blank">
-        <span class="logo-wrap"><img src="assets/img/schools/acp.jpg" alt="ACP logo" loading="lazy"></span>
-        <span class="code">ACP</span><span class="name">AC Primary Section</span>
-      </a>
-      <a class="net-item" href="http://www.act.ac.th" target="_blank">
-        <span class="logo-wrap"><img src="assets/img/schools/act.jpg" alt="ACT logo" loading="lazy"></span>
-        <span class="code">ACT</span><span class="name">AC Thonburi</span>
-      </a>
-      <a class="net-item" href="http://www.acs.ac.th" target="_blank">
-        <span class="logo-wrap"><img src="assets/img/schools/acs.gif" alt="ACS logo" loading="lazy"></span>
-        <span class="code">ACS</span><span class="name">AC Sriracha</span>
-      </a>
-      <a class="net-item" href="http://www.acsp.ac.th" target="_blank">
-        <span class="logo-wrap"><img src="assets/img/schools/acsp.jpg" alt="ACSP logo" loading="lazy"></span>
-        <span class="code">ACSP</span><span class="name">AC Samut Prakan</span>
-      </a>
-      <a class="net-item" href="http://www.acl.ac.th" target="_blank">
-        <span class="logo-wrap"><img src="assets/img/schools/acl.jpg" alt="ACL logo" loading="lazy"></span>
-        <span class="code">ACL</span><span class="name">AC Lampang</span>
-      </a>
-      <a class="net-item" href="http://www.acr.ac.th" target="_blank">
-        <span class="logo-wrap"><img src="assets/img/schools/acr.png" alt="ACR logo" loading="lazy"></span>
-        <span class="code">ACR</span><span class="name">AC Rayong</span>
-      </a>
-      <a class="net-item" href="http://www.acu.ac.th" target="_blank">
-        <span class="logo-wrap"><img src="assets/img/schools/acu.png" alt="ACU logo" loading="lazy"></span>
-        <span class="code">ACU</span><span class="name">AC Ubon Ratchathani</span>
-      </a>
-      <a class="net-item" href="http://www.acn.ac.th" target="_blank">
-        <span class="logo-wrap"><img src="assets/img/schools/acn.jpg" alt="ACN logo" loading="lazy"></span>
-        <span class="code">ACN</span><span class="name">AC Nakhon Ratchasima</span>
-      </a>
-      <a class="net-item" href="http://www.atsn.ac.th" target="_blank">
-        <span class="logo-wrap"><img src="assets/img/schools/atsn.png" alt="ATSN logo" loading="lazy"></span>
-        <span class="code">ATSN</span><span class="name">AC Technical · Nakhon Phanom</span>
-      </a>
-      <a class="net-item" href="http://www.sg.ac.th" target="_blank">
-        <span class="logo-wrap"><img src="assets/img/schools/sg.png" alt="SG logo" loading="lazy"></span>
-        <span class="code">SG</span><span class="name">Saint Gabriel's College</span>
-      </a>
-      <a class="net-item" href="https://www.sl.ac.th" target="_blank">
-        <span class="logo-wrap"><img src="assets/img/schools/sl.png" alt="SL logo" loading="lazy"></span>
-        <span class="code">SL</span><span class="name">Saint Louis · Chachoengsao</span>
-      </a>
-      <a class="net-item" href="https://www.mcp.ac.th" target="_blank">
-        <span class="logo-wrap"><img src="assets/img/schools/mcp.jpg" alt="MCP logo" loading="lazy"></span>
-        <span class="code">MCP</span><span class="name">Montfort College (Primary)</span>
-      </a>
-      <a class="net-item" href="http://www.montfort.ac.th" target="_blank">
-        <span class="logo-wrap"><img src="assets/img/schools/mcs.jpg" alt="MCS logo" loading="lazy"></span>
-        <span class="code">MCS</span><span class="name">Montfort College (Secondary)</span>
-      </a>
+      <a class="net-item" href="http://www.assumption.ac.th" target="_blank"><span class="logo-wrap"><img src="assets/img/schools/ac.png" alt="AC logo" loading="lazy"></span><span class="code">AC</span><span class="name">Assumption College (Bangrak)</span></a>
+      <a class="net-item" href="http://www.acp.ac.th" target="_blank"><span class="logo-wrap"><img src="assets/img/schools/acp.jpg" alt="ACP logo" loading="lazy"></span><span class="code">ACP</span><span class="name">AC Primary Section</span></a>
+      <a class="net-item" href="http://www.act.ac.th" target="_blank"><span class="logo-wrap"><img src="assets/img/schools/act.jpg" alt="ACT logo" loading="lazy"></span><span class="code">ACT</span><span class="name">AC Thonburi</span></a>
+      <a class="net-item" href="http://www.acs.ac.th" target="_blank"><span class="logo-wrap"><img src="assets/img/schools/acs.gif" alt="ACS logo" loading="lazy"></span><span class="code">ACS</span><span class="name">AC Sriracha</span></a>
+      <a class="net-item" href="http://www.acsp.ac.th" target="_blank"><span class="logo-wrap"><img src="assets/img/schools/acsp.jpg" alt="ACSP logo" loading="lazy"></span><span class="code">ACSP</span><span class="name">AC Samut Prakan</span></a>
+      <a class="net-item" href="http://www.acl.ac.th" target="_blank"><span class="logo-wrap"><img src="assets/img/schools/acl.jpg" alt="ACL logo" loading="lazy"></span><span class="code">ACL</span><span class="name">AC Lampang</span></a>
+      <a class="net-item" href="http://www.acr.ac.th" target="_blank"><span class="logo-wrap"><img src="assets/img/schools/acr.png" alt="ACR logo" loading="lazy"></span><span class="code">ACR</span><span class="name">AC Rayong</span></a>
+      <a class="net-item" href="http://www.acu.ac.th" target="_blank"><span class="logo-wrap"><img src="assets/img/schools/acu.png" alt="ACU logo" loading="lazy"></span><span class="code">ACU</span><span class="name">AC Ubon Ratchathani</span></a>
+      <a class="net-item" href="http://www.acn.ac.th" target="_blank"><span class="logo-wrap"><img src="assets/img/schools/acn.jpg" alt="ACN logo" loading="lazy"></span><span class="code">ACN</span><span class="name">AC Nakhon Ratchasima</span></a>
+      <a class="net-item" href="http://www.atsn.ac.th" target="_blank"><span class="logo-wrap"><img src="assets/img/schools/atsn.png" alt="ATSN logo" loading="lazy"></span><span class="code">ATSN</span><span class="name">AC Technical · Nakhon Phanom</span></a>
+      <a class="net-item" href="http://www.sg.ac.th" target="_blank"><span class="logo-wrap"><img src="assets/img/schools/sg.png" alt="SG logo" loading="lazy"></span><span class="code">SG</span><span class="name">Saint Gabriel's College</span></a>
+      <a class="net-item" href="https://www.sl.ac.th" target="_blank"><span class="logo-wrap"><img src="assets/img/schools/sl.png" alt="SL logo" loading="lazy"></span><span class="code">SL</span><span class="name">Saint Louis · Chachoengsao</span></a>
+      <a class="net-item" href="https://www.mcp.ac.th" target="_blank"><span class="logo-wrap"><img src="assets/img/schools/mcp.jpg" alt="MCP logo" loading="lazy"></span><span class="code">MCP</span><span class="name">Montfort College (Primary)</span></a>
+      <a class="net-item" href="http://www.montfort.ac.th" target="_blank"><span class="logo-wrap"><img src="assets/img/schools/mcs.jpg" alt="MCS logo" loading="lazy"></span><span class="code">MCS</span><span class="name">Montfort College (Secondary)</span></a>
       <span class="net-item you-are-here">
         <span class="logo-wrap"><img src="assets/img/schools/acep.jpg" alt="ACEP logo" loading="lazy"></span>
         <span class="code">ACEP</span><span class="name">English Program · Rama 2</span>
@@ -710,11 +589,205 @@
   </div>
 </section>
 
-<!-- ===== SLOGAN STRIP (between Network and Admission CTA) ===== -->
+
+<!-- ===================================================================== -->
+<!-- ===== QUALITY & MANAGEMENT — กระบวนการ + หลักการแนวคิด ===== -->
+<!-- ===================================================================== -->
+<section class="section section-cream" id="quality">
+  <div class="wrap">
+    <div class="section-title">
+      <div class="eyebrow">Quality &amp; Management</div>
+      <h2>กระบวนการคุณภาพ · หลักการแนวคิด</h2>
+      <p>เบื้องหลังของ ACEP — ระบบที่ทำให้เราเป็น "Loving Place" อย่างยั่งยืน · ทั้งกระบวนการคัดสรร พัฒนา ยกย่องครู และหลักการแนวคิดที่ยึดเป็นเข็มทิศ.</p>
+    </div>
+
+    <!-- ===== ⓪ Director's Message ===== -->
+    <div class="quality-block" id="message">
+      <h3 class="quality-h3">⓪ Director's Message &amp; Policy · สาร ผอ. และนโยบาย</h3>
+      <div class="director-card">
+        <div class="photo"><img src="https://acep.ac.th/wp-content/uploads/2026/05/MMM.jpg" alt="Bro. Supanun Khantapreecha, Director of ACEP"></div>
+        <div>
+          <div class="lang-tabs" role="tablist" aria-label="Message language">
+            <button class="lang-tab active" data-lang="en" role="tab" aria-selected="true">English</button>
+            <button class="lang-tab" data-lang="th" role="tab" aria-selected="false">ภาษาไทย</button>
+            <button class="lang-tab" data-lang="zh" role="tab" aria-selected="false">中文</button>
+            <button class="lang-tab" data-lang="heart" role="tab" aria-selected="false" style="font-size:1.15rem;">❤️</button>
+          </div>
+
+          <div class="lang-panel lang-en active" data-lang="en" role="tabpanel">
+            <p>In an era where AI serves as the <strong>fundamental infrastructure</strong> for every sector — from energy and food to technology — our challenge is to empower the next generation to become the <em>architects of the future</em>, rather than mere occupants of a technology-driven world.</p>
+            <p>We believe that while not every student possesses a profound literary talent, <strong>every child can achieve effective communication</strong> through international languages (English and Chinese) and <strong>Systematic Thinking</strong>. These are the essential competencies for mastering AI prompting in today's landscape.</p>
+            <p>As a member of the Catholic educational network managed by the <strong>Saint Gabriel's Foundation of Thailand</strong>, we focus on moral cultivation to develop individuals of high integrity. In the age of AI and collaborative teamwork, <em>"Virtue"</em> and <em>"Trust"</em> have become the most precious and rarest foundations of success.</p>
+            <p>We invite you to join our community, characterized by a distinguished alumni network of leading entrepreneurs, top executives, and organizational leaders at both national and international levels. Together, let us build a society that fosters human dignity and collective prosperity.</p>
+          </div>
+
+          <div class="lang-panel lang-th" data-lang="th" role="tabpanel">
+            <p>ในยุคที่ AI เป็น<strong>โครงสร้างพื้นฐานของทุกภาคส่วน</strong> — พลังงาน · อาหาร · เทคโนโลยี — ความท้าทายของเราคือการหล่อหลอมบุตรหลานให้มีศักยภาพ <em>เป็นผู้กำหนดทิศทาง</em> ไม่ใช่เพียงอาศัยอยู่ร่วมกับเทคโนโลยี</p>
+            <p>เราเชื่อมั่นว่า แม้ผู้เรียนทุกคนอาจไม่ได้มีพรสวรรค์ทางด้านอักษรศาสตร์ในเชิงลึก แต่<strong>เด็กทุกคนสามารถสื่อสารอย่างมีประสิทธิภาพ</strong> ด้วยภาษาระดับสากล (English, Chinese) และ<strong>กระบวนการคิดที่เป็นระบบ (Systematic Thinking)</strong> — ซึ่งเป็นสมรรถนะสำคัญในการสั่งการ AI (Prompting) ในโลกปัจจุบัน</p>
+            <p>เราเป็นหนึ่งในสถาบันการศึกษาในเครือคาทอลิก บริหารงานโดย<strong>มูลนิธิคณะภราดาเซนต์คาเบรียล</strong> ที่มุ่งเน้นการบ่มเพาะจริยธรรม เพื่อสร้างบุคคลที่เปี่ยมด้วยความน่าเชื่อถือ — ซึ่งเป็นพื้นฐานสำคัญของการได้รับ <em>คุณธรรมและความไว้วางใจ</em> อันเป็นสิ่งล้ำค่าและหายากที่สุดในยุค AI และการทำงานเป็นทีม (Teamwork or Team Spirit)</p>
+            <p>มาร่วมเป็นประชาคมที่มีศิษย์เก่าเป็นนักธุรกิจชั้นนำ ผู้บริหารระดับสูง และผู้นำองค์กรในระดับประเทศและนานาชาติ และร่วมสร้างสังคมที่ควรจะเป็นสำหรับการอาศัยอยู่มนุษย์ที่แสวงหาความเจริญร่วมกันครับ</p>
+          </div>
+
+          <div class="lang-panel lang-zh" data-lang="zh" role="tabpanel">
+            <p>在现今人工智能（AI）已成为能源、粮食、科技等各领域<strong>基础设施</strong>的时代，我们的挑战在于培养孩子的能力，使其成为<em>技术的引领者</em>，而非仅仅是技术的共存者。</p>
+            <p>我们坚信，尽管并非每位学生都具备深厚的文学天赋，但<strong>每个孩子都能通过国际通用语言（英语、中文）和系统性思维（Systematic Thinking）进行高效沟通</strong>。这正是当今世界驱动人工智能（Prompting）的核心胜任力。</p>
+            <p>作为<strong>圣加百列修士基金会</strong>旗下的天主教教育机构，我们致力于德育培养，旨在造就诚信正直的人才。在人工智能时代和团队协作中，<em>"美德"</em>与<em>"信任"</em>已成为最珍贵且稀缺的基石。</p>
+            <p>欢迎加入我们的社群。在这里，我们的校友涵盖了国内外卓越的商业精英、高层管理人员及机构领袖。让我们携手共建一个追求共同繁荣、充满人文关怀的理想社会。</p>
+          </div>
+
+          <div class="lang-panel lang-heart" data-lang="heart" role="tabpanel">
+            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:24px; align-items:center; padding:20px 0;">
+              <img src="assets/img/hearts/heart-single.avif" alt="" style="width:100%; height:auto; display:block; border-radius:8px;">
+              <img src="assets/img/hearts/heart-many.webp" alt="" style="width:100%; height:auto; display:block; border-radius:8px;">
+            </div>
+          </div>
+
+          <div class="sig">
+            Bro. Supanun Khantapreecha, FSG
+            <small>Director, Assumption College English Program · Board Member, Saint Gabriel's Foundation of Thailand</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== ① Faculty Quality Standard ===== -->
+    <div class="quality-block" id="q-faculty">
+      <h3 class="quality-h3">① Faculty Quality Standard · มาตรฐานครู</h3>
+      <div class="teacher-standard">
+        <h3>Three-Stage Commitment</h3>
+        <p class="standard-intro">Every teacher at ACEP passes through the same three-stage commitment.
+          <strong style="color:var(--gold);">Our direction:</strong> all native teachers progressively moving to <strong style="color:var(--white);">British faculty and Cambridge-aligned assessment</strong>; all Thai teachers continually upgraded through the same Cambridge methodology.</p>
+        <div class="standard-grid">
+          <div class="standard-pillar">
+            <div class="pillar-num">01</div>
+            <div class="pillar-title">Selection · คัดสรร</div>
+            <ul>
+              <li><strong>Entrance exam</strong> for both native and Thai applicants</li>
+              <li>Degree-qualified · TEFL/CELTA/PGCE</li>
+              <li>Background &amp; police check</li>
+              <li>Demo class &amp; panel interview</li>
+            </ul>
+          </div>
+          <div class="standard-pillar">
+            <div class="pillar-num">02</div>
+            <div class="pillar-title">Development · อบรมพัฒนา</div>
+            <ul>
+              <li><strong>Termly Cambridge methodology workshops</strong></li>
+              <li>Classroom observation cycle every term</li>
+              <li>Mentoring pairs (senior + new)</li>
+              <li>Cross-school exchange with AC / ACT / ACR</li>
+            </ul>
+          </div>
+          <div class="standard-pillar">
+            <div class="pillar-num">03</div>
+            <div class="pillar-title">Recognition · ยกย่อง</div>
+            <ul>
+              <li><strong>Teacher of the Month</strong> · public recognition</li>
+              <li>Voices from the Classroom video series</li>
+              <li>Parent-facing profiles</li>
+              <li>Long-service awards (5/10/15+ years)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p class="center" style="margin-top:20px;">
+        <a class="btn btn-red" href="faculty.html">See All 16 Native Teachers + Compliance →</a>
+      </p>
+    </div>
+
+    <!-- ===== ② Faculty Development Calendar ===== -->
+    <div class="quality-block" id="q-calendar">
+      <h3 class="quality-h3">② Faculty Development Calendar · โปรแกรมอบรมพัฒนาครู</h3>
+      <p style="margin-bottom: 18px; color: var(--text-light);">An explicit year-round commitment to raising classroom standards.</p>
+      <div class="dev-calendar">
+        <div class="dev-cal-item"><div class="month">May 2026</div><div class="event">New teacher orientation · ACEP induction week</div></div>
+        <div class="dev-cal-item"><div class="month">Jun 2026</div><div class="event">Academic Preparatory Meeting · curriculum alignment</div></div>
+        <div class="dev-cal-item"><div class="month">Aug 2026</div><div class="event">Cambridge methodology workshop · all faculty</div></div>
+        <div class="dev-cal-item"><div class="month">Oct 2026</div><div class="event">Mid-term observation cycle · peer review</div></div>
+        <div class="dev-cal-item"><div class="month">Dec 2026</div><div class="event">Cross-school exchange with AC / ACT / ACR</div></div>
+        <div class="dev-cal-item"><div class="month">Feb 2027</div><div class="event">Teacher of the Term recognition · ceremony</div></div>
+        <div class="dev-cal-item"><div class="month">Mar 2027</div><div class="event">Year-end PD retreat · planning AY 2570</div></div>
+        <div class="dev-cal-item" style="background:#FDF4E8; border-left-color: var(--primary);"><div class="month" style="color:var(--gold-dark);">Ongoing</div><div class="event">Weekly mentoring · monthly subject-team planning · termly observation</div></div>
+      </div>
+    </div>
+
+    <!-- ===== ③ School Formula — 6 Pillars ===== -->
+    <div class="quality-block" id="q-formula">
+      <h3 class="quality-h3">③ The International-School Formula · 6 Pillars</h3>
+      <p style="margin-bottom: 20px; color: var(--text-light);">What parents really evaluate when choosing an international school for their child — and how ACEP answers each.</p>
+      <div class="card-grid">
+        <div class="prog-card">
+          <div class="prog-img"><img src="https://acep.ac.th/wp-content/uploads/2025/06/img-about1.jpg" alt="Toward an All-British Native Faculty"></div>
+          <div class="prog-body">
+            <h3>1. Toward an All-British Native Faculty</h3>
+            <p>As ACEP enters its next phase we are progressively building an all-British native faculty, Cambridge-aligned and recognised through our Teacher Standard.</p>
+          </div>
+        </div>
+        <div class="prog-card">
+          <div class="prog-img"><img src="https://acep.ac.th/wp-content/uploads/2025/06/cambridge.png" alt="International Recognition · Credit Transfer" style="object-fit:contain; background:var(--white); padding:32px;"></div>
+          <div class="prog-body">
+            <h3>2. International Recognition · Credit Transfer</h3>
+            <p>Our students earn Cambridge, IDP IELTS, and HSK credentials that count toward leading universities worldwide.</p>
+          </div>
+        </div>
+        <div class="prog-card">
+          <div class="prog-img"><img src="https://acep.ac.th/wp-content/uploads/2025/06/logo-gold-1.jpg" alt="Assumption · Saint Gabriel Heritage"></div>
+          <div class="prog-body">
+            <h3>3. Assumption · Saint Gabriel Heritage</h3>
+            <p>125+ years of Catholic education excellence in Thailand — a name parents have trusted across generations to form leaders of character.</p>
+          </div>
+        </div>
+        <div class="prog-card">
+          <div class="prog-img"><img src="assets/img/alumni/alumni-1.jpg" alt="ACEP Alumni Network"></div>
+          <div class="prog-body">
+            <h3>4. Alumni Network · Career Pathway</h3>
+            <p>From classroom to industry: our alumni include leading entrepreneurs, executives, and organisational leaders nationally and internationally.</p>
+          </div>
+        </div>
+        <div class="prog-card">
+          <div class="prog-img"><img src="https://acep.ac.th/wp-content/uploads/2025/06/img-about2.jpg" alt="Life Skills Development"></div>
+          <div class="prog-body">
+            <h3>5. Life Skills Beyond the Classroom</h3>
+            <p>Learning that fosters creativity, resilience, and the practical skills students will need to lead fulfilling, meaningful lives.</p>
+          </div>
+        </div>
+        <div class="prog-card">
+          <div class="prog-img"><img src="https://acep.ac.th/wp-content/uploads/2025/06/img-about3.jpg" alt="Social Responsibility"></div>
+          <div class="prog-body">
+            <h3>6. Social Responsibility &amp; Virtue</h3>
+            <p>In the age of AI and teamwork, virtue and trust become rarest assets. We form students of conscience — leaders with both competence and compassion.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== ④ International Recognition ===== -->
+    <div class="quality-block" id="q-recognition">
+      <h3 class="quality-h3">④ International Recognition · Credentials That Travel</h3>
+      <p style="margin-bottom: 20px; color: var(--text-light);">Our students earn credentials from globally recognised institutions — for university admission and credit transfer worldwide.</p>
+      <div class="partners">
+        <div class="logo"><img src="https://acep.ac.th/wp-content/uploads/2025/06/cambridge.png" alt="Cambridge Assessment English"></div>
+        <div class="logo"><img src="https://acep.ac.th/wp-content/uploads/2025/06/idp_ielts.png" alt="IDP IELTS"></div>
+        <div class="logo"><img src="https://acep.ac.th/wp-content/uploads/2025/06/hsk.png" alt="HSK Chinese Proficiency"></div>
+        <div class="logo"><img src="https://acep.ac.th/wp-content/uploads/2025/06/mahidol.png" alt="Mahidol University"></div>
+        <div class="logo"><img src="https://acep.ac.th/wp-content/uploads/2025/06/assumption.png" alt="Assumption University"></div>
+        <div class="logo"><img src="https://acep.ac.th/wp-content/uploads/2025/06/kmitl.png" alt="KMITL"></div>
+      </div>
+      <p class="center" style="margin-top:14px; font-size:0.92rem; color:var(--primary); font-weight:500;">
+        ⮕ <em>Our direction: every assessment Cambridge-aligned across all levels.</em>
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ===== SLOGAN STRIP ===== -->
 <section class="slogan-strip">
   <p class="slogan-big">“ Make ACEP our loving place! ”</p>
   <p class="slogan-sub">A school where every child belongs · every family is family</p>
 </section>
+
 
 <!-- ===== ADMISSION CTA ===== -->
 <section class="cta-strip" id="admission">
@@ -726,6 +799,7 @@
     </div>
   </div>
 </section>
+
 
 <!-- ===== CONTACT ===== -->
 <section class="section" id="contact">
@@ -744,16 +818,22 @@
         <div class="footer-social" style="margin-top:18px;">
           <a href="https://www.facebook.com/" target="_blank" title="Facebook">f</a>
           <a href="https://www.instagram.com/" target="_blank" title="Instagram">ig</a>
-          <a href="https://www.youtube.com/" target="_blank" title="YouTube">yt</a>
         </div>
       </div>
-      <div class="contact-map placeholder-img">
-        <span class="photo-num">📷 รอภาพ #10</span>
-        Google Map · ACEP Rama 2 Campus
+      <div class="contact-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3878.4751243629603!2d100.34741437329058!3d13.56775838680518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e2bbd62a3ee197%3A0xe50bc47d71122088!2z4LmC4Lij4LiH4LmA4Lij4Li14Lii4LiZ4Lit4Lix4Liq4Liq4Lix4Lih4LiK4Lix4LiN4Lir4Lil4Lix4LiB4Liq4Li54LiV4Lij4Lig4Liy4Lip4Liy4Lit4Lix4LiH4LiB4Lik4LipIOC5geC4hOC4oeC4m-C4seC4quC4nuC4o-C4sOC4o-C4suC4oTI!5e0!3m2!1sth!2sth!4v1782482704482!5m2!1sth!2sth"
+          width="100%" height="100%"
+          style="border:0; display:block; min-height: 380px;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          title="โรงเรียนอัสสัมชัญหลักสูตรภาษาอังกฤษ — แคมปัสพระราม 2"></iframe>
       </div>
     </div>
   </div>
 </section>
+
 
 <!-- ===== FOOTER ===== -->
 <footer class="footer">
@@ -762,9 +842,7 @@
       <div>
         <div class="footer-brand">ACEP</div>
         <div class="footer-tagline">Assumption College English Program</div>
-        <div class="footer-mission">
-          A Catholic English-medium school under the Saint Gabriel's Foundation of Thailand · Rama 2 Campus · Raising future leaders for the AI era.
-        </div>
+        <div class="footer-mission">A Catholic English-medium school under the Saint Gabriel's Foundation of Thailand · Rama 2 Campus · Raising future leaders for the AI era.</div>
       </div>
       <div>
         <h4>Foundation Network</h4>
@@ -779,18 +857,18 @@
       </div>
       <div>
         <h4>Programs</h4>
-        <a href="https://acep.ac.th/program/kindergarten/" target="_blank">Kindergarten Level</a>
-        <a href="https://acep.ac.th/program/primary-level/" target="_blank">Primary Level</a>
-        <a href="#about">Why ACEP</a>
-        <a href="facilities.html">Facilities</a>
+        <a href="program/kindergarten.html">Kindergarten Level</a>
+        <a href="program/primary.html">Primary Level</a>
+        <a href="faculty.html">Our Faculty</a>
+        <a href="facilities.html">Sports &amp; Facilities</a>
+        <a href="#quality">Quality &amp; Management</a>
         <a href="#admission">Admissions</a>
       </div>
     </div>
-    <div class="footer-bottom">
-      © 2026 Assumption College English Program · A school of the Saint Gabriel's Foundation of Thailand · Powered by SWIS
-    </div>
+    <div class="footer-bottom">© 2026 Assumption College English Program · A school of the Saint Gabriel's Foundation of Thailand · Powered by SWIS</div>
   </div>
 </footer>
+
 
 <!-- ===== HERO CAROUSEL SCRIPT ===== -->
 <script>
@@ -799,89 +877,101 @@
   const dots   = document.querySelectorAll('.hero-dot');
   const thumbs = document.querySelectorAll('.hero-thumb');
   const total  = slides.length;
-  let idx = 0;
-  let timer = null;
-
-  function show(n) {
-    idx = (n + total) % total;
-    slides.forEach((el, i) => el.classList.toggle('active', i === idx));
-    dots.forEach((el, i)   => el.classList.toggle('active', i === idx));
-    thumbs.forEach((el, i) => el.classList.toggle('active', i === idx));
-  }
+  let idx = 0, timer = null;
+  function show(n) { idx = (n + total) % total; slides.forEach((el, i) => el.classList.toggle('active', i === idx)); dots.forEach((el, i) => el.classList.toggle('active', i === idx)); thumbs.forEach((el, i) => el.classList.toggle('active', i === idx)); }
   function next() { show(idx + 1); }
   function start() { stop(); timer = setInterval(next, 5500); }
   function stop()  { if (timer) clearInterval(timer); }
-
-  dots.forEach((d, i)   => d.addEventListener('click', () => { show(i); start(); }));
+  dots.forEach((d, i) => d.addEventListener('click', () => { show(i); start(); }));
   thumbs.forEach((t, i) => t.addEventListener('click', () => { show(i); start(); }));
-
-  // pause when hovering over hero or thumbs
   document.querySelector('.hero').addEventListener('mouseenter', stop);
   document.querySelector('.hero').addEventListener('mouseleave', start);
   document.querySelector('.hero-thumbs').addEventListener('mouseenter', stop);
   document.querySelector('.hero-thumbs').addEventListener('mouseleave', start);
-
   start();
 })();
 </script>
 
-<!-- ===== SWIS LIVE FEED FETCHER (by SWIS Plus team · 26 Jun 2026) ===== -->
+
+<!-- ===== KG + PRIMARY TEACHERS (filtered from faculty data, sorted by years) ===== -->
+<script>
+(function() {
+  const faculty = [
+    { photo: 'teacher-9.jpg',  name: 'Miss Mary Vatral',         flag: '🇺🇸', subject: 'Science', level: 'Secondary',    yrs: 14.3, stage: 'expert',     joined: 'Mar 2012' },
+    { photo: 'teacher-8.jpg',  name: 'Mr. Johnny Byrne',         flag: '🇮🇪', subject: 'Math',    level: 'Primary',      yrs: 12.3, stage: 'proficient', joined: 'Mar 2014' },
+    { photo: 'teacher-12.jpg', name: 'Mr. Oliver Bluett',        flag: '🇬🇧', subject: 'Science', level: 'Primary',      yrs: 9.3,  stage: 'proficient', joined: 'Mar 2017' },
+    { photo: 'teacher-13.jpg', name: 'Mr. Kaiya Newman',         flag: '🇬🇧', subject: 'English', level: 'Primary',      yrs: 8.3,  stage: 'proficient', joined: 'Mar 2018' },
+    { photo: 'teacher-11.jpg', name: 'Mr. Robert Daly',          flag: '🇬🇧', subject: 'English', level: 'Primary',      yrs: 4.11, stage: 'developing', joined: 'Jul 2021' },
+    { photo: 'teacher-14.jpg', name: 'Mr. Carl Crawford',        flag: '🇿🇦', subject: 'Math',    level: 'Primary',      yrs: 4.10, stage: 'developing', joined: 'Jul 2021' },
+    { photo: 'teacher-15.jpg', name: 'Mr. Karam Fathy',          flag: '🇺🇸', subject: 'English', level: 'Primary',      yrs: 2.10, stage: 'developing', joined: 'Aug 2023' },
+    { photo: 'teacher-10.jpg', name: 'Mr. Christopher Morgan',   flag: '🇬🇧', subject: 'English', level: 'Secondary',    yrs: 2.6,  stage: 'developing', joined: 'Dec 2023' },
+    { photo: 'teacher-7.jpg',  name: 'Mr. Qu Yubin',             flag: '🇨🇳', subject: 'Chinese', level: 'Secondary',    yrs: 2.1,  stage: 'proficient', joined: 'May 2024' },
+    { photo: 'teacher-6.jpg',  name: 'Mr. Edwin Camba',          flag: '🇵🇭', subject: 'Science', level: 'Secondary',    yrs: 1.5,  stage: 'developing', joined: 'Jan 2025' },
+    { photo: 'teacher-5.jpg',  name: 'Mr. Roman Danilin',        flag: '🇷🇺', subject: 'Science', level: 'Primary',      yrs: 0.9,  stage: 'developing', joined: 'Aug 2025' },
+    { photo: 'teacher-1.jpg',  name: 'Miss Velicity Van Rooyen', flag: '🇿🇦', subject: 'KG',      level: 'Kindergarten', yrs: 0.1,  stage: 'foundation', joined: 'May 2026' },
+    { photo: 'teacher-2.jpg',  name: 'Mr. Nikhil Nagaraja Ra',   flag: '🇮🇳', subject: 'Computer',level: 'Secondary',    yrs: 0.1,  stage: 'developing', joined: 'May 2026' },
+    { photo: 'teacher-3.jpg',  name: 'Mr. Danny Lee',            flag: '🇿🇦', subject: 'English', level: 'Secondary',    yrs: 0.1,  stage: 'developing', joined: 'May 2026' },
+    { photo: 'teacher-4.jpg',  name: 'Miss Trixia Colibao',      flag: '🇵🇭', subject: 'Math',    level: 'Secondary',    yrs: 0.1,  stage: 'developing', joined: 'May 2026' },
+    { photo: 'teacher-cassie.png', name: 'Miss Yanyi He (Cassie)', flag: '🇨🇳', subject: 'Chinese', level: 'Primary',   yrs: 0,    stage: 'proficient', joined: 'Aug 2026 · joining' }
+  ];
+  const stageLabel = { foundation: 'Foundation', developing: 'Developing', proficient: 'Proficient', expert: 'Expert' };
+  function card(f) {
+    return `
+      <div class="lt-card">
+        <div class="lt-img${f.portrait ? ' portrait' : ''}"><img src="assets/img/teachers/${f.photo}" alt="${f.name}" loading="lazy"></div>
+        <div class="lt-body">
+          <div class="lt-meta">
+            <span style="font-size:1rem;">${f.flag}</span>
+            <span><strong>${f.subject}</strong></span>
+            <span style="margin-left:auto;">Since ${f.joined}</span>
+          </div>
+        </div>
+      </div>`;
+  }
+  const kg = faculty.filter(f => f.level === 'Kindergarten').sort((a, b) => b.yrs - a.yrs);
+  const pri = faculty.filter(f => f.level === 'Primary').sort((a, b) => b.yrs - a.yrs);
+  document.getElementById('kg-teachers').innerHTML = kg.map(card).join('');
+  document.getElementById('primary-teachers').innerHTML = pri.map(card).join('');
+})();
+</script>
+
+
+<!-- ===== SWIS LIVE FEED FETCHER · TEMPORARILY DISABLED ===== -->
+<!-- ปิดชั่วคราว 26 มิ.ย. 69 · บราเดอร์สั่ง: ระบบ SWIS สารสนเทศไม่พร้อม · ใช้ static calendar+news ไปก่อน
+     เมื่อ SWIS พร้อม → uncomment block นี้กลับมา + ลบ static lists ใน section #news
 <script>
 (function() {
   var SWIS = 'https://swis.acep.ac.th/html_edu/api/json';
   var MON  = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
-
-  // --- Photo Albums ---
   fetch(SWIS + '/get_pic_post.php?start=0&count=6&category=all')
     .then(function(r) { return r.json(); })
     .then(function(json) {
       if (json.status !== 'success' || !json.data) return;
       var items = json.data.map(function(d) {
-        var dateStr = d.post_date || '';
-        var parts = dateStr.split('-');
-        var formatted = parts.length === 3
-          ? parseInt(parts[2]) + ' ' + MON[parseInt(parts[1])-1] + ' ' + parts[0]
-          : dateStr;
-        return {
-          date:  formatted,
-          title: d.title || d.title_eng || '',
-          image: d.cover || '',
-          link:  d.url || '#'
-        };
+        var dateStr = d.post_date || '', parts = dateStr.split('-');
+        var formatted = parts.length === 3 ? parseInt(parts[2]) + ' ' + MON[parseInt(parts[1])-1] + ' ' + parts[0] : dateStr;
+        return { date: formatted, title: d.title || d.title_eng || '', image: d.cover || '', link: d.url || '#' };
       });
       if (window.acepRenderAlbums) window.acepRenderAlbums(items);
-    })
-    .catch(function() {});
-
-  // --- News ---
+    }).catch(function() {});
   fetch(SWIS + '/get_news.php?start=0&count=5&type=2')
     .then(function(r) { return r.json(); })
     .then(function(json) {
       if (json.status !== 'success' || !json.data) return;
       var items = json.data.map(function(d) {
-        var dateStr = d.post_date || '';
-        var parts = dateStr.split('-');
-        var day = '', monthYear = '';
-        if (parts.length === 3) {
-          day = parseInt(parts[2]).toString();
-          monthYear = MON[parseInt(parts[1])-1] + ' ' + parts[0];
-        }
-        return {
-          date:      d.post_date_th || dateStr,
-          day:       day,
-          monthYear: monthYear,
-          title:     d.title || d.title_eng || '',
-          excerpt:   (d.detail || '').replace(/<[^>]*>/g, '').substring(0, 120),
-          link:      d.url || '#'
-        };
+        var dateStr = d.post_date || '', parts = dateStr.split('-'), day = '', monthYear = '';
+        if (parts.length === 3) { day = parseInt(parts[2]).toString(); monthYear = MON[parseInt(parts[1])-1] + ' ' + parts[0]; }
+        return { date: d.post_date_th || dateStr, day: day, monthYear: monthYear, title: d.title || d.title_eng || '', excerpt: (d.detail || '').replace(/<[^>]*>/g, '').substring(0, 120), link: d.url || '#' };
       });
       if (window.acepRenderNews) window.acepRenderNews(items);
-    })
-    .catch(function() {});
+    }).catch(function() {});
 })();
 </script>
+-->
 
-<!-- ===== LANGUAGE TABS (Director's Message) ===== -->
+
+
+<!-- ===== LANGUAGE TABS ===== -->
 <script>
 (function() {
   const tabs = document.querySelectorAll('.lang-tab');
@@ -889,98 +979,49 @@
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
       const lang = tab.dataset.lang;
-      tabs.forEach(t => {
-        const active = t.dataset.lang === lang;
-        t.classList.toggle('active', active);
-        t.setAttribute('aria-selected', active ? 'true' : 'false');
-      });
+      tabs.forEach(t => { const active = t.dataset.lang === lang; t.classList.toggle('active', active); t.setAttribute('aria-selected', active ? 'true' : 'false'); });
       panels.forEach(p => p.classList.toggle('active', p.dataset.lang === lang));
     });
   });
 })();
 </script>
 
-<!-- ===== SWIS LIVE FEED RENDERERS ===== -->
-<!--
-  Public API for the SWIS team script:
-  window.acepRenderAlbums([
-    { date: "18 JUN 2026", title: "Teacher Appreciation", image: "https://.../pic.jpg", link: "https://swis.acep.ac.th/..." },
-    ...
-  ]);
-  window.acepRenderNews([
-    { date: "18 JUN 2026", day: "18", monthYear: "JUN 2026", title: "...", excerpt: "...", link: "..." },
-    ...
-  ]);
--->
+
+<!-- ===== SWIS RENDERERS + FALLBACK ===== -->
 <script>
 (function() {
   function renderAlbums(items) {
     const container = document.getElementById('photo-feed');
     if (!container || !Array.isArray(items) || items.length === 0) return;
     container.className = 'photo-grid';
-    container.innerHTML = items.map(it => `
-      <a class="photo-card" href="${it.link || '#'}" target="_blank" rel="noopener">
-        <img src="${it.image}" alt="${it.title || ''}" loading="lazy">
-        <div class="overlay">
-          <span class="badge">${it.date || ''}</span>
-          <div class="title">${it.title || ''}</div>
-        </div>
-      </a>
-    `).join('');
+    container.innerHTML = items.map(it => `<a class="photo-card" href="${it.link || '#'}" target="_blank" rel="noopener"><img src="${it.image}" alt="${it.title || ''}" loading="lazy"><div class="overlay"><span class="badge">${it.date || ''}</span><div class="title">${it.title || ''}</div></div></a>`).join('');
   }
   function renderNews(items) {
     const container = document.getElementById('news-feed');
     if (!container || !Array.isArray(items) || items.length === 0) return;
     container.className = 'news-list';
-    container.innerHTML = items.map(it => `
-      <div class="news-item">
-        <div class="date"><span class="day">${it.day || ''}</span>${it.monthYear || ''}</div>
-        <div>
-          <h3><a href="${it.link || '#'}" target="_blank" rel="noopener">${it.title || ''}</a></h3>
-          <p>${it.excerpt || ''}</p>
-        </div>
-      </div>
-    `).join('');
+    container.innerHTML = items.map(it => `<div class="news-item"><div class="date"><span class="day">${it.day || ''}</span>${it.monthYear || ''}</div><div><h3><a href="${it.link || '#'}" target="_blank" rel="noopener">${it.title || ''}</a></h3><p>${it.excerpt || ''}</p></div></div>`).join('');
   }
   function renderCalendar(items) {
     const container = document.getElementById('calendar-feed');
     if (!container || !Array.isArray(items) || items.length === 0) return;
-    container.innerHTML = '<div class="cal-events">' + items.map(it => `
-      <div class="cal-ev">
-        <div class="date-box"><div class="d">${it.day || ''}</div><div class="m">${it.month || ''}</div></div>
-        <div>
-          <div class="title">${it.title || ''}</div>
-          <div class="meta">${it.meta || ''}</div>
-        </div>
-      </div>
-    `).join('') + '</div>';
+    container.innerHTML = '<div class="cal-events">' + items.map(it => `<div class="cal-ev"><div class="date-box"><div class="d">${it.day || ''}</div><div class="m">${it.month || ''}</div></div><div><div class="title">${it.title || ''}</div><div class="meta">${it.meta || ''}</div></div></div>`).join('') + '</div>';
   }
   function showFallback(id, label) {
     const el = document.getElementById(id);
     if (!el) return;
-    el.innerHTML = `
-      <div class="feed-fallback">
-        <div class="feed-icon">📷</div>
-        <h4>${label} loading from SWIS…</h4>
-        <p style="margin:0;">If this stays blank, the SWIS feed may be temporarily unavailable.</p>
-      </div>`;
+    el.innerHTML = `<div class="feed-fallback"><div class="feed-icon">📷</div><h4>${label} loading from SWIS…</h4><p style="margin:0;">If this stays blank, the SWIS feed may be temporarily unavailable.</p></div>`;
   }
-  // Expose public hooks
-  window.acepRenderAlbums   = renderAlbums;
-  window.acepRenderNews     = renderNews;
+  window.acepRenderAlbums = renderAlbums;
+  window.acepRenderNews = renderNews;
   window.acepRenderCalendar = renderCalendar;
-
-  // Fallback after 4s if no script populated the feeds
   setTimeout(() => {
     const photo = document.getElementById('photo-feed');
-    const news  = document.getElementById('news-feed');
-    if (photo && photo.querySelector('.feed-skeleton'))
-      showFallback('photo-feed', 'Photo album');
-    if (news && news.querySelector('.feed-skeleton'))
-      showFallback('news-feed', 'News');
+    const news = document.getElementById('news-feed');
     const cal = document.getElementById('calendar-feed');
-    if (cal && cal.querySelector('.feed-skeleton'))
-      showFallback('calendar-feed', 'Calendar');
+    if (photo && photo.querySelector('.feed-skeleton')) showFallback('photo-feed', 'Photo album');
+    if (news && news.querySelector('.feed-skeleton')) showFallback('news-feed', 'News');
+    if (cal && cal.querySelector('.feed-skeleton')) showFallback('calendar-feed', 'Calendar');
   }, 4000);
 })();
 </script>
