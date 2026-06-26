@@ -200,6 +200,7 @@
       <a href="#development">Development</a>
       <a href="#recognition">Recognition</a>
       <a href="#calendar">Calendar</a>
+      <a href="#support">Psychology Team</a>
       <a href="#meet" style="background:var(--primary); color:var(--white);">★ Meet the Faculty</a>
       <a href="#photos">In Action</a>
       <a href="#faq">FAQ</a>
@@ -366,6 +367,57 @@
       </div>
     </section>
 
+    <!-- ===== Psychology Team ===== -->
+    <section id="support">
+      <h2>Student &amp; Teacher Support · Psychology Team</h2>
+      <p>Beyond academic teaching, ACEP keeps a dedicated <strong>psychology team</strong> on campus — supporting both teachers and students from <strong>Kindergarten through Primary</strong>. The team consults on classroom management, supports children navigating social-emotional growth, and works alongside parents when needed.</p>
+
+      <div style="background:var(--white); border-radius:10px; padding:18px; box-shadow:0 2px 12px var(--shadow); margin:18px 0;">
+        <img src="assets/img/support/team-cover.jpg" alt="ACEP Psychology Team" style="width:100%; border-radius:6px; display:block;">
+      </div>
+
+      <h3 style="margin-top:24px;">Meet the Psychologists</h3>
+      <div class="faculty-grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
+        <div class="fac-card">
+          <div class="fac-portrait" style="aspect-ratio:1 / 1;">
+            <img src="assets/img/support/psychologist-1.jpg" alt="ACEP Psychologist">
+          </div>
+          <div class="fac-body">
+            <div style="font-size:0.78rem; color:var(--gray-text); margin-bottom:4px;">
+              <strong style="color:var(--primary);">Psychology · Counselling</strong> · KG–Primary
+            </div>
+            <span class="fac-stage developing">On-campus support</span>
+            <ul class="qual-list">
+              <li class="held"><span class="mark">✓</span>Bachelor / Master in Psychology</li>
+              <li class="held"><span class="mark">✓</span>Child &amp; Adolescent specialisation</li>
+              <li class="held"><span class="mark">✓</span>Available for parent consultation</li>
+            </ul>
+            <a class="fac-watch-btn" href="#" aria-disabled="true">📞 Schedule a Consultation</a>
+          </div>
+        </div>
+        <div class="fac-card">
+          <div class="fac-portrait placeholder-img" style="aspect-ratio:1 / 1;">
+            <span class="photo-num">📷 รอภาพ #19</span>
+            Additional psychologist
+          </div>
+          <div class="fac-body">
+            <div style="font-size:0.78rem; color:var(--gray-text); margin-bottom:4px;">
+              <strong style="color:var(--primary);">Psychology · Counselling</strong>
+            </div>
+            <span class="fac-stage unverified">Profile pending</span>
+            <ul class="qual-list">
+              <li class="pending"><span class="mark">⏳</span>Profile being assembled</li>
+            </ul>
+            <a class="fac-watch-btn" href="#" aria-disabled="true">Coming soon</a>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#FDF4E8; border-left:4px solid var(--gold); padding:14px 18px; border-radius:4px; margin-top:18px; font-size:0.92rem;">
+        <strong style="color:var(--primary);">What the psychology team does</strong> — Consults with teachers on classroom strategies · supports students navigating social-emotional milestones · runs early-years screening when needed · provides confidential 1:1 sessions with referral to specialists when appropriate · liaises with parents on growth and well-being.
+      </div>
+    </section>
+
   </div>
 
   <!-- ===== ★ Meet the Faculty (wide-wrap section) ===== -->
@@ -378,8 +430,8 @@
       </div>
 
       <div class="faculty-headcount" id="headcount">
-        <span class="count-num" id="count-num">15</span>
-        <span class="count-label" id="count-label">native faculty currently teaching at ACEP · AY 2569 · 1 KG · 7 Primary · 7 Secondary</span>
+        <span class="count-num" id="count-num">16</span>
+        <span class="count-label" id="count-label">native faculty for AY 2569 · 1 KG · 8 Primary · 7 Secondary (incl. 1 joining Aug 2026)</span>
       </div>
 
       <div class="profile-pending">
@@ -402,9 +454,9 @@
       </div>
 
       <div class="filter-bar" id="filter-bar">
-        <button class="filter-chip active" data-filter="all">All 15</button>
+        <button class="filter-chip active" data-filter="all">All 16</button>
         <button class="filter-chip" data-filter="level:Kindergarten">Kindergarten (1)</button>
-        <button class="filter-chip" data-filter="level:Primary">Primary (7)</button>
+        <button class="filter-chip" data-filter="level:Primary">Primary (8)</button>
         <button class="filter-chip" data-filter="level:Secondary">Secondary (7)</button>
         <button class="filter-chip" data-filter="subject:English">English</button>
         <button class="filter-chip" data-filter="subject:Math">Math</button>
@@ -605,15 +657,28 @@
         { s: 'held',    t: "Diploma in Teacher's Education" },
         { s: 'pending', t: 'CELT-P (target)' },
         { s: 'missing', t: 'Cambridge workshop · Aug 2026' }
+      ]},
+    { id: 16, photo: 'teacher-cassie-pending.jpg', name: 'Miss Yanyi He (Cassie)', flag: '🇨🇳', subject: 'Chinese', level: 'Primary', joined: 'Aug 2026 · joining', stage: 'proficient',
+      quals: [
+        { s: 'held',    t: "M.Ed Educational Management · Mahidol · GPA 4.00" },
+        { s: 'held',    t: 'BA English (First-Class Honors) · Payap Univ.' },
+        { s: 'held',    t: 'College Diploma in English Education · Chengdu Univ.' },
+        { s: 'held',    t: 'Doctor of Education (in progress) · Mahidol' },
+        { s: 'held',    t: 'Lecturer 2 years · Shandong (China) + Montessori training' },
+        { s: 'missing', t: 'Cambridge methodology workshop · Aug 2026' }
       ]}
   ];
   const stageLabel = { unverified: 'Stage: pending review', foundation: 'Foundation', developing: 'Developing', proficient: 'Proficient', expert: 'Expert' };
   const mark = s => s === 'held' ? '✓' : s === 'pending' ? '⏳' : '○';
 
   function render(list) {
-    document.getElementById('faculty-grid').innerHTML = list.map(f => `
+    document.getElementById('faculty-grid').innerHTML = list.map(f => {
+      const portrait = f.photo.includes('pending')
+        ? `<div class="fac-portrait placeholder-img"><span class="photo-num">📷 Joining</span>${f.name}</div>`
+        : `<div class="fac-portrait"><img src="assets/img/teachers/${f.photo}" alt="${f.name}" loading="lazy"><div class="play-badge">▶</div></div>`;
+      return `
       <div class="fac-card" data-level="${f.level}" data-subject="${f.subject}">
-        <div class="fac-portrait"><img src="assets/img/teachers/${f.photo}" alt="${f.name}" loading="lazy"><div class="play-badge">▶</div></div>
+        ${portrait}
         <div class="fac-body">
           <div style="display:flex; gap:6px; flex-wrap:wrap; align-items:center; font-size:0.78rem; color:var(--gray-text); margin-bottom:4px;">
             <span style="font-size:1rem;">${f.flag}</span>
@@ -626,8 +691,8 @@
           </ul>
           <a class="fac-watch-btn" href="#" aria-disabled="true">▶ Watch Interview · Coming</a>
         </div>
-      </div>
-    `).join('');
+      </div>`;
+    }).join('');
     document.getElementById('count-num').textContent = list.length;
   }
 

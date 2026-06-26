@@ -140,9 +140,9 @@ a:hover { color: var(--primary-light); }
 }
 .hero-slide.active { opacity: 1; }
 /* Hero photos — KG + Primary classroom · Preparatory Meeting (no kneeling, no old director) */
-.hero-slide.s1 { background-image: url('https://acep.ac.th/wp-content/uploads/2025/06/Academic-Kindergarten-1200x674.jpg'); }
+.hero-slide.s1 { background-image: url('assets/img/kindergarten/kg-1.jpg'); }
 .hero-slide.s2 { background-image: url('https://acep.ac.th/wp-content/uploads/2025/06/508557638_1345025630963903_4762845114533693764_n-1200x674.jpg'); }
-.hero-slide.s3 { background-image: url('https://acep.ac.th/wp-content/uploads/2026/05/box-ac-453x341.jpg'); }
+.hero-slide.s3 { background-image: url('assets/img/kindergarten/kg-30.jpg'); }
 
 .hero-overlay {
   position: absolute; inset: 0; z-index: 1;
@@ -198,9 +198,9 @@ a:hover { color: var(--primary-light); }
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 /* Thumb backgrounds matching slides */
-.hero-thumb.t1 { background-image: url('https://acep.ac.th/wp-content/uploads/2025/06/Academic-Kindergarten-1200x674.jpg'); }
+.hero-thumb.t1 { background-image: url('assets/img/kindergarten/kg-1.jpg'); }
 .hero-thumb.t2 { background-image: url('https://acep.ac.th/wp-content/uploads/2025/06/508557638_1345025630963903_4762845114533693764_n-1200x674.jpg'); }
-.hero-thumb.t3 { background-image: url('https://acep.ac.th/wp-content/uploads/2026/05/box-ac-453x341.jpg'); }
+.hero-thumb.t3 { background-image: url('assets/img/kindergarten/kg-30.jpg'); }
 .hero-eyebrow {
   display: inline-block;
   background: var(--gold); color: var(--primary-dark);
@@ -370,6 +370,12 @@ a:hover { color: var(--primary-light); }
 }
 .lang-panel.lang-zh p:first-of-type::first-letter,
 .lang-panel.lang-th p:first-of-type::first-letter { font-size: 1em; float: none; margin: 0; color: inherit; font-family: inherit; font-weight: inherit; }
+
+.lang-panel.lang-heart { display: none; }
+.lang-panel.lang-heart.active { display: block; }
+@media (max-width: 640px) {
+  .lang-panel.lang-heart > div { grid-template-columns: 1fr !important; }
+}
 
 /* ============ UPDATES SECTION (News + Calendar + Album) ============ */
 .updates-grid {
