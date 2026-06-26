@@ -143,7 +143,7 @@ a:hover { color: var(--primary-light); }
 .hero-slide.active { opacity: 1; }
 /* Hero photos — KG + Primary classroom · Preparatory Meeting (no kneeling, no old director) */
 .hero-slide.s1 { background-image: url('assets/img/kindergarten/kg-1.jpg'); }
-.hero-slide.s2 { background-image: url('https://acep.ac.th/wp-content/uploads/2025/06/508557638_1345025630963903_4762845114533693764_n-1200x674.jpg'); }
+.hero-slide.s2 { background-image: url('assets/img/kindergarten/kg-60.jpg'); }
 .hero-slide.s3 { background-image: url('assets/img/kindergarten/kg-30.jpg'); }
 
 .hero-overlay {
@@ -216,7 +216,7 @@ a:hover { color: var(--primary-light); }
 }
 /* Thumb backgrounds matching slides */
 .hero-thumb.t1 { background-image: url('assets/img/kindergarten/kg-1.jpg'); }
-.hero-thumb.t2 { background-image: url('https://acep.ac.th/wp-content/uploads/2025/06/508557638_1345025630963903_4762845114533693764_n-1200x674.jpg'); }
+.hero-thumb.t2 { background-image: url('assets/img/kindergarten/kg-60.jpg'); }
 .hero-thumb.t3 { background-image: url('assets/img/kindergarten/kg-30.jpg'); }
 .hero-eyebrow {
   display: inline-block;
