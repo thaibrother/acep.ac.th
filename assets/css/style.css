@@ -106,6 +106,44 @@ a:hover { color: var(--primary-light); }
   margin-left: 6px;
   white-space: nowrap;
 }
+
+/* ===== Google Translate widget styling ===== */
+.nav-translate {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 6px;
+}
+.nav-translate::before {
+  content: "🌐";
+  margin-right: 4px;
+  font-size: 0.95rem;
+}
+.nav-translate .goog-te-gadget {
+  font-family: inherit !important;
+  font-size: 0;
+}
+.nav-translate .goog-te-gadget > span > a {
+  display: none !important;
+}
+.nav-translate .goog-te-gadget .goog-te-combo {
+  font-family: inherit;
+  font-size: 0.82rem;
+  padding: 4px 6px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--white);
+  color: var(--text);
+  cursor: pointer;
+}
+.nav-translate .goog-te-gadget .goog-te-combo:hover {
+  border-color: var(--primary);
+}
+/* Hide Google Translate top banner that pushes content down */
+body { top: 0 !important; }
+.goog-te-banner-frame { display: none !important; }
+.skiptranslate { display: none !important; }
+/* Re-show our actual widget */
+#google_translate_element .skiptranslate { display: inline-block !important; }
 .nav-links a.cta:hover { background: var(--primary-light); }
 
 /* dropdown */
