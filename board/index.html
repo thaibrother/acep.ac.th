@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ACEP · Board Documents · Meeting 1/2569</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --brand: #6B0F1A;
+    --gold: #C9A961;
+    --cream: #FDF4E8;
+    --ink: #2C2C2C;
+    --muted: #666;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Sarabun", -apple-system, BlinkMacSystemFont, sans-serif;
+    background: linear-gradient(135deg, #FDF4E8 0%, #F5E9CE 100%);
+    color: var(--ink);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+  .card {
+    background: #fff;
+    max-width: 720px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(107, 15, 26, 0.15);
+    overflow: hidden;
+  }
+  .card-head {
+    background: var(--brand);
+    color: #fff;
+    padding: 28px 32px;
+    text-align: center;
+    border-bottom: 4px solid var(--gold);
+  }
+  .card-head .brand {
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    letter-spacing: 0.05em;
+    margin-bottom: 4px;
+  }
+  .card-head .sub {
+    font-size: 13px;
+    opacity: 0.85;
+  }
+  .card-body { padding: 32px; }
+  h1 {
+    font-family: "Playfair Display", serif;
+    color: var(--brand);
+    font-size: 20px;
+    margin: 0 0 8px;
+  }
+  p.lede { color: var(--muted); margin: 0 0 24px; font-size: 14px; line-height: 1.6; }
+  .gate label {
+    display: block;
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+  .gate input[type=password] {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 15px;
+    font-family: inherit;
+    border: 1px solid #D9C69F;
+    border-radius: 6px;
+    background: var(--cream);
+    outline: none;
+  }
+  .gate input[type=password]:focus { border-color: var(--brand); }
+  .gate button {
+    margin-top: 14px;
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    font-family: inherit;
+    font-weight: 600;
+    background: var(--brand);
+    color: #fff;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    letter-spacing: 0.02em;
+  }
+  .gate button:hover { background: #8B1524; }
+  .gate .err {
+    color: var(--brand);
+    font-size: 13px;
+    margin-top: 10px;
+    display: none;
+  }
+  .gate .err.show { display: block; }
+  .list { display: none; }
+  .list.show { display: block; }
+  .group-title {
+    font-family: "Playfair Display", serif;
+    color: var(--brand);
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin: 20px 0 8px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--gold);
+  }
+  .doc {
+    display: block;
+    background: var(--cream);
+    border-left: 4px solid var(--gold);
+    padding: 10px 14px;
+    border-radius: 4px;
+    margin: 6px 0;
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.15s, border-left-color 0.15s;
+  }
+  .doc:hover { background: #F5E9CE; border-left-color: var(--brand); }
+  .doc .t {
+    font-family: "Playfair Display", serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--brand);
+  }
+  .doc .d { font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .primary-cta {
+    background: var(--brand);
+    border-left-color: var(--gold);
+  }
+  .primary-cta .t, .primary-cta .d { color: #fff; }
+  .primary-cta:hover { background: #8B1524; }
+  .foot {
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px dashed #D9C69F;
+    font-size: 11px;
+    color: var(--muted);
+    text-align: center;
+    line-height: 1.6;
+  }
+  .foot .logout {
+    color: var(--brand);
+    text-decoration: none;
+    font-weight: 600;
+  }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="card-head">
+    <div class="brand">ACEP · หนังสือกรรมการ</div>
+    <div class="sub">Board Documents · Meeting 1/2569 · ๙ กรกฎาคม ๒๕๖๙</div>
+  </div>
+  <div class="card-body">
+
+    <!-- Password Gate -->
+    <div id="gate" class="gate">
+      <h1>เอกสารสำหรับกรรมการเท่านั้น</h1>
+      <p class="lede">
+        กรุณากรอกรหัสผ่านเพื่อเข้าถึงเอกสารประชุมคณะกรรมการบริหารมูลนิธิฯ<br>
+        เอกสารทั้งหมดจัดทำเพื่อประกอบการพิจารณาภายในเท่านั้น
+      </p>
+      <form id="gateForm" onsubmit="return checkPw(event)">
+        <label for="pw">รหัสผ่าน</label>
+        <input type="password" id="pw" autocomplete="off" autofocus>
+        <button type="submit">เข้าสู่หน้าเอกสาร</button>
+        <div class="err" id="err">รหัสผ่านไม่ถูกต้อง · โปรดลองอีกครั้ง</div>
+      </form>
+    </div>
+
+    <!-- Document List (shown after auth) -->
+    <div id="list" class="list">
+      <h1>รายการเอกสารทั้งหมด</h1>
+      <p class="lede">
+        เอกสารประกอบการประชุมคณะกรรมการบริหารมูลนิธิคณะเซนต์คาเบรียลฯ · วาระที่ ๑/๒๕๖๙ · โรงเรียนอัสสัมชัญหลักสูตรภาษาอังกฤษ ACEP
+      </p>
+
+      <div class="group-title">Meeting Presentation</div>
+      <a class="doc primary-cta" href="acep_board_overview_9jul2026.html">
+        <div class="t">Board Overview · ๘ สไลด์ (๙ ก.ค. ๖๙)</div>
+        <div class="d">ภาพรวมประชุม · presentation-style · 8 สไลด์</div>
+      </a>
+      <a class="doc" href="acep_board_deepdive_9jul2026.html">
+        <div class="t">Board Deep-dive Reference · เจาะลึก</div>
+        <div class="d">เอกสารประกอบเจาะลึก 9 หัวข้อ + reference list</div>
+      </a>
+
+      <div class="group-title">แผนฟื้นฟู (Recovery Plan)</div>
+      <a class="doc" href="acep_recovery_plan_v3_13jun2026.html">
+        <div class="t">แผนฟื้นฟู ACEP · Ver 3 (๑๓ มิ.ย. ๖๙)</div>
+        <div class="d">3 ส่วน · 11 บท · ภาคผนวก ก–ช · ยุทธศาสตร์ 3 ขา "ทำน้อยแต่ทำจริง"</div>
+      </a>
+      <a class="doc" href="acep_recovery_plan_v3_background_appendix.html">
+        <div class="t">ภาคผนวก Background · แผนฟื้นฟู v3</div>
+        <div class="d">ประวัติศาสตร์ · Trend Analysis · ข้อมูลประกอบ</div>
+      </a>
+
+      <div class="group-title">หนังสือขอกู้ยืมและงบประมาณ</div>
+      <a class="doc" href="acep_budget_proposal_urgent_2569_executive_summary_v3_13jun2026.html">
+        <div class="t">Executive Summary v3 · 56.26 ล้าน · 4 หมวด (๑๓ มิ.ย. ๖๙)</div>
+        <div class="d">ปิด · ประคอง · เร่งด่วน · เตรียม 2570 · Audit ผ่าน 5/5 มิติ</div>
+      </a>
+      <a class="doc" href="acep_budget_proposal_urgent_2569_consolidated.html">
+        <div class="t">หนังสือขอกู้ยืม · ฉบับรวม (Consolidated)</div>
+        <div class="d">รวมทุกส่วน · ครบทุกหมวด</div>
+      </a>
+      <a class="doc" href="acep_budget_proposal_urgent_2569_brother_letter_v2.html">
+        <div class="t">จดหมาย ผอ. เรียนกรรมการ · ฉบับ v2</div>
+        <div class="d">เนื้อความจดหมาย ผอ. เขียนถึงคณะกรรมการมูลนิธิ</div>
+      </a>
+      <a class="doc" href="acep_loan_request_letter_16jun2026.html">
+        <div class="t">จดหมายขอกู้ยืม · ฉบับ ๑๖ มิ.ย. ๖๙</div>
+        <div class="d">Loan Request Letter · ฉบับเต็ม</div>
+      </a>
+      <a class="doc" href="acep_loan_request_letter_short_19jun2026.html">
+        <div class="t">จดหมายขอกู้ยืม · ฉบับสั้น (๑๙ มิ.ย. ๖๙)</div>
+        <div class="d">Short version · เหมาะสำหรับ handout</div>
+      </a>
+      <a class="doc" href="acep_loan_request_appendix_16jun2026.html">
+        <div class="t">ภาคผนวกจดหมายขอกู้ยืม (๑๖ มิ.ย. ๖๙)</div>
+        <div class="d">Supporting Appendix · ภาคผนวก ก–ซ</div>
+      </a>
+
+      <div class="group-title">จดหมายนำและการตอบสนอง</div>
+      <a class="doc" href="acep_cover_letter_v2_financial_focus_16jun2026.html">
+        <div class="t">Cover Letter v2 · Financial Focus (๑๖ มิ.ย. ๖๙)</div>
+        <div class="d">จดหมายนำเสนอ · เน้นเรื่องการเงิน</div>
+      </a>
+      <a class="doc" href="acep_cover_letter_budget_recovery_14jun2026.html">
+        <div class="t">Cover Letter · Budget Recovery (๑๔ มิ.ย. ๖๙)</div>
+        <div class="d">จดหมายนำเสนอ · ที่ ACEP ๐๖๒/๒๕๖๙</div>
+      </a>
+      <a class="doc" href="acep_response_to_meeting_18jun2026.html">
+        <div class="t">การตอบสนองข้อสังเกตจากประชุม ๑๘ มิ.ย. ๖๙</div>
+        <div class="d">Response to Meeting Comments</div>
+      </a>
+
+      <div class="group-title">แนวทางการเรียนการสอน · Defense</div>
+      <a class="doc" href="acep_secondary_retention_plan_3jul2026.html">
+        <div class="t">แนวทางปรับ ม.ต้น–ม.ปลาย (๓ ก.ค. ๖๙)</div>
+        <div class="d">หลัง ผปค. ปฏิเสธข้อเสนอย้าย AC/ACT · 10 เหตุผล · Legal + Reputation</div>
+      </a>
+      <a class="doc" href="acep_loan_defense_1page_2jul2026.html">
+        <div class="t">ข้อโต้แย้งขอกู้ยืม 56.26 M · 1 หน้า (๒ ก.ค. ๖๙)</div>
+        <div class="d">สำหรับตอบซักถามในห้องประชุม · ตารางเดียว</div>
+      </a>
+
+      <div class="group-title">Pulse &amp; Update</div>
+      <a class="doc" href="acep_pulse_report_3jul2026.html">
+        <div class="t">Pulse Report · สถานการณ์ล่าสุด ACEP (๓ ก.ค. ๖๙)</div>
+        <div class="d">งานค้าง · งานเข้าใหม่ · Priority · 4 sources</div>
+      </a>
+
+      <div class="foot">
+        เอกสารสำหรับคณะกรรมการบริหารมูลนิธิฯ เท่านั้น · โปรดปิดหน้าต่างหลังใช้งาน<br>
+        <a href="#" class="logout" onclick="logout(event)">ออกจากระบบ</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+// ================================================================
+// Password Gate · Client-side SHA-256 (obfuscation, not real security)
+// รหัสผ่านปัจจุบัน: acep2569
+// เปลี่ยนรหัสผ่าน:
+//   1) คำนวณ SHA-256 hash ของรหัสใหม่ที่ https://emn178.github.io/online-tools/sha256.html
+//   2) แทนที่ค่า EXPECTED_HASH ด้านล่าง
+// ================================================================
+const EXPECTED_HASH = "7ab91ce3c856156abf5a48c7756e8e851978df18110724ddc09a9a3093db12b5";
+
+async function sha256(str) {
+  const buf = new TextEncoder().encode(str);
+  const hash = await crypto.subtle.digest("SHA-256", buf);
+  return Array.from(new Uint8Array(hash))
+    .map(b => b.toString(16).padStart(2, "0")).join("");
+}
+
+async function checkPw(e) {
+  e.preventDefault();
+  const pw = document.getElementById("pw").value.trim();
+  const err = document.getElementById("err");
+  err.classList.remove("show");
+  if (!pw) return false;
+  const h = await sha256(pw);
+  if (h === EXPECTED_HASH) {
+    sessionStorage.setItem("acep_board_auth", "ok");
+    // ถ้ามี ?next= → redirect ไปหน้านั้น
+    const params = new URLSearchParams(location.search);
+    const next = params.get("next");
+    if (next && /^acep_[a-z0-9_\-]+\.html$/.test(next)) {
+      location.replace(next);
+    } else {
+      showList();
+    }
+  } else {
+    err.classList.add("show");
+    document.getElementById("pw").select();
+  }
+  return false;
+}
+
+function showList() {
+  document.getElementById("gate").style.display = "none";
+  document.getElementById("list").classList.add("show");
+}
+
+function logout(e) {
+  e.preventDefault();
+  sessionStorage.removeItem("acep_board_auth");
+  location.reload();
+}
+
+// ถ้ามี session อยู่แล้ว → แสดงรายการทันที
+if (sessionStorage.getItem("acep_board_auth") === "ok") {
+  const params = new URLSearchParams(location.search);
+  const next = params.get("next");
+  if (next && /^acep_[a-z0-9_\-]+\.html$/.test(next)) {
+    location.replace(next);
+  } else {
+    showList();
+  }
+}
+</script>
+</body>
+</html>

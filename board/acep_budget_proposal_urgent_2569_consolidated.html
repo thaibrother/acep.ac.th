@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<script src="_guard.js"></script>
+<meta charset="UTF-8">
+<title>หนังสือขอรับการสนับสนุนงบประมาณเร่งด่วน · ๓ ระยะของการฟื้นตัว ACEP</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap');
+  * { box-sizing: border-box; }
+  body {
+    font-family: 'Sarabun', 'TH Sarabun New', sans-serif;
+    color: #1a1a1a;
+    background: #f5f5f0;
+    margin: 0;
+    padding: 40px 20px;
+    line-height: 1.7;
+  }
+  .page {
+    max-width: 920px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 60px 80px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+    border-radius: 6px;
+  }
+  .letterhead {
+    text-align: center;
+    border-bottom: 2px solid #1a3a6e;
+    padding-bottom: 20px;
+    margin-bottom: 32px;
+  }
+  .letterhead h1 {
+    font-size: 22px;
+    margin: 0;
+    color: #1a3a6e;
+    letter-spacing: 1px;
+  }
+  .letterhead .subtitle {
+    font-size: 16px;
+    color: #555;
+    margin-top: 8px;
+  }
+  .meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 17px;
+    margin-bottom: 24px;
+  }
+  .meta div { display: flex; gap: 8px; }
+  .meta b { color: #1a3a6e; }
+  h2 {
+    font-size: 22px;
+    color: #1a3a6e;
+    border-left: 6px solid #1a3a6e;
+    padding-left: 14px;
+    margin: 40px 0 16px;
+  }
+  h3 {
+    font-size: 19px;
+    color: #2c5a9c;
+    margin: 28px 0 10px;
+    padding-bottom: 4px;
+    border-bottom: 1px dashed #c5d5e8;
+  }
+  h4 {
+    font-size: 17px;
+    color: #444;
+    margin: 20px 0 8px;
+  }
+  p, li { font-size: 17px; }
+  .letter-body {
+    text-indent: 32px;
+    margin-bottom: 14px;
+    text-align: justify;
+  }
+  .letter-body.no-indent { text-indent: 0; }
+  ol, ul { padding-left: 28px; }
+  ol li, ul li { margin-bottom: 6px; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 24px;
+    font-size: 16px;
+  }
+  th {
+    background: #1a3a6e;
+    color: #ffffff;
+    padding: 10px 12px;
+    text-align: left;
+    font-weight: 500;
+    border: 1px solid #1a3a6e;
+  }
+  th.amount { text-align: right; }
+  td {
+    border: 1px solid #d8dee6;
+    padding: 9px 12px;
+    vertical-align: top;
+  }
+  td.amount { text-align: right; font-variant-numeric: tabular-nums; }
+  tbody tr:nth-child(even) td { background: #f7f9fc; }
+  tr.total td {
+    background: #e8eef7;
+    font-weight: 700;
+    color: #1a3a6e;
+  }
+  .phase-card {
+    background: #fbfbf8;
+    border-left: 6px solid;
+    padding: 20px 26px;
+    margin: 24px 0;
+    border-radius: 4px;
+  }
+  .phase-card.phase-1 { border-color: #c0392b; }
+  .phase-card.phase-2 { border-color: #d68910; }
+  .phase-card.phase-3 { border-color: #1e8449; }
+  .phase-card .phase-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0 0 6px;
+  }
+  .phase-card.phase-1 .phase-title { color: #c0392b; }
+  .phase-card.phase-2 .phase-title { color: #d68910; }
+  .phase-card.phase-3 .phase-title { color: #1e8449; }
+  .phase-card .phase-desc { color: #555; margin-bottom: 12px; }
+  .callout {
+    background: #fff8e7;
+    border-left: 5px solid #d68910;
+    padding: 14px 18px;
+    margin: 20px 0;
+    border-radius: 4px;
+  }
+  .callout.critical { background: #fdedec; border-color: #c0392b; }
+  .callout.info { background: #eaf3fa; border-color: #2c5a9c; }
+  .callout strong { display: block; margin-bottom: 6px; }
+  .summary-table th { background: #2c5a9c; }
+  .signature {
+    margin-top: 60px;
+    text-align: right;
+  }
+  .signature .name { font-weight: 700; margin-top: 64px; font-size: 18px; }
+  .signature .title { color: #555; }
+  .footer-note {
+    margin-top: 50px;
+    font-size: 14px;
+    color: #777;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+  }
+  .toc {
+    background: #f0f3f9;
+    border: 1px solid #d8dee6;
+    padding: 18px 22px;
+    border-radius: 6px;
+    margin: 24px 0 40px;
+  }
+  .toc h4 { margin-top: 0; color: #1a3a6e; }
+  .toc ol { margin: 8px 0 0; }
+  .toc a { color: #1a3a6e; text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+  @media print {
+    body { background: white; padding: 0; }
+    .page { box-shadow: none; padding: 30mm 25mm; max-width: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+<!-- =========== หนังสือนำ =========== -->
+<header class="letterhead">
+  <h1>หนังสือขอรับการสนับสนุนงบประมาณเร่งด่วน</h1>
+  <div class="subtitle">เพื่อแก้ปัญหาและพัฒนา · โรงเรียนอัสสัมชัญหลักสูตรภาษาอังกฤษ (ACEP)</div>
+  <div class="subtitle" style="font-size:14px;color:#888;margin-top:4px;">ฉบับรวมยุบ v1+v2+v3 · ๓ ระยะของการฟื้นตัว</div>
+</header>
+
+<div class="meta">
+  <div><b>ที่</b> อสช ____/๒๕๖๙</div>
+  <div><b>วันที่</b> ๕ มิถุนายน พ.ศ. ๒๕๖๙</div>
+</div>
+
+<p><b>เรื่อง</b> ขอรับการสนับสนุนงบประมาณเร่งด่วน เพื่อเร่งแก้ปัญหาและพัฒนาโรงเรียนอัสสัมชัญหลักสูตรภาษาอังกฤษ</p>
+<p><b>เรียน</b> ภราดา ดร.สุรกิจ ศรีสราญกุลวงศ์ ประธานคณะกรรมการบริหารมูลนิธิคณะเซนต์คาเบรียลแห่งประเทศไทย</p>
+
+<p class="letter-body">จากการปฏิบัติหน้าที่และการศึกษาข้อมูลระยะกว่าหนึ่งเดือนที่ผ่านมา ตามคำสั่งของประธานมูลนิธิฯ และได้นำเสนอผลการศึกษาพร้อมเสนอแนวทางไปแล้ว ๒ ฉบับ</p>
+
+<p class="letter-body">กระผมขอลำดับ ๓ ระยะของการฟื้นตัว พร้อมตัวเลขงบประมาณในแต่ละระยะ ตามความเร่งด่วน และตามลำดับการพลิกฟื้น ดังนี้</p>
+
+<ul style="margin: 8px 0 14px;">
+  <li><b>ระยะของการปิดจบ</b> (หลักสูตร / นักเรียน / ครู / ผู้ปกครอง / หน่วยงานและสัญญาบริการ / อุปกรณ์ ฯลฯ)</li>
+  <li><b>ระยะของการคงประคอง</b> (หลักสูตร / นักเรียน / ครู / ผู้ปกครอง / หน่วยงานและสัญญาบริการ / อุปกรณ์ / ห้องประกอบการ / อาคารสถานที่ ฯลฯ)</li>
+  <li><b>ระยะการเริ่มกิจการใหม่</b> (หลักสูตร / นักเรียน / ครู / ผู้ปกครอง / หน่วยงานและสัญญาบริการ / อุปกรณ์ / ห้องประกอบการ / อาคารสถานที่ ฯลฯ)</li>
+</ul>
+
+<div class="callout critical">
+  <strong>🔴 สถานะการเงินปัจจุบัน</strong>
+  เงินคงเหลือสำหรับจ่ายเงินเดือนและค่าใช้จ่ายหลักของโรงเรียนมีอยู่เพียงประมาณ <b>๑ เดือน</b> เท่านั้น จึงขอรับการสนับสนุนงบประมาณครอบคลุมรายการต่อไปนี้
+  <ol style="margin: 10px 0 0;">
+    <li>เงินเดือนบุคลากรตลอดปีการศึกษา ๒๕๖๙</li>
+    <li>ค่าใช้จ่ายหลักประจำของโรงเรียน</li>
+    <li>การว่าจ้างงานเร่งด่วนต่าง ๆ</li>
+    <li>แผนงานเร่งด่วนตามที่แนบมาพร้อมหนังสือฉบับนี้</li>
+  </ol>
+</div>
+
+<p class="letter-body">ทั้งนี้ ค่าใช้จ่ายทุกรายการสามารถตรวจสอบและติดตามได้ตลอดเวลาจากระบบ <b>SWIS โมดูลการเงินและบัญชีออนไลน์</b> มูลนิธิฯ สามารถเข้าตรวจสอบสถานะการใช้จ่ายและความคืบหน้าได้ตลอดเวลา</p>
+
+<p class="letter-body">จึงเรียนมาเพื่อโปรดพิจารณาให้การสนับสนุน</p>
+
+<div class="toc">
+  <h4>สารบัญกรอบแผนงาน</h4>
+  <ol>
+    <li><a href="#overview">หลักคิดการจัดลำดับ ๓ ระยะ</a></li>
+    <li><a href="#phase-1">ระยะที่ ๑ · ปิดจบ</a> (๖ Domains)</li>
+    <li><a href="#phase-2">ระยะที่ ๒ · คงประคอง</a> (๘ Domains)</li>
+    <li><a href="#phase-3">ระยะที่ ๓ · เริ่มกิจการใหม่</a> (๘ Domains)</li>
+    <li><a href="#summary">งบประมาณรวม ๓ ระยะ</a></li>
+    <li><a href="#cross-cutting">ปัญหานอกงบประมาณ-สัญญาขาดอายุ</a></li>
+    <li><a href="#parallel">งานคู่ขนานที่ดำเนินการอยู่</a></li>
+    <li><a href="#outcomes">ผลที่คาดว่าจะได้รับ</a></li>
+  </ol>
+</div>
+
+<!-- =========== หลักคิด =========== -->
+<h2 id="overview">หลักคิดการจัดลำดับ ๓ ระยะ</h2>
+<p>หลักการ: <b>ปิดจบ → คงประคอง → เริ่มกิจการใหม่</b> · ครอบคลุมมิติร่วมกัน (หลักสูตร · นักเรียน · ครู · ผู้ปกครอง · หน่วยงานและสัญญาบริการ · อุปกรณ์ · ห้องประกอบการ · อาคารสถานที่)</p>
+<table>
+  <thead>
+    <tr>
+      <th style="width:18%;">ระยะ</th>
+      <th style="width:42%;">วัตถุประสงค์</th>
+      <th>ขอบเขต Domains</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="color:#c0392b;font-weight:600;">🟥 ๑ · ปิดจบ</td>
+      <td>ปิดเรื่องค้างคา · ตัดล็อต · ตัดสินใจจบงานที่หมดอายุ/ไม่คุ้ม</td>
+      <td>หลักสูตร · น.ร. · ครู · ผปค. · หน่วยงานและสัญญาบริการ · อุปกรณ์</td>
+    </tr>
+    <tr>
+      <td style="color:#d68910;font-weight:600;">🟧 ๒ · คงประคอง</td>
+      <td>รักษาเสถียรภาพ · เงินเดือน · ค่าใช้จ่ายหลัก · ประคองให้องค์กรไม่หยุดชะงัก</td>
+      <td>+ ห้องประกอบการ · อาคารสถานที่</td>
+    </tr>
+    <tr>
+      <td style="color:#1e8449;font-weight:600;">🟨 ๓ · เริ่มกิจการใหม่</td>
+      <td>Restart · Relaunch · หลักสูตรใหม่ · พื้นที่ใหม่ · บริการใหม่เพื่อ recovery จำนวนนักเรียน + รายได้</td>
+      <td>(เหมือนระยะ ๒)</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- =========== ระยะ 1 =========== -->
+<div class="phase-card phase-1" id="phase-1">
+  <div class="phase-title">ระยะที่ ๑ · ปิดจบ</div>
+  <div class="phase-desc">ปิดเรื่องค้างคา · ตัดล็อต · จบงานที่หมดอายุ/ไม่คุ้ม</div>
+</div>
+
+<h3>หลักสูตร</h3>
+<table>
+  <thead><tr><th>รายการ</th><th>กำลังทำอะไร</th><th>สถานะ</th><th>ผู้รับผิดชอบ</th><th class="amount">งบประมาณ (บาท)</th></tr></thead>
+  <tbody>
+    <tr><td>ปิดจบรอบประเมินผลภาคเรียนที่ผ่านมา (Cambridge / HSK / EP)</td><td>รวบรวมผลและตัดสินใจ certificate ที่ค้าง</td><td>กำลังทำ</td><td>ฝ่ายวิชาการ + ภราดารักษาการ</td><td class="amount">TBD</td></tr>
+    <tr><td>ปิด/ทบทวนหลักสูตรเสริมที่ไม่คุ้มต่อยอด</td><td>วิเคราะห์ ROI หลักสูตรเสริม · ตัดสินใจตัดทิ้ง</td><td>เริ่ม</td><td>ฝ่ายวิชาการ</td><td class="amount">TBD</td></tr>
+    <tr><td>สรุปรอยต่อ Curriculum ระดับชั้น (ส่งต่อทีมพัชรปกรณ์)</td><td>map ปัญหา · เตรียมรับทีมวิชาการใหม่</td><td>เริ่ม</td><td>ฝ่ายวิชาการ + ภราดาพัชรปกรณ์</td><td class="amount">TBD</td></tr>
+  </tbody>
+</table>
+
+<h3>นักเรียน</h3>
+<table>
+  <thead><tr><th>รายการ</th><th>กำลังทำอะไร</th><th>สถานะ</th><th>ผู้รับผิดชอบ</th><th class="amount">งบประมาณ (บาท)</th></tr></thead>
+  <tbody>
+    <tr><td>ปิดเอกสารวีซ่านักเรียนต่างชาติที่ค้างใน สช.</td><td>เร่งดำเนินการก่อน ๗ มิ.ย.</td><td>กำลังทำ</td><td>มิสเอ้ (ธุรการ)</td><td class="amount">TBD</td></tr>
+    <tr><td>ปิดยอดค่าเทอมค้างชำระ ปีการศึกษา ๒๕๖๘</td><td>เรียกเก็บ · ตัดบัญชี · ตัดสินใจสิทธิ์เรียนต่อ</td><td>เริ่ม</td><td>การเงิน + ภราดาณัฐธร</td><td class="amount">TBD</td></tr>
+    <tr><td>สรุปจำนวนนักเรียน ๑๒๑ คน · vs จุดคุ้มทุน ๘๕๗</td><td>baseline สำหรับแผน recovery</td><td>เสร็จ</td><td>ฝ่ายวิชาการ</td><td class="amount">—</td></tr>
+  </tbody>
+</table>
+
+<h3>ครู</h3>
+<table>
+  <thead><tr><th>รายการ</th><th>กำลังทำอะไร</th><th>สถานะ</th><th>ผู้รับผิดชอบ</th><th class="amount">งบประมาณ (บาท)</th></tr></thead>
+  <tbody>
+    <tr><td>ปิดสัญญา / ต่อสัญญาครูต่างชาติ (Mr. Danny Lee)</td><td>ต่อสัญญาตามเงื่อนไขใหม่</td><td>กำลังทำ</td><td>มิสเนย (HRD/HRM)</td><td class="amount">TBD</td></tr>
+    <tr><td>ตรวจประวัติ + พิจารณารับเข้าใหม่ (Miss Trixia + Mr. Nikhil)</td><td>verify เอกสาร · check reference</td><td>กำลังทำ</td><td>มิสเนย</td><td class="amount">TBD</td></tr>
+    <tr><td>Robert's Proposal · Head of Foreign Department</td><td>block ไว้ก่อน · รอคู่มือคุณภาพ Foreign Dept</td><td>รอ</td><td>มิสเนย + มิสเจ</td><td class="amount">TBD</td></tr>
+    <tr><td>ปิดยอด rotation ครู ๓ ปี (สำหรับครูที่ครบรอบ)</td><td>ตัดสินใจย้าย / ต่อ</td><td>เริ่ม</td><td>HRM</td><td class="amount">TBD</td></tr>
+  </tbody>
+</table>
+
+<h3>ผู้ปกครอง</h3>
+<table>
+  <thead><tr><th>รายการ</th><th>กำลังทำอะไร</th><th>สถานะ</th><th>ผู้รับผิดชอบ</th><th class="amount">งบประมาณ (บาท)</th></tr></thead>
+  <tbody>
+    <tr><td>ปิดประเด็นข้อร้องเรียน/คดีที่ค้างกับ ผปค.</td><td>ที่ปรึกษากฎหมาย ๔ ท่าน + ค่าทนาย ๒,๗๓๕,๓๕๐ บาท</td><td>กำลังทำ</td><td>ผอ. + ภราดาณัฐธร + ทีมที่ปรึกษากฎหมาย</td><td class="amount">2,735,350</td></tr>
+    <tr><td>ปิดยอดค้าง ผปค. ที่ลาออก · คืนเอกสาร · เคลียร์การเงิน</td><td>รวบรวม + ปิดทีละราย</td><td>เริ่ม</td><td>ธุรการ + การเงิน</td><td class="amount">TBD</td></tr>
+  </tbody>
+</table>
+
+<h3>หน่วยงานและสัญญาบริการ</h3>
+<table>
+  <thead><tr><th>รายการ</th><th>กำลังทำอะไร</th><th>สถานะ</th><th>ผู้รับผิดชอบ</th><th class="amount">งบประมาณ (บาท)</th></tr></thead>
+  <tbody>
+    <tr><td>🔴 ปิดสัญญาประกันภัยที่ขาดอายุ + ต่อใหม่ทันที (อาคาร · ยานพาหนะ · ความรับผิดบุคคลที่ ๓ · นักเรียน)</td><td>inventory ฉบับขาดอายุ · ขอ quote ต่อใหม่</td><td>เริ่ม</td><td>มิสแน็ต + ภราดาณัฐธร</td><td class="amount">TBD</td></tr>
+    <tr><td>🔴 ปิดสัญญาอินเทอร์เน็ตเดิมที่หมดอายุ</td><td>ตัดสินใจเปลี่ยน vendor / ต่อสัญญา</td><td>เริ่ม</td><td>มิสแน็ต + ม.สิชล</td><td class="amount">TBD</td></tr>
+    <tr><td>🔴 ปิดสัญญา WiFi + Printer / Printing Center ที่ขาดอายุ</td><td>verify scope · เลือกแบบใหม่</td><td>เริ่ม</td><td>มิสแน็ต</td><td class="amount">TBD</td></tr>
+    <tr><td>ปิดสัญญาบริการอื่นที่ไม่คุ้ม (รออ inventory SWIS โมดูลสัญญา)</td><td>รวบรวมรายการสัญญาทั้งหมด</td><td>รอ</td><td>มิสแน็ต + ภราดาน้อย</td><td class="amount">TBD</td></tr>
+  </tbody>
+</table>
+
+<h3>อุปกรณ์</h3>
+<table>
+  <thead><tr><th>รายการ</th><th>กำลังทำอะไร</th><th>สถานะ</th><th>ผู้รับผิดชอบ</th><th class="amount">งบประมาณ (บาท)</th></tr></thead>
+  <tbody>
+    <tr><td>ปิดบัญชีครุภัณฑ์เก่าที่ไม่ใช้แล้ว / เสีย</td><td>inventory + ตัดจำหน่าย</td><td>เริ่ม</td><td>ธุรการ (รับงานต่อจาก ม.วุฒิ ที่บราเดอร์ยกเลิก ๕ มิ.ย.)</td><td class="amount">TBD</td></tr>
+    <tr><td>เครื่องตัดหญ้าเก่า · เปลี่ยนใหม่ NEWTECH BL-1 Ultra 18 แรงม้า</td><td>ม.วุฒิ ส่งใบเสนอราคา 350,000 (รวม VAT) · รอใบเสนอเทียบจาก vendor อื่น</td><td>กำลังทำ</td><td>มิสแน็ต (single channel · blind verification)</td><td class="amount">350,000</td></tr>
+    <tr><td>ปิดบัญชีเครื่องเล่นเก่าที่ชำรุด</td><td>ตัดจำหน่าย · เคลียร์พื้นที่</td><td>เริ่ม</td><td>ธุรการ + อาคารสถานที่</td><td class="amount">TBD</td></tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr class="total"><td>รวมระยะที่ ๑ · ปิดจบ</td><td class="amount" style="width:30%;">TBD (+ ๒,๗๓๕,๓๕๐ ค่าทนาย + ๓๕๐,๐๐๐ เครื่องตัดหญ้า)</td></tr>
+  </tbody>
+</table>
+
+<!-- =========== ระยะ 2 =========== -->
+<div class="phase-card phase-2" id="phase-2">
+  <div class="phase-title">ระยะที่ ๒ · คงประคอง</div>
+  <div class="phase-desc">รักษาเสถียรภาพ · เงินเดือน · ค่าใช้จ่ายหลัก · ประคองให้องค์กรไม่หยุดชะงัก</div>
+</div>
+
+<h3>หลักสูตร</h3>
+<table>
+  <thead><tr><th>รายการ</th><th>กำลังทำอะไร</th><th>สถานะ</th><th>ผู้รับผิดชอบ</th><th class="amount">งบประมาณ (บาท)</th></tr></thead>
+  <tbody>
+    <tr><td>รักษามาตรฐาน Cambridge / HSK / EP ปัจจุบัน</td><td>คุมคุณภาพ · ตรวจสอบครูตามแผนการสอน</td><td>กำลังทำ</td><td>ฝ่ายวิชาการ + ภราดารักษาการ</td><td class="amount">TBD</td></tr>
+    <tr><td>บันทึกแผนการสอนในระบบ SWIS</td><td>ครูไทยกรอกแทนครูต่างชาติ (เมนูภาษาไทย)</td><td>กำลังทำ</td><td>ภราดาวันวสันต์ + มิสเนย</td><td class="amount">TBD</td></tr>
+    <tr><td>คงโครงสร้าง Cambridge / HSK exam หลักสูตรเดิม</td><td>เก็บข้อมูลผลสอบ · ใช้คุยกับ ผปค.</td><td>กำลังทำ</td><td>ฝ่ายวิชาการ</td><td class="amount">TBD</td></tr>
+  </tbody>
+</table>
+
+<h3>นักเรียน</h3>
+<table>
+  <thead><tr><th>รายการ</th><th>กำลังทำอะไร</th><th>สถานะ</th><th>ผู้รับผิดชอบ</th><th class="amount">งบประมาณ (บาท)</th></tr></thead>
+  <tbody>
+    <tr><td>รักษาจำนวนนักเรียน ๑๒๑ คน ตลอดปีการศึกษา ๒๕๖๙</td><td>ติดตาม attendance · ป้องกัน drop-out</td><td>กำลังทำ</td><td>ฝ่ายกิจการนักเรียน</td><td class="amount">TBD</td></tr>
+    <tr><td>เตรียมงานปฐมนิเทศ ผปค. ๒๗ มิ.ย. ๒๕๖๙</td><td>มิสสิริพร ร่างคำสั่งแต่งตั้ง คกก. ปฐมนิเทศ</td><td>กำลังทำ</td><td>มิสสิริพร + ม.บารมี (กิจการนักเรียน)</td><td class="amount">TBD</td></tr>
+    <tr><td>จดหมายสำรวจกีฬา v3 ส่ง ผปค.</td><td>มิสเบล/ธัญญ์ฐิตา ส่งร่าง 4 มิ.ย. · รอ ผอ. review</td><td>รอ</td><td>มิสเบล + ผอ.</td><td class="amount">—</td></tr>
+    <tr><td>รักษาระบบ Pickup / Logistic Assistant (SWIS 100%)</td><td>ใช้งานครบ · กล้องสแกน QR Code</td><td>เสร็จ</td><td>มิสเนย</td><td class="amount">—</td></tr>
+    <tr><td>ระบบหนังสือเรียน · ติดตามที่ยังไม่ได้รับ</td><td>มิสกนกวรรณ update รายการ (Topic 2569/00068)</td><td>กำลังทำ</td><td>มิสกนกวรรณ</td><td class="amount">TBD</td></tr>
+  </tbody>
+</table>
+
+<h3>ครู</h3>
+<p style="font-size:14px;color:#777;margin:0 0 6px;"><em>หมายเหตุ: เงินเดือน · สวัสดิการ · การพัฒนาบุคลากร — base layer ที่ทำให้องค์กรไม่หยุดชะงัก</em></p>
+<table>
+  <thead><tr><th>รายการ</th><th>กำลังทำอะไร</th><th>สถานะ</th><th>ผู้รับผิดชอบ</th><th class="amount">งบประมาณ (บาท)</th></tr></thead>
+  <tbody>
+    <tr><td>🔴 เงินเดือนบุคลากร (ครู · เจ้าหน้าที่ · ภราดา) ตลอดปีการศึกษา</td><td>เงินสดเหลือ ~๑ เดือน · ต้องของบเร่งด่วน</td><td>กำลังทำ</td><td>การเงิน + ผอ.</td><td class="amount">TBD</td></tr>
+    <tr><td>สวัสดิการบุคลากร (ประกันสังคม · กองทุนสำรอง · ค่ารักษา · ใบเสนอลงนาม ม.พรพงษ์)</td><td>ดำเนินการต่อเนื่อง · มิสเจ ส่งเอกสารลงนาม</td><td>กำลังทำ</td><td>มิสเนย + มิสเจ</td><td class="amount">TBD</td></tr>
+    <tr><td>คำสั่งแต่งตั้งบุคลากร ปีการศึกษา ๒๕๖๙</td><td>มิสเจ ส่งร่าง 2 มิ.ย. (Topic 2569/00080)</td><td>กำลังทำ</td><td>มิสเจ + มิสเนย</td><td class="amount">—</td></tr>
+    <tr><td>คณะกรรมการงานบุคลากร (ตามกรอบ ภราดาณัฐธร)</td><td>มิสเนย ร่างคำสั่ง</td><td>กำลังทำ</td><td>มิสเนย</td><td class="amount">TBD</td></tr>
+    <tr><td>การพัฒนาครู (อบรม AI ปฐมวัย · Robotics · ต้านทุจริต E-learning)</td><td>มิสเอ้ ดำเนินการต่อเนื่อง</td><td>กำลังทำ</td><td>มิสเอ้ + มิสเนย</td><td class="amount">TBD</td></tr>
+  </tbody>
+</table>
+
+<h3>ผู้ปกครอง</h3>
+<table>
+  <thead><tr><th>รายการ</th><th>กำลังทำอะไร</th><th>สถานะ</th><th>ผู้รับผิดชอบ</th><th class="amount">งบประมาณ (บาท)</th></tr></thead>
+  <tbody>
+    <tr><td>ประกาศอัตราค่าธรรมเนียมการศึกษา ๒๕๖๙ (Topic 2569/00071)</td><td>ภราดาณัฐธร เสนอลงนาม · ตารางเปรียบเทียบ ๒๕๖๘ พร้อม</td><td>รอ</td><td>มิสเอ้ + ภราดาณัฐธร</td><td class="amount">—</td></tr>
+    <tr><td>จดหมายเชิญ ผปค. ปฐมนิเทศ (Topic 2569/00083)</td><td>มิสเบล/ธัญญ์ฐิตา ร่าง</td><td>กำลังทำ</td><td>มิสเบล</td><td class="amount">TBD</td></tr>
+    <tr><td>การสื่อสาร ผปค. ผ่านระบบ ACEP Parent App</td><td>ใช้งานครบ 100% · ครูประจำชั้น push update</td><td>กำลังทำ</td><td>มิสเนย</td><td class="amount">TBD</td></tr>
+  </tbody>
+</table>
+
+<h3>หน่วยงานและสัญญาบริการ</h3>
+<p style="font-size:14px;color:#777;margin:0 0 6px;"><em>หมายเหตุ: ค่าสัญญาบริการประจำ · ประกันภัย · สาธารณูปโภค</em></p>
+<table>
+  <thead><tr><th>รายการ</th><th>กำลังทำอะไร</th><th>สถานะ</th><th>ผู้รับผิดชอบ</th><th class="amount">งบประมาณ (บาท)</th></tr></thead>
+  <tbody>
+    <tr><td>ค่าใช้จ่ายหลักประจำ (สาธารณูปโภค · น้ำ-ไฟ · อาหาร · วัสดุสำนักงาน)</td><td>ดำเนินการต่อเนื่องตลอดปี</td><td>กำลังทำ</td><td>การเงิน</td><td class="amount">TBD</td></tr>
+    <tr><td>🔴 รายงาน ๓.๑ ล้านบาท · งานค้างซ่อม (ลิฟต์ · ชิลเลอร์ · CCTV · บำบัดน้ำเสีย · ปั๊มสระ · ค้างปี ๒๕๖๖-๒๕๖๘)</td><td>มิสแน็ต รวบรวม list แยกอายุหนี้ + เกรดความจำเป็น (Topic 2569/00086 · ม.วุฒิ)</td><td>กำลังทำ</td><td>มิสแน็ต</td><td class="amount">3,100,000</td></tr>
+    <tr><td>สมัคร Kpayment + เปิด E-payment</td><td>ภราดาณัฐธร ดำเนินการ</td><td>กำลังทำ</td><td>ภราดาณัฐธร</td><td class="amount">TBD</td></tr>
+    <tr><td>ระบบจัดซื้อที่ตรวจสอบได้ (3 ใบเสนอราคา + audit trail)</td><td>มิสแน็ต วาง flow · ทุกใบขอซื้อผ่าน SWIS</td><td>กำลังทำ</td><td>มิสแน็ต (single channel)</td><td class="amount">TBD</td></tr>
+  </tbody>
+</table>
+
+<h3>อุปกรณ์</h3>
+<table>
+  <thead><tr><th>รายการ</th><th>กำลังทำอะไร</th><th>สถานะ</th><th>ผู้รับผิดชอบ</th><th class="amount">งบประมาณ (บาท)</th></tr></thead>
+  <tbody>
+    <tr><td>Classroom facilities (ที่นั่ง · กระดาน · projector · เสียง · แอร์)</td><td>ใช้งานไม่ครบ · ขอเติมที่ขาด</td><td>เริ่ม</td><td>มิสเอ้ + มิสแน็ต</td><td class="amount">TBD</td></tr>
+    <tr><td>อุปกรณ์การเรียนการสอนเฉพาะวิชา (วิทย์ · ศิลปะ · เทคโนโลยี · ดนตรี)</td><td>inventory · เติมที่ขาด</td><td>เริ่ม</td><td>หัวหน้าวิชา + มิสแน็ต</td><td class="amount">TBD</td></tr>
+    <tr><td>ระบบ Mobile App (Executive/Teacher/Student/Parents)</td><td>ใช้งานครบ 100%</td><td>เสร็จ</td><td>มิสเนย</td><td class="amount">—</td></tr>
+    <tr><td>ครุภัณฑ์/สินทรัพย์ — ตั้งระบบบัญชี + ผู้รับผิดชอบ</td><td>บราเดอร์สั่งย้ายให้ธุรการดำเนินการ (ยกเลิก ม.วุฒิ · 5 มิ.ย.)</td><td>เริ่ม</td><td>ธุรการ + มิสเอ้</td><td class="amount">TBD</td></tr>
+  </tbody>
+</table>
+
+<h3>ห้องประกอบการ</h3>
+<table>
+  <thead><tr><th>รายการ</th><th>กำลังทำอะไร</th><th>สถานะ</th><th>ผู้รับผิดชอบ</th><th class="amount">งบประมาณ (บาท)</th></tr></thead>
+  <tbody>
+    <tr><td>ห้องเรียนปัจจุบัน — ปรับปรุง/ทาสี/ซ่อมพื้นฐาน</td><td>inventory ห้องที่ต้องปรับเร่งด่วน</td><td>เริ่ม</td><td>ธุรการ + อาคารสถานที่</td><td class="amount">TBD</td></tr>
+    <tr><td>ห้องประชุมฝ่ายบริหาร / สำนัก ผอ.</td><td>ใช้งานไม่ครบ · ปรับเครื่องเสียง/projector</td><td>เริ่ม</td><td>มิสแน็ต</td><td class="amount">TBD</td></tr>
+    <tr><td>ห้องพักครู</td><td>ขาดมาตรฐาน · ปรับ furniture + IT</td><td>เริ่ม</td><td>มิสเนย + มิสแน็ต</td><td class="amount">TBD</td></tr>
+    <tr><td>ห้องเก็บเอกสาร / สินทรัพย์-ครุภัณฑ์</td><td>ขาดระบบ · ต้องตั้งใหม่</td><td>เริ่ม</td><td>ธุรการ</td><td class="amount">TBD</td></tr>
+  </tbody>
+</table>
+
+<h3>อาคารสถานที่</h3>
+<table>
+  <thead><tr><th>รายการ</th><th>กำลังทำอะไร</th><th>สถานะ</th><th>ผู้รับผิดชอบ</th><th class="amount">งบประมาณ (บาท)</th></tr></thead>
+  <tbody>
+    <tr><td>🔴 ซ่อมฐานอาคารที่เกิดโพรง</td><td>structural risk · เร่งซ่อม</td><td>เริ่ม</td><td>ทีมก่อสร้าง (ภราดาชำนาญ) + อาคารสถานที่</td><td class="amount">TBD</td></tr>
+    <tr><td>ตัดต้นไม้เสี่ยงล้ม + ปรับถังขยะรอบบริเวณ</td><td>safety + สุขอนามัย</td><td>เริ่ม</td><td>ทีมพื้นที่ (ภราดาจำรัส)</td><td class="amount">TBD</td></tr>
+    <tr><td>เปลี่ยนเต๊นท์รับ-ส่งนักเรียน → หลังคาถาวร + ทางเชื่อมเข้าอาคารเรียน</td><td>ออกแบบ + ขอ quote</td><td>เริ่ม</td><td>ทีมพื้นที่ (ภราดาจำรัส)</td><td class="amount">TBD</td></tr>
+    <tr><td>ระบบไฟฟ้าฉุกเฉิน · แสงสว่างทางเดิน · ทางหนีไฟ</td><td>safety check · ปรับให้ครบ</td><td>เริ่ม</td><td>อาคารสถานที่</td><td class="amount">TBD</td></tr>
+    <tr><td>ทาสี/ปรับสภาพอาคารเรียนเบื้องต้น</td><td>คงสภาพ · เตรียมต้อนรับ ผปค. ปฐมนิเทศ</td><td>เริ่ม</td><td>อาคารสถานที่</td><td class="amount">TBD</td></tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr class="total"><td>รวมระยะที่ ๒ · คงประคอง</td><td class="amount" style="width:30%;">TBD (+ ๓,๑๐๐,๐๐๐ ค้างซ่อม)</td></tr>
+  </tbody>
+</table>
+
+<!-- =========== ระยะ 3 =========== -->
+<div class="phase-card phase-3" id="phase-3">
+  <div class="phase-title">ระยะที่ ๓ · เริ่มกิจการใหม่</div>
+  <div class="phase-desc">Restart · Relaunch · หลักสูตรใหม่ · พื้นที่ใหม่ · บริการใหม่เพื่อ recovery จำนวนนักเรียน + รายได้</div>
+</div>
+
+<h3>หลักสูตร</h3>
+<table>
+  <thead><tr><th>รายการ</th><th>กำลังทำอะไร</th><th>สถานะ</th><th>ผู้รับผิดชอบ</th><th class="amount">งบประมาณ (บาท)</th></tr></thead>
+  <tbody>
+    <tr><td>หลักสูตร Early Years Center (Module ๑ Brief Ver 2)</td><td>ออกแบบหลักสูตรตามปรัชญา MEC · ฐาน recovery</td><td>เริ่ม</td><td>ทีมวิชาการ (ภราดาพัชรปกรณ์ + ระดับประถม + อนุบาล)</td><td class="amount">TBD</td></tr>
+    <tr><td>Robert's Proposal · Head of Foreign Department + คู่มือคุณภาพ Foreign Dept</td><td>block ไว้ก่อน · มิสเจ inventory คู่มือคุณภาพ · มิสเนย เตรียมเกณฑ์</td><td>รอ</td><td>มิสเนย + มิสเจ + Robert</td><td class="amount">TBD</td></tr>
+    <tr><td>หลักสูตรเสริม Cambridge / HSK ที่ขยาย</td><td>วางแผนเปิดรับเพิ่ม</td><td>เริ่ม</td><td>ทีมวิชาการ</td><td class="amount">TBD</td></tr>
+    <tr><td>ผลสรุปจากประชุมทีมหลักสูตร+วิชาการ ๕ มิ.ย.</td><td>รอสรุปจากภราดาน้อย (ภราดาณัฐธร)</td><td>รอ</td><td>ภราดาน้อย</td><td class="amount">TBD</td></tr>
+  </tbody>
+</table>
+
+<h3>นักเรียน</h3>
+<table>
+  <thead><tr><th>รายการ</th><th>กำลังทำอะไร</th><th>สถานะ</th><th>ผู้รับผิดชอบ</th><th class="amount">งบประมาณ (บาท)</th></tr></thead>
+  <tbody>
+    <tr><td>รับสมัครนักเรียน Early Years (อายุ ๒-๖ ปี) ปี ๒๕๗๐</td><td>เปิดระบบรับสมัคร · marketing</td><td>เริ่ม</td><td>มิสเอ้ + ทีมประชาสัมพันธ์</td><td class="amount">TBD</td></tr>
+    <tr><td>Recovery จำนวนนักเรียน → เป้าหมายใกล้จุดคุ้มทุน ๘๕๗</td><td>วางแผน roadmap ปีต่อปี</td><td>เริ่ม</td><td>ทีมวิชาการ + ฝ่ายวิชาการ</td><td class="amount">TBD</td></tr>
+    <tr><td>บัตรสมาชิกชุมชน (น.ร./เด็กรอบบริเวณ) สำหรับใช้ลานกิจกรรม</td><td>วาง MOU กับหมู่บ้าน + โรงงาน</td><td>เริ่ม</td><td>ทีมประสานเครือข่ายพื้นที่ (ภราดาพิสูตร + คุณวิษณุ + ภราดาจำรัส)</td><td class="amount">TBD</td></tr>
+    <tr><td>MEET MOU MUIC (มหิดล) — ความร่วมมือทางวิชาการ</td><td>มิสเบล ลงทะเบียน 10 มิ.ย. · งาน 19 มิ.ย. ที่ศาลายา</td><td>กำลังทำ</td><td>มิสเบล + ผอ.</td><td class="amount">TBD</td></tr>
+  </tbody>
+</table>
+
+<h3>ครู</h3>
+<table>
+  <thead><tr><th>รายการ</th><th>กำลังทำอะไร</th><th>สถานะ</th><th>ผู้รับผิดชอบ</th><th class="amount">งบประมาณ (บาท)</th></tr></thead>
+  <tbody>
+    <tr><td>รับทีมภราดา ๕ ทีม จาก BSG Assembly (พัชรปกรณ์ · พิสูตร · ชำนาญ · วีรยุทธ · จำรัส)</td><td>จม.เชิญพัชรปกรณ์ + ทีมวิชาการ ส่งแล้ว · ภราดาณัฐธรร่าง</td><td>กำลังทำ</td><td>มิสเจ + ภราดาณัฐธร</td><td class="amount">TBD</td></tr>
+    <tr><td>รับครู Early Years ใหม่ (อนุบาล · ปฐมวัย)</td><td>วาง JD · เปิดสรรหา</td><td>เริ่ม</td><td>มิสเนย</td><td class="amount">TBD</td></tr>
+    <tr><td>รับครู Foreign Department ตามแผนใหม่ (หลัง Robert proposal ปลด block)</td><td>รอผลคู่มือคุณภาพ Foreign Dept</td><td>รอ</td><td>มิสเนย</td><td class="amount">TBD</td></tr>
+    <tr><td>พัฒนาทีมครูปัจจุบัน (Cambridge teacher training · CLIL · Early Years)</td><td>วาง training plan</td><td>เริ่ม</td><td>มิสเนย + ภราดาพัชรปกรณ์</td><td class="amount">TBD</td></tr>
+  </tbody>
+</table>
+
+<h3>ผู้ปกครอง</h3>
+<table>
+  <thead><tr><th>รายการ</th><th>กำลังทำอะไร</th><th>สถานะ</th><th>ผู้รับผิดชอบ</th><th class="amount">งบประมาณ (บาท)</th></tr></thead>
+  <tbody>
+    <tr><td>เปิดบริการสมาชิก ผปค.+ ชุมชน สำหรับลานกิจกรรม</td><td>วาง model + บัตรสมาชิก + โปรโมชั่น</td><td>เริ่ม</td><td>ทีมประสานเครือข่าย + ทีมประชาสัมพันธ์</td><td class="amount">TBD</td></tr>
+    <tr><td>พื้นที่ต้อนรับ ผปค. + ห้องประชุม ผปค. + ห้องรอ</td><td>ออกแบบ · ปรับ entry point</td><td>เริ่ม</td><td>อาคารสถานที่ + ธุรการ</td><td class="amount">TBD</td></tr>
+    <tr><td>สร้าง story พัฒนาการของโรงเรียน (footage + PR) ส่ง ผปค./เครือข่าย</td><td>มิสเบล เก็บ footage จุดเด่น</td><td>กำลังทำ</td><td>มิสเบล</td><td class="amount">TBD</td></tr>
+    <tr><td>ระบบรับสมัครนักเรียนผ่าน SWIS (รับสมัคร)</td><td>ยังไม่เปิดใช้ · ตั้งค่าระบบ</td><td>เริ่ม</td><td>มิสเอ้ + มิสเนย</td><td class="amount">TBD</td></tr>
+  </tbody>
+</table>
+
+<h3>หน่วยงานและสัญญาบริการ</h3>
+<table>
+  <thead><tr><th>รายการ</th><th>กำลังทำอะไร</th><th>สถานะ</th><th>ผู้รับผิดชอบ</th><th class="amount">งบประมาณ (บาท)</th></tr></thead>
+  <tbody>
+    <tr><td>SWIS Plus expansion — เปิดใช้ ๑๔ โมดูลที่ยังไม่ใช้</td><td>Pushing Knowledge · พฤติกรรม · ห้องพยาบาล · Face Scan · ขาด-ลา-มาสาย · งบประมาณ · มินิมาร์ท/คาเฟ่ · สินทรัพย์ · บริการหน่วยงาน · ประกัน · สื่อสารมวลชน · วิจัย · ห้องสมุด</td><td>เริ่ม</td><td>ทีม SWIS Plus (Meiy MCP) + มิสเนย + ภราดาณัฐธร + ม.สิชล + ธุรการ</td><td class="amount">TBD</td></tr>
+    <tr><td>Face Scan + RFID นักเรียน (พร้อม Canteen/มินิมาร์ท/คาเฟ่)</td><td>ลงทะเบียนใบหน้า + ทดสอบระบบ</td><td>เริ่ม</td><td>มิสเนย</td><td class="amount">TBD</td></tr>
+    <tr><td>เปิด E-payment + ระบบงบประมาณ + ประกันคุณภาพใน SWIS</td><td>สมัคร Kpayment + ลงแผนงาน ๒๕๖๙</td><td>กำลังทำ</td><td>ภราดาณัฐธร + ทุกหน่วยงาน</td><td class="amount">TBD</td></tr>
+    <tr><td>MOU + สัญญาผู้ให้บริการลานกิจกรรม (ตู้ vending สแน็คทูโก ฯลฯ)</td><td>เจรจายังไม่สำเร็จ (Topic 2569/00101)</td><td>กำลังทำ</td><td>ผอ. + มิสแน็ต</td><td class="amount">TBD</td></tr>
+  </tbody>
+</table>
+
+<h3>อุปกรณ์</h3>
+<table>
+  <thead><tr><th>รายการ</th><th>กำลังทำอะไร</th><th>สถานะ</th><th>ผู้รับผิดชอบ</th><th class="amount">งบประมาณ (บาท)</th></tr></thead>
+  <tbody>
+    <tr><td>เครื่องเล่นเด็ก Early Years (มอก. ๖๘๕ / ASTM F1487 · บริษัท เจ.เจ.ซี คอร์ปอเรชั่น)</td><td>รอผลสำรวจและเปรียบเทียบราคา ภราดาน้อย (Topic 2569/00100)</td><td>รอ</td><td>ภราดาน้อย + มิสแน็ต</td><td class="amount">TBD</td></tr>
+    <tr><td>อุปกรณ์การเรียนรู้ตาม MEC สำหรับ Early Years</td><td>วาง list + ขอ quote</td><td>เริ่ม</td><td>ทีมวิชาการ + มิสแน็ต</td><td class="amount">TBD</td></tr>
+    <tr><td>Sport equipment สำหรับลานกิจกรรม</td><td>วาง list ตาม sport ที่จะเปิด</td><td>เริ่ม</td><td>ทีมกีฬา (ภราดาชำนาญ) + มิสแน็ต</td><td class="amount">TBD</td></tr>
+    <tr><td>เครื่องดนตรี + อุปกรณ์กิจกรรม (จากแนวทาง ภราดาวีรยุทธ ACT)</td><td>วาง list</td><td>เริ่ม</td><td>ภราดาวีรยุทธ + มิสแน็ต</td><td class="amount">TBD</td></tr>
+  </tbody>
+</table>
+
+<h3>ห้องประกอบการ</h3>
+<table>
+  <thead><tr><th>รายการ</th><th>กำลังทำอะไร</th><th>สถานะ</th><th>ผู้รับผิดชอบ</th><th class="amount">งบประมาณ (บาท)</th></tr></thead>
+  <tbody>
+    <tr><td>Early Years Center · ส่วนกลางของอาคาร</td><td>ปรับพื้นที่ + เฟอร์นิเจอร์เด็กเล็ก + มุมเรียนรู้ + พื้นนุ่ม</td><td>เริ่ม</td><td>อาคารสถานที่ + ทีมวิชาการ</td><td class="amount">TBD</td></tr>
+    <tr><td>Foreign Department (หลังปลด block Robert)</td><td>ออกแบบ + วางพื้นที่</td><td>รอ</td><td>มิสเนย + อาคารสถานที่</td><td class="amount">TBD</td></tr>
+    <tr><td>ห้องสมุด · เปิดใช้งานใหม่</td><td>เปิดระบบใน SWIS · จัดหนังสือ · setup</td><td>เริ่ม</td><td>ฝ่ายวิชาการ + มิสแน็ต</td><td class="amount">TBD</td></tr>
+    <tr><td>ห้องดนตรี (จากแนวทาง ภราดาวีรยุทธ ACT)</td><td>วาง layout + อุปกรณ์</td><td>เริ่ม</td><td>ภราดาวีรยุทธ + อาคารสถานที่</td><td class="amount">TBD</td></tr>
+    <tr><td>ห้องพยาบาล · เปิดใช้งาน</td><td>มี structure แล้วใน SWIS · setup จริง</td><td>เริ่ม</td><td>ธุรการ + มิสเนย</td><td class="amount">TBD</td></tr>
+  </tbody>
+</table>
+
+<h3>อาคารสถานที่</h3>
+<table>
+  <thead><tr><th>รายการ</th><th>กำลังทำอะไร</th><th>สถานะ</th><th>ผู้รับผิดชอบ</th><th class="amount">งบประมาณ (บาท)</th></tr></thead>
+  <tbody>
+    <tr><td>🟨 Sports Complex (Module ๒ Brief Ver 2) — Master plan</td><td>สำรวจวิศวกร/สถาปนิก ๙ พ.ค. แล้ว · ขาด M-F-M</td><td>กำลังทำ</td><td>ภราดาชำนาญ + ทีมก่อสร้างสนามกีฬา</td><td class="amount">TBD</td></tr>
+    <tr><td>สนามฟุตบอลหญ้าเทียม #๑ + ติดตั้งหลังคา (รายได้ชุมชน)</td><td>มีแล้ว · รอเชื่อมหมู่บ้าน/โรงงาน · บัตรสมาชิก + โปรโมชั่น</td><td>กำลังทำ</td><td>ทีมประสานเครือข่ายพื้นที่ + ภราดาชำนาญ</td><td class="amount">TBD</td></tr>
+    <tr><td>สนามฟุตบอลหญ้าจริง #๒ + #๓ (ปรับดิน · หญ้าจริง · โค้ชผ่อง · บังฮับ)</td><td>นัดคุย ๕ มิ.ย. บ่ายสาม · ได้ราคาแล้ว</td><td>กำลังทำ</td><td>โค้ชผ่อง + ภราดาชำนาญ</td><td class="amount">TBD</td></tr>
+    <tr><td>สนามจักรยานผู้ใหญ่ ๒ กม. · ลาดยาง กว้าง ๔ ม. = ๘,๐๐๐ ตร.ม.</td><td>ขอ quote ลาดยาง</td><td>เริ่ม</td><td>ทีมพื้นที่ + มิสแน็ต</td><td class="amount">TBD</td></tr>
+    <tr><td>สนามจักรยานเด็ก + หลังคาคลุมแดด</td><td>ขอ quote หลังคา</td><td>เริ่ม</td><td>ทีมพื้นที่ + ภราดาจำรัส</td><td class="amount">TBD</td></tr>
+    <tr><td>สนามเทนนิส + สนามไดรฟ์กอล์ฟ + สนามบาส ๓ สนาม</td><td>ปรับพื้น · ถางรอบ · หลังคา</td><td>เริ่ม</td><td>ภราดาชำนาญ + ทีมพื้นที่</td><td class="amount">TBD</td></tr>
+    <tr><td>ฟิตเนส (ย้าย location ให้รองรับคนนอก)</td><td>ปัจจุบันชั้น ๒ สระว่ายน้ำ ไม่เหมาะ</td><td>รอ</td><td>ภราดาชำนาญ + ภราดาน้อย</td><td class="amount">TBD</td></tr>
+    <tr><td>Training Center & New Provincial Hub (Module ๓ Brief Ver 2)</td><td>วาง Master plan</td><td>เริ่ม</td><td>ผอ. + ภราดาน้อย + ทีมก่อสร้าง</td><td class="amount">TBD</td></tr>
+    <tr><td>Examination Centre (Module ๔ Brief Ver 2)</td><td>วาง concept · Cambridge/HSK exam centre</td><td>เริ่ม</td><td>ทีมวิชาการ + อาคารสถานที่</td><td class="amount">TBD</td></tr>
+    <tr><td>ทัศนียภาพรวม (ทางเดิน · ป้าย · เสาไฟ · ภูมิทัศน์)</td><td>master landscape</td><td>เริ่ม</td><td>ทีมพื้นที่ + ภราดาจำรัส</td><td class="amount">TBD</td></tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr class="total"><td>รวมระยะที่ ๓ · เริ่มกิจการใหม่</td><td class="amount" style="width:30%;">TBD</td></tr>
+  </tbody>
+</table>
+
+<!-- =========== สรุปงบรวม =========== -->
+<h2 id="summary">งบประมาณรวม ๓ ระยะ</h2>
+<table class="summary-table">
+  <thead>
+    <tr>
+      <th style="width:60%;">ระยะ</th>
+      <th class="amount">งบประมาณ (บาท)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><span style="color:#c0392b;">🟥</span> ๑ · ปิดจบ</td><td class="amount">TBD</td></tr>
+    <tr><td><span style="color:#d68910;">🟧</span> ๒ · คงประคอง</td><td class="amount">TBD</td></tr>
+    <tr><td><span style="color:#1e8449;">🟨</span> ๓ · เริ่มกิจการใหม่</td><td class="amount">TBD</td></tr>
+    <tr class="total"><td>รวมทั้งสิ้น</td><td class="amount">TBD</td></tr>
+  </tbody>
+</table>
+
+<div class="callout info">
+  <strong>🔍 กลไกตรวจสอบ</strong>
+  ทุกรายการบันทึกและติดตามผ่าน <b>SWIS โมดูลการเงินและบัญชีออนไลน์</b> — มูลนิธิฯ สามารถเข้าตรวจสอบสถานะการใช้จ่ายและความคืบหน้าได้ตลอดเวลา
+</div>
+
+<!-- =========== ปัญหานอกงบประมาณ =========== -->
+<h2 id="cross-cutting">ปัญหานอกงบประมาณ-สัญญาขาดอายุ</h2>
+<div class="callout critical">
+  <strong>🔴 ค่าใช้จ่ายค้างต่ออายุ-ต่อสัญญา — กระทบการดำเนินงานปัจจุบันโดยตรง</strong>
+  ต้องเร่งต่อสัญญาด่วน · จัดอยู่ระหว่าง <b>ระยะ ๑ ปิดจบ (สัญญาเดิม)</b> และ <b>ระยะ ๒ คงประคอง (ต่อสัญญาใหม่)</b>
+  <ul style="margin: 10px 0 0;">
+    <li><b>ระบบอินเทอร์เน็ต</b> — bandwidth ไม่เพียงพอ / ขาดต่อสัญญา</li>
+    <li><b>WiFi</b> — จุดบริการไม่ครอบคลุม / ขาดต่อสัญญา</li>
+    <li><b>Printer / Printing Center</b> — ขาดสัญญาบริการ ผลให้งานเอกสารและการเรียนการสอนสะดุด</li>
+    <li><b>สัญญาประกันภัยขาดอายุ</b> — อาคารเรียน · ยานพาหนะ · ความรับผิดต่อบุคคลที่สาม · นักเรียน</li>
+    <li><b>สัญญาบริการอื่น ๆ</b> ที่อาจค้าง — รอ inventory จากมิสแน็ตและภราดาน้อย (ตรวจ SWIS โมดูลสัญญา)</li>
+  </ul>
+</div>
+
+<!-- =========== งานคู่ขนาน =========== -->
+<h2 id="parallel">งานคู่ขนานที่ดำเนินการอยู่</h2>
+<p>รายการต่อไปนี้กำลังดำเนินการคู่ขนานกับการเสนองบประมาณนี้ · ขอบันทึกเพื่อ cross-reference</p>
+<table>
+  <thead>
+    <tr>
+      <th style="width:32%;">รายการ</th>
+      <th>สถานะปัจจุบัน</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>เครื่องเล่นเด็ก · Early Years Center (บริษัท เจ.เจ.ซี คอร์ปอเรชั่น · สมุทรสาคร)</td>
+      <td>รอผลสำรวจและเปรียบเทียบราคาโดยภราดาณัฐธร (Topic 2569/00100)</td>
+    </tr>
+    <tr>
+      <td>ตู้ vending สแน็คทูโก (ใต้ตึกเรียนประถม)</td>
+      <td>เจรจายังไม่สำเร็จ (Topic 2569/00101)</td>
+    </tr>
+    <tr>
+      <td>รถไถเอนกประสงค์ติดเครื่องตัดหญ้า NEWTECH BL-1 Ultra 18 แรง (บริษัท นิวเทคคอบร้า อินโนเวชั่น)</td>
+      <td>ม.วุฒิ ส่งใบเสนอราคา 350,000 บาท (รวม VAT 7%) · บราเดอร์เลือกขอใบเสนอราคาเทียบจาก vendor อื่นก่อน sign off (Topic 2569/00102)</td>
+    </tr>
+    <tr>
+      <td>จดหมายขอเงินสนับสนุนค่าทนาย ๒,๗๓๕,๓๕๐ บาท ถึงภราดาสุรกิจ</td>
+      <td>ภราดาณัฐธรร่าง + ส่งผ่าน SWIS แล้ว · รอ finalize + ลงนาม</td>
+    </tr>
+    <tr>
+      <td>หนังสือแต่งตั้ง ผอ. อสช ๐๐๑/๒๕๖๙</td>
+      <td>มิสเนยส่ง สช. แล้ว · คาดเสร็จ ๘ มิ.ย. ๒๕๖๙ (เส้นตาย ๗ มิ.ย.)</td>
+    </tr>
+    <tr>
+      <td>ทีมภราดา ๕ ทีมจาก BSG Assembly</td>
+      <td>วิชาการ (พัชรปกรณ์) · ประสานเครือข่าย (พิสูตร+วิษณุ+จำรัส) · Sports Complex (ชำนาญ) · กิจกรรม+ดนตรี (วีรยุทธ) · พื้นที่ (จำรัส)</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- =========== ผลที่คาดว่าจะได้รับ =========== -->
+<h2 id="outcomes">ผลที่คาดว่าจะได้รับ</h2>
+<table>
+  <thead>
+    <tr>
+      <th style="width:18%;">ระยะ</th>
+      <th>ผลที่คาดว่าจะได้รับ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="color:#c0392b;font-weight:600;">🟥 ๑ ปิดจบ</td>
+      <td>ปิดเรื่องค้าง · ตัดล็อตปัญหาที่ลากต่อ · ปลดล็อกการดำเนินงานช่วงถัดไป · ลดความเสี่ยงด้านกฎหมายและความปลอดภัย</td>
+    </tr>
+    <tr>
+      <td style="color:#d68910;font-weight:600;">🟧 ๒ คงประคอง</td>
+      <td>รักษาเสถียรภาพการดำเนินงาน · ครูและบุคลากรได้รับเงินเดือนต่อเนื่อง · ระบบและสัญญาบริการพื้นฐานทำงานปกติ · โรงเรียนพร้อมรองรับนักเรียนปัจจุบันและรับ ผปค. ใหม่ในวันปฐมนิเทศ ๒๗ มิ.ย. ๒๕๖๙</td>
+    </tr>
+    <tr>
+      <td style="color:#1e8449;font-weight:600;">🟨 ๓ เริ่มกิจการใหม่</td>
+      <td>เปิด Early Years Center → ฐานเริ่มต้นของการ recovery จำนวนนักเรียน · เปิดลานกิจกรรมรับสมาชิกชุมชน → สร้างรายได้ลดการขาดทุน · เตรียมพื้นที่ Sports Complex → เชื่อมต่อกับ Module ๒ ของแผนฟื้นฟูเต็มรูป</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- =========== ลงนาม =========== -->
+<div class="signature">
+  <div>ขอแสดงความนับถือ</div>
+  <div class="name">(ภราดาศุภนันท์ ขันธปรีชา)</div>
+  <div class="title">ผู้อำนวยการโรงเรียนอัสสัมชัญหลักสูตรภาษาอังกฤษ</div>
+</div>
+
+<div class="footer-note">
+  <p><b>หมายเหตุ:</b></p>
+  <ul>
+    <li>งบประมาณ (TBD) ในตารางจะเติมรายการในขั้นถัดไป — บราเดอร์เติมจาก Google Sheets ๓ ระยะ (deadline ประชุม ๙ มิ.ย. ๒๕๖๙) ที่ส่งไปคู่ขนาน · รายการที่ต้องผ่าน vendor procurement ต้องมีใบเสนอราคา ๓ ราย · ผ่านระบบจัดซื้อที่ตรวจสอบได้ (มิสประภัสสร เป็นผู้รวบรวมและตรวจสอบ)</li>
+    <li>ทุกรายการเชื่อมเข้าระบบ SWIS (แผนงาน · งบประมาณ · ครุภัณฑ์ · ประกันคุณภาพ)</li>
+    <li>ทุกรายการอยู่ภายใต้กรอบของแผนฟื้นฟู ACEP Brief Ver 2 (๔ Modules + M-F-M + ๔ phases) ที่ได้นำเสนอที่ประชุม BSG Assembly ๓๐-๓๑ พ.ค. ๒๕๖๙ ที่ผ่านมา</li>
+  </ul>
+  <p style="text-align:right; color:#999; font-size:13px; margin-top:30px;">
+    Consolidated v1 (๖ หมวด) + v2 (๕ เฟส) + v3 (๓ ระยะ) → canonical · ๕ มิถุนายน ๒๕๖๙
+  </p>
+</div>
+
+</div>
+
+</body>
+</html>

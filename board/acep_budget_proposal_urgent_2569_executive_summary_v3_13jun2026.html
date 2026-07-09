@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<script src="_guard.js"></script>
+<meta charset="UTF-8">
+<title>Executive Summary · หนังสือขอกู้ยืมเงินเพื่อการดำเนินงาน ACEP ปีการศึกษา ๒๕๖๙ · ๔ หมวด · ๑๓ มิ.ย. ๖๙</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap');
+  * { box-sizing: border-box; }
+  body {
+    font-family: 'Sarabun', 'TH Sarabun New', sans-serif;
+    color: #1a1a1a;
+    background: #f5f5f0;
+    margin: 0;
+    padding: 40px 20px;
+    line-height: 1.75;
+  }
+  .page {
+    max-width: 940px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 60px 80px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+    border-radius: 6px;
+  }
+  h1.head {
+    font-size: 22px;
+    text-align: center;
+    color: #1a3a6e;
+    border-bottom: 2px solid #1a3a6e;
+    padding-bottom: 16px;
+    margin-bottom: 28px;
+  }
+  .meta-row { font-size: 18px; margin-bottom: 14px; }
+  .meta-row b { color: #1a3a6e; }
+  p { font-size: 17px; text-align: justify; margin: 10px 0; }
+  p.indent { text-indent: 36px; }
+  h2.section {
+    font-size: 20px;
+    color: #1a3a6e;
+    border-left: 6px solid #1a3a6e;
+    padding-left: 12px;
+    margin: 32px 0 14px;
+  }
+  h3.cat {
+    font-size: 18px;
+    color: #c0392b;
+    margin: 24px 0 8px;
+    padding: 10px 14px;
+    background: #fdedec;
+    border-left: 6px solid #c0392b;
+    border-radius: 4px;
+  }
+  h3.cat.cat-2 { color: #d68910; background: #fdf5e7; border-left-color: #d68910; }
+  h3.cat.cat-3 { color: #1e8449; background: #eafaf1; border-left-color: #1e8449; }
+  h3.cat.cat-4 { color: #6c3483; background: #f4ecf7; border-left-color: #6c3483; }
+  .cat-summary { padding: 4px 0 8px 12px; font-size: 17px; }
+  .cat-summary ul { padding-left: 20px; margin: 6px 0; }
+  .cat-summary li { margin-bottom: 6px; }
+  .num { color: #1a3a6e; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .verified {
+    background: #eaf3fa; color: #1a3a6e; padding: 1px 6px;
+    border-radius: 3px; font-size: 14px; font-weight: 600;
+  }
+  .annex-ref {
+    background: #f5e9c4; color: #8a6d3b; padding: 2px 8px;
+    border-radius: 4px; font-size: 13px; font-style: italic;
+    border: 1px solid #d8b150; margin-left: 6px;
+  }
+  .source-note { color: #888; font-size: 13px; font-style: italic; margin-left: 6px; }
+  .signature { margin-top: 50px; text-align: right; }
+  .signature .sig-name { font-weight: 700; margin-top: 56px; font-size: 18px; }
+  .signature .sig-title { color: #555; }
+  .legend {
+    background: #f0f3f9; border: 1px solid #d8dee6;
+    padding: 14px 18px; border-radius: 6px;
+    margin: 18px 0 28px; font-size: 14px;
+  }
+  .legend b { color: #1a3a6e; }
+  .subtotal {
+    background: #f7f9fc; border: 2px solid #1a3a6e;
+    border-radius: 6px; padding: 14px 20px;
+    margin: 18px 0 28px; font-size: 16px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .subtotal .label { font-weight: 700; color: #1a3a6e; }
+  .subtotal .amount {
+    font-weight: 700; color: #1a3a6e;
+    font-variant-numeric: tabular-nums; font-size: 19px;
+  }
+  .grand-total {
+    background: linear-gradient(135deg, #1a3a6e 0%, #2c5a9c 100%);
+    color: white; padding: 28px 32px;
+    margin: 40px 0 24px; border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(26,58,110,0.2);
+  }
+  .grand-total h2 {
+    color: white; border-left-color: #ffd700;
+    margin-top: 0; font-size: 24px;
+  }
+  .grand-total .gt-row {
+    display: flex; justify-content: space-between;
+    padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.2); font-size: 17px;
+  }
+  .grand-total .gt-row.total-line {
+    border-bottom: none; border-top: 2px solid #ffd700;
+    margin-top: 8px; padding-top: 14px; font-size: 22px; font-weight: 700;
+  }
+  .grand-total .amount { font-variant-numeric: tabular-nums; }
+  .grand-total .note { color: #d8dee6; font-size: 13px; margin-top: 12px; font-style: italic; }
+  .annex-box {
+    background: #fff9e6; border: 2px solid #d68910;
+    border-radius: 6px; padding: 18px 22px; margin: 24px 0;
+  }
+  .annex-box h3 { color: #92400e; margin-top: 0; font-size: 18px; }
+  .annex-box ol { padding-left: 24px; margin: 8px 0; }
+  .annex-box li { font-size: 15px; margin-bottom: 6px; }
+  .annex-box a { color: #1a3a6e; text-decoration: none; }
+  .annex-box a:hover { text-decoration: underline; }
+  @media print {
+    body { background: white; padding: 0; }
+    .page { box-shadow: none; padding: 30mm 25mm; max-width: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+<div style="text-align: center; background: #fef3c7; border: 2px dashed #d68910; padding: 10px 16px; border-radius: 6px; margin-bottom: 24px; font-size: 17px; font-weight: 600; color: #92400e; letter-spacing: 1px;">
+  📋 ร่างหนังสือนำเสนอกรรมการบริหารมูลนิธิคณะเซนต์คาเบรียลแห่งประเทศไทย · Executive Summary v3 (๑๓ มิ.ย. ๖๙)<br>ฉบับ โฟกัสเรื่องรายรับ-รายจ่าย
+</div>
+
+<h1 class="head">หนังสือขอกู้ยืมเงินเพื่อการดำเนินงาน ACEP ปีการศึกษา ๒๕๖๙ · เพื่อแก้ปัญหาและพัฒนาโรงเรียน</h1>
+
+<p class="meta-row"><b>เรื่อง</b> ขอกู้ยืมเงินงวดเดียวเพื่อการดำเนินงานปีการศึกษา ๒๕๖๙ และเร่งแก้ปัญหา-พัฒนาโรงเรียนอัสสัมชัญหลักสูตรภาษาอังกฤษ</p>
+
+<p class="meta-row"><b>เรียน</b> ภราดา ดร.สุรกิจ ศรีสราญกุลวงศ์ ประธานมูลนิธิคณะเซนต์คาเบรียลแห่งประเทศไทย และคณะกรรมการบริหารมูลนิธิฯ</p>
+
+<div class="legend">
+  <b>📑 รูปแบบเอกสารฉบับนี้ (Executive Summary):</b> เน้นเฉพาะหัวข้อหลัก + ตัวเลขรวมหมวด · รายละเอียดย่อย/รายชื่อ/BOQ/breakdown อยู่ใน <span class="annex-ref">ภาคผนวก ก-จ</span> (HTML v2 ฉบับเต็ม + เอกสารต้นฉบับใน Drive)
+</div>
+
+<p class="indent">จากการปฏิบัติหน้าที่และการศึกษาข้อมูลระยะกว่าหนึ่งเดือนที่ผ่านมา ตามคำสั่งของประธานมูลนิธิฯ และการนำเสนอผลการศึกษาพร้อมเสนอแนวทางไปแล้ว ๒ ฉบับต่อกรรมการบริหารมูลนิธิฯ และต่อคณะภราดาที่ประชุม Provincial Assembly</p>
+
+<p class="indent">กระผมได้มีการประชุมหลายฝ่าย หลายครั้ง และมีการเก็บข้อมูลมาศึกษาวิเคราะห์เพิ่มเติมเพื่อเร่งหาทางออกสำหรับ ACEP · ในเบื้องต้นจึงขอลำดับ <b>๔ หมวด</b> เพื่อฟื้นตัว พร้อมตัวเลขงบประมาณในแต่ละระยะ</p>
+
+<!-- ============== ภาพรวมเงินสด ============== -->
+<h2 class="section">📊 ภาพรวมเงินสดที่เหลือใช้จริง · ณ วันรายงาน</h2>
+
+<table style="width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.95em;">
+  <tr style="background: #fee2e2;">
+    <th style="border: 1px solid #f87171; padding: 8px; text-align: left;">รายการ</th>
+    <th style="border: 1px solid #f87171; padding: 8px; text-align: right;">จำนวน (บาท)</th>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #f87171; padding: 8px;">ยอดคงเหลือในบัญชีต่างๆ ทุกบัญชี (8 บัญชี)</td>
+    <td style="border: 1px solid #f87171; padding: 8px; text-align: right;">๓๐,๙๓๐,๕๖๒.๕๖</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #f87171; padding: 8px;">หัก: เงินกู้คงค้าง (เม.ย. ๖๙) ที่ยังเหลือใช้</td>
+    <td style="border: 1px solid #f87171; padding: 8px; text-align: right; color: #b91c1c;">(๕,๗๗๐,๐๐๐)</td>
+  </tr>
+  <tr style="background: #fef3c7; font-weight: 700;">
+    <td style="border: 1px solid #f87171; padding: 8px;">🔴 เงินสดของโรงเรียนที่เหลือใช้จริง</td>
+    <td style="border: 1px solid #f87171; padding: 8px; text-align: right;">๕,๑๖๐,๕๖๒.๕๖</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #f87171; padding: 8px;">ยอดจ่ายเงินเดือนพฤษภาคม จริง (ภราดา ๑๘๔,๑๖๒ + ครูต่างชาติ ๙๘๙,๑๒๙ + ครูไทย ๕๓๙,๔๕๑ + เจ้าหน้าที่ ๑๘๔,๔๔๕ + พนักงาน ๔๕๕,๕๓๓)</td>
+    <td style="border: 1px solid #f87171; padding: 8px; text-align: right;">๒,๓๕๒,๗๒๐.๑๔</td>
+  </tr>
+  <tr style="background:#fff3cd;">
+    <td style="border: 1px solid #f87171; padding: 8px;"><b>ประมาณการยอดจ่ายเดือนมิถุนายน (เต็มอัตราตามสัญญาจ้าง)</b> <span class="source-note">(พ.ค. จ่ายตามสัดส่วนวันทำงานจริง เพราะมีครูใหม่/เริ่มงานระหว่างเดือน)</span></td>
+    <td style="border: 1px solid #f87171; padding: 8px; text-align: right;"><b>~๒,๕๐๐,๐๐๐</b></td>
+  </tr>
+</table>
+
+<p style="background: #fef3c7; padding: 12px 16px; border-radius: 4px; border-left: 4px solid #d68910; font-size: 16px;">
+  ⚠️ พฤษภาคม ๖๙ คือ <b>เดือนสุดท้ายที่จ่ายเงินเดือนได้จากเงินในมือ</b> · ยังมีค่าใช้จ่ายอีกหลายรายการที่ไม่พอจ่าย
+  <span class="source-note">(สำนักผู้อำนวยการ · ๙ มิ.ย. ๖๙ ๐๒:๔๘ · รายจ่ายเดือน พ.ค. verified ๑๓ มิ.ย.)</span>
+</p>
+
+<!-- ============== ภาพรวมรายรับ ============== -->
+<h2 class="section">💰 ภาพรวมรายรับโรงเรียน · ปีการศึกษา ๒๕๖๙ — เทียบเล่มงบประมาณที่ส่งมูลนิธิฯ vs ความเป็นจริง พ.ค. ๖๙</h2>
+
+<div style="background:#fff8e7; border:2px solid #d68910; border-radius:6px; padding:14px 18px; margin:16px 0; font-size:15px;">
+  <b style="color:#8a6d3b;">📌 หมายเหตุสำคัญ · ข้อจำกัดในการคำนวณตัวเลข:</b>
+  <p style="margin:8px 0 0; font-style:italic;">ความยากในการคำนวณตัวเลขที่แม่นยำของที่นี่ คือ <b>การล่าความจริงที่ประกาศไว้ไม่ตรงกันในหลายจุด</b> และ <b>คนทำส่วนใหญ่ลาออกก่อนที่กระผมจะเข้าสู่วาระ</b> · ตัวเลขในเอกสารฉบับนี้จึงเป็น verified จากเอกสารต้นทางใน Drive ที่ cross-reference แล้ว ณ ปัจจุบัน · ส่วนตัวเลขที่ยังไม่ verify ระบุ "<span class="annex-ref">รอข้อมูล</span>" ไว้</p>
+</div>
+
+<p class="indent">เพื่อให้คณะกรรมการเห็น <b>delta ระหว่างประมาณการในเล่มงบประมาณที่ส่งมูลนิธิฯ กับสภาพจริง ณ ๑ พฤษภาคม ๒๕๖๙</b> กระผมขอแสดงรายการรายรับเปรียบเทียบ verbatim ตามรายชั้น ดังนี้</p>
+
+<h3 style="color:#a64304; margin-top:16px;">🅐 รายรับค่าเทอม (1.1) · เทียบทีละชั้น</h3>
+<p class="indent"><b>เล่มงบประมาณ ๒๕๖๙ ตั้งบนฐาน นักเรียน ๑๕๓ คน</b> (M-EP ๑๐ + S-EP ๑๔๓) · ค่าเทอมรวม <b>๒๙,๓๙๗,๓๐๐ บาท</b> · <b>ความจริง พ.ค. ๖๙ มี ๑๒๑ คน</b> (KG ๑๕ + ประถม ๕๖ + มัธยม ๕๐)</p>
+
+<table style="width:100%; border-collapse:collapse; font-size:0.88em; margin:12px 0;">
+  <thead>
+    <tr style="background:#eafaf1;">
+      <th style="border:1px solid #1e8449; padding:5px;">ระดับชั้น</th>
+      <th style="border:1px solid #1e8449; padding:5px;">ค่าเทอม/คน</th>
+      <th style="border:1px solid #1e8449; padding:5px;">เล่มงบ (คน)</th>
+      <th style="border:1px solid #1e8449; padding:5px;">เล่มงบ (บาท)</th>
+      <th style="border:1px solid #1e8449; padding:5px;">จริง (คน)</th>
+      <th style="border:1px solid #1e8449; padding:5px;">จริง (บาท)</th>
+      <th style="border:1px solid #1e8449; padding:5px;">หาย (บาท)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="border:1px solid #ddd; padding:5px;">ป.1 M-EP (โครงการไทย-ภาษาจีน)</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๘๐,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">๕</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๔๐๐,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:center; color:#c0392b;">๐</td><td style="border:1px solid #ddd; padding:5px; text-align:right; color:#c0392b;">๐</td><td style="border:1px solid #ddd; padding:5px; text-align:right; color:#c0392b;"><b>-๔๐๐,๐๐๐</b></td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;">ป.2 M-EP</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๘๐,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">๕</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๔๐๐,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:center; color:#c0392b;">๐</td><td style="border:1px solid #ddd; padding:5px; text-align:right; color:#c0392b;">๐</td><td style="border:1px solid #ddd; padding:5px; text-align:right; color:#c0392b;"><b>-๔๐๐,๐๐๐</b></td></tr>
+    <tr style="background:#fff9e6;"><td style="border:1px solid #ddd; padding:5px;" colspan="6"><b>รวม M-EP (โครงการไทย-ภาษาจีน · ไม่เปิดในความจริง)</b></td><td style="border:1px solid #ddd; padding:5px; text-align:right; color:#c0392b;"><b>-๘๐๐,๐๐๐</b></td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;">อ.1 S-EP</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๑๔๐,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">๕</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๗๐๐,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">~๗</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๙๘๐,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:right; color:#1e8449;">+๒๘๐,๐๐๐</td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;">อ.2 S-EP</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๑๔๐,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">๘</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๑,๑๒๐,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">~๘</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๑,๑๒๐,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๐</td></tr>
+    <tr style="background:#fff9e6;"><td style="border:1px solid #ddd; padding:5px;" colspan="6"><b>รวม KG (เล่มงบ ๑๓ vs จริง ๑๕)</b></td><td style="border:1px solid #ddd; padding:5px; text-align:right; color:#1e8449;"><b>+๒๘๐,๐๐๐</b></td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;">ป.1 S-EP</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๑๘๗,๕๕๐</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">๑๐</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๑,๘๗๕,๕๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:center;" rowspan="6">๕๖ <span class="source-note">(รวม ป.๑-๖)</span></td><td style="border:1px solid #ddd; padding:5px; text-align:right;" rowspan="6">~๑๐,๘๐๕,๓๐๐ <span class="source-note">(weighted avg)</span></td><td style="border:1px solid #ddd; padding:5px; text-align:right; color:#c0392b;" rowspan="6"><b>-๑,๖๐๙,๓๐๐</b></td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;">ป.2 S-EP</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๑๘๗,๕๕๐</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">๑๐</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๑,๘๗๕,๕๐๐</td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;">ป.3 S-EP</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๑๘๗,๕๕๐</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">๑๐</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๑,๘๗๕,๕๐๐</td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;">ป.4 S-EP</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๑๙๙,๖๕๐</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">๑๕</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๒,๙๙๔,๗๕๐</td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;">ป.5 S-EP</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๑๙๙,๖๕๐</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">๑๑</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๒,๑๙๖,๑๕๐</td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;">ป.6 S-EP</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๑๙๙,๖๕๐</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">๘</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๑,๕๙๗,๒๐๐</td></tr>
+    <tr style="background:#fff9e6;"><td style="border:1px solid #ddd; padding:5px;" colspan="3"><b>รวมประถม (เล่มงบ ๖๔ vs จริง ๕๖)</b></td><td style="border:1px solid #ddd; padding:5px; text-align:right;"><b>๑๒,๔๑๔,๖๐๐</b></td><td style="border:1px solid #ddd; padding:5px;"></td><td style="border:1px solid #ddd; padding:5px; text-align:right;"><b>~๑๐,๘๐๕,๓๐๐</b></td><td style="border:1px solid #ddd; padding:5px; text-align:right; color:#c0392b;"><b>-๑,๖๐๙,๓๐๐</b></td></tr>
+    <tr style="background:#fef5e7;"><td style="border:1px solid #ddd; padding:5px;">ม.1 S-EP (Y7 ย้าย AC/ACT)</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๒๑๑,๗๕๐</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">๑๑</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๒,๓๒๙,๒๕๐</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">⚠️ย้าย · ๑๐% Return</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๒๓๒,๙๒๕</td><td style="border:1px solid #ddd; padding:5px; text-align:right; color:#c0392b;"><b>-๒,๐๙๖,๓๒๕</b></td></tr>
+    <tr style="background:#fef5e7;"><td style="border:1px solid #ddd; padding:5px;">ม.2 S-EP (Y8 ย้าย AC/ACT)</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๒๑๑,๗๕๐</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">๑๑</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๒,๓๒๙,๒๕๐</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">⚠️ย้าย · ๑๐% Return</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๒๓๒,๙๒๕</td><td style="border:1px solid #ddd; padding:5px; text-align:right; color:#c0392b;"><b>-๒,๐๙๖,๓๒๕</b></td></tr>
+    <tr style="background:#fef5e7;"><td style="border:1px solid #ddd; padding:5px;">ม.3 S-EP (Y9 ย้าย AC/ACT)</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๒๑๑,๗๕๐</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">๑๒</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๒,๕๔๑,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">⚠️ย้าย · ๑๐% Return</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๒๕๔,๑๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:right; color:#c0392b;"><b>-๒,๒๘๖,๙๐๐</b></td></tr>
+    <tr style="background:#fff9e6;"><td style="border:1px solid #ddd; padding:5px;" colspan="3"><b>รวม ม.ต้น (เล่มงบ ๓๔ → Y7-9 ย้าย AC/ACT · ACEP ได้ ๑๐% Return)</b></td><td style="border:1px solid #ddd; padding:5px; text-align:right;"><b>๗,๑๙๙,๕๐๐</b></td><td style="border:1px solid #ddd; padding:5px;"></td><td style="border:1px solid #ddd; padding:5px; text-align:right;"><b>๗๑๙,๙๕๐</b></td><td style="border:1px solid #ddd; padding:5px; text-align:right; color:#c0392b;"><b>-๖,๔๗๙,๕๕๐</b></td></tr>
+    <tr style="background:#fef5e7;"><td style="border:1px solid #ddd; padding:5px;">ม.4 S-EP (Y10 ย้าย AC/ACT)</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๒๒๓,๘๕๐</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">๕</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๑,๑๑๙,๒๕๐</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">⚠️ย้าย · ๑๐% Return</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๑๑๑,๙๒๕</td><td style="border:1px solid #ddd; padding:5px; text-align:right; color:#c0392b;"><b>-๑,๐๐๗,๓๒๕</b></td></tr>
+    <tr style="background:#fef5e7;"><td style="border:1px solid #ddd; padding:5px;">ม.5 S-EP (Y11 ย้าย AC/ACT)</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๒๒๓,๘๕๐</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">๔</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๘๙๕,๔๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">⚠️ย้าย · ๑๐% Return</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๘๙,๕๔๐</td><td style="border:1px solid #ddd; padding:5px; text-align:right; color:#c0392b;"><b>-๘๐๕,๘๖๐</b></td></tr>
+    <tr style="background:#e8f5e9;"><td style="border:1px solid #ddd; padding:5px;"><b>ม.6 S-EP (Y12 คนสุดท้ายให้จบที่นี่)</b></td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๒๒๓,๘๕๐</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">๒๓</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๕,๑๔๘,๕๕๐</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">๒๒ <span style="color:#1e8449;">✓</span></td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๔,๙๒๔,๗๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:right; color:#c0392b;"><b>-๒๒๓,๘๕๐</b></td></tr>
+    <tr style="background:#fff9e6;"><td style="border:1px solid #ddd; padding:5px;" colspan="3"><b>รวม ม.ปลาย (Y10-11 ย้าย ๑๐% Return + Y12 ๒๒ คน ACEP เก็บเต็ม)</b></td><td style="border:1px solid #ddd; padding:5px; text-align:right;"><b>๗,๑๖๓,๒๐๐</b></td><td style="border:1px solid #ddd; padding:5px;"></td><td style="border:1px solid #ddd; padding:5px; text-align:right;"><b>๕,๑๒๖,๑๖๕</b></td><td style="border:1px solid #ddd; padding:5px; text-align:right; color:#c0392b;"><b>-๒,๐๓๗,๐๓๕</b></td></tr>
+    <tr style="background:#1a3a6e; color:white; font-weight:bold;"><td style="border:1px solid #1a3a6e; padding:8px;" colspan="3">💰 รวมค่าเทอม ๑.๑ ทั้งหมด (รวม ๑๐% Return จาก AC/ACT)</td><td style="border:1px solid #1a3a6e; padding:8px; text-align:right;">๒๙,๓๙๗,๓๐๐</td><td style="border:1px solid #1a3a6e; padding:8px;"></td><td style="border:1px solid #1a3a6e; padding:8px; text-align:right;">๑๘,๗๕๑,๔๑๕</td><td style="border:1px solid #1a3a6e; padding:8px; text-align:right; background:#c0392b;">-๑๐,๖๔๕,๘๘๕</td></tr>
+  </tbody>
+</table>
+
+<div style="background:#fef5e7; border-left:4px solid #c0392b; padding:10px 14px; margin:10px 0;">
+  <b>⚠️ มติประชุมคณะกรรมการดำเนินงานพิจารณาแนวทางปรับโครงสร้างการจัดการศึกษา (ACEP RAMA II · ๕ มิ.ย. ๖๙ · ๐๙:๐๐-๑๒:๐๐ · ผู้เข้าประชุม ๑๒ ท่าน):</b>
+  <br>วาระ ๒ verbatim: "<b>การตัดลดระดับชั้นมัธยมศึกษา · เสนอให้หยุดดำเนินการในระดับชั้น Year 7 ถึง Year 12</b>" · มุ่งเน้นความแข็งแกร่ง <b>Nursery + Early Years + ประถม</b>
+  <br>Transfer: <b>Y7-11 ย้าย AC (บางรัก) / ACT (ธนบุรี) ในภาคเรียนที่ ๒</b> ส่วนลด + เทียบโอน · <b>Y12 (๒๒ คนสุดท้าย) ดูแลให้จบที่นี่</b> + "Road to University" + Internship
+  <br>
+  <br><b>📐 ข้อตกลงค่าเทอม (ตามข้อตกลงระหว่างผู้บริหาร AC ↔ ผอ. ACEP · ๑๓ มิ.ย. ๖๙):</b>
+  <br>• <b>Y7-Y11 (๔๓ คน) ย้าย AC/ACT ภาคเรียนที่ ๒/๒๕๖๙</b> · ผปค.จ่าย AC/ACT เต็ม · ชื่อ นร. อยู่ในระบบทั้งสองโรงเรียน · <b>AC/ACT เก็บ ๙๐% + Return ๑๐% ให้ ACEP</b>
+  <br>• <b>Y12 (๒๒ คน) Option 1:</b> เรียน ACEP ๓ วัน (จ-พ) + AC ๒ วัน (พฤ-ศ) · จ่าย ACEP เต็ม · จบ ACEP · "Road to University" + Internship · AC ดูแลและช่วยจัดการ
+  <br>
+  <br><b>๒ scenario:</b>
+  <br>[a] <b>ก่อนปิดมัธยม (ตัวเลขปัจจุบัน ๑๒๑ คน)</b> · มัธยม ๕๐ คน = ม.ต้น ๓๔ + ม.ปลาย ๑๖ → ค่าเทอมรวมจริง ~<b>๒๓,๖๘๖,๔๐๐</b> · <b>หาย ๕,๗๑๐,๙๐๐ (๑๙.๔%)</b>
+  <br>[b] <b>หลังปิดมัธยมทั้งหมด (Y7-11 ย้าย AC/ACT · Return ๑๐% · Y12 ๒๒ คน ACEP เก็บเต็ม)</b> · ค่าเทอมรวม + Return = <b>๑๘,๗๕๑,๔๑๕</b> · <b>หาย ๑๐,๖๔๕,๘๘๕ (๓๖.๒%)</b>
+</div>
+
+<h3 style="color:#a64304; margin-top:20px;">🅑 รายรับค่าบำรุง + ค่าธรรมเนียมอื่น (1.2 + 2.x)</h3>
+
+<table style="width:100%; border-collapse:collapse; font-size:0.88em; margin:12px 0;">
+  <thead>
+    <tr style="background:#eafaf1;">
+      <th style="border:1px solid #1e8449; padding:5px;">รหัส · รายการ</th>
+      <th style="border:1px solid #1e8449; padding:5px;">ราคา/คน</th>
+      <th style="border:1px solid #1e8449; padding:5px;">เล่มงบ</th>
+      <th style="border:1px solid #1e8449; padding:5px;">ยอดเล่มงบ</th>
+      <th style="border:1px solid #1e8449; padding:5px;">จริง</th>
+      <th style="border:1px solid #1e8449; padding:5px;">ยอดจริง</th>
+      <th style="border:1px solid #1e8449; padding:5px;">หาย</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="border:1px solid #ddd; padding:5px;">1.2.1 ค่าบำรุง ประถม</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๒๕,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">๓๐</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๗๕๐,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">๕๖</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๑,๔๐๐,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:right; color:#1e8449;">+๖๕๐,๐๐๐</td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;">1.2.2 ค่าบำรุง มัธยม</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๒๕,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">๑๙</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๔๗๕,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">๒๒ (Y12)</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๕๕๐,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:right; color:#1e8449;">+๗๕,๐๐๐</td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;">2.3 ค่าบำรุงห้องสมุด</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๑,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">๑๕๓</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๑๕๓,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">๑๒๑</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๑๒๑,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:right; color:#c0392b;">-๓๒,๐๐๐</td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;">2.4 ค่าสื่อประชาสัมพันธ์</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๑,๕๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">๑๕๓</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๒๒๙,๕๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">๑๒๑</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๑๘๑,๕๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:right; color:#c0392b;">-๔๘,๐๐๐</td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;">2.5 อุปกรณ์การเรียน (รวม ๗ ย่อย)</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">avg ~๖,๔๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">๑๕๓</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๙๗๕,๕๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">๗๘ (ตัด ม.๑-๕)</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">~๕๗๐,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:right; color:#c0392b;">-~๔๐๖,๐๐๐</td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;">2.6 ค่าห้องเรียนปรับอากาศ</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๑๐,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">๑๕๓</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๑,๕๓๐,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">๑๒๑</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๑,๒๑๐,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:right; color:#c0392b;">-๓๒๐,๐๐๐</td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;">2.7 คอมพิวเตอร์ (2 ย่อย)</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๕,๐๐๐-๖,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">๑๕๓</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๙๐๕,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">~๙๓</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">~๕๔๓,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:right; color:#c0392b;">-~๓๖๒,๐๐๐</td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;">2.8 ตรวจสุขภาพ+ประกัน (3 ย่อย)</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๑,๐๐๐-๒,๕๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">๑๕๓</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๕๓๕,๕๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">๑๒๑</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">~๓๙๓,๕๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:right; color:#c0392b;">-~๑๔๒,๐๐๐</td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;">2.9 การเรียนกีฬา (ว่ายน้ำ + Fitness)</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๒,๐๐๐-๒,๕๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">๗๔/๑๔๐</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๔๙๘,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">๕๖/๗๘</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">~๓๐๗,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:right; color:#c0392b;">-~๑๙๑,๐๐๐</td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;">2.10 กิจกรรมพัฒนาผู้เรียน</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๕,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">๑๕๓</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๗๖๕,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">๑๒๑</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๖๐๕,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:right; color:#c0392b;">-๑๖๐,๐๐๐</td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;">2.11 กิจกรรมอื่น (3 ย่อย)</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๔,๕๐๐-๕,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">๑๕๓</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๘๒๓,๕๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">~๙๓</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">~๕๒๐,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:right; color:#c0392b;">-~๓๐๓,๐๐๐</td></tr>
+    <tr style="background:#1a3a6e; color:white; font-weight:bold;"><td style="border:1px solid #1a3a6e; padding:8px;" colspan="3">รวม 1.2 + 2.x</td><td style="border:1px solid #1a3a6e; padding:8px; text-align:right;">๗,๖๓๙,๐๐๐</td><td style="border:1px solid #1a3a6e; padding:8px;"></td><td style="border:1px solid #1a3a6e; padding:8px; text-align:right;">~๖,๔๐๑,๐๐๐</td><td style="border:1px solid #1a3a6e; padding:8px; text-align:right; background:#c0392b;">-๑,๒๓๘,๐๐๐</td></tr>
+  </tbody>
+</table>
+
+<h3 style="color:#a64304; margin-top:20px;">🅒 รายรับอื่น (3.x) — Cambridge / ภาษาจีน / อาหาร / มินิมาร์ท / แบบเรียน / งาน / After School / ATM</h3>
+<table style="width:100%; border-collapse:collapse; font-size:0.88em; margin:12px 0;">
+  <tr style="background:#eafaf1;"><th style="border:1px solid #1e8449; padding:5px;">รหัส</th><th style="border:1px solid #1e8449; padding:5px;">รายการ</th><th style="border:1px solid #1e8449; padding:5px;">เล่มงบ</th><th style="border:1px solid #1e8449; padding:5px;">จริง</th><th style="border:1px solid #1e8449; padding:5px;">หาย</th></tr>
+  <tr><td style="border:1px solid #ddd; padding:5px;">3.1</td><td style="border:1px solid #ddd; padding:5px;">Cambridge ป.2-3/ป.5/ป.6/ม.2-3</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๒๔๖,๖๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">~๑๔๐,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:right; color:#c0392b;">-๑๐๖,๖๐๐</td></tr>
+  <tr><td style="border:1px solid #ddd; padding:5px;">3.2</td><td style="border:1px solid #ddd; padding:5px;">วัดความรู้ภาษาจีน ป.3-ม.3</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๖๕,๓๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">~๓๐,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:right; color:#c0392b;">-๓๕,๓๐๐</td></tr>
+  <tr><td style="border:1px solid #ddd; padding:5px;">3.3</td><td style="border:1px solid #ddd; padding:5px;">อาหาร+มินิมาร์ท+คาเฟ่ (รวม ๕ ย่อย)</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๔,๒๘๔,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">~๓,๒๐๐,๐๐๐ <span class="source-note">(ฐานคน-๒๑%)</span></td><td style="border:1px solid #ddd; padding:5px; text-align:right; color:#c0392b;">-~๑,๐๘๔,๐๐๐</td></tr>
+  <tr><td style="border:1px solid #ddd; padding:5px;">3.4</td><td style="border:1px solid #ddd; padding:5px;">แบบเรียน + เครื่องเขียน + เครื่องแบบ</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๑,๒๗๑,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">~๑,๐๐๕,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:right; color:#c0392b;">-~๒๖๖,๐๐๐</td></tr>
+  <tr><td style="border:1px solid #ddd; padding:5px;">3.5</td><td style="border:1px solid #ddd; padding:5px;">คริสต์มาสแฟร์ + Family Night</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๖๘๐,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">~๖๘๐,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๐</td></tr>
+  <tr><td style="border:1px solid #ddd; padding:5px;">3.6</td><td style="border:1px solid #ddd; padding:5px;">After School</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๙๗๐,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">~๗๖๗,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:right; color:#c0392b;">-~๒๐๓,๐๐๐</td></tr>
+  <tr><td style="border:1px solid #ddd; padding:5px;">3.7</td><td style="border:1px solid #ddd; padding:5px;">ใบรับรอง+ใบสมัคร+ATM+ตู้น้ำ+บริจาค</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๗๕๘,๕๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">~๖๐๐,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:right; color:#c0392b;">-~๑๕๘,๕๐๐</td></tr>
+  <tr style="background:#1a3a6e; color:white; font-weight:bold;"><td style="border:1px solid #1a3a6e; padding:8px;" colspan="2">รวมรายรับอื่น (3.x)</td><td style="border:1px solid #1a3a6e; padding:8px; text-align:right;">๘,๒๗๕,๔๐๐</td><td style="border:1px solid #1a3a6e; padding:8px; text-align:right;">~๖,๔๒๒,๐๐๐</td><td style="border:1px solid #1a3a6e; padding:8px; text-align:right; background:#c0392b;">-~๑,๘๕๓,๐๐๐</td></tr>
+</table>
+
+<h3 style="color:#c0392b; margin-top:20px;">📉 สรุปรายรับโรงเรียน · เล่มงบประมาณที่ส่งมูลนิธิฯ vs ความเป็นจริง · ปีการศึกษา ๒๕๖๙</h3>
+<table style="width:100%; border-collapse:collapse; font-size:0.95em; margin:12px 0;">
+  <tr style="background:#eafaf1; font-weight:bold;"><th style="border:1px solid #1e8449; padding:6px;">หมวด</th><th style="border:1px solid #1e8449; padding:6px;">เล่มงบประมาณ ๒๕๖๙ (๑๕๓ คน)</th><th style="border:1px solid #1e8449; padding:6px;">[a] ก่อนปิดมัธยม (๑๒๑ คน · ปัจจุบัน)</th><th style="border:1px solid #1e8449; padding:6px;">[b] หลังปิด ม.๑-๖ ทั้งหมด (๙๓ คน · Y12 ๒๒ คนเหลือ)</th></tr>
+  <tr><td style="border:1px solid #ddd; padding:6px;"><b>1.1 ค่าเทอม</b> (รวม ๑๐% Return)</td><td style="border:1px solid #ddd; padding:6px; text-align:right;">๒๙,๓๙๗,๓๐๐</td><td style="border:1px solid #ddd; padding:6px; text-align:right;">๒๓,๖๘๖,๔๐๐ <span style="color:#c0392b;">(-๕,๗๑๐,๙๐๐)</span></td><td style="border:1px solid #ddd; padding:6px; text-align:right;">๑๘,๗๕๑,๔๑๕ <span style="color:#c0392b;">(-๑๐,๖๔๕,๘๘๕)</span></td></tr>
+  <tr><td style="border:1px solid #ddd; padding:6px;"><b>1.2 + 2.x ค่าบำรุง + ค่าธรรมเนียม</b></td><td style="border:1px solid #ddd; padding:6px; text-align:right;">๗,๖๓๙,๐๐๐</td><td style="border:1px solid #ddd; padding:6px; text-align:right;">~๖,๔๐๑,๐๐๐ <span style="color:#c0392b;">(-๑,๒๓๘,๐๐๐)</span></td><td style="border:1px solid #ddd; padding:6px; text-align:right;">~๔,๕๐๐,๐๐๐ <span style="color:#c0392b;">(-~๓,๑๓๙,๐๐๐)</span></td></tr>
+  <tr><td style="border:1px solid #ddd; padding:6px;"><b>3.x รายรับอื่น</b></td><td style="border:1px solid #ddd; padding:6px; text-align:right;">๘,๒๗๕,๔๐๐</td><td style="border:1px solid #ddd; padding:6px; text-align:right;">~๖,๔๒๒,๐๐๐ <span style="color:#c0392b;">(-~๑,๘๕๓,๐๐๐)</span></td><td style="border:1px solid #ddd; padding:6px; text-align:right;">~๕,๑๐๐,๐๐๐ <span style="color:#c0392b;">(-~๓,๑๗๕,๐๐๐)</span></td></tr>
+  <tr style="background:#1a3a6e; color:white; font-weight:bold; font-size:1.05em;"><td style="border:1px solid #1a3a6e; padding:8px;">รวมรายรับโรงเรียน</td><td style="border:1px solid #1a3a6e; padding:8px; text-align:right;">๔๕,๓๑๑,๗๐๐</td><td style="border:1px solid #1a3a6e; padding:8px; text-align:right; background:#e67e22;">~๓๖,๕๐๙,๔๐๐ <br><span style="font-size:0.9em;">หาย ~๘,๘๐๐,๐๐๐</span></td><td style="border:1px solid #1a3a6e; padding:8px; text-align:right; background:#c0392b;">~๒๘,๓๕๑,๔๐๐ <br><span style="font-size:0.9em;">หาย ~๑๖,๙๖๐,๓๐๐</span></td></tr>
+</table>
+
+<div style="background:#fef5e7; border-left:5px solid #c0392b; padding:12px 18px; margin:16px 0;">
+  <b>📌 ข้อสังเกตสำคัญ (ฝั่งรายรับ):</b>
+  <ul style="margin:8px 0;">
+    <li><b>M-EP (โครงการไทย-ภาษาจีน) ๑๐ คน ๘๐๐,๐๐๐ บาท ไม่เปิดในความจริง</b> · เล่มงบใส่ไว้ทั้งที่ปี ๒๕๖๘ ก็ไม่เปิด</li>
+    <li><b>อนุบาลตัวจริงเพิ่มขึ้น</b> (๑๓→๑๕) → +๒๘๐,๐๐๐ (positive delta เล็กๆ · กลุ่มเดียวที่บวก)</li>
+    <li><b>ประถมหายไป ๑.๖M</b> (เด็กลด ๖๔→๕๖) — ส่วนใหญ่อยู่ที่ ป.๔-๖</li>
+    <li><b>ม.ต้น (ม.๑-๓) เล่มงบ ๓๔ คน · ๗,๑๙๙,๕๐๐ บาท</b> — Y7-9 ย้าย AC/ACT · <b>ACEP ได้ ๑๐% Return = ๗๑๙,๙๕๐ บาท</b></li>
+    <li><b>ม.ปลาย (ม.๔-๖) เล่มงบ ๓๒ คน · ๗,๑๖๓,๒๐๐ บาท</b> — Y10-11 ย้าย Return ๒๐๑,๔๖๕ + Y12 (๒๒ คน) ACEP เก็บเต็ม ๔,๙๒๔,๗๐๐ = <b>๕,๑๒๖,๑๖๕</b></li>
+    <li><b>รวมค่าเทอม Return จาก AC/ACT</b> (Y7-11 ทั้งหมด) = <b>๙๒๑,๔๑๕ บาท/ปี</b> · ช่วยลด delta ที่หายไปจาก -๑๑.๕๗M เหลือ -๑๐.๖๔M</li>
+    <li><b>รายรับอื่น 2.x และ 3.x ลดสัดส่วน ~๒๑-๓๙%</b> ตามจำนวนนักเรียน · scenario [b] หายมากกว่าเพราะนักเรียน ๑๕๓→๙๓ = ลด ๓๙%</li>
+    <li>เล่มงบเดิมรวมเงินยืมมูลนิธิ ๒๕,๖๐๓,๙๗๗.๓๔ จึงได้ ๗๑,๐๐๙,๖๗๗ — <b>รายรับจากการศึกษาจริงไม่ครบ ๔๕M ที่เล่มงบประมาณการไว้</b></li>
+    <li><b>ภาพรวม scenario [b]:</b> รายรับการศึกษาจริงเข้ามาเพียง ~๒๘.๓๕M หรือ <b>๖๒.๖%</b> ของที่เล่มงบประมาณการ → ขาดอย่างน้อย <b>~๑๖.๙๖M</b> ก่อนพูดถึงรายจ่ายเร่งด่วน ๕๖.๒๖M ใน ๔ หมวด</li>
+  </ul>
+</div>
+
+<!-- ============== ภาพรวมรายจ่าย ============== -->
+<h2 class="section">💸 ภาพรวมรายจ่าย ปีการศึกษา ๒๕๖๙ · เปรียบเทียบเล่มงบประมาณที่ส่งมูลนิธิฯ vs ความเป็นจริง</h2>
+
+<p class="indent">ในฝั่งรายจ่ายเช่นกัน · เล่มงบประมาณ ๒๕๖๙ ที่ส่งมูลนิธิฯ ตั้งบนฐานบุคลากร <b>๙๒ คน</b> (ครูต่างชาติ ๑๘ · จีน ๑ · ครูไทย ๒๗ · เจ้าหน้าที่ ๑๒ · พนักงาน ๓๕) ขณะที่ความจริงปัจจุบันมีการเลิกจ้าง ๙ ราย + คดีค้าง + ระบบงานค้างซ่อมปี ๖๖-๖๘ ที่ไม่อยู่ในเล่มงบประมาณเดิม</p>
+
+<h3 style="color:#a64304; margin-top:16px;">🅓 รายการที่เล่มงบประมาณ "เกินจริง" (ฐานข้อมูลไม่ตรง)</h3>
+
+<table style="width:100%; border-collapse:collapse; font-size:0.9em; margin:12px 0;">
+  <thead>
+    <tr style="background:#fee2e2;">
+      <th style="border:1px solid #f87171; padding:5px;">รายการ</th>
+      <th style="border:1px solid #f87171; padding:5px;">เล่มงบ ๒๕๖๙</th>
+      <th style="border:1px solid #f87171; padding:5px;">ความจริง พ.ค. ๖๙</th>
+      <th style="border:1px solid #f87171; padding:5px;">เกินจริง</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="border:1px solid #ddd; padding:5px;"><b>Payroll ครูต่างชาติ</b> (1.2)</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๑๘,๓๕๒,๕๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">~๑๐,๔๕๗,๓๓๔ <span class="source-note">(พ.ค. ๖๙ ๘๗๑K × ๑๒)</span></td><td style="border:1px solid #ddd; padding:5px; text-align:right; color:#c0392b;"><b>~๗,๘๙๕,๐๐๐</b></td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;"><b>Payroll ครูไทย</b> (1.1)</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๘,๗๓๙,๖๓๔</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">~๕,๕๔๔,๙๘๙ <span class="source-note">(พ.ค. ๖๙ ๔๖๒K × ๑๒)</span></td><td style="border:1px solid #ddd; padding:5px; text-align:right; color:#c0392b;"><b>~๓,๑๙๕,๐๐๐</b></td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;"><b>ค่าตอบแทนพิเศษ</b> (1.9) ⚠️</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๒,๒๘๐,๙๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:right; color:#c0392b;">⚠️ คดีตีว่าเป็น "ค่าจ้าง" · ต้องรื้อโครงสร้าง</td><td style="border:1px solid #ddd; padding:5px; text-align:right; color:#c0392b;"><b>ต้องรื้อ</b></td></tr>
+    <tr style="background:#fee2e2; font-weight:bold;"><td style="border:1px solid #f87171; padding:6px;">รวมเฉพาะ Payroll + ค่าตอบแทน</td><td style="border:1px solid #f87171; padding:6px; text-align:right;">๒๙,๓๗๓,๐๓๔</td><td style="border:1px solid #f87171; padding:6px; text-align:right;">~๑๖,๐๐๒,๓๒๓</td><td style="border:1px solid #f87171; padding:6px; text-align:right;"><b>~๑๓,๓๗๑,๐๐๐</b></td></tr>
+  </tbody>
+</table>
+
+<h3 style="color:#a64304; margin-top:16px;">🅔 รายการ "ต่อสัญญา" ที่ rate เปลี่ยน (เล่มงบประมาณต่ำกว่าจริงเล็กน้อย)</h3>
+<p class="indent">เฉพาะรายการที่เป็น <b>การต่อสัญญา/ค่าบริการประจำปี</b> · rate ใหม่สูงกว่ารายการเดิมในเล่มงบประมาณเดิม (ไม่ใช่ค่าใช้จ่ายใหม่ที่เพิ่มเข้ามา · ค่าใช้จ่ายใหม่ดูในตาราง 🅕)</p>
+
+<table style="width:100%; border-collapse:collapse; font-size:0.9em; margin:12px 0;">
+  <thead>
+    <tr style="background:#fdf5e7;">
+      <th style="border:1px solid #d68910; padding:5px;">รายการ (ต่อสัญญา/ประจำปี)</th>
+      <th style="border:1px solid #d68910; padding:5px;">เล่มงบ ๒๕๖๙ (rate เดิม)</th>
+      <th style="border:1px solid #d68910; padding:5px;">จดหมายของบ (rate ใหม่)</th>
+      <th style="border:1px solid #d68910; padding:5px;">ส่วนต่าง</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="border:1px solid #ddd; padding:5px;">ประกันทรัพย์สิน · AIG</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๑๐๐,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๑๔๐,๙๙๙</td><td style="border:1px solid #ddd; padding:5px; text-align:right; color:#d68910;">+๔๑,๐๐๐</td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;">กำจัดปลวก · เอ็ม-เซเว่น</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๑๑๐,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๑๙๔,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:right; color:#d68910;">+๘๔,๐๐๐</td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;">สัญญาบริการลิฟต์ · สยาม ดาม (ค่าบริการต่อเนื่อง · ไม่รวมค่าซ่อมค้าง)</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๑๙๐,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๒๒๕,๕๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:right; color:#d68910;">+๓๕,๕๐๐</td></tr>
+    <tr style="background:#fdf5e7; font-weight:bold;"><td style="border:1px solid #d68910; padding:6px;">รวมส่วนต่าง "rate ต่อสัญญา"</td><td style="border:1px solid #d68910; padding:6px;"></td><td style="border:1px solid #d68910; padding:6px;"></td><td style="border:1px solid #d68910; padding:6px; text-align:right;"><b>+~๑๖๐,๕๐๐</b></td></tr>
+  </tbody>
+</table>
+
+<div style="background:#fff8e1; border-left:4px solid #d68910; padding:10px 14px; margin:8px 0; font-size:14px;">
+  <b>⚠️ หมายเหตุสำคัญ:</b> รายการอื่นที่เคยอยู่ในตารางนี้ (สระว่ายน้ำ · Chiller · ซ่อมแซมอาคาร) <b>ย้ายไปตาราง 🅕</b> เพราะค่าซ่อมเครื่องเสีย/คูลลิ่งทาวเวอร์สนิม/Tennis/Football/ถนน <b>เป็นค่าใช้จ่ายใหม่ที่ไม่ทดแทนค่าใช้จ่ายเดิม</b> (เช่น ซ่อมเครื่องสระว่ายน้ำเสร็จแล้วยังต้องซื้อสารเคมีเป็นปกติ · ของเดิมยังต้องจ่ายต่อ)
+</div>
+
+<h3 style="color:#a64304; margin-top:16px;">🅕 รายการที่ "เล่มงบประมาณไม่มีเลย" — เหตุผลต้องของบเพิ่ม ๔ หมวด</h3>
+
+<table style="width:100%; border-collapse:collapse; font-size:0.9em; margin:12px 0;">
+  <thead>
+    <tr style="background:#eafaf1;">
+      <th style="border:1px solid #1e8449; padding:5px;">หมวด</th>
+      <th style="border:1px solid #1e8449; padding:5px;">รายการที่เล่มงบประมาณไม่ครอบคลุม</th>
+      <th style="border:1px solid #1e8449; padding:5px;">ยอด</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="border:1px solid #ddd; padding:5px;" rowspan="4"><b>🟥 ๑. ปิดจบ</b></td><td style="border:1px solid #ddd; padding:5px;">ค่าชดเชยเลิกจ้าง · <em>รายชื่อทบทวน · บางคนได้อยู่ต่อ · รอคำสั่งฝ่ายใหม่</em></td><td style="border:1px solid #ddd; padding:5px; text-align:right;">≤ ๒,๐๖๖,๕๙๐</td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;">คดีเก่า ๕ คดี ครูต่างชาติ + ดอกเบี้ย</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๒,๘๒๘,๒๕๐</td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;">คดีใหม่ ๘ ราย (ร.๓๑๕-๓๒๒/๒๕๖๗)</td><td style="border:1px solid #ddd; padding:5px; text-align:right; color:#c0392b;">รอสำเนา + ดอกเบี้ย</td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;">ยกเลิกสัญญา Kyocera</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๑๐๗K/เดือน (~๑.๒๘M/ปี)</td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;" rowspan="10"><b>🟧 ๒. ประคอง</b></td><td style="border:1px solid #ddd; padding:5px;">ครู Native ใหม่</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๗๒๐,๐๐๐/ปี/คน</td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;">BOND คืน ผปค. ๒๘ คน + เช็คค้าง ๑๓ คน</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๓,๕๒๙,๓๙๘</td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;">ระบบงานค้างซ่อมปี ๖๖-๖๘ (ลิฟต์/ชิลเลอร์/CCTV/คูลลิ่งทาวเวอร์/ตู้แคปแบงค์/บำบัดน้ำเสีย)</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๓,๑๑๔,๒๑๔</td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;">CHAIWAT ปรับปรุงรอบอาคาร</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๗๕๐,๒๘๔</td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;">ปรับปรุงถนนลาดยาง ๘,๐๐๐ ตร.ม.</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๓,๓๓๘,๔๐๐</td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;">Playground Castle Crown1</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๔๒๕,๘๖๐</td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;">LED ส่วนที่เหลือ + ระบบตู้ขายน้ำ SWIS</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๒๔๗,๕๓๕</td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;">รถถางป่า NEWTECH + เครื่องบดกิ่งไม้ + รถกอล์ฟใหญ่</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๖๓๙,๙๐๐</td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;">ย้ายโซนนั่งรอ ผปค.</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๑๒๐,๐๐๐</td></tr>
+    <tr style="background:#e8f5e9;"><td style="border:1px solid #ddd; padding:5px;"><b>💧 เจาะน้ำบาดาล ๒ จุด</b> · ๑,๘๐๐ บาท/ม. × ๑๕๐ ม. × ๒ จุด (สมุทรสาคร) <span class="source-note">(ลดค่าน้ำประปาที่อยู่ใน Overhead ๑.๒M/ปี)</span></td><td style="border:1px solid #ddd; padding:5px; text-align:right;">~๕๔๐,๐๐๐</td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;" rowspan="6"><b>🟨 ๓. เร่งด่วน</b></td><td style="border:1px solid #ddd; padding:5px;">Football Academy สนามหญ้าจริง + ไฟหญ้าเทียม</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๒,๔๖๙,๗๐๐</td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;">Tennis Academy ๔ สนาม</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๓,๙๓๘,๖๖๖</td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;">ซ่อมสระว่ายน้ำ · ตัวผลิตคลอรีน Salt Chlorinator SSC50 E × ๓ เครื่อง <span class="source-note">(ใบเสนอราคา KKS Chemical QT.ACEP69061502 · ๑๓ มิ.ย. ๖๙ · รวมรื้อถอน+ติดตั้ง+VAT)</span></td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๑๔๔,๔๕๐</td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;">จักรยานวิ่งลาดยาง ๒ กม.</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๒,๘๐๐,๐๐๐</td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;">ANPR + ไม้กั้น DZ-132</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๔๒,๒๖๕</td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;">Rebranding marketing + Cambridge partnership</td><td style="border:1px solid #ddd; padding:5px; text-align:right; color:#c0392b;">รอ quote</td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;" rowspan="4"><b>🟦 ๔. เตรียม ๒๕๗๐</b></td><td style="border:1px solid #ddd; padding:5px;">Early Years Center</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">~๘๐๐,๐๐๐</td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;">เนิร์สเซอรี่ ๑๑๓ ตร.ม.</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๘๐๐,๐๐๐</td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;">ครู Native อนุบาล</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๖๐๐,๐๐๐/ปี/คน</td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;">Networking AC/ACT + PGL Asia Hub</td><td style="border:1px solid #ddd; padding:5px; text-align:right; color:#1e8449;">PGL ไม่ขอในเฟส ๑</td></tr>
+    <tr style="background:#1a3a6e; color:white; font-weight:bold;"><td style="border:1px solid #1a3a6e; padding:8px;" colspan="2">💰 รวมยอดที่ไม่อยู่ในเล่มงบประมาณเดิม (verified)</td><td style="border:1px solid #1a3a6e; padding:8px; text-align:right;">~๕๖,๒๕๗,๔๗๖</td></tr>
+  </tbody>
+</table>
+
+<div style="background:#fef5e7; border-left:5px solid #c0392b; padding:12px 18px; margin:16px 0;">
+  <b>📌 ข้อสังเกตสำคัญ (ฝั่งรายจ่าย):</b>
+  <ul style="margin:8px 0;">
+    <li><b>เล่มงบประมาณเดิม Payroll เกินจริง ~๑๑M</b> (ครูต่างชาติ ~๗.๙M + ครูไทย ~๓.๒M) — ใช้ฐานบุคลากร ๔๕ คน vs จริง พ.ค. ๖๙ จ่ายเพียง ๒.๑๑M/เดือน</li>
+    <li><b>ค่าตอบแทนพิเศษ ๑.๙M ในเล่มงบ</b> ⚠️ คำพิพากษาศาลแรงงานภาค ๗ ตีว่าเป็น "ค่าจ้าง" (คดี ร.๓๑๕-๓๒๒/๒๕๖๗) → ต้องรื้อโครงสร้าง <b>แยกค่าจ้าง vs สวัสดิการ ชัดเจน</b> + ทำเป็น variable/conditional</li>
+    <li><b>รายการต่อสัญญาประจำปี (ประกัน/ปลวก/ลิฟต์) rate ใหม่เพิ่มขึ้น ~๑๖๐K</b> · ส่วนค่าซ่อมเครื่องสระว่ายน้ำ ๓๐๐K · ค่าซ่อมระบบ Chiller + คูลลิ่งทาวเวอร์ ๕๙๐K · ค่าก่อสร้างใหญ่ Tennis/Football/ถนน <b>ไม่ใช่ค่าใช้จ่ายแทนกัน · เป็นค่าใช้จ่ายใหม่</b> (ของเดิมเช่นสารเคมีสระว่ายน้ำ ๑๔๔K · บำรุงสัญญาเดิมยังต้องจ่ายต่อ) จึงจัดอยู่ในตาราง 🅕</li>
+    <li><b>BOND คงค้างคืน ผปค. ๓.๕๓M</b> + <b>คดีใหม่ ๘ ราย</b> + <b>ยกเลิกสัญญา Kyocera</b> — ทั้ง ๓ รายการนี้ <b>ไม่อยู่ในเล่มงบประมาณเดิมเลย</b></li>
+    <li><b>ภาพรวม:</b> เล่มงบประมาณตั้งบน reality ปี ๒๕๖๘ ที่ไม่ตรงสภาพปัจจุบัน → <b>delta ระหว่าง projected vs actual</b> = เหตุผลของการขอ ๔ หมวดงานที่จะนำเสนอต่อไป</li>
+  </ul>
+</div>
+
+<p class="indent">ด้วยสถานะเงินสด · ภาพรวมรายรับ-รายจ่ายข้างต้น กระผมจึงขอนำเสนอ <b>๔ หมวดงาน</b> เพื่อให้คณะกรรมการบริหารมูลนิธิฯ พิจารณาอนุมัติ<b>เงินกู้ยืมงวดเดียวสำหรับการดำเนินงานปีการศึกษา ๒๕๖๙</b> — <b>หมวดที่ ๑ ปิด · หมวดที่ ๒ ประคอง · หมวดที่ ๓ เร่งด่วน · หมวดที่ ๔ เตรียมเริ่มใหม่ปีหน้า</b> — ตามรายละเอียดดังต่อไปนี้</p>
+
+<h2 class="section">🔴 ๔ หมวดงาน · ลำดับตามความเร่งด่วน</h2>
+
+<!-- ============== หมวด 1 ปิดจบ ============== -->
+<h3 class="cat">หมวดที่ ๑ · งานปิดจบ (หลักสูตร/นักเรียน/ครู/ผู้ปกครอง/หน่วยงาน-สัญญาบริการ/อุปกรณ์)</h3>
+
+<div class="cat-summary">
+  <ul>
+    <li><b>มติประชุมคณะกรรมการดำเนินงานปรับโครงสร้างฯ (๕ มิ.ย. ๖๙ · ๑๒ ท่าน):</b> <b>หยุดดำเนินการระดับชั้น Year 7 ถึง Year 12</b> · มุ่งเน้น <b>Nursery + Early Years + ประถม</b>
+    <span class="annex-ref">ภาคผนวก ก-๑</span></li>
+
+    <li><b>คณะกรรมการศึกษาและฟื้นฟูด้านวิชาการ ๑๓ ท่าน</b> (คำสั่งที่ ๓/๒๕๖๙ · ๙ มิ.ย. · ลงนามอธิการเจ้าคณะ)
+    <span class="annex-ref">ภาคผนวก ก-๒ · รายชื่อ ๑๓ ท่าน</span></li>
+
+    <li><b>การเลิกจ้างบุคลากร</b> · เดิมมีรายชื่อ ๙ ราย (ครูต่างชาติ ๗ + ครูไทย ๒) ตามมติประชุมวิสามัญ ๑/๒๕๖๙ (๔ มิ.ย.) · ค่าชดเชยรวมเบื้องต้น <span class="verified">~๒,๐๖๖,๕๙๐ บาท</span>
+      <ul>
+        <li><b>หลังประชุมทบทวน + คำสั่ง ๑๕/๒๕๖๙ (๑๒ มิ.ย.):</b> รายชื่อรับผิดชอบงานในคำสั่งใหม่ <b>ยังปรากฏชื่อบุคลากรหลายรายที่อยู่ในกลุ่มเลิกจ้างเดิม</b> · แสดงว่า <b>"บางรายได้อยู่ต่อ"</b> ภายใต้บทบาทใหม่</li>
+        <li><span style="background:#fff8e7; color:#8a6d3b; padding:2px 8px; border-radius:4px; border:1px dashed #d68910;"><b>⚠️ รอรายชื่อเลิกจ้างชุดสุดท้าย</b> หลังการแต่งตั้งบุคลากรเข้า ๓๓ หน่วยงานครบ + การสรรหาบุคลากรใหม่ ๕ ตำแหน่งที่ยังว่าง · ค่าชดเชยจริงจะน้อยกว่ายอด ~๒,๐๖๖,๕๙๐ บาท ที่ตั้งไว้</span></li>
+      </ul>
+      <span class="annex-ref">ภาคผนวก ก-๓ · รายชื่อ ๙ ราย (เดิม) + เหตุผล + คำสั่ง ๑๕/๒๕๖๙</span></li>
+
+    <li><b>คดีเก่า ๕ คดี ครูต่างชาติ</b> (Blokhin · Cricchio · Shajahan · Mahesh · Saihgal/Dale) ประนีประนอม/ผ่อน · รวม <span class="verified">๒,๘๒๘,๒๕๐ บาท</span>
+    <span class="annex-ref">ภาคผนวก ก-๔ · breakdown ต่อราย</span></li>
+
+    <li><b>🔴 คดีใหม่ ครูไทย ๘ ราย</b> (ร.๓๑๕-๓๒๒/๒๕๖๗) · แพ้ทั้ง ๗ ประเด็นที่ศาลภาค ๗ · ศาลอุทธรณ์ยกอุทธรณ์ · รออนุญาตฎีกา · <b>โอกาสแพ้ ~๙๐-๙๕%</b> · ดอกเบี้ย ๗.๕% + เงินเพิ่ม ๑๕%/ปี ทบ ๒-๓ ปี
+    <span class="annex-ref">ภาคผนวก ก-๕ · ตารางโอกาส + กลยุทธ์ Option A เจรจาประนีประนอม</span></li>
+
+    <li><b>เตรียมประชุมผู้ปกครอง เสาร์ ๒๗ มิ.ย. ๖๙</b> ห้องประชุม Multipurpose · รอบเช้าประถม + รอบบ่ายมัธยม (กลุ่ม Y7-11 + กลุ่ม Y12) · มี AC + ACT มาชี้แจง
+    <span class="annex-ref">ภาคผนวก ก-๖ · กำหนดการเต็ม</span></li>
+
+    <li><b>เจรจายกเลิกสัญญา Kyocera</b> <span class="verified">๑๐๗,๐๐๐ บาท/เดือน</span> (๑๑ ตัว · ผูกแน่นและยาว · ยังเจรจาไม่สำเร็จ)</li>
+  </ul>
+</div>
+
+<div class="subtotal">
+  <div><span class="label">🟥 รวมหมวด ๑ · ปิดจบ (verified · ยังไม่รวมคดีใหม่ ๘ ราย ที่รอสำเนาคำพิพากษา)</span></div>
+  <span class="amount">๔,๘๙๔,๘๔๐ บาท +</span>
+</div>
+
+<!-- ============== หมวด 2 ฟื้นสภาพคงประคอง ============== -->
+<h3 class="cat cat-2">หมวดที่ ๒ · งานฟื้นสภาพเพื่อคงประคองความเป็นสถาบันจนจบปีการศึกษา</h3>
+
+<div class="cat-summary">
+  <ul>
+    <li><b>คงเหลือระดับประถมลงมาถึงระดับอนุบาล</b> · นักเรียน ๑๒๑ คน (KG ๑๕ · ป ๕๖ · ม ๕๐)</li>
+
+    <li><b>🔴 Payroll ตลอดปี ๒๕๖๙</b> · ยอดจริง พ.ค. <span class="verified">๒,๓๕๒,๗๒๐.๑๔/เดือน</span> · ประมาณการ มิ.ย. เต็มอัตราตามสัญญา <span class="verified">~๒,๕๐๐,๐๐๐/เดือน × ๑๒ = ๓๐,๐๐๐,๐๐๐ บาท/ปี</span>
+    <span class="annex-ref">ภาคผนวก ข-๑ · breakdown 5 กลุ่ม + Excel 2026 May</span></li>
+
+    <li><b>📋 โครงสร้างใหม่ ๓ ฝ่าย ๓๓ หน่วยงาน</b> (คำสั่ง ๑๕/๒๕๖๙ · ๑๒ มิ.ย. ๖๙ · ปรับจาก ๔ ฝ่ายเดิม)
+      <ul>
+        <li><b>ฝ่ายวิชาการ ๗ หน่วยงาน:</b> บริหาร · พัฒนาหลักสูตร (ปฐมวัย+พื้นฐาน) · จัดการเรียนรู้ · นิเทศ · วัดผล · วิจัย · นวัตกรรม</li>
+        <li><b>ฝ่ายกิจการนักเรียน ๘ หน่วยงาน:</b> บริหาร · คุณธรรม · ระดับชั้น · กิจกรรมพัฒนาผู้เรียน · อนามัย · แนะแนว · ทักษะชีวิต · ชุมชนสัมพันธ์</li>
+        <li><b>ฝ่ายสำนักผู้อำนวยการ ๓ กลุ่ม ๑๘ หน่วยงาน:</b> (๑) บริหารสำนัก ๖ · (๒) บริหารทั่วไป ๔ · (๓) ธุรการ-การเงิน ๘</li>
+        <li><b>บุคลากรใหม่กำลังสรรหา ๕ ตำแหน่ง:</b> สวัสดิภาพและความปลอดภัย · หอพัก · ธุรการ · สารบรรณ · ทะเบียนนักเรียน</li>
+      </ul>
+      <span class="annex-ref">ภาคผนวก ข-๓ · คำสั่ง ๑๕/๒๕๖๙ ฉบับเต็ม ๒๖ หน้า</span>
+    </li>
+
+    <li><b>โอนเด็ก Y7-11 ไป AC (บางรัก) / ACT (ธนบุรี)</b> ภาคเรียนที่ ๒ · <b>Y12 (๒๒ คน) ดูแลให้จบที่นี่</b> เรียน ACEP ๓ วัน + AC ๒ วัน · Road to University + Internship
+    <span class="annex-ref">ภาคผนวก ข-๒ · ข้อตกลง ๑๐% Return</span></li>
+
+    <li><b>โละครูต่างชาติเก่า จ้างครูต่างชาติ Native ใหม่</b> · ได้แล้ว ๑ ราย · <span class="verified">๖๐,๐๐๐ บาท/เดือน × ๑๒ = ๗๒๐,๐๐๐ บาท/ปี/คน</span> · กำลังสรรหาเพิ่ม</li>
+
+    <li><b>โครงสร้างอัตรากำลังครูคงอยู่ ระดับประถม Y1-6</b> · ๒๑ ราย (ครูต่างชาติ ๘ + ไทย ๑๓)
+    <span class="annex-ref">ภาคผนวก ข-๓ · รายชื่อครู ๒๑ ราย</span></li>
+
+    <li><b>ต่อสัญญาประกัน ๔ ประเภท + Central Air Trane</b> รวม <span class="verified">๑,๒๗๐,๔๔๗.๓๘ บาท</span> (ทรัพย์สิน/รถ/อุบัติเหตุ/Fan Coil/ชิลเลอร์)
+    <span class="annex-ref">ภาคผนวก ข-๔</span></li>
+
+    <li><b>ซ่อมแซมพื้นที่เรียน/กิจกรรม</b> · Playground Castle Crown1 <span class="verified">๔๒๕,๘๖๐</span> · LED ส่วนเหลือ <span class="verified">๖๗,๕๓๕</span> · ตู้ขายน้ำ SWIS <span class="verified">๑๘๐,๐๐๐</span> · บำบัดน้ำเสีย <span class="verified">๑๒๒,๐๐๐</span> · รถถางป่า NEWTECH <span class="verified">๓๕๐,๐๐๐</span> · เครื่องบดกิ่ง <span class="verified">๔๙,๙๐๐</span> · รถกอล์ฟใหญ่ <span class="verified">๒๔๐,๐๐๐</span>
+    <span class="annex-ref">ภาคผนวก ข-๕ · ใบเสนอราคา/source ทุกรายการ</span></li>
+
+    <li><b>ปรับปรุงรอบอาคารอำนวยการ + ชั้น ๑</b> · <span class="verified">๗๕๐,๒๘๔ บาท</span> (CHAIWAT CONSTRUCTION · BOQ ๑๗ รายการ · ผ่อน ๓ งวด)
+    <span class="annex-ref">ภาคผนวก ข-๖</span></li>
+
+    <li><b>ปรับปรุงถนนภายในโรงเรียน · ลาดยาง ๕ ซม. + หินคลุก ๘,๐๐๐ ตร.ม.</b> · <span class="verified">๓,๓๓๘,๔๐๐ บาท</span> (ค้อนปการโยธา)</li>
+
+    <li><b>ย้ายที่นั่ง ผปค.</b> ออกจากใต้บันได + เพิ่มผนังกั้น · <span class="verified">๑๒๐,๐๐๐ บาท</span></li>
+
+    <li><b>🔴 ระบบงานค้างซ่อม (ค้างปี ๒๕๖๖-๒๕๖๘)</b> · <span class="verified">๓,๑๑๔,๒๑๔ บาท</span> (ลิฟต์ ๔ อาคาร · ชิลเลอร์ ๒ อาคาร · CCTV · คูลลิ่งทาวเวอร์สนิม · ตู้แคปแบงค์ · บำบัดน้ำเสีย · ห้องปั๊มสระว่ายน้ำ)
+    <span class="annex-ref">ภาคผนวก ข-๗ · breakdown ต่อรายการ</span></li>
+
+    <li><b>สัญญาบริการอื่นค้างต่อ</b> · กำจัดปลวก เอ็ม-เซเว่น <span class="verified">๑๙๔,๐๐๐</span> + ลิฟต์สยาม ดาม <span class="verified">๒๒๕,๕๐๐</span></li>
+
+    <li><b>การคืน BOND ผปค.</b> · ๒๘ คน <span class="verified">๒,๓๖๐,๐๐๐ บาท</span> + เช็คค้าง ๑๓ คน <span class="verified">๑,๑๖๙,๓๙๘ บาท</span></li>
+
+    <li><b>Payment Form มิ.ย. ๖๙</b> (PA 6906-0001 ถึง 0020) · <span class="verified">๔๓๐,๕๔๙.๒๕ บาท</span> (ประกัน AIG/บำรุงรักษา/อาหาร/สวัสดิการ ฯลฯ)
+    <span class="annex-ref">ภาคผนวก ข-๘</span></li>
+  </ul>
+</div>
+
+<div class="subtotal">
+  <div><span class="label">🟧 รวมหมวด ๒ · ฟื้นสภาพคงประคอง (รวม Payroll ๒๕.๒๘M + ครูใหม่ ๗๒๐K)</span></div>
+  <span class="amount">~๔๐,๔๑๒,๐๐๕ บาท</span>
+</div>
+
+<!-- ============== หมวด 3 ปรับปรุงเร่งด่วน ============== -->
+<h3 class="cat cat-3">หมวดที่ ๓ · งานปรับปรุงเร่งด่วนเพื่อลดความเสียหาย/เสียโอกาส ระหว่างรอ Master Plan ใหม่</h3>
+
+<div class="cat-summary">
+  <ul>
+    <li><b>⚽ Football Academy "ช้างบ้าน สู่ ช้างเผือก"</b> · ทีมโค้ชพร้อม · <b>๒ ปีคืนทุน</b> · ค่าทำสนามหญ้าจริง (พาสพารัม + ระบบ) <span class="verified">๒,๒๖๙,๗๐๐ บาท</span> + ไฟสนามหญ้าเทียม <span class="verified">๒๐๐,๐๐๐ บาท</span> · ค่าสมัคร ๔,๐๐๐/เดือน · ๓๐ คน → ๑๒๐K/เดือน · คืนทุน ๓๘ เดือน + ประกันรายได้ ๕๐K/เดือน
+    <span class="annex-ref">ภาคผนวก ค-๑ · BOQ + breakdown</span></li>
+
+    <li><b>🎾 Tennis Academy</b> · <span class="verified">๓,๙๓๘,๖๖๕.๗๒ บาท</span> (รวม VAT · พื้นที่ ๒,๕๘๓.๓๖ ตร.ม. = ๔ สนาม · ทองรุ่งฟ้า ๕๙๙๘ · ผ่อน ๖ งวด) · <b>๓ ปีคืนทุน</b> conservative · best case Junior Competition Full Time = ~๖ เดือน คืนทุน
+    <span class="annex-ref">ภาคผนวก ค-๒ · benchmark ALM x Impact ๗ คอร์ส + คำนวณ ๔ สนาม</span></li>
+
+    <li><b>🏊 ว่ายน้ำ</b> · เร่งซ่อมเครื่องเสีย ๓ ตัว · น้ำเขียวบ่อย · เตรียมจัดแข่งปลาย พ.ย. · <span class="verified">๓๐๐,๐๐๐ บาท</span></li>
+
+    <li><b>💪 ฟิตเนส</b> · ห้องซุกทึบเข้าออกยาก · รอย้าย · <em>รองบย้าย/อุปกรณ์</em></li>
+
+    <li><b>🚴 จักรยาน-วิ่ง</b> · ๒ กม. × ๔ ม. = ๘,๐๐๐ ตร.ม. × <span class="verified">๓๕๐ บาท/ตร.ม.</span> = <span class="verified">๒,๘๐๐,๐๐๐ บาท</span> (ป้องกันหญ้า/วัชพืช/สัตว์ร้าย)</li>
+
+    <li><b>🎨 Rebranding</b> · ชื่อเดิม + เปลี่ยน theme · USP: Global Citizenship + Entrepreneurship · CEFR + Cambridge · ตลาดหมู่บ้านจัดสรร 30-50 กม. · ทีมสำรวจ ๘-๑๒ มิ.ย. + ประชุมสรุป ๑๘ มิ.ย.
+    <span class="annex-ref">ภาคผนวก ค-๓</span></li>
+
+    <li><b>🚗 ANPR + ไม้กั้น DZ-132</b> · เชื่อม SWIS Campus Member · <span class="verified">๔๒,๒๖๕ บาท</span> (รวม VAT · ซีเคียวเมท)</li>
+  </ul>
+</div>
+
+<div class="subtotal">
+  <div><span class="label">🟨 รวมหมวด ๓ · ปรับปรุงเร่งด่วน (verified · บางส่วน)</span></div>
+  <span class="amount">~๙,๕๕๐,๖๓๑ บาท</span>
+</div>
+
+<!-- ============== หมวด 4 เตรียมพันธกิจ 2570 ============== -->
+<h3 class="cat cat-4">หมวดที่ ๔ · งานเตรียมพร้อมพันธกิจการศึกษาปี ๒๕๗๐</h3>
+
+<div class="cat-summary">
+  <ul>
+    <li><b>🏫 เตรียมเปิด Early Years Center</b> · รองบปรับพื้นที่ + เครื่องเล่นในร่ม/นอกร่ม + เฟอร์นิเจอร์เด็กเล็ก</li>
+
+    <li><b>ประสานโรงเรียนอนุบาลในเครือเตรียมหลักสูตร</b> · ใช้ SWIS รุ่นใหม่ AWS ครบ + Mobile App + การเงิน · ระบบ วิชาการ-วัดผล/มินิมาร์ท/Canteen/Cafe ยังอยู่ระหว่างพัฒนา</li>
+
+    <li><b>จ้างครู Native อนุบาล</b> · <span class="verified">๕๐,๐๐๐ บาท/เดือน/คน × ๑๒ = ๖๐๐,๐๐๐ บาท/ปี/คน</span></li>
+
+    <li><b>เพิ่มห้องเนิร์สเซอรี่</b> · พื้นที่ <span class="verified">๑๑๓ ตร.ม.</span> · <span class="verified">๘๐๐,๐๐๐ บาท</span> (~๗,๐๗๙ บาท/ตร.ม. · ใช้วัสดุปลอดสารหุ้มรอบ)</li>
+
+    <li><b>Networking with AC and ACT</b> · academic + activities · เชื่อมทีมผู้บริหารโรงเรียนอัสสัมชัญ (AC) + โรงเรียนอัสสัมชัญธนบุรี (ACT)</li>
+
+    <li><b>⭐ PGL Asia Hub (Pilot School ที่ ACEP)</b> · PGL พร้อมมาลงทุนใช้สถานที่ · <b>ยังไม่ต้องการเงินกู้ในเฟสเริ่มต้น</b> · Outdoor Education มาตรฐานสหราชอาณาจักร · ใช้ ACEP เป็น Pilot School ของเอเชีย
+    <span class="annex-ref">ภาคผนวก ง-๑ · ข้อเสนอ + ประโยชน์ต่อมูลนิธิฯ</span></li>
+  </ul>
+</div>
+
+<div class="subtotal">
+  <div><span class="label">🟦 รวมหมวด ๔ · เตรียมพร้อมพันธกิจปี ๒๕๗๐ (verified · บางส่วน)</span></div>
+  <span class="amount">~๑,๔๐๐,๐๐๐ บาท</span>
+</div>
+
+<!-- ============== GRAND TOTAL ============== -->
+<div class="grand-total">
+  <h2>💰 รวมยอดขอกู้ยืมเงิน · งวดเดียว สำหรับปีการศึกษา ๒๕๖๙</h2>
+  <div class="gt-row">
+    <span>🟥 หมวด ๑ · ปิดจบ <em style="font-size: 0.85em;">(ยังไม่รวมคดีใหม่ ๘ ราย)</em></span>
+    <span class="amount">๔,๘๙๔,๘๔๐ บาท +</span>
+  </div>
+  <div class="gt-row">
+    <span>🟧 หมวด ๒ · ฟื้นสภาพคงประคอง <em style="font-size: 0.85em;">(รวม Payroll ๒๕.๒๘M + ครูใหม่ ๗๒๐K)</em></span>
+    <span class="amount">~๔๐,๔๑๒,๐๐๕ บาท</span>
+  </div>
+  <div class="gt-row">
+    <span>🟨 หมวด ๓ · ปรับปรุงเร่งด่วน</span>
+    <span class="amount">~๙,๕๕๐,๖๓๑ บาท</span>
+  </div>
+  <div class="gt-row">
+    <span>🟦 หมวด ๔ · เตรียมพันธกิจ ๒๕๗๐</span>
+    <span class="amount">~๑,๔๐๐,๐๐๐ บาท</span>
+  </div>
+  <div class="gt-row total-line">
+    <span>รวมยอดขอกู้ยืม · งวดเดียว (verified ปัจจุบัน)</span>
+    <span class="amount">~๕๖,๒๕๗,๔๗๖ บาท</span>
+  </div>
+  <div class="note">
+    ⚠️ ยอดนี้คือ <b>ยอด verified จากเอกสารใน Drive ที่ผม cross-reference แล้ว</b> · รายละเอียดทุกรายการอยู่ในภาคผนวก
+  </div>
+</div>
+
+<!-- ============== สรุปท้าย · Overhead + จุดคุ้มทุน ============== -->
+<h2 class="section">🎯 สรุปท้าย · รายจ่าย Overhead ของอาคาร-อุปกรณ์-พลังงาน-ฝ่ายบริการ + จุดคุ้มทุน</h2>
+
+<p class="indent">เพื่อให้คณะกรรมการเห็นภาพ <b>โครงสร้างต้นทุนคงที่ (Overhead Cost)</b> ที่ต้องแบกรับโดยไม่ขึ้นกับจำนวนนักเรียน และ <b>จุดคุ้มทุน</b> ที่จะใช้เป็นเป้าหมายในการฟื้นฟูระยะยาว · กระผมขอสรุปดังนี้</p>
+
+<h3 style="color:#a64304;">📊 ๑. รายจ่าย Overhead ที่ไม่ขึ้นกับจำนวนนักเรียน · ปีการศึกษา ๒๕๖๙</h3>
+<p class="indent"><b>กลุ่มที่ไม่ใช่ครูผู้สอน</b> (ตามโครงสร้างคำสั่งที่ ๕๔/๒๕๖๘) — <b>๕๑ คน</b> ประกอบด้วย ผู้บริหาร ๓ · เจ้าหน้าที่ ๑๒ · พี่เลี้ยงอนุบาล ๒ · พนักงานบริหารทั่วไป ๑๗ · พนักงานโภชนาการ/มินิมาร์ท/คาเฟ่ ๑๔ · พนักงานรักษาความปลอดภัย ๓</p>
+
+<table style="width:100%; border-collapse:collapse; font-size:0.9em; margin:12px 0;">
+  <thead>
+    <tr style="background:#fee2e2;">
+      <th style="border:1px solid #f87171; padding:6px; text-align:left;">รายการ Overhead</th>
+      <th style="border:1px solid #f87171; padding:6px;">รหัส</th>
+      <th style="border:1px solid #f87171; padding:6px; text-align:right;">เล่มงบ ๒๕๖๙ (บาท/ปี)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="border:1px solid #ddd; padding:5px;">เงินเดือนผู้บริหาร (๓ คน)</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">1.3</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๒,๒๔๕,๖๔๘</td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;">เงินเดือนเจ้าหน้าที่ (๑๒ คน)</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">1.4</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๓,๑๑๓,๑๘๙</td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;">เงินเดือนพี่เลี้ยงอนุบาล (๒ คน)</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">1.5</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๓๒๘,๖๕๖</td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;">เงินเดือนพนักงานบริหารทั่วไป (๑๗ คน)</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">1.6</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๒,๙๕๕,๓๗๒</td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;">เงินเดือนพนักงานโภชนาการ/มินิมาร์ท/คาเฟ่ (๑๔ คน)</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">1.7</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๒,๑๙๕,๗๘๐</td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;">เงินเดือนพนักงานรักษาความปลอดภัย (๓ คน)</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">1.8</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๔๘๙,๗๙๒</td></tr>
+    <tr style="background:#fdf5e7;"><td style="border:1px solid #ddd; padding:5px;"><b>รวม Payroll กลุ่มไม่ใช่ครูผู้สอน (๕๑ คน)</b></td><td style="border:1px solid #ddd; padding:5px; text-align:center;"></td><td style="border:1px solid #ddd; padding:5px; text-align:right;"><b>๑๑,๓๒๘,๔๓๗</b></td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;">ค่าตอบแทนพิเศษ (เฉพาะ non-teaching · บริหาร/เจ้าหน้าที่/พี่เลี้ยง/พนักงาน/ค่าล่วงเวลา)</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">1.9</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๑,๐๓๕,๒๐๐</td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;">ค่าตอบแทนภายนอก (ตำรวจจราจร + เก็บขยะ + บริษัทรปภ.)</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">1.10</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๖๖๖,๐๐๐</td></tr>
+    <tr style="background:#fef5e7;"><td style="border:1px solid #ddd; padding:5px;"><b>ค่าสาธารณูปโภค</b> (ไฟ ๗.๒M + น้ำ ๑.๒M + โทร ๐.๐๔M + อินเทอร์เน็ต ๑.๒๘M)</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">1.11</td><td style="border:1px solid #ddd; padding:5px; text-align:right;"><b>๙,๗๒๐,๐๐๐</b></td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;">ค่าใช้จ่ายเพื่อการบริหาร (ประกัน + ภาษี + ธรรมเนียมธนาคาร + กองทุนเงินทดแทน)</td><td style="border:1px solid #ddd; padding:5px; text-align:center;">1.12</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๓๙๐,๐๐๐</td></tr>
+    <tr style="background:#1a3a6e; color:white; font-weight:bold; font-size:1.05em;"><td style="border:1px solid #1a3a6e; padding:8px;" colspan="2">💸 รวม Overhead ตามเล่มงบประมาณ</td><td style="border:1px solid #1a3a6e; padding:8px; text-align:right;">~๒๓,๑๓๙,๖๓๗</td></tr>
+    <tr style="background:#fdf5e7; font-style:italic;"><td style="border:1px solid #d68910; padding:5px;" colspan="2">เทียบยอด Payroll non-teaching จริง พ.ค. ๖๙ × ๑๒ = ภราดา ๒.๒๑M + เจ้าหน้าที่ ๒.๒๑M + พนักงาน ๕.๔๗M = <b>๙.๘๙M</b> (ลดลงจากเล่มงบ ๑๑.๓๓M เพียงเล็กน้อย · ปรับสูงกว่าที่เคยประมาณ)</td><td style="border:1px solid #d68910; padding:5px; text-align:right;">Overhead จริงโดยประมาณ <b>~๒๐.๖M</b></td></tr>
+  </tbody>
+</table>
+
+<div style="background:#fff8e7; border-left:4px solid #d68910; padding:10px 14px; margin:8px 0; font-size:14px;">
+  <b>📌 หมายเหตุ:</b> ยอด Overhead ข้างต้น <b>ยังไม่รวม</b> (ก) ค่าซ่อมบำรุงระบบงานค้างปี ๒๕๖๖-๒๕๖๘ ~๓.๑๑M (จะเกิดครั้งเดียวเมื่อสะสาง) (ข) ค่าก่อสร้างใหม่ Tennis/Football/ถนน (one-time investment ในหมวด ๓) (ค) คดีความค้าง (one-time settlement ในหมวด ๑)
+</div>
+
+<h3 style="color:#a64304; margin-top:24px;">🎯 ๒. จุดคุ้มทุน · เริ่มใหม่ที่อนุบาล + ประถม (ตามตราสารฉบับที่ ๕)</h3>
+
+<div style="background:#e8f5e9; border-left:4px solid #1e8449; padding:10px 14px; margin:10px 0; font-size:14px;">
+  <b>📋 ข้อมูลห้องเรียนตามตราสารฉบับที่ ๕ · ใช้ "ห้องละ ๒๕ คน" เป็นมาตรฐานคุณภาพ (ทั้ง KG และประถม):</b>
+  <ul style="margin:6px 0;">
+    <li><b>อนุบาล ๑-๓:</b> ระดับชั้นละ ๒ ห้องเรียน · รวม ๖ ห้อง · ห้องละ <b>๒๕ คน</b> · รับได้ไม่เกิน <b>๑๕๐ คน</b></li>
+    <li><b>ประถม ๑-๖:</b> ระดับชั้นละ ๖ ห้องเรียน · รวม ๓๖ ห้อง · ตราสารกำหนด ๓๐ คน/ห้อง — <b>แต่จะรักษามาตรฐานคุณภาพไว้ที่ห้องละไม่เกิน ๒๕ คน</b></li>
+  </ul>
+</div>
+
+<p class="indent"><b>สมมุติฐานเริ่มต้น:</b> เปิดเฉพาะอนุบาล (KG) + ประถม (Y1-6) · <b>ห้องละไม่เกิน ๒๕ คน</b> · ครูต่างชาติ Native EN ค่าจ้าง ๖๐,๐๐๐-๗๐,๐๐๐ บาท/เดือน + ครูไทย ๓๕,๐๐๐ บาท/เดือน (สอนวิชาเฉพาะ) + พี่เลี้ยงอนุบาล ๒๓,๐๐๐ บาท/เดือน</p>
+
+<table style="width:100%; border-collapse:collapse; font-size:0.9em; margin:12px 0;">
+  <thead>
+    <tr style="background:#eafaf1;">
+      <th style="border:1px solid #1e8449; padding:5px;">ระดับ</th>
+      <th style="border:1px solid #1e8449; padding:5px;">รายรับ/ห้อง (๒๕ คน)</th>
+      <th style="border:1px solid #1e8449; padding:5px;">ค่าครู/ห้อง</th>
+      <th style="border:1px solid #1e8449; padding:5px;">กำไรขั้นต้น/ห้อง</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="border:1px solid #ddd; padding:5px;"><b>KG</b> (๒๕ คน × ๑๔๐K)<br><span class="source-note">ครูต่างชาติ ๗๐K + พี่เลี้ยง ๒๓K + ครูไทย ๐.๕ คน</span></td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๓,๕๐๐,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๑,๓๒๖,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:right; color:#1e8449;"><b>๒,๑๗๔,๐๐๐</b></td></tr>
+    <tr><td style="border:1px solid #ddd; padding:5px;"><b>ประถม</b> (๒๕ คน × ๑๙๐K avg)<br><span class="source-note">ครูต่างชาติ ๗๐K (homeroom) + ครูไทย ๓๕K (วิชาเฉพาะ)</span></td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๔,๗๕๐,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:right;">๑,๒๖๐,๐๐๐</td><td style="border:1px solid #ddd; padding:5px; text-align:right; color:#1e8449;"><b>๓,๔๙๐,๐๐๐</b></td></tr>
+    <tr style="background:#fff9e6;"><td style="border:1px solid #ddd; padding:5px;" colspan="3"><b>กำไรเฉลี่ย/ห้อง (mix KG:ประถม = 1:2 · ห้องละ ๒๕ คน)</b></td><td style="border:1px solid #ddd; padding:5px; text-align:right; color:#1e8449;"><b>๓,๐๕๑,๐๐๐</b></td></tr>
+  </tbody>
+</table>
+
+<table style="width:100%; border-collapse:collapse; font-size:0.95em; margin:12px 0;">
+  <thead>
+    <tr style="background:#1a3a6e; color:white;">
+      <th style="border:1px solid #1a3a6e; padding:6px;">Overhead ที่ต้อง cover</th>
+      <th style="border:1px solid #1a3a6e; padding:6px;">จำนวนห้อง (mix 1:2)</th>
+      <th style="border:1px solid #1a3a6e; padding:6px;">KG</th>
+      <th style="border:1px solid #1a3a6e; padding:6px;">ประถม</th>
+      <th style="border:1px solid #1a3a6e; padding:6px;">รวมนักเรียน</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="border:1px solid #ddd; padding:6px;">Overhead จริง ~๒๐M</td><td style="border:1px solid #ddd; padding:6px; text-align:center;">~๖.๖ ห้อง</td><td style="border:1px solid #ddd; padding:6px; text-align:center;">~๒.๒ ห้อง = ๕๕ คน</td><td style="border:1px solid #ddd; padding:6px; text-align:center;">~๔.๔ ห้อง = ๑๐๙ คน</td><td style="border:1px solid #ddd; padding:6px; text-align:center;"><b>~๑๖๔ คน</b></td></tr>
+    <tr style="background:#fef5e7;"><td style="border:1px solid #ddd; padding:6px;"><b>Overhead เล่มงบ ~๒๓M</b></td><td style="border:1px solid #ddd; padding:6px; text-align:center;"><b>~๗.๕ ห้อง</b></td><td style="border:1px solid #ddd; padding:6px; text-align:center;">~๒.๕ ห้อง = ๖๓ คน</td><td style="border:1px solid #ddd; padding:6px; text-align:center;">~๕.๐ ห้อง = ๑๒๕ คน</td><td style="border:1px solid #ddd; padding:6px; text-align:center;"><b>~๑๘๘ คน</b></td></tr>
+    <tr><td style="border:1px solid #ddd; padding:6px;">Overhead + ค่าซ่อมระบบค้าง ~๒๗M</td><td style="border:1px solid #ddd; padding:6px; text-align:center;">~๘.๘ ห้อง</td><td style="border:1px solid #ddd; padding:6px; text-align:center;">~๒.๙ ห้อง = ๗๔ คน</td><td style="border:1px solid #ddd; padding:6px; text-align:center;">~๕.๙ ห้อง = ๑๔๗ คน</td><td style="border:1px solid #ddd; padding:6px; text-align:center;"><b>~๒๒๑ คน</b></td></tr>
+  </tbody>
+</table>
+
+<div style="background:#fff8e7; border-left:4px solid #d68910; padding:10px 14px; margin:8px 0; font-size:14px;">
+  <b>📌 Sensitivity · ค่าจ้างครูต่างชาติ ๖๐K vs ๗๐K (Overhead ๒๓M):</b>
+  <ul style="margin:6px 0;">
+    <li>ค่าจ้าง <b>๖๐K/เดือน</b> → กำไร KG/ห้อง <span class="num">๒,๒๙๔,๐๐๐</span> · ประถม/ห้อง <span class="num">๓,๖๑๐,๐๐๐</span> · เฉลี่ย <span class="num">๓,๑๗๑,๐๐๐</span> → จุดคุ้มทุน <b>~๗.๓ ห้อง = ~๑๘๑ คน</b></li>
+    <li>ค่าจ้าง <b>๗๐K/เดือน</b> → กำไร KG/ห้อง <span class="num">๒,๑๗๔,๐๐๐</span> · ประถม/ห้อง <span class="num">๓,๔๙๐,๐๐๐</span> · เฉลี่ย <span class="num">๓,๐๕๑,๐๐๐</span> → จุดคุ้มทุน <b>~๗.๕ ห้อง = ~๑๘๘ คน</b></li>
+  </ul>
+</div>
+
+<div style="background:#e8f5e9; border-left:5px solid #1e8449; padding:12px 18px; margin:16px 0;">
+  <b>🎯 ข้อสรุปสำคัญสำหรับการฟื้นฟูระยะยาว:</b>
+  <ul style="margin:8px 0;">
+    <li><b>ปัจจุบัน (พ.ค. ๖๙) มีนักเรียน ๑๒๑ คน</b> (KG ๑๕ + ประถม ๕๖ + มัธยม ๕๐) — <b>ต่ำกว่าจุดคุ้มทุน ~๑๘๘ คน</b> ของโครงสร้างใหม่ที่ Overhead ~๒๓M</li>
+    <li>หลังปิดมัธยมทั้งหมด (Y7-12) เหลือ ๙๓ คน · จะต้อง <b>รับเด็กใหม่อย่างน้อย ~๙๕-๑๐๐ คน ใน ๒-๓ ปี</b> เพื่อถึงจุดคุ้มทุน (ที่ห้องละ ๒๕ คน)</li>
+    <li><b>โครงสร้างเป้าหมายระยะกลาง</b> (รักษาคุณภาพห้องละ ๒๕ คน): KG เต็ม ๖ ห้อง × ๒๕ = ๑๕๐ คน + ประถม ๑ ห้อง/ระดับ × ๖ × ๒๕ = ๑๕๐ คน · <b>รวม ๓๐๐ คน</b> → กำไรขั้นต้น ~๓๔M/ปี · cover Overhead ๒๓-๒๗M ได้สบาย</li>
+    <li><b>ในขณะที่ Y12 ๒๒ คน</b> ทยอยจบ + ประถม ๕๖ คนคงอยู่ · KG ๑๕ คนเพิ่มเป็น ๕๐ คน (เต็ม cap ๒ ห้อง KG.๑) + ขยาย KG.๒-๓ → ปีที่ ๒-๓ จะถึง break-even</li>
+    <li><b>จุดเด่นเริ่มใหม่ที่อนุบาล:</b> รับเด็กจาก ๓ ขวบ ต่อเนื่องไปประถม + เครือ AC/ACT รับช่วงต่อ Y7+ · marketing เจาะหมู่บ้านจัดสรร ๓๐-๕๐ กม. ตาม Rebranding (หมวด ๓)</li>
+    <li>การขอ <b>๔ หมวดงาน ๕๖.๒๖M ในระยะนี้</b> = เพื่อ <b>ลดต้นทุน Fixed</b> (จัดการคดี + เลิกจ้าง + ระบบค้างซ่อม + <b>เจาะน้ำบาดาลลดค่าน้ำประปา</b>) + <b>สร้างรายได้เพิ่ม</b> (Academy + Rebranding) + <b>เตรียมโครงสร้างใหม่</b> (Early Years Center) เพื่อให้ ACEP <b>เดินถึงจุดคุ้มทุนภายใน ๒-๓ ปี</b> และเลี้ยงตัวเองได้ในระยะยาว</li>
+  </ul>
+</div>
+
+<!-- ============== ภาคผนวก ============== -->
+<div class="annex-box">
+  <h3>📎 ภาคผนวก · เอกสารอ้างอิงรายละเอียด</h3>
+
+  <p style="font-size:15px; margin:8px 0;"><b>ก. หมวดที่ ๑ (ปิดจบ):</b></p>
+  <ol>
+    <li><b>ก-๑</b> รายงานการประชุมแนวทางปรับโครงสร้างการจัดการศึกษา ACEP RAMA II · ๕ มิ.ย. ๖๙ · ๑๒ ท่าน <span class="source-note">(Drive 1A2ElqcyhLkrDE9O3PRa_tQxzI41UPvA0)</span></li>
+    <li><b>ก-๒</b> คำสั่งที่ ๓/๒๕๖๙ · แต่งตั้ง คกก. ศึกษาและฟื้นฟูด้านวิชาการ ๑๓ ท่าน <span class="source-note">(Drive 1WYcI9d2-RqLG4hJJpc4nvN52gas6iEZ9 · ๙ มิ.ย. ๖๙)</span></li>
+    <li><b>ก-๓</b> รายงานประชุมวิสามัญ ๑/๒๕๖๙ (๔ มิ.ย. ๖๙) + รายชื่อเลิกจ้างเบื้องต้น ๙ ราย + เหตุผลรายบุคคล + ค่าชดเชยคำนวณ <span class="source-note">(Drive 8 มิ.ย. 09:43)</span> · <b>⚠️ อยู่ระหว่างทบทวน · รอคำสั่งแต่งตั้งมอบหมายหน้าที่ฝ่ายใหม่</b></li>
+    <li><b>ก-๔</b> สถานะคดีเก่า ๕ คดี ครูต่างชาติ (Blokhin/Cricchio/Shajahan/Mahesh/Saihgal-Dale) · ตารางผ่อนชำระ</li>
+    <li><b>ก-๕</b> สำนวนคดีใหม่ ร.๓๑๕-๓๒๒/๒๕๖๗ (ครูไทย ๘ ราย) · คำพิพากษาศาลภาค ๗ + ศาลอุทธรณ์ + คำคัดค้านฎีกาโจทก์ ๒ มิ.ย. ๖๙ · ตารางวิเคราะห์โอกาส + Option A เจรจาประนีประนอม <span class="source-note">(Drive 8 มิ.ย. 12:07)</span></li>
+    <li><b>ก-๖</b> ร่างคำสั่งแต่งตั้ง คกก. ปฐมนิเทศ + ร่างจดหมายเชิญ ผปค. + กำหนดการ ๒๗ มิ.ย. ๖๙ (รอบเช้าประถม + รอบบ่ายมัธยม) <span class="source-note">(Topic 2569/00094 + 00111)</span></li>
+  </ol>
+
+  <p style="font-size:15px; margin:8px 0;"><b>ข. หมวดที่ ๒ (ฟื้นสภาพคงประคอง):</b></p>
+  <ol>
+    <li><b>ข-๑</b> Payroll พ.ค. ๖๙ · breakdown ภราดา ๑๖๖,๘๓๕ + ครูต่างชาติ ๘๗๑,๔๔๔ + ไทย ๔๖๒,๐๘๒ + เจ้าหน้าที่ ๑๗๐,๘๖๖ + พนักงาน ๔๓๕,๗๖๔ <span class="source-note">(Drive 9 มิ.ย. 02:21)</span></li>
+    <li><b>ข-๒</b> chat ระหว่างผู้บริหาร AC ↔ ผอ. ACEP · ๑๓ มิ.ย. ๖๙ ๐๗:๒๓-๐๗:๔๑ · ข้อตกลงค่าเทอม Y7-11 ย้าย AC/ACT ๑๐% Return + Y12 ๒๒ คน เรียน ACEP ๓ วัน + AC ๒ วัน <span class="source-note">(Drive 1h-myqsLM0lQBEyLibFcmcMNBgqNoZuOo)</span></li>
+    <li><b>ข-๓</b> Teaching Staff Allocation Primary 2026 · Draft 7 มิ.ย. ๖๙ · ๒๑ ราย (ครูต่างชาติ ๘ + ไทย ๑๓)</li>
+    <li><b>ข-๔</b> สัญญาประกัน AIG (ทรัพย์สิน/ยานพาหนะ/อุบัติเหตุ) + Central Air Trane + ทีมเทค Fan Coil + แอร์โคชิลเลอร์</li>
+    <li><b>ข-๕</b> ใบเสนอราคาทุกรายการซ่อมแซม: Playground WRP 260625-2 · LED เสริมบุญอิเล็คทริค QT69-00376 · NEWTECH BL-1 Ultra · THAITOP 4289</li>
+    <li><b>ข-๖</b> ใบเสนอราคา QT-06062026/01 · CHAIWAT CONSTRUCTION · BOQ ๑๗ รายการ · ๘ มิ.ย. ๖๙</li>
+    <li><b>ข-๗</b> รายงานระบบงานค้างซ่อม (ค้างปี ๒๕๖๖-๒๕๖๘) · หัวหน้ากลุ่มงานบริหารทั่วไป → ผอ. · ๒ มิ.ย. ๖๙ · breakdown ลิฟต์/ชิลเลอร์/CCTV/คูลลิ่งทาวเวอร์ <span class="source-note">(Drive 8 มิ.ย. 07:33)</span></li>
+    <li><b>ข-๘</b> Payment Form PA 6906-0001 ถึง 0020 · ฝ่ายการเงิน · ๕ มิ.ย. ๖๙ <span class="source-note">(Drive 8 มิ.ย. 02:41)</span></li>
+  </ol>
+
+  <p style="font-size:15px; margin:8px 0;"><b>ค. หมวดที่ ๓ (ปรับปรุงเร่งด่วน):</b></p>
+  <ol>
+    <li><b>ค-๑</b> Assumption College Football Academy "ช้างบ้าน สู่ ช้างเผือก" · pptx (Drive 7 มิ.ย.) + breakdown รายได้/กำไร ๓ ส่วน + ประกันรายได้ (Drive 8 มิ.ย. 03:29)</li>
+    <li><b>ค-๒</b> ใบเสนอราคา Tennis QT-07062026/01 · ทองรุ่งฟ้า ๕๙๙๘ · ๗ มิ.ย. + benchmark pricing ๘ ภาพ ALM x Impact Tennis Center (Drive 8 มิ.ย. 23:48) + ตารางคำนวณคืนทุน ๔ สนาม × ๗ คอร์ส</li>
+    <li><b>ค-๓</b> แผน Rebranding + Cambridge partnership + ทีมสำรวจ PWORK 11-12 มิ.ย. + ประชุมสรุป 18 มิ.ย. <span class="source-note">(File_001.png Drive 11 มิ.ย. 10:57)</span></li>
+  </ol>
+
+  <p style="font-size:15px; margin:8px 0;"><b>ง. หมวดที่ ๔ (เตรียมพันธกิจ ๒๕๗๐):</b></p>
+  <ol>
+    <li><b>ง-๑</b> ข้อเสนอ PGL Asia Hub · pgl.co.uk · ประโยชน์ต่อมูลนิธิฯ + สถานะการเจรจา <span class="source-note">(Drive 8 มิ.ย. 05:29)</span></li>
+  </ol>
+
+  <p style="font-size:15px; margin:12px 0 6px;"><b>จ. ไฟล์อ้างอิงหลัก:</b></p>
+  <ol>
+    <li><b>จ-๑</b> <b>HTML งบฉบับเต็ม v2</b> (รายละเอียด BOQ/รายชื่อ/breakdown ทุกรายการ) · <code>acep_budget_proposal_urgent_2569_brother_letter_v2.html</code></li>
+    <li><b>จ-๒</b> <b>เล่มงบประมาณ ๒๕๖๙ ที่ส่งมูลนิธิฯ</b> · ๔๔๐ หน้า · ฐาน ๑๕๓ คน · งบรวม ๗๑,๐๐๙,๖๗๗.๓๔ (รวมเงินยืมมูลนิธิ ๒๕.๖M)</li>
+    <li><b>จ-๓</b> <b>จดหมายของบเร่งด่วนฉบับ ๙ มิ.ย. ๖๙</b> · ส่งกรรมการบริหารมูลนิธิฯ <span class="source-note">(Drive 1MDgHY1JidSHBsF5Sl0_49v0x189yRpnq)</span></li>
+    <li><b>จ-๔</b> <b>ตราสารจัดตั้งโรงเรียนฉบับที่ ๖/๒๕๖๘</b> · กำหนดความจุห้องเรียน KG ๖ ห้อง × ๒๕ คน + ประถม ๓๖ ห้อง × ๓๐ คน + มัธยม ๓๖ ห้อง × ๓๐ คน (ที่ใช้คำนวณจุดคุ้มทุน) · <a href="https://drive.google.com/file/d/1qcAa23Q8zZSKfUaJxSD32tBDxdW3Svcc/view?usp=drivesdk" target="_blank">เปิดดูตราสาร (PDF · Drive)</a></li>
+    <li><b>จ-๕</b> 📸 <b>อัลบั้มภาพประกอบ · สภาพก่อนและหลังการพัฒนา</b> · รวบรวมไว้ในโฟลเดอร์เดียวเพื่อให้คณะกรรมการดูประกอบได้ตามต้องการ · <a href="https://drive.google.com/drive/folders/1wdngXJU4eJ-2BsV-Hpq1E0uyjtceMSjd?usp=drive_link" target="_blank">เปิดดูอัลบั้มภาพ (Google Drive Folder)</a></li>
+    <li><b>จ-๖</b> ระบบ SWIS โมดูลการเงินและบัญชีออนไลน์ (ตรวจสอบและติดตามค่าใช้จ่ายทุกรายการ real-time)</li>
+  </ol>
+</div>
+
+<!-- ============== ปิดท้าย ============== -->
+<p class="indent" style="margin-top: 32px;">ทั้งนี้ ค่าใช้จ่ายทุกรายการสามารถตรวจสอบและติดตามได้ตลอดเวลาจากระบบ <b>SWIS โมดูลการเงินและบัญชีออนไลน์</b> · รายละเอียดประกอบทุกหมวดอยู่ใน <b>HTML ฉบับเต็ม v2</b> และเอกสารต้นฉบับใน Google Drive ตามภาคผนวก</p>
+
+<p class="indent">จึงเรียนมาเพื่อทราบและขอการพิจารณาอนุมัติ<b>เงินกู้ยืมงวดเดียวจำนวน ๕๖,๒๖๐,๐๐๐ บาท สำหรับการดำเนินงาน ACEP ปีการศึกษา ๒๕๖๙</b> · พร้อมเงื่อนไขตามแบบสัญญากู้ยืมเงิน ๖ ฉบับเดิมระหว่างปีการศึกษา ๒๕๖๖-๒๕๖๙ ที่มูลนิธิคณะเซนต์คาเบรียลแห่งประเทศไทยและโรงเรียนอัสสัมชัญหลักสูตรภาษาอังกฤษได้ทำไว้แล้ว · ตามรายละเอียดที่ปรากฏ</p>
+
+<div style="background:#eef6fa; border-left:6px solid #1a3d6b; padding:14px 18px; margin:20px 0;">
+<h3 style="margin-top:0;">📦 หลักการแยกบัญชี ๒ ก้อน + เงื่อนไขกู้ยืม + แหล่งคืน</h3>
+
+<p><b>(ก) แยกบัญชี ๒ ก้อน เพื่อความชัดเจนในการบริหารและตรวจสอบ:</b></p>
+<table style="width:100%; border-collapse:collapse; margin:8px 0;">
+<tr style="background:#eafaf1; font-weight:bold;"><th style="border:1px solid #1e8449; padding:6px;">ก้อน</th><th style="border:1px solid #1e8449; padding:6px;">แหล่งเงิน</th><th style="border:1px solid #1e8449; padding:6px;">ใช้สำหรับ</th></tr>
+<tr><td style="border:1px solid #ddd; padding:6px; text-align:center;"><b>A</b></td><td style="border:1px solid #ddd; padding:6px;"><b>เงินกู้ยืมจากมูลนิธิฯ ๕๖,๒๖๐,๐๐๐ บาท</b> (งวดเดียว)</td><td style="border:1px solid #ddd; padding:6px;">การดำเนินงาน ACEP <b>ตลอดปีการศึกษา ๒๕๖๙</b> ตาม ๔ หมวด (ปิด · ประคอง · เร่งด่วน · เตรียม ๒๕๗๐)</td></tr>
+<tr><td style="border:1px solid #ddd; padding:6px; text-align:center;"><b>B</b></td><td style="border:1px solid #ddd; padding:6px;"><b>ค่าเทอม + รายรับการศึกษาในปี ๒๕๖๙ ~๒๘,๓๕๑,๔๐๐ บาท</b> (ทยอยเก็บตามงวด)</td><td style="border:1px solid #ddd; padding:6px;">เก็บไว้เป็น <b>working capital ปีการศึกษา ๒๕๗๐</b> + <b>คืนเงินกู้ก้อนแรก</b>ให้มูลนิธิฯ ภายใน ๑๒ เดือน</td></tr>
+</table>
+
+<p><b>(ข) เงื่อนไขการกู้ยืม:</b> เป็นนิติกรรมระหว่างนิติบุคคล ๒ ฝ่าย (มูลนิธิคณะเซนต์คาเบรียลฯ ผู้ให้กู้ · ACEP ผู้กู้) · มีหลักฐานสัญญาเป็นลายลักษณ์อักษร · บันทึกใน SWIS โมดูลการเงินและบัญชีออนไลน์ · <b>อัตราดอกเบี้ย · ระยะเวลาคืน · หลักประกัน · การงวดผ่อน เป็นไปตามแบบและเงื่อนไขเดียวกับสัญญากู้ยืมเงิน ๖ ฉบับ ระหว่างปีการศึกษา ๒๕๖๖-๒๕๖๙ ที่ผ่านมา</b> · เพื่อความสอดคล้องของกระบวนการและลดภาระการพิจารณาเงื่อนไขใหม่</p>
+
+<p><b>(ค) แหล่งคืนเงินกู้ ๒ แหล่ง:</b></p>
+<ul>
+<li><b>แหล่งคืนระยะแรก (ปีการศึกษา ๒๕๗๐):</b> ค่าเทอม ๒๕๖๙ ที่แยกเก็บไว้ในบัญชี B (~๒๘.๓๕ ล้านบาท) — เป็น<b>การคืนเงินก้อนแรก</b>ภายใน ๑๒ เดือนหลังกู้ยืม</li>
+<li><b>แหล่งคืนระยะกลาง-ยาว (๒๕๗๐-๒๕๗๔):</b> รายได้จาก ๔ Module + ATSN ตามแผนฟื้นฟู Ver 3 (Early Years + Sports Complex + Training Center + English &amp; Chinese Languages Center) — ทยอยคืนตามที่แต่ละ Module เริ่มสร้างรายได้</li>
+</ul>
+
+<p><b>(ง) ผลที่คาดหวัง:</b> ปีการศึกษา ๒๕๗๐ · ACEP จะ<b>ลดภาระการกู้ยืมจากมูลนิธิฯ ลงอย่างมีนัยสำคัญ</b> · เพราะมีทุนตั้งต้น ~๒๘.๓๕M สะสมจากปี ๒๕๖๙ + รายได้จากการเปิด Early Years รุ่นใหม่ + ๔ Module · เข้าสู่ trajectory การพึ่งตนเองและคืนเงินกู้ครบทุกแหล่งภายใน ๓-๕ ปีตามแผนฟื้นฟู</p>
+</div>
+
+<div class="signature">
+  <div>ขอแสดงความนับถือ</div>
+  <div class="sig-name">(ภราดาศุภนันท์ ขันธปรีชา)</div>
+  <div class="sig-title">ผู้อำนวยการโรงเรียนอัสสัมชัญหลักสูตรภาษาอังกฤษ</div>
+</div>
+
+</div>
+
+</body>
+</html>
