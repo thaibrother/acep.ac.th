@@ -502,40 +502,29 @@
 </section>
 
 
-<!-- ===== SWIS QUICK ACCESS · Calendar Embed + SWIS Portal ===== -->
+<!-- ===== SWIS QUICK ACCESS · Direct Links (no iframe) ===== -->
 <section class="section" id="swis-access">
   <div class="wrap">
     <div class="section-title">
       <div class="eyebrow">School Systems · Live</div>
       <h2>📅 Calendar &amp; SWIS Portal</h2>
-      <p>Access the school calendar and the full SWIS system directly from here</p>
+      <p>Direct links to the school calendar and the full SWIS system</p>
     </div>
 
-    <!-- Calendar Embed -->
-    <div class="swis-card" style="background:#fff; border:1px solid #E5D9BC; border-radius:12px; overflow:hidden; box-shadow:0 6px 24px rgba(107,15,26,0.08); margin-bottom:28px; max-width:1200px; margin-left:auto; margin-right:auto;">
-      <div style="padding:14px 22px; background:#6B0F1A; color:#fff; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
-        <div>
-          <div style="font-family:'Playfair Display',serif; font-size:18px; font-weight:700;">📅 School Calendar · ปฏิทินโรงเรียน</div>
-          <div style="font-size:12px; opacity:0.85;">Public Calendar · Live feed from SWIS</div>
-        </div>
-        <a href="https://swis.acep.ac.th/html_edu/public_calendar.php" target="_blank" style="background:#C9A961; color:#6B0F1A; padding:8px 18px; border-radius:20px; text-decoration:none; font-size:13px; font-weight:600; white-space:nowrap;">Open Full Screen →</a>
-      </div>
-      <iframe src="https://swis.acep.ac.th/html_edu/public_calendar.php" style="width:100%; height:720px; border:0; display:block; background:#fff;" loading="lazy" title="ACEP Public Calendar"></iframe>
-    </div>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:20px; max-width:960px; margin:0 auto;">
+      <a href="https://swis.acep.ac.th/html_edu/public_calendar.php" target="_blank" style="display:block; text-decoration:none; background:#fff; border:1px solid #E5D9BC; border-left:4px solid #6B0F1A; border-radius:8px; padding:24px 26px; box-shadow:0 4px 16px rgba(107,15,26,0.06); transition:transform 0.15s, box-shadow 0.15s;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 24px rgba(107,15,26,0.12)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 16px rgba(107,15,26,0.06)';">
+        <div style="font-size:32px; margin-bottom:6px;">📅</div>
+        <div style="font-family:'Playfair Display',serif; color:#6B0F1A; font-size:19px; font-weight:700; margin-bottom:4px;">School Calendar</div>
+        <div style="color:#666; font-size:13px; margin-bottom:12px;">ปฏิทินโรงเรียน · Public Calendar · Live feed from SWIS</div>
+        <div style="color:#C9A961; font-size:13px; font-weight:600;">Open Calendar →</div>
+      </a>
 
-    <!-- SWIS Portal Embed -->
-    <div class="swis-card" style="background:#fff; border:1px solid #E5D9BC; border-radius:12px; overflow:hidden; box-shadow:0 6px 24px rgba(107,15,26,0.08); max-width:1200px; margin-left:auto; margin-right:auto;">
-      <div style="padding:14px 22px; background:#6B0F1A; color:#fff; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
-        <div>
-          <div style="font-family:'Playfair Display',serif; font-size:18px; font-weight:700;">🖥 SWIS · School Information System</div>
-          <div style="font-size:12px; opacity:0.85;">Grades · Attendance · Announcements · Homework · Services</div>
-        </div>
-        <a href="https://swis.acep.ac.th" target="_blank" style="background:#C9A961; color:#6B0F1A; padding:8px 18px; border-radius:20px; text-decoration:none; font-size:13px; font-weight:600; white-space:nowrap;">Open Full Screen →</a>
-      </div>
-      <iframe src="https://swis.acep.ac.th" style="width:100%; height:820px; border:0; display:block; background:#fff;" loading="lazy" title="ACEP SWIS Portal"></iframe>
-      <div style="padding:14px 22px; font-size:12px; color:#666; background:#FDF4E8; border-top:1px solid #E5D9BC;">
-        ℹ️ ถ้าหน้าไม่แสดงในกรอบด้านบน (บาง browser บล็อค iframe ของระบบภายใน) · กด <a href="https://swis.acep.ac.th" target="_blank" style="color:#6B0F1A; font-weight:600;">Open Full Screen</a> เพื่อเปิดในหน้าต่างใหม่
-      </div>
+      <a href="https://swis.acep.ac.th" target="_blank" style="display:block; text-decoration:none; background:#fff; border:1px solid #E5D9BC; border-left:4px solid #6B0F1A; border-radius:8px; padding:24px 26px; box-shadow:0 4px 16px rgba(107,15,26,0.06); transition:transform 0.15s, box-shadow 0.15s;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 24px rgba(107,15,26,0.12)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 16px rgba(107,15,26,0.06)';">
+        <div style="font-size:32px; margin-bottom:6px;">🖥</div>
+        <div style="font-family:'Playfair Display',serif; color:#6B0F1A; font-size:19px; font-weight:700; margin-bottom:4px;">SWIS Portal</div>
+        <div style="color:#666; font-size:13px; margin-bottom:12px;">School Information System · Grades · Attendance · Announcements · Homework</div>
+        <div style="color:#C9A961; font-size:13px; font-weight:600;">Enter SWIS →</div>
+      </a>
     </div>
   </div>
 </section>
